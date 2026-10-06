@@ -1,0 +1,154 @@
+{
+  "version": "0.4",
+  "title": "PES – Cta",
+  "type": "container",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "af2c991",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "flex_direction": "row",
+        "css_classes": "pes-cta",
+        "flex_direction_mobile": "column",
+        "flex_align_items": "center",
+        "flex_align_items_mobile": "flex-start",
+        "flex_justify_content": "space-between",
+        "flex_gap": {
+          "column": "24",
+          "row": "24",
+          "isLinked": true,
+          "unit": "px",
+          "size": 24
+        },
+        "padding": {
+          "unit": "px",
+          "top": "36",
+          "right": "24",
+          "bottom": "36",
+          "left": "24",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "ba4fd16",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "row",
+            "width": {
+              "unit": "%",
+              "size": 75,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_align_items": "center",
+            "flex_gap": {
+              "column": "20",
+              "row": "20",
+              "isLinked": true,
+              "unit": "px",
+              "size": 20
+            },
+            "flex_wrap": "nowrap"
+          },
+          "elements": [
+            {
+              "id": "4c19d37",
+              "elType": "widget",
+              "widgetType": "icon",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "far fa-calendar-alt",
+                  "library": "fa-regular"
+                },
+                "align": "center",
+                "_css_classes": "pes-cta-icon"
+              },
+              "elements": []
+            },
+            {
+              "id": "e3b7e07",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "pes-cta-text",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_gap": {
+                  "column": "4",
+                  "row": "4",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 4
+                }
+              },
+              "elements": [
+                {
+                  "id": "9bd85b6",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Schedule A Consultation Today",
+                    "header_size": "h2",
+                    "_css_classes": "pes-cta-title"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "dc9be7b",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Powering Progress. Building Confidence.",
+                    "header_size": "p",
+                    "_css_classes": "pes-cta-sub"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6c26108",
+          "elType": "widget",
+          "widgetType": "button",
+          "isInner": false,
+          "settings": {
+            "text": "Call Now",
+            "link": {
+              "url": "tel:+10000000000",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "_css_classes": "pes-btn-solid"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

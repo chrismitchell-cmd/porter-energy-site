@@ -1,0 +1,59 @@
+{
+  "title": "PES – Page Template",
+  "slug": "pes-page-template",
+  "blocks": [
+    {
+      "type": "hero",
+      "kicker": "Solar • Storage • EV • Electrical",
+      "title": "Control<br>Your Power",
+      "text": "Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.",
+      "button": { "text": "Get A Quote", "url": "/contact/" },
+      "image": ""
+    },
+    {
+      "type": "feature",
+      "layout": "image-right",
+      "frame": "orange",
+      "title": "Commercial Solar",
+      "subtitle": "Put your property to work.",
+      "text": "Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs",
+      "button": { "text": "Learn More →", "url": "/commercial-solar/" },
+      "image": ""
+    },
+    {
+      "type": "feature",
+      "layout": "image-left",
+      "frame": "blue",
+      "title": "Battery Energy Storage",
+      "subtitle": "Put your property to work.",
+      "text": "Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.",
+      "button": { "text": "Learn More →", "url": "/battery-energy-storage/" },
+      "image": ""
+    },
+    {
+      "type": "feature",
+      "layout": "image-right",
+      "frame": "orange",
+      "title": "Commercial Solar",
+      "subtitle": "Put your property to work.",
+      "text": "Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs",
+      "button": { "text": "Learn More →", "url": "/commercial-solar/" },
+      "image": ""
+    },
+    {
+      "type": "process",
+      "title": "Our Process",
+      "steps": [
+        { "icon": "fas fa-solar-panel", "text": "Integrated energy systems built for businesses, organization." },
+        { "icon": "fas fa-bolt", "text": "Integrated energy systems built for businesses, organization." },
+        { "icon": "fas fa-charging-station", "text": "Integrated energy systems built for businesses, organization." }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Schedule A Consultation Today",
+      "subtitle": "Powering Progress. Building Confidence.",
+      "button": { "text": "Call Now", "url": "tel:+10000000000" }
+    }
+  ]
+}

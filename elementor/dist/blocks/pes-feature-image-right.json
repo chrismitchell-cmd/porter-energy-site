@@ -1,0 +1,159 @@
+{
+  "version": "0.4",
+  "title": "PES – Feature Image Right",
+  "type": "container",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "1c46ae4",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "flex_direction": "row",
+        "css_classes": "pes-section pes-feature",
+        "flex_direction_mobile": "column",
+        "flex_align_items": "center",
+        "flex_justify_content": "space-between",
+        "flex_gap": {
+          "column": "48",
+          "row": "48",
+          "isLinked": true,
+          "unit": "px",
+          "size": 48
+        },
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "24",
+          "bottom": "110",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "20",
+          "bottom": "70",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "b02243a",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 48,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_gap": {
+              "column": "16",
+              "row": "16",
+              "isLinked": true,
+              "unit": "px",
+              "size": 16
+            },
+            "flex_justify_content": "center"
+          },
+          "elements": [
+            {
+              "id": "fdf9e2a",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Commercial Solar",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "a9a41c9",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Put your property to work.",
+                "header_size": "p",
+                "_css_classes": "pes-subhead"
+              },
+              "elements": []
+            },
+            {
+              "id": "215cdb0",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "badd48b",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Learn More →",
+                "link": {
+                  "url": "/commercial-solar/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "065e544",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 46,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            }
+          },
+          "elements": [
+            {
+              "id": "6bead46",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image_size": "full",
+                "_css_classes": "pes-frame"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>PES – Page Template – preview</title><style>
+*{box-sizing:border-box} body{margin:0;background:#1b1b1c}
+.e-con{display:flex;position:relative}
+.e-con-boxed{flex-direction:column;align-items:center}
+.e-con-inner{display:flex;width:100%;max-width:1140px;margin:0 auto}
+.e-con-full{display:flex}
+.e-con[style*="--pv-overlay"]::before{content:"";position:absolute;inset:0;background:var(--pv-overlay)}
+.e-con[style*="--pv-overlay"]>.e-con-inner{position:relative}
+.elementor-heading-title{margin:0;padding:0}
+.elementor-widget-container p{margin:0 0 1em}
+.elementor-button{display:inline-block;text-decoration:none}
+.elementor-widget-image img{max-width:100%;height:auto}
+.elementor-widget-icon .elementor-icon-wrapper{text-align:center}
+.elementor-icon{display:inline-block;line-height:1}
+.elementor-icon svg{width:1em;height:1em;display:block}
+.pes-logo img{height:44px;width:auto}
+@media(max-width:767px){.pv-stack{flex-direction:column!important}.pv-stack>.e-con{width:100%!important}}
+</style><style>/* ==========================================================================
+   Porter Energy Systems – global Elementor styles
+   --------------------------------------------------------------------------
+   Paste this whole file into ONE of:
+     • Elementor > Site Settings > Custom CSS          (Elementor Pro)
+     • Appearance > Customize > Additional CSS         (works without Pro)
+
+   Every block in the PES templates is styled by a "pes-" class (set in
+   Elementor under Advanced > CSS Classes). Add the same class to any new
+   widget/container and it picks up the same look. Anything you change in a
+   widget's own Style tab still wins over these defaults.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --pes-bg: #1b1b1c;
+  --pes-bg-grid: rgba(255, 255, 255, 0.035);
+  --pes-orange: #e9792b;
+  --pes-orange-light: #f5a04a;
+  --pes-navy: #2c3f7c;
+  --pes-blue-deep: #071a6b;
+  --pes-blue-bright: #1f4fe0;
+  --pes-white: #ffffff;
+  --pes-text: #e9e9ea;
+  --pes-text-dark: #1d1d1f;
+  --pes-font-head: "Saira", "Arial Narrow", sans-serif;
+  --pes-font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --pes-cut: 22px; /* size of the angled corners on frames and cards */
+  --pes-circuit: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='60' viewBox='0 0 320 60' fill='none'%3E%3Cpath d='M0 8H118' stroke='%23e9792b' stroke-width='2'/%3E%3Ccircle cx='123' cy='8' r='5' fill='%23e9792b'/%3E%3Cpath d='M0 46H34L52 28H264' stroke='%23e9792b' stroke-width='2'/%3E%3Ccircle cx='270' cy='28' r='5' fill='%23e9792b'/%3E%3C/svg%3E");
+}
+
+/* --------------------------------------------------------------------------
+   Sections (containers) – dark grid background
+   -------------------------------------------------------------------------- */
+.elementor .pes-section {
+  position: relative;
+  background-color: var(--pes-bg);
+  background-image:
+    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px);
+  background-size: 96px 96px;
+  color: var(--pes-text);
+  font-family: var(--pes-font-body);
+}
+
+/* --------------------------------------------------------------------------
+   Shared type
+   -------------------------------------------------------------------------- */
+.elementor .pes-kicker .elementor-heading-title {
+  font-family: var(--pes-font-body);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--pes-white);
+}
+
+.elementor .pes-h1 .elementor-heading-title {
+  font-family: var(--pes-font-head);
+  font-size: clamp(48px, 7vw, 92px);
+  font-weight: 700;
+  line-height: 0.95;
+  color: var(--pes-white);
+}
+
+.elementor .pes-h2 .elementor-heading-title {
+  font-family: var(--pes-font-head);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--pes-white);
+}
+
+.elementor .pes-subhead .elementor-heading-title {
+  font-family: var(--pes-font-body);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--pes-white);
+}
+
+.elementor .pes-lead,
+.elementor .pes-body {
+  font-family: var(--pes-font-body);
+  color: var(--pes-text);
+}
+.elementor .pes-lead { font-size: 18px; line-height: 1.5; max-width: 520px; }
+.elementor .pes-body { font-size: 16px; line-height: 1.75; max-width: 440px; }
+.elementor .pes-lead p:last-child,
+.elementor .pes-body p:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Buttons
+   pes-btn         – dark button, orange outline, italic ("Learn More →")
+   pes-btn-solid   – orange gradient fill ("Get A Quote", "Call Now")
+   -------------------------------------------------------------------------- */
+.elementor .pes-btn .elementor-button,
+.elementor .pes-btn-solid .elementor-button {
+  font-family: var(--pes-font-head);
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.elementor .pes-btn .elementor-button {
+  padding: 10px 16px;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--pes-white);
+  background: rgba(0, 0, 0, 0.55);
+  border: 2px solid var(--pes-orange);
+}
+.elementor .pes-btn .elementor-button:hover {
+  background: var(--pes-orange);
+  color: var(--pes-white);
+}
+
+.elementor .pes-btn-solid .elementor-button {
+  padding: 14px 26px;
+  font-size: 17px;
+  color: var(--pes-white);
+  background: linear-gradient(180deg, var(--pes-orange-light), var(--pes-orange));
+  border: 0;
+  box-shadow: 0 4px 14px rgba(233, 121, 43, 0.35);
+}
+.elementor .pes-btn-solid .elementor-button:hover {
+  transform: translateY(-1px);
+  color: var(--pes-white);
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.elementor .pes-hero {
+  border-bottom: 3px solid var(--pes-orange);
+}
+
+/* --------------------------------------------------------------------------
+   Feature row (text + framed image)
+   pes-feature           – circuit lines on the LEFT  (text left, image right)
+   pes-feature-reverse   – circuit lines on the RIGHT (image left, text right)
+   -------------------------------------------------------------------------- */
+.elementor .pes-feature::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 320px;
+  height: 60px;
+  background: var(--pes-circuit) no-repeat left top / contain;
+  pointer-events: none;
+}
+.elementor .pes-feature-reverse::before {
+  left: auto;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* Framed image with two angled corners.
+   pes-frame        – orange frame (cuts top-right / bottom-left)
+   pes-frame-blue   – navy frame   (cuts top-left / bottom-right)        */
+.elementor .pes-frame {
+  --pes-frame-color: var(--pes-orange);
+  --pes-frame-shape: polygon(0 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut), 100% 100%, var(--pes-cut) 100%, 0 calc(100% - var(--pes-cut)));
+  padding: 5px;
+  background: var(--pes-frame-color);
+  clip-path: var(--pes-frame-shape);
+  filter: drop-shadow(0 0 18px rgba(233, 121, 43, 0.25));
+}
+.elementor .pes-frame-blue {
+  --pes-frame-color: var(--pes-navy);
+  --pes-frame-shape: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+}
+.elementor .pes-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  clip-path: var(--pes-frame-shape);
+}
+
+/* --------------------------------------------------------------------------
+   Section title with circuit lines on both sides ("Our Process")
+   -------------------------------------------------------------------------- */
+.elementor .pes-title-circuit {
+  position: relative;
+  width: 100%;
+}
+.elementor .pes-title-circuit .elementor-heading-title {
+  font-family: var(--pes-font-head);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 700;
+  color: var(--pes-white);
+  text-align: center;
+}
+.elementor .pes-title-circuit::before,
+.elementor .pes-title-circuit::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: min(30%, 320px);
+  height: 60px;
+  transform: translateY(-30%);
+  background: var(--pes-circuit) no-repeat left top / contain;
+  pointer-events: none;
+}
+.elementor .pes-title-circuit::before { left: 0; }
+.elementor .pes-title-circuit::after  { right: 0; transform: translateY(-30%) scaleX(-1); }
+
+/* --------------------------------------------------------------------------
+   Process steps
+   pes-step         – the column (number on top, card below)
+   pes-step-num     – the big number heading
+   pes-step-card    – white card with cut corner + navy edge
+   -------------------------------------------------------------------------- */
+.elementor .pes-step-num .elementor-heading-title {
+  font-family: var(--pes-font-head);
+  font-size: 92px;
+  font-weight: 700;
+  line-height: 0.8;
+  color: var(--pes-white);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+.elementor .pes-step-num {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -26px;
+}
+.elementor .pes-step-card {
+  position: relative;
+  background: var(--pes-white);
+  box-shadow: 6px 6px 0 var(--pes-navy);
+  color: var(--pes-text-dark);
+}
+/* angled top-right corner: a triangle in the page colour with a navy edge */
+.elementor .pes-step-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -6px;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(to bottom left, var(--pes-bg) 50%, var(--pes-navy) 50%, var(--pes-navy) calc(50% + 4px), transparent calc(50% + 4px));
+  pointer-events: none;
+}
+.elementor .pes-step-card .elementor-widget-icon .elementor-icon {
+  color: var(--pes-navy);
+  font-size: 64px;
+}
+.elementor .pes-step-card .elementor-widget-icon .elementor-icon svg { fill: var(--pes-navy); }
+.elementor .pes-step-card .pes-body,
+.elementor .pes-step-card .pes-body p {
+  color: var(--pes-text-dark);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   CTA banner ("Schedule a consultation today")
+   -------------------------------------------------------------------------- */
+.elementor .pes-cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(46, 110, 255, 0.55), transparent 60%),
+    linear-gradient(100deg, #020c3a 0%, var(--pes-blue-deep) 45%, var(--pes-blue-bright) 100%);
+  color: var(--pes-white);
+}
+.elementor .pes-cta::after { /* lightning bolt */
+  content: "";
+  position: absolute;
+  right: 22%;
+  top: -10%;
+  width: 140px;
+  height: 130%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140' fill='none'%3E%3Cpath d='M62 2 18 78h30L32 138 84 52H54L70 2Z' stroke='%2385c8ff' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  filter: drop-shadow(0 0 10px #4fb4ff) drop-shadow(0 0 22px #2e7bff);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.elementor .pes-cta > .e-con-inner,
+.elementor .pes-cta > .elementor-element { position: relative; z-index: 1; }
+.elementor .pes-cta-icon.elementor-widget-icon .elementor-icon { color: var(--pes-white); font-size: 46px; }
+.elementor .pes-cta-icon.elementor-widget-icon .elementor-icon svg { fill: var(--pes-white); }
+.elementor .pes-cta-text {
+  border-left: 2px solid rgba(255, 255, 255, 0.6);
+  padding-left: 20px;
+}
+.elementor .pes-cta-title .elementor-heading-title {
+  font-family: var(--pes-font-head);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--pes-white);
+}
+.elementor .pes-cta-sub .elementor-heading-title {
+  font-family: var(--pes-font-body);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* --------------------------------------------------------------------------
+   Header (only if you build the header with the PES header block)
+   -------------------------------------------------------------------------- */
+.elementor .pes-header {
+  background: var(--pes-bg);
+  border-bottom: 2px solid var(--pes-orange);
+}
+.elementor .pes-header .menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.elementor .pes-header .menu > li { position: relative; }
+.elementor .pes-header .menu a {
+  font-family: var(--pes-font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--pes-white);
+  text-decoration: none;
+}
+.elementor .pes-header .menu a:hover { color: var(--pes-orange); }
+.elementor .pes-header .menu > .menu-item-has-children > a::after { content: " \25BE"; font-size: 0.8em; }
+.elementor .pes-header .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -14px;
+  z-index: 50;
+  min-width: 220px;
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  background: #111;
+  border-top: 2px solid var(--pes-orange);
+}
+.elementor .pes-header li:hover > .sub-menu,
+.elementor .pes-header li:focus-within > .sub-menu { display: block; }
+.elementor .pes-header .sub-menu a { display: block; padding: 8px 14px; font-weight: 500; }
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .elementor .pes-feature::before,
+  .elementor .pes-title-circuit::before,
+  .elementor .pes-title-circuit::after { display: none; }
+  .elementor .pes-step-num .elementor-heading-title { font-size: 72px; }
+  .elementor .pes-cta::after { right: -20px; opacity: 0.45; }
+  .elementor .pes-cta-text { border-left: 0; padding-left: 0; }
+  .elementor .pes-header .menu { display: none; } /* use a mobile menu / Nav Menu widget on phones */
+}
+</style></head><body><div class='elementor elementor-preview'><div class="elementor-element e-con e-con-boxed pes-header" style="padding:14px 24px 14px 24px"><div class="e-con-inner" style="flex-direction:row;align-items:center;justify-content:space-between;gap:24px 24px"><div class="elementor-element elementor-widget elementor-widget-image pes-logo"><div class="elementor-widget-container"><img src="img/logo.png" alt=""></div></div><div class="elementor-element elementor-widget elementor-widget-wp-widget-nav_menu pes-nav"><div class="elementor-widget-container"><ul class="menu"><li class="menu-item menu-item-has-children"><a href="#">Solution</a></li><li class="menu-item menu-item-has-children"><a href="#">Service O&amp;M</a></li><li class="menu-item menu-item-has-children"><a href="#">Projects</a></li><li class="menu-item menu-item-has-children"><a href="#">Company</a></li><li class="menu-item menu-item-has-children"><a href="#">Contact Us</a></li><li class="menu-item menu-item-has-children"><a href="#">Industry</a></li></ul></div></div><div class="elementor-element elementor-widget elementor-widget-button pes-btn-solid"><div class="elementor-widget-container"><a class="elementor-button" href="/contact/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Get A Quote</span></span></a></div></div></div></div><div class="elementor-element e-con e-con-boxed pes-section pes-hero" style="min-height:640px;padding:80px 24px 80px 24px;--pv-overlay:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.05) 80%);background-image:url(img/hero.jpg);background-size:cover;background-position:center"><div class="e-con-inner" style="flex-direction:column;align-items:flex-start;justify-content:center;gap:18px 18px"><div class="elementor-element elementor-widget elementor-widget-heading pes-kicker"><div class="elementor-widget-container"><p class="elementor-heading-title">Solar • Storage • EV • Electrical</p></div></div><div class="elementor-element elementor-widget elementor-widget-heading pes-h1"><div class="elementor-widget-container"><h1 class="elementor-heading-title">Control<br>Your Power</h1></div></div><div class="elementor-element elementor-widget elementor-widget-text-editor pes-lead"><div class="elementor-widget-container"><p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p></div></div><div class="elementor-element elementor-widget elementor-widget-button pes-btn"><div class="elementor-widget-container"><a class="elementor-button" href="/contact/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Get A Quote</span></span></a></div></div></div></div><div class="elementor-element e-con e-con-boxed pv-stack pes-section pes-feature" style="padding:110px 24px 110px 24px"><div class="e-con-inner pv-stack" style="flex-direction:row;align-items:center;justify-content:space-between;gap:48px 48px"><div class="elementor-element e-con e-con-full " style="flex-direction:column;justify-content:center;gap:16px 16px;width:48%"><div class="elementor-element elementor-widget elementor-widget-heading pes-h2"><div class="elementor-widget-container"><h2 class="elementor-heading-title">Commercial Solar</h2></div></div><div class="elementor-element elementor-widget elementor-widget-heading pes-subhead"><div class="elementor-widget-container"><p class="elementor-heading-title">Put your property to work.</p></div></div><div class="elementor-element elementor-widget elementor-widget-text-editor pes-body"><div class="elementor-widget-container"><p>Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs</p></div></div><div class="elementor-element elementor-widget elementor-widget-button pes-btn"><div class="elementor-widget-container"><a class="elementor-button" href="/commercial-solar/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Learn More →</span></span></a></div></div></div><div class="elementor-element e-con e-con-full " style="flex-direction:column;width:46%"><div class="elementor-element elementor-widget elementor-widget-image pes-frame"><div class="elementor-widget-container"><img src="img/frame-1.jpg" alt=""></div></div></div></div></div><div class="elementor-element e-con e-con-boxed pv-stack pes-section pes-feature pes-feature-reverse" style="padding:110px 24px 110px 24px"><div class="e-con-inner pv-stack" style="flex-direction:row;align-items:center;justify-content:space-between;gap:48px 48px"><div class="elementor-element e-con e-con-full " style="flex-direction:column;width:46%"><div class="elementor-element elementor-widget elementor-widget-image pes-frame pes-frame-blue"><div class="elementor-widget-container"><img src="img/frame-2.jpg" alt=""></div></div></div><div class="elementor-element e-con e-con-full " style="flex-direction:column;justify-content:center;gap:16px 16px;width:48%"><div class="elementor-element elementor-widget elementor-widget-heading pes-h2"><div class="elementor-widget-container"><h2 class="elementor-heading-title">Battery Energy Storage</h2></div></div><div class="elementor-element elementor-widget elementor-widget-heading pes-subhead"><div class="elementor-widget-container"><p class="elementor-heading-title">Put your property to work.</p></div></div><div class="elementor-element elementor-widget elementor-widget-text-editor pes-body"><div class="elementor-widget-container"><p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p></div></div><div class="elementor-element elementor-widget elementor-widget-button pes-btn"><div class="elementor-widget-container"><a class="elementor-button" href="/battery-energy-storage/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Learn More →</span></span></a></div></div></div></div></div><div class="elementor-element e-con e-con-boxed pv-stack pes-section pes-feature" style="padding:110px 24px 110px 24px"><div class="e-con-inner pv-stack" style="flex-direction:row;align-items:center;justify-content:space-between;gap:48px 48px"><div class="elementor-element e-con e-con-full " style="flex-direction:column;justify-content:center;gap:16px 16px;width:48%"><div class="elementor-element elementor-widget elementor-widget-heading pes-h2"><div class="elementor-widget-container"><h2 class="elementor-heading-title">Commercial Solar</h2></div></div><div class="elementor-element elementor-widget elementor-widget-heading pes-subhead"><div class="elementor-widget-container"><p class="elementor-heading-title">Put your property to work.</p></div></div><div class="elementor-element elementor-widget elementor-widget-text-editor pes-body"><div class="elementor-widget-container"><p>Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs</p></div></div><div class="elementor-element elementor-widget elementor-widget-button pes-btn"><div class="elementor-widget-container"><a class="elementor-button" href="/commercial-solar/"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Learn More →</span></span></a></div></div></div><div class="elementor-element e-con e-con-full " style="flex-direction:column;width:46%"><div class="elementor-element elementor-widget elementor-widget-image pes-frame"><div class="elementor-widget-container"><img src="img/frame-3.jpg" alt=""></div></div></div></div></div><div class="elementor-element e-con e-con-boxed pes-section pes-process" style="padding:60px 24px 120px 24px"><div class="e-con-inner" style="flex-direction:column;align-items:center;gap:48px 48px"><div class="elementor-element elementor-widget elementor-widget-heading pes-title-circuit"><div class="elementor-widget-container"><h2 class="elementor-heading-title">Our Process</h2></div></div><div class="elementor-element e-con e-con-full pv-stack " style="flex-direction:row;justify-content:space-between;gap:56px 32px"><div class="elementor-element e-con e-con-full pes-step" style="flex-direction:column;align-items:center;width:30%"><div class="elementor-element elementor-widget elementor-widget-heading pes-step-num"><div class="elementor-widget-container"><h3 class="elementor-heading-title">1</h3></div></div><div class="elementor-element e-con e-con-full pes-step-card" style="flex-direction:column;gap:20px 20px;padding:30px 24px 30px 24px"><div class="elementor-element elementor-widget elementor-widget-icon pes-step-icon"><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div></div></div></div><div class="elementor-element elementor-widget elementor-widget-text-editor pes-body"><div class="elementor-widget-container"><p>Integrated energy systems built for businesses, organization.</p></div></div></div></div><div class="elementor-element e-con e-con-full pes-step" style="flex-direction:column;align-items:center;width:30%"><div class="elementor-element elementor-widget elementor-widget-heading pes-step-num"><div class="elementor-widget-container"><h3 class="elementor-heading-title">2</h3></div></div><div class="elementor-element e-con e-con-full pes-step-card" style="flex-direction:column;gap:20px 20px;padding:30px 24px 30px 24px"><div class="elementor-element elementor-widget elementor-widget-icon pes-step-icon"><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div></div></div></div><div class="elementor-element elementor-widget elementor-widget-text-editor pes-body"><div class="elementor-widget-container"><p>Integrated energy systems built for businesses, organization.</p></div></div></div></div><div class="elementor-element e-con e-con-full pes-step" style="flex-direction:column;align-items:center;width:30%"><div class="elementor-element elementor-widget elementor-widget-heading pes-step-num"><div class="elementor-widget-container"><h3 class="elementor-heading-title">3</h3></div></div><div class="elementor-element e-con e-con-full pes-step-card" style="flex-direction:column;gap:20px 20px;padding:30px 24px 30px 24px"><div class="elementor-element elementor-widget elementor-widget-icon pes-step-icon"><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div></div></div></div><div class="elementor-element elementor-widget elementor-widget-text-editor pes-body"><div class="elementor-widget-container"><p>Integrated energy systems built for businesses, organization.</p></div></div></div></div></div></div></div><div class="elementor-element e-con e-con-boxed pv-stack pes-cta" style="padding:36px 24px 36px 24px"><div class="e-con-inner pv-stack" style="flex-direction:row;align-items:center;justify-content:space-between;gap:24px 24px"><div class="elementor-element e-con e-con-full " style="flex-direction:row;align-items:center;gap:20px 20px;width:75%"><div class="elementor-element elementor-widget elementor-widget-icon pes-cta-icon"><div class="elementor-widget-container"><div class="elementor-icon-wrapper"><div class="elementor-icon"><svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div></div></div></div><div class="elementor-element e-con e-con-full pes-cta-text" style="flex-direction:column;gap:4px 4px;width:100%"><div class="elementor-element elementor-widget elementor-widget-heading pes-cta-title"><div class="elementor-widget-container"><h2 class="elementor-heading-title">Schedule A Consultation Today</h2></div></div><div class="elementor-element elementor-widget elementor-widget-heading pes-cta-sub"><div class="elementor-widget-container"><p class="elementor-heading-title">Powering Progress. Building Confidence.</p></div></div></div></div><div class="elementor-element elementor-widget elementor-widget-button pes-btn-solid"><div class="elementor-widget-container"><a class="elementor-button" href="tel:+10000000000"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Call Now</span></span></a></div></div></div></div></div></body></html>

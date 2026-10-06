@@ -1,0 +1,79 @@
+{
+  "version": "0.4",
+  "title": "PES – Header",
+  "type": "container",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "ce90b56",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "flex_direction": "row",
+        "css_classes": "pes-header",
+        "flex_align_items": "center",
+        "flex_justify_content": "space-between",
+        "flex_gap": {
+          "column": "24",
+          "row": "24",
+          "isLinked": true,
+          "unit": "px",
+          "size": 24
+        },
+        "padding": {
+          "unit": "px",
+          "top": "14",
+          "right": "24",
+          "bottom": "14",
+          "left": "24",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "e41e963",
+          "elType": "widget",
+          "widgetType": "image",
+          "isInner": false,
+          "settings": {
+            "image_size": "full",
+            "_css_classes": "pes-logo"
+          },
+          "elements": []
+        },
+        {
+          "id": "91941e4",
+          "elType": "widget",
+          "widgetType": "wp-widget-nav_menu",
+          "isInner": false,
+          "settings": {
+            "wp": {
+              "title": "",
+              "nav_menu": ""
+            },
+            "_css_classes": "pes-nav"
+          },
+          "elements": []
+        },
+        {
+          "id": "c29fd89",
+          "elType": "widget",
+          "widgetType": "button",
+          "isInner": false,
+          "settings": {
+            "text": "Get A Quote",
+            "link": {
+              "url": "/contact/",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "_css_classes": "pes-btn-solid"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

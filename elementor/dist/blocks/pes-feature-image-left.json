@@ -1,0 +1,159 @@
+{
+  "version": "0.4",
+  "title": "PES – Feature Image Left",
+  "type": "container",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "690b852",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "flex_direction": "row",
+        "css_classes": "pes-section pes-feature pes-feature-reverse",
+        "flex_direction_mobile": "column",
+        "flex_align_items": "center",
+        "flex_justify_content": "space-between",
+        "flex_gap": {
+          "column": "48",
+          "row": "48",
+          "isLinked": true,
+          "unit": "px",
+          "size": 48
+        },
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "24",
+          "bottom": "110",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "20",
+          "bottom": "70",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "3a6c058",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 46,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            }
+          },
+          "elements": [
+            {
+              "id": "1da8245",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image_size": "full",
+                "_css_classes": "pes-frame pes-frame-blue"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "8706732",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 48,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_gap": {
+              "column": "16",
+              "row": "16",
+              "isLinked": true,
+              "unit": "px",
+              "size": 16
+            },
+            "flex_justify_content": "center"
+          },
+          "elements": [
+            {
+              "id": "9c4809d",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Battery Energy Storage",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "cac6003",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Put your property to work.",
+                "header_size": "p",
+                "_css_classes": "pes-subhead"
+              },
+              "elements": []
+            },
+            {
+              "id": "f21b93f",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "a36d6ed",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Learn More →",
+                "link": {
+                  "url": "/battery-energy-storage/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

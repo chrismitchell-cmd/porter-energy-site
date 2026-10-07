@@ -10,38 +10,77 @@
   },
   "content": [
     {
-      "id": "a7c9eb1",
-      "elType": "container",
+      "id": "3ddd741",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "column",
-        "css_classes": "pes-section pes-hero",
-        "flex_justify_content": "center",
-        "flex_align_items": "flex-start",
-        "flex_gap": {
-          "column": "18",
-          "row": "18",
-          "isLinked": true,
+        "layout": "full_width",
+        "gap": "no",
+        "content_width": {
           "unit": "px",
-          "size": 18
+          "size": 1140,
+          "sizes": []
         },
-        "min_height": {
+        "css_classes": "pes-styles",
+        "_title": "PES Styles – keep this section (hidden on the live site)"
+      },
+      "elements": [
+        {
+          "id": "8af1dfe",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "666f00c",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<style>\n/* ==========================================================================\n   Porter Energy Systems – Elementor styles\n   --------------------------------------------------------------------------\n   This CSS already ships inside the \"PES – Page Template\" (in the hidden\n   \"PES Styles\" section at the top of the page), so you don't need to paste\n   it anywhere for the page to look right.\n\n   Optional: to style the whole site from one place, paste this file into\n   Appearance > Customize > Additional CSS (or Elementor Pro > Site Settings >\n   Custom CSS) and then you can delete the \"PES Styles\" section from pages.\n\n   Every block is styled by a \"pes-\" class (Elementor: Advanced > CSS Classes).\n   Anything you change in a widget's own Style tab still wins over these.\n   ========================================================================== */\n\n@import url(\"https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600&display=swap\");\n\n:root {\n  --pes-bg: #1b1b1c;\n  --pes-bg-grid: rgba(255, 255, 255, 0.035);\n  --pes-orange: #e9792b;\n  --pes-orange-light: #f5a04a;\n  --pes-navy: #2c3f7c;\n  --pes-blue-deep: #071a6b;\n  --pes-blue-bright: #1f4fe0;\n  --pes-white: #ffffff;\n  --pes-text: #e9e9ea;\n  --pes-text-dark: #1d1d1f;\n  --pes-font-head: \"Saira\", \"Arial Narrow\", sans-serif;\n  --pes-font-body: \"Inter\", \"Helvetica Neue\", Arial, sans-serif;\n  --pes-cut: 22px; /* size of the angled corners on frames and cards */\n  --pes-circuit: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='60' viewBox='0 0 320 60' fill='none'%3E%3Cpath d='M0 8H118' stroke='%23e9792b' stroke-width='2'/%3E%3Ccircle cx='123' cy='8' r='5' fill='%23e9792b'/%3E%3Cpath d='M0 46H34L52 28H264' stroke='%23e9792b' stroke-width='2'/%3E%3Ccircle cx='270' cy='28' r='5' fill='%23e9792b'/%3E%3C/svg%3E\");\n}\n\n/* --------------------------------------------------------------------------\n   The hidden section that carries these styles inside the page template.\n   Hidden on the live site; shown as a slim labelled bar inside the editor.\n   -------------------------------------------------------------------------- */\n.elementor .pes-styles { display: none; }\n.elementor-editor-active .elementor .pes-styles {\n  display: block;\n  padding: 6px 12px;\n  background: #fff3cd;\n  border: 1px dashed #b88600;\n}\n.elementor-editor-active .elementor .pes-styles::before {\n  content: \"PES Styles – keep this section. It is hidden on the live site.\";\n  font: 600 12px/1.4 var(--pes-font-body);\n  color: #6b4e00;\n}\n.elementor-editor-active .elementor .pes-styles .elementor-widget-html { min-height: 0; }\n\n/* --------------------------------------------------------------------------\n   Sections – dark grid background\n   -------------------------------------------------------------------------- */\n.elementor .pes-section {\n  position: relative;\n  background-color: var(--pes-bg);\n  background-image:\n    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px);\n  background-size: 96px 96px;\n  color: var(--pes-text);\n  font-family: var(--pes-font-body);\n}\n.elementor .pes-section a.elementor-button,\n.elementor .pes-cta a.elementor-button,\n.elementor .pes-header a.elementor-button { text-decoration: none; }\n.elementor .pes-align-right .elementor-button-wrapper { text-align: right; }\n\n/* --------------------------------------------------------------------------\n   Shared type\n   -------------------------------------------------------------------------- */\n.elementor .pes-kicker .elementor-heading-title {\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n\n.elementor .pes-h1 .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: clamp(48px, 7vw, 92px);\n  font-weight: 700;\n  line-height: 0.95;\n  color: var(--pes-white);\n}\n\n.elementor .pes-h2 .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: clamp(32px, 4vw, 46px);\n  font-weight: 800;\n  line-height: 1.05;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n\n.elementor .pes-subhead .elementor-heading-title {\n  font-family: var(--pes-font-body);\n  font-size: 19px;\n  font-weight: 600;\n  color: var(--pes-white);\n}\n\n.elementor .pes-lead,\n.elementor .pes-body {\n  font-family: var(--pes-font-body);\n  color: var(--pes-text);\n}\n.elementor .pes-lead { font-size: 18px; line-height: 1.5; max-width: 520px; }\n.elementor .pes-body { font-size: 16px; line-height: 1.75; max-width: 440px; }\n.elementor .pes-lead p:last-child,\n.elementor .pes-body p:last-child { margin-bottom: 0; }\n\n/* --------------------------------------------------------------------------\n   Buttons\n   pes-btn         – dark button, orange outline, italic (\"Learn More →\")\n   pes-btn-solid   – orange gradient fill (\"Get A Quote\", \"Call Now\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn-solid .elementor-button {\n  font-family: var(--pes-font-head);\n  font-weight: 600;\n  line-height: 1;\n  border-radius: 6px;\n  transition: background-color 0.2s, color 0.2s, transform 0.2s;\n}\n\n.elementor .pes-btn .elementor-button {\n  padding: 10px 16px;\n  font-size: 15px;\n  font-style: italic;\n  color: var(--pes-white);\n  background: rgba(0, 0, 0, 0.55);\n  border: 2px solid var(--pes-orange);\n}\n.elementor .pes-btn .elementor-button:hover {\n  background: var(--pes-orange);\n  color: var(--pes-white);\n}\n\n.elementor .pes-btn-solid .elementor-button {\n  padding: 14px 26px;\n  font-size: 17px;\n  color: var(--pes-white);\n  background: linear-gradient(180deg, var(--pes-orange-light), var(--pes-orange));\n  border: 0;\n  box-shadow: 0 4px 14px rgba(233, 121, 43, 0.35);\n}\n.elementor .pes-btn-solid .elementor-button:hover {\n  transform: translateY(-1px);\n  color: var(--pes-white);\n}\n\n/* --------------------------------------------------------------------------\n   Hero\n   -------------------------------------------------------------------------- */\n.elementor .pes-hero {\n  border-bottom: 3px solid var(--pes-orange);\n}\n\n/* --------------------------------------------------------------------------\n   Feature row (text + framed image)\n   pes-feature           – circuit lines on the LEFT  (text left, image right)\n   pes-feature-reverse   – circuit lines on the RIGHT (image left, text right)\n   -------------------------------------------------------------------------- */\n.elementor .pes-feature::before {\n  content: \"\";\n  position: absolute;\n  top: 40px;\n  left: 0;\n  width: 320px;\n  height: 60px;\n  background: var(--pes-circuit) no-repeat left top / contain;\n  pointer-events: none;\n}\n.elementor .pes-feature-reverse::before {\n  left: auto;\n  right: 0;\n  transform: scaleX(-1);\n}\n\n/* Framed image with two angled corners.\n   pes-frame        – orange frame (cuts top-right / bottom-left)\n   pes-frame-blue   – navy frame   (cuts top-left / bottom-right)        */\n.elementor .pes-frame {\n  --pes-frame-color: var(--pes-orange);\n  --pes-frame-shape: polygon(0 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut), 100% 100%, var(--pes-cut) 100%, 0 calc(100% - var(--pes-cut)));\n  padding: 5px;\n  background: var(--pes-frame-color);\n  clip-path: var(--pes-frame-shape);\n  filter: drop-shadow(0 0 18px rgba(233, 121, 43, 0.25));\n}\n.elementor .pes-frame-blue {\n  --pes-frame-color: var(--pes-navy);\n  --pes-frame-shape: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));\n}\n.elementor .pes-frame img {\n  display: block;\n  width: 100%;\n  aspect-ratio: 4 / 3;\n  object-fit: cover;\n  clip-path: var(--pes-frame-shape);\n}\n\n/* --------------------------------------------------------------------------\n   Section title with circuit lines on both sides (\"Our Process\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-title-circuit {\n  position: relative;\n  width: 100%;\n}\n.elementor .pes-title-circuit .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: clamp(36px, 5vw, 56px);\n  font-weight: 700;\n  color: var(--pes-white);\n  text-align: center;\n}\n.elementor .pes-title-circuit::before,\n.elementor .pes-title-circuit::after {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  width: min(30%, 320px);\n  height: 60px;\n  transform: translateY(-30%);\n  background: var(--pes-circuit) no-repeat left top / contain;\n  pointer-events: none;\n}\n.elementor .pes-title-circuit::before { left: 0; }\n.elementor .pes-title-circuit::after  { right: 0; transform: translateY(-30%) scaleX(-1); }\n\n/* --------------------------------------------------------------------------\n   Process steps\n   pes-step         – the column (number on top, card below)\n   pes-step-num     – the big number heading\n   pes-step-card    – white card with cut corner + navy edge\n   -------------------------------------------------------------------------- */\n.elementor .pes-step-num .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: 92px;\n  font-weight: 700;\n  line-height: 0.8;\n  color: var(--pes-white);\n  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);\n}\n.elementor .pes-step-num.elementor-widget {\n  position: relative;\n  z-index: 2;\n  margin-bottom: -26px;\n  margin-block-end: -26px;\n  text-align: center;\n}\n.elementor .pes-step-card.elementor-widget {\n  position: relative;\n  padding: 30px 24px;\n  background: var(--pes-white);\n  box-shadow: 6px 6px 0 var(--pes-navy);\n}\n/* angled top-right corner: a triangle in the page colour with a navy edge */\n.elementor .pes-step-card.elementor-widget::before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  right: -6px;\n  width: 36px;\n  height: 36px;\n  background: linear-gradient(to bottom left, var(--pes-bg) 50%, var(--pes-navy) 50%, var(--pes-navy) calc(50% + 4px), transparent calc(50% + 4px));\n  pointer-events: none;\n}\n.elementor .pes-step-card .elementor-icon-box-icon { margin-bottom: 18px; }\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon {\n  font-size: 64px;\n  color: var(--pes-navy);\n  fill: var(--pes-navy);\n}\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-navy); }\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon-box-description {\n  margin: 0;\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  line-height: 1.6;\n  text-align: left;\n  color: var(--pes-text-dark);\n}\n\n/* --------------------------------------------------------------------------\n   CTA banner (\"Schedule a consultation today\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-cta {\n  position: relative;\n  overflow: hidden;\n  background:\n    radial-gradient(ellipse at 70% 50%, rgba(46, 110, 255, 0.55), transparent 60%),\n    linear-gradient(100deg, #020c3a 0%, var(--pes-blue-deep) 45%, var(--pes-blue-bright) 100%);\n  color: var(--pes-white);\n}\n.elementor .pes-cta::after { /* lightning bolt */\n  content: \"\";\n  position: absolute;\n  right: 22%;\n  top: -10%;\n  width: 140px;\n  height: 130%;\n  background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140' fill='none'%3E%3Cpath d='M62 2 18 78h30L32 138 84 52H54L70 2Z' stroke='%2385c8ff' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E\") no-repeat center / contain;\n  filter: drop-shadow(0 0 10px #4fb4ff) drop-shadow(0 0 22px #2e7bff);\n  opacity: 0.9;\n  pointer-events: none;\n}\n.elementor .pes-cta > .elementor-container { position: relative; z-index: 1; }\n.elementor .pes-cta-box .elementor-icon-box-wrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 22px;\n  text-align: left;\n}\n.elementor .pes-cta-box .elementor-icon-box-icon { margin: 0; flex: none; }\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon {\n  font-size: 46px;\n  color: var(--pes-white);\n  fill: var(--pes-white);\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-white); }\n.elementor .pes-cta-box .elementor-icon-box-content {\n  border-left: 2px solid rgba(255, 255, 255, 0.6);\n  padding-left: 20px;\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon-box-title {\n  margin: 0 0 4px;\n  font-family: var(--pes-font-head);\n  font-size: clamp(22px, 2.6vw, 30px);\n  font-weight: 700;\n  line-height: 1.1;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon-box-description {\n  margin: 0;\n  font-family: var(--pes-font-body);\n  font-size: 17px;\n  letter-spacing: 0.02em;\n  color: rgba(255, 255, 255, 0.9);\n}\n\n/* --------------------------------------------------------------------------\n   Header (only if you build the header with the PES header block)\n   -------------------------------------------------------------------------- */\n.elementor .pes-header {\n  background: var(--pes-bg);\n  border-bottom: 2px solid var(--pes-orange);\n}\n.elementor .pes-header .menu {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 4px 28px;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.elementor .pes-header .menu > li { position: relative; }\n.elementor .pes-header .menu a {\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  font-weight: 600;\n  color: var(--pes-white);\n  text-decoration: none;\n}\n.elementor .pes-header .menu a:hover { color: var(--pes-orange); }\n.elementor .pes-header .menu > .menu-item-has-children > a::after { content: \" \\25BE\"; font-size: 0.8em; }\n.elementor .pes-header .sub-menu {\n  display: none;\n  position: absolute;\n  top: 100%;\n  left: -14px;\n  z-index: 50;\n  min-width: 220px;\n  margin: 0;\n  padding: 10px 0;\n  list-style: none;\n  background: #111;\n  border-top: 2px solid var(--pes-orange);\n}\n.elementor .pes-header li:hover > .sub-menu,\n.elementor .pes-header li:focus-within > .sub-menu { display: block; }\n.elementor .pes-header .sub-menu a { display: block; padding: 8px 14px; font-weight: 500; }\n\n/* --------------------------------------------------------------------------\n   Mobile\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  .elementor .pes-feature::before,\n  .elementor .pes-title-circuit::before,\n  .elementor .pes-title-circuit::after { display: none; }\n  .elementor .pes-step-num .elementor-heading-title { font-size: 72px; }\n  .elementor .pes-cta::after { right: -20px; opacity: 0.45; }\n  .elementor .pes-cta-box .elementor-icon-box-content { border-left: 0; padding-left: 0; }\n  .elementor .pes-align-right .elementor-button-wrapper { text-align: left; }\n  .elementor .pes-header .menu { display: none; } /* use a mobile menu / Nav Menu widget on phones */\n}\n</style>",
+                "_css_classes": "pes-styles-widget"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13207ef",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-hero",
+        "_title": "Hero",
+        "height": "min-height",
+        "custom_height": {
           "unit": "px",
           "size": 640,
           "sizes": []
         },
-        "min_height_mobile": {
+        "custom_height_mobile": {
           "unit": "px",
           "size": 520,
           "sizes": []
         },
+        "column_position": "middle",
         "padding": {
           "unit": "px",
           "top": "80",
-          "right": "24",
+          "right": "0",
           "bottom": "80",
-          "left": "24",
+          "left": "0",
           "isLinked": false
         },
         "background_overlay_background": "gradient",
@@ -65,124 +104,116 @@
       },
       "elements": [
         {
-          "id": "666f00c",
-          "elType": "widget",
-          "widgetType": "heading",
+          "id": "2f50cd9",
+          "elType": "column",
           "isInner": false,
           "settings": {
-            "title": "Solar • Storage • EV • Electrical",
-            "header_size": "p",
-            "_css_classes": "pes-kicker"
+            "_column_size": 100,
+            "_inline_size": 100
           },
-          "elements": []
-        },
-        {
-          "id": "8af1dfe",
-          "elType": "widget",
-          "widgetType": "heading",
-          "isInner": false,
-          "settings": {
-            "title": "Control<br>Your Power",
-            "header_size": "h1",
-            "_css_classes": "pes-h1"
-          },
-          "elements": []
-        },
-        {
-          "id": "3ddd741",
-          "elType": "widget",
-          "widgetType": "text-editor",
-          "isInner": false,
-          "settings": {
-            "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
-            "_css_classes": "pes-lead"
-          },
-          "elements": []
-        },
-        {
-          "id": "0677bb8",
-          "elType": "widget",
-          "widgetType": "button",
-          "isInner": false,
-          "settings": {
-            "text": "Get A Quote",
-            "link": {
-              "url": "/contact/",
-              "is_external": "",
-              "nofollow": "",
-              "custom_attributes": ""
+          "elements": [
+            {
+              "id": "0677bb8",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Solar • Storage • EV • Electrical",
+                "header_size": "p",
+                "_css_classes": "pes-kicker"
+              },
+              "elements": []
             },
-            "_css_classes": "pes-btn"
-          },
-          "elements": []
+            {
+              "id": "a7c9eb1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Control<br>Your Power",
+                "header_size": "h1",
+                "_css_classes": "pes-h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "b5bd372",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
+                "_css_classes": "pes-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "fb72d90",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Get A Quote",
+                "link": {
+                  "url": "/contact/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn"
+              },
+              "elements": []
+            }
+          ]
         }
       ]
     },
     {
-      "id": "4d3fad1",
-      "elType": "container",
+      "id": "867eaa1",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "row",
-        "css_classes": "pes-section pes-feature",
-        "flex_direction_mobile": "column",
-        "flex_align_items": "center",
-        "flex_justify_content": "space-between",
-        "flex_gap": {
-          "column": "48",
-          "row": "48",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
           "unit": "px",
-          "size": 48
+          "size": 1140,
+          "sizes": []
         },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Feature – Commercial Solar",
+        "structure": "20",
+        "column_position": "middle",
         "padding": {
           "unit": "px",
           "top": "110",
-          "right": "24",
+          "right": "0",
           "bottom": "110",
-          "left": "24",
+          "left": "0",
           "isLinked": false
         },
         "padding_mobile": {
           "unit": "px",
           "top": "70",
-          "right": "20",
+          "right": "0",
           "bottom": "70",
-          "left": "20",
+          "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
-          "id": "f18fc3d",
-          "elType": "container",
-          "isInner": true,
+          "id": "f8e4fde",
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "width": {
-              "unit": "%",
-              "size": 48,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            },
-            "flex_gap": {
-              "column": "16",
-              "row": "16",
-              "isLinked": true,
-              "unit": "px",
-              "size": 16
-            },
-            "flex_justify_content": "center"
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
           },
           "elements": [
             {
-              "id": "b5bd372",
+              "id": "f18fc3d",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -194,7 +225,7 @@
               "elements": []
             },
             {
-              "id": "fb72d90",
+              "id": "f703df4",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -206,7 +237,7 @@
               "elements": []
             },
             {
-              "id": "2f50cd9",
+              "id": "53e8dca",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -217,7 +248,7 @@
               "elements": []
             },
             {
-              "id": "13207ef",
+              "id": "4d3fad1",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -236,26 +267,17 @@
           ]
         },
         {
-          "id": "53e8dca",
-          "elType": "container",
-          "isInner": true,
+          "id": "b2d662f",
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "width": {
-              "unit": "%",
-              "size": 46,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            }
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
           },
           "elements": [
             {
-              "id": "f703df4",
+              "id": "afa2bca",
               "elType": "widget",
               "widgetType": "image",
               "isInner": false,
@@ -270,62 +292,51 @@
       ]
     },
     {
-      "id": "8d4fdaf",
-      "elType": "container",
+      "id": "c7eb37a",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "row",
-        "css_classes": "pes-section pes-feature pes-feature-reverse",
-        "flex_direction_mobile": "column",
-        "flex_align_items": "center",
-        "flex_justify_content": "space-between",
-        "flex_gap": {
-          "column": "48",
-          "row": "48",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
           "unit": "px",
-          "size": 48
+          "size": 1140,
+          "sizes": []
         },
+        "css_classes": "pes-section pes-feature pes-feature-reverse",
+        "_title": "Feature – Battery Energy Storage",
+        "structure": "20",
+        "column_position": "middle",
         "padding": {
           "unit": "px",
           "top": "110",
-          "right": "24",
+          "right": "0",
           "bottom": "110",
-          "left": "24",
+          "left": "0",
           "isLinked": false
         },
         "padding_mobile": {
           "unit": "px",
           "top": "70",
-          "right": "20",
+          "right": "0",
           "bottom": "70",
-          "left": "20",
+          "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
-          "id": "b9c1033",
-          "elType": "container",
-          "isInner": true,
+          "id": "d48e5f3",
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "width": {
-              "unit": "%",
-              "size": 46,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            }
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
           },
           "elements": [
             {
-              "id": "5d38654",
+              "id": "df2b76e",
               "elType": "widget",
               "widgetType": "image",
               "isInner": false,
@@ -338,34 +349,17 @@
           ]
         },
         {
-          "id": "998192e",
-          "elType": "container",
-          "isInner": true,
+          "id": "d6b3d66",
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "width": {
-              "unit": "%",
-              "size": 48,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            },
-            "flex_gap": {
-              "column": "16",
-              "row": "16",
-              "isLinked": true,
-              "unit": "px",
-              "size": 16
-            },
-            "flex_justify_content": "center"
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
           },
           "elements": [
             {
-              "id": "f8e4fde",
+              "id": "998192e",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -377,7 +371,7 @@
               "elements": []
             },
             {
-              "id": "afa2bca",
+              "id": "5d38654",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -389,7 +383,7 @@
               "elements": []
             },
             {
-              "id": "b2d662f",
+              "id": "b9c1033",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -400,7 +394,7 @@
               "elements": []
             },
             {
-              "id": "867eaa1",
+              "id": "8d4fdaf",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -421,70 +415,51 @@
       ]
     },
     {
-      "id": "6a2253b",
-      "elType": "container",
+      "id": "7765935",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "row",
-        "css_classes": "pes-section pes-feature",
-        "flex_direction_mobile": "column",
-        "flex_align_items": "center",
-        "flex_justify_content": "space-between",
-        "flex_gap": {
-          "column": "48",
-          "row": "48",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
           "unit": "px",
-          "size": 48
+          "size": 1140,
+          "sizes": []
         },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Feature – Commercial Solar",
+        "structure": "20",
+        "column_position": "middle",
         "padding": {
           "unit": "px",
           "top": "110",
-          "right": "24",
+          "right": "0",
           "bottom": "110",
-          "left": "24",
+          "left": "0",
           "isLinked": false
         },
         "padding_mobile": {
           "unit": "px",
           "top": "70",
-          "right": "20",
+          "right": "0",
           "bottom": "70",
-          "left": "20",
+          "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
-          "id": "6311dfe",
-          "elType": "container",
-          "isInner": true,
+          "id": "4bdd972",
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "width": {
-              "unit": "%",
-              "size": 48,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            },
-            "flex_gap": {
-              "column": "16",
-              "row": "16",
-              "isLinked": true,
-              "unit": "px",
-              "size": 16
-            },
-            "flex_justify_content": "center"
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
           },
           "elements": [
             {
-              "id": "d6b3d66",
+              "id": "6311dfe",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -496,7 +471,7 @@
               "elements": []
             },
             {
-              "id": "df2b76e",
+              "id": "1b14de2",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -508,7 +483,7 @@
               "elements": []
             },
             {
-              "id": "d48e5f3",
+              "id": "329e32d",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -519,7 +494,7 @@
               "elements": []
             },
             {
-              "id": "c7eb37a",
+              "id": "6a2253b",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -538,26 +513,17 @@
           ]
         },
         {
-          "id": "329e32d",
-          "elType": "container",
-          "isInner": true,
+          "id": "9ceece6",
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "width": {
-              "unit": "%",
-              "size": 46,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            }
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
           },
           "elements": [
             {
-              "id": "1b14de2",
+              "id": "1ad8e69",
               "elType": "widget",
               "widgetType": "image",
               "isInner": false,
@@ -572,318 +538,193 @@
       ]
     },
     {
-      "id": "a1a10e9",
-      "elType": "container",
+      "id": "1838a52",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "column",
-        "css_classes": "pes-section pes-process",
-        "flex_align_items": "center",
-        "flex_gap": {
-          "column": "48",
-          "row": "48",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
           "unit": "px",
-          "size": 48
+          "size": 1140,
+          "sizes": []
         },
+        "css_classes": "pes-section pes-process",
+        "_title": "Our Process",
         "padding": {
           "unit": "px",
           "top": "60",
-          "right": "24",
+          "right": "0",
           "bottom": "120",
-          "left": "24",
+          "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
-          "id": "1838a52",
-          "elType": "widget",
-          "widgetType": "heading",
+          "id": "eb2da79",
+          "elType": "column",
           "isInner": false,
           "settings": {
-            "title": "Our Process",
-            "header_size": "h2",
-            "_css_classes": "pes-title-circuit"
-          },
-          "elements": []
-        },
-        {
-          "id": "eb2da79",
-          "elType": "container",
-          "isInner": true,
-          "settings": {
-            "content_width": "full",
-            "flex_direction": "row",
-            "flex_direction_mobile": "column",
-            "flex_justify_content": "space-between",
-            "flex_gap": {
-              "column": "32",
-              "row": "56",
-              "isLinked": false,
-              "unit": "px",
-              "size": 32
-            }
+            "_column_size": 100,
+            "_inline_size": 100
           },
           "elements": [
             {
-              "id": "f94c672",
-              "elType": "container",
+              "id": "865e923",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Our Process",
+                "header_size": "h2",
+                "_css_classes": "pes-title-circuit"
+              },
+              "elements": []
+            },
+            {
+              "id": "9242cfb",
+              "elType": "section",
               "isInner": true,
               "settings": {
-                "content_width": "full",
-                "flex_direction": "column",
-                "css_classes": "pes-step",
-                "width": {
-                  "unit": "%",
-                  "size": 30,
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
                   "sizes": []
                 },
-                "width_mobile": {
-                  "unit": "%",
-                  "size": 100,
-                  "sizes": []
-                },
-                "flex_align_items": "center"
+                "css_classes": "pes-steps",
+                "structure": "30"
               },
               "elements": [
                 {
-                  "id": "4bdd972",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "1",
-                    "header_size": "h3",
-                    "_css_classes": "pes-step-num"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "7765935",
-                  "elType": "container",
+                  "id": "e697812",
+                  "elType": "column",
                   "isInner": true,
                   "settings": {
-                    "content_width": "full",
-                    "flex_direction": "column",
-                    "css_classes": "pes-step-card",
-                    "flex_gap": {
-                      "column": "20",
-                      "row": "20",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 20
-                    },
-                    "padding": {
-                      "unit": "px",
-                      "top": "30",
-                      "right": "24",
-                      "bottom": "30",
-                      "left": "24",
-                      "isLinked": false
-                    }
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "1ad8e69",
+                      "id": "f94c672",
                       "elType": "widget",
-                      "widgetType": "icon",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "1",
+                        "header_size": "h3",
+                        "_css_classes": "pes-step-num"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "0d7b177",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
                           "value": "fas fa-solar-panel",
                           "library": "fa-solid"
                         },
-                        "align": "center",
-                        "_css_classes": "pes-step-icon"
-                      },
-                      "elements": []
-                    },
-                    {
-                      "id": "9ceece6",
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "isInner": false,
-                      "settings": {
-                        "editor": "<p>Integrated energy systems built for businesses, organization.</p>",
-                        "_css_classes": "pes-body"
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "",
+                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-step-card"
                       },
                       "elements": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "id": "18b2589",
-              "elType": "container",
-              "isInner": true,
-              "settings": {
-                "content_width": "full",
-                "flex_direction": "column",
-                "css_classes": "pes-step",
-                "width": {
-                  "unit": "%",
-                  "size": 30,
-                  "sizes": []
-                },
-                "width_mobile": {
-                  "unit": "%",
-                  "size": 100,
-                  "sizes": []
-                },
-                "flex_align_items": "center"
-              },
-              "elements": [
-                {
-                  "id": "0d7b177",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "2",
-                    "header_size": "h3",
-                    "_css_classes": "pes-step-num"
-                  },
-                  "elements": []
                 },
                 {
-                  "id": "1ef9a39",
-                  "elType": "container",
+                  "id": "18b2589",
+                  "elType": "column",
                   "isInner": true,
                   "settings": {
-                    "content_width": "full",
-                    "flex_direction": "column",
-                    "css_classes": "pes-step-card",
-                    "flex_gap": {
-                      "column": "20",
-                      "row": "20",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 20
-                    },
-                    "padding": {
-                      "unit": "px",
-                      "top": "30",
-                      "right": "24",
-                      "bottom": "30",
-                      "left": "24",
-                      "isLinked": false
-                    }
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "e697812",
+                      "id": "41ebdf6",
                       "elType": "widget",
-                      "widgetType": "icon",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "2",
+                        "header_size": "h3",
+                        "_css_classes": "pes-step-num"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "1ef9a39",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
                           "value": "fas fa-bolt",
                           "library": "fa-solid"
                         },
-                        "align": "center",
-                        "_css_classes": "pes-step-icon"
-                      },
-                      "elements": []
-                    },
-                    {
-                      "id": "41ebdf6",
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "isInner": false,
-                      "settings": {
-                        "editor": "<p>Integrated energy systems built for businesses, organization.</p>",
-                        "_css_classes": "pes-body"
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "",
+                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-step-card"
                       },
                       "elements": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "id": "865e923",
-              "elType": "container",
-              "isInner": true,
-              "settings": {
-                "content_width": "full",
-                "flex_direction": "column",
-                "css_classes": "pes-step",
-                "width": {
-                  "unit": "%",
-                  "size": 30,
-                  "sizes": []
-                },
-                "width_mobile": {
-                  "unit": "%",
-                  "size": 100,
-                  "sizes": []
-                },
-                "flex_align_items": "center"
-              },
-              "elements": [
-                {
-                  "id": "b1978e6",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "3",
-                    "header_size": "h3",
-                    "_css_classes": "pes-step-num"
-                  },
-                  "elements": []
                 },
                 {
-                  "id": "9242cfb",
-                  "elType": "container",
+                  "id": "4c2aa35",
+                  "elType": "column",
                   "isInner": true,
                   "settings": {
-                    "content_width": "full",
-                    "flex_direction": "column",
-                    "css_classes": "pes-step-card",
-                    "flex_gap": {
-                      "column": "20",
-                      "row": "20",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 20
-                    },
-                    "padding": {
-                      "unit": "px",
-                      "top": "30",
-                      "right": "24",
-                      "bottom": "30",
-                      "left": "24",
-                      "isLinked": false
-                    }
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-step"
                   },
                   "elements": [
                     {
+                      "id": "b1978e6",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "3",
+                        "header_size": "h3",
+                        "_css_classes": "pes-step-num"
+                      },
+                      "elements": []
+                    },
+                    {
                       "id": "c4ed8fc",
                       "elType": "widget",
-                      "widgetType": "icon",
+                      "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
                           "value": "fas fa-charging-station",
                           "library": "fa-solid"
                         },
-                        "align": "center",
-                        "_css_classes": "pes-step-icon"
-                      },
-                      "elements": []
-                    },
-                    {
-                      "id": "4c2aa35",
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "isInner": false,
-                      "settings": {
-                        "editor": "<p>Integrated energy systems built for businesses, organization.</p>",
-                        "_css_classes": "pes-body"
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "",
+                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-step-card"
                       },
                       "elements": []
                     }
@@ -896,148 +737,91 @@
       ]
     },
     {
-      "id": "c4597b6",
-      "elType": "container",
+      "id": "a2c2b18",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "row",
-        "css_classes": "pes-cta",
-        "flex_direction_mobile": "column",
-        "flex_align_items": "center",
-        "flex_align_items_mobile": "flex-start",
-        "flex_justify_content": "space-between",
-        "flex_gap": {
-          "column": "24",
-          "row": "24",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
           "unit": "px",
-          "size": 24
+          "size": 1140,
+          "sizes": []
         },
+        "css_classes": "pes-cta",
+        "_title": "CTA – Schedule a consultation",
+        "structure": "20",
+        "column_position": "middle",
         "padding": {
           "unit": "px",
-          "top": "36",
-          "right": "24",
-          "bottom": "36",
-          "left": "24",
+          "top": "30",
+          "right": "0",
+          "bottom": "30",
+          "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
-          "id": "7464bf2",
-          "elType": "container",
-          "isInner": true,
+          "id": "8813ad8",
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "row",
-            "width": {
-              "unit": "%",
-              "size": 75,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            },
-            "flex_align_items": "center",
-            "flex_gap": {
-              "column": "20",
-              "row": "20",
-              "isLinked": true,
-              "unit": "px",
-              "size": 20
-            },
-            "flex_wrap": "nowrap"
+            "_column_size": 50,
+            "_inline_size": 70,
+            "content_position": "center"
           },
           "elements": [
             {
-              "id": "8813ad8",
+              "id": "a1a10e9",
               "elType": "widget",
-              "widgetType": "icon",
+              "widgetType": "icon-box",
               "isInner": false,
               "settings": {
                 "selected_icon": {
                   "value": "far fa-calendar-alt",
                   "library": "fa-regular"
                 },
-                "align": "center",
-                "_css_classes": "pes-cta-icon"
+                "view": "default",
+                "position": "left",
+                "title_text": "Schedule A Consultation Today",
+                "description_text": "Powering Progress. Building Confidence.",
+                "title_size": "h2",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-cta-box"
               },
               "elements": []
-            },
-            {
-              "id": "a2c2b18",
-              "elType": "container",
-              "isInner": true,
-              "settings": {
-                "content_width": "full",
-                "flex_direction": "column",
-                "css_classes": "pes-cta-text",
-                "width": {
-                  "unit": "%",
-                  "size": 100,
-                  "sizes": []
-                },
-                "width_mobile": {
-                  "unit": "%",
-                  "size": 100,
-                  "sizes": []
-                },
-                "flex_gap": {
-                  "column": "4",
-                  "row": "4",
-                  "isLinked": true,
-                  "unit": "px",
-                  "size": 4
-                }
-              },
-              "elements": [
-                {
-                  "id": "767d910",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "Schedule A Consultation Today",
-                    "header_size": "h2",
-                    "_css_classes": "pes-cta-title"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "939b109",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "Powering Progress. Building Confidence.",
-                    "header_size": "p",
-                    "_css_classes": "pes-cta-sub"
-                  },
-                  "elements": []
-                }
-              ]
             }
           ]
         },
         {
-          "id": "d6ecf26",
-          "elType": "widget",
-          "widgetType": "button",
+          "id": "939b109",
+          "elType": "column",
           "isInner": false,
           "settings": {
-            "text": "Call Now",
-            "link": {
-              "url": "tel:+10000000000",
-              "is_external": "",
-              "nofollow": "",
-              "custom_attributes": ""
-            },
-            "_css_classes": "pes-btn-solid"
+            "_column_size": 50,
+            "_inline_size": 30,
+            "content_position": "center"
           },
-          "elements": []
+          "elements": [
+            {
+              "id": "767d910",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Call Now",
+                "link": {
+                  "url": "tel:+10000000000",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-right"
+              },
+              "elements": []
+            }
+          ]
         }
       ]
     }

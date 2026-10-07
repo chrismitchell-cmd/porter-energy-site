@@ -1,70 +1,51 @@
 {
   "version": "0.4",
   "title": "PES – Feature Image Right",
-  "type": "container",
+  "type": "section",
   "page_settings": [],
   "content": [
     {
       "id": "1c46ae4",
-      "elType": "container",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "row",
-        "css_classes": "pes-section pes-feature",
-        "flex_direction_mobile": "column",
-        "flex_align_items": "center",
-        "flex_justify_content": "space-between",
-        "flex_gap": {
-          "column": "48",
-          "row": "48",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
           "unit": "px",
-          "size": 48
+          "size": 1140,
+          "sizes": []
         },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Feature – Commercial Solar",
+        "structure": "20",
+        "column_position": "middle",
         "padding": {
           "unit": "px",
           "top": "110",
-          "right": "24",
+          "right": "0",
           "bottom": "110",
-          "left": "24",
+          "left": "0",
           "isLinked": false
         },
         "padding_mobile": {
           "unit": "px",
           "top": "70",
-          "right": "20",
+          "right": "0",
           "bottom": "70",
-          "left": "20",
+          "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
           "id": "b02243a",
-          "elType": "container",
-          "isInner": true,
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "width": {
-              "unit": "%",
-              "size": 48,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            },
-            "flex_gap": {
-              "column": "16",
-              "row": "16",
-              "isLinked": true,
-              "unit": "px",
-              "size": 16
-            },
-            "flex_justify_content": "center"
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
           },
           "elements": [
             {
@@ -123,21 +104,12 @@
         },
         {
           "id": "065e544",
-          "elType": "container",
-          "isInner": true,
+          "elType": "column",
+          "isInner": false,
           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "width": {
-              "unit": "%",
-              "size": 46,
-              "sizes": []
-            },
-            "width_mobile": {
-              "unit": "%",
-              "size": 100,
-              "sizes": []
-            }
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
           },
           "elements": [
             {

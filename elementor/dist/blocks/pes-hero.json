@@ -1,42 +1,41 @@
 {
   "version": "0.4",
   "title": "PES – Hero",
-  "type": "container",
+  "type": "section",
   "page_settings": [],
   "content": [
     {
-      "id": "ca928db",
-      "elType": "container",
+      "id": "a76f9ae",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "column",
-        "css_classes": "pes-section pes-hero",
-        "flex_justify_content": "center",
-        "flex_align_items": "flex-start",
-        "flex_gap": {
-          "column": "18",
-          "row": "18",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
           "unit": "px",
-          "size": 18
+          "size": 1140,
+          "sizes": []
         },
-        "min_height": {
+        "css_classes": "pes-section pes-hero",
+        "_title": "Hero",
+        "height": "min-height",
+        "custom_height": {
           "unit": "px",
           "size": 640,
           "sizes": []
         },
-        "min_height_mobile": {
+        "custom_height_mobile": {
           "unit": "px",
           "size": 520,
           "sizes": []
         },
+        "column_position": "middle",
         "padding": {
           "unit": "px",
           "top": "80",
-          "right": "24",
+          "right": "0",
           "bottom": "80",
-          "left": "24",
+          "left": "0",
           "isLinked": false
         },
         "background_overlay_background": "gradient",
@@ -60,56 +59,67 @@
       },
       "elements": [
         {
-          "id": "e047f31",
-          "elType": "widget",
-          "widgetType": "heading",
+          "id": "ca928db",
+          "elType": "column",
           "isInner": false,
           "settings": {
-            "title": "Solar • Storage • EV • Electrical",
-            "header_size": "p",
-            "_css_classes": "pes-kicker"
+            "_column_size": 100,
+            "_inline_size": 100
           },
-          "elements": []
-        },
-        {
-          "id": "4be94ba",
-          "elType": "widget",
-          "widgetType": "heading",
-          "isInner": false,
-          "settings": {
-            "title": "Control<br>Your Power",
-            "header_size": "h1",
-            "_css_classes": "pes-h1"
-          },
-          "elements": []
-        },
-        {
-          "id": "f54acd7",
-          "elType": "widget",
-          "widgetType": "text-editor",
-          "isInner": false,
-          "settings": {
-            "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
-            "_css_classes": "pes-lead"
-          },
-          "elements": []
-        },
-        {
-          "id": "6d1cf2d",
-          "elType": "widget",
-          "widgetType": "button",
-          "isInner": false,
-          "settings": {
-            "text": "Get A Quote",
-            "link": {
-              "url": "/contact/",
-              "is_external": "",
-              "nofollow": "",
-              "custom_attributes": ""
+          "elements": [
+            {
+              "id": "e047f31",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Solar • Storage • EV • Electrical",
+                "header_size": "p",
+                "_css_classes": "pes-kicker"
+              },
+              "elements": []
             },
-            "_css_classes": "pes-btn"
-          },
-          "elements": []
+            {
+              "id": "4be94ba",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Control<br>Your Power",
+                "header_size": "h1",
+                "_css_classes": "pes-h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "f54acd7",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
+                "_css_classes": "pes-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "6d1cf2d",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Get A Quote",
+                "link": {
+                  "url": "/contact/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn"
+              },
+              "elements": []
+            }
+          ]
         }
       ]
     }

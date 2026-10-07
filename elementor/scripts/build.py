@@ -10,8 +10,10 @@ For each content file this writes:
 and, once, one file per reusable block:
     elementor/dist/blocks/pes-*.json    single sections to insert into any page
 
-All styling lives in elementor/css/pes-global.css; the templates only carry
-content, layout and the "pes-" CSS classes.
+Templates use classic Sections/Columns (not Flexbox Containers) so they import
+on every Elementor version, with or without the Container feature switched on.
+The page template carries its own styles in a hidden "PES Styles" section, so
+nothing has to be pasted into the Customizer for it to look right.
 """
 import hashlib
 import html
@@ -22,6 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
+CSS_FILE = ROOT / "css" / "pes-global.css"
 TEMPLATE_VERSION = "0.4"
 
 
@@ -48,17 +51,24 @@ def box(top, right, bottom, left, unit="px"):
             "left": str(left), "isLinked": False}
 
 
-def gap(column, row=None):
-    row = column if row is None else row
-    return {"column": str(column), "row": str(row), "isLinked": column == row, "unit": "px", "size": column}
+def section(ids, columns, classes="", title="", inner=False, **settings):
+    s = {"layout": "boxed", "gap": "default", "content_width": px(1140)}
+    if classes:
+        s["css_classes"] = classes
+    if title:
+        s["_title"] = title  # name shown in Elementor's Navigator
+    s.update(settings)
+    for c in columns:
+        c["isInner"] = inner
+    return {"id": ids(), "elType": "section", "isInner": inner, "settings": s, "elements": columns}
 
 
-def container(ids, children, classes="", inner=False, **settings):
-    s = {"content_width": "full" if inner else "boxed", "flex_direction": "column"}
+def column(ids, size, widgets, classes="", **settings):
+    s = {"_column_size": 100 if size == 100 else 50, "_inline_size": size}
     if classes:
         s["css_classes"] = classes
     s.update(settings)
-    return {"id": ids(), "elType": "container", "isInner": inner, "settings": s, "elements": children}
+    return {"id": ids(), "elType": "column", "isInner": False, "settings": s, "elements": widgets}
 
 
 def widget(ids, kind, classes="", **settings):
@@ -87,36 +97,53 @@ def image(ids, url, classes, alt=""):
     return widget(ids, "image", classes, image_size="full", **extra)
 
 
-def icon(ids, fa_class, classes):
+def fa(fa_class):
     library = "fa-regular" if fa_class.startswith("far ") else "fa-solid"
-    return widget(ids, "icon", classes, selected_icon={"value": fa_class, "library": library},
-                  align="center")
+    return {"value": fa_class, "library": library}
+
+
+def icon_box(ids, fa_class, classes, title="", description="", position="top", title_tag="h3"):
+    return widget(ids, "icon-box", classes, selected_icon=fa(fa_class), view="default",
+                  position=position, title_text=title, description_text=description,
+                  title_size=title_tag, content_vertical_alignment="middle")
 
 
 # ---------------------------------------------------------------------------
 # Blocks – one function per section type in the design
 # ---------------------------------------------------------------------------
+def block_styles(ids, _b=None):
+    css = CSS_FILE.read_text()
+    return section(
+        ids,
+        [column(ids, 100, [widget(ids, "html", "pes-styles-widget", html=f"<style>\n{css}</style>")])],
+        "pes-styles",
+        title="PES Styles – keep this section (hidden on the live site)",
+        layout="full_width",
+        gap="no",
+    )
+
+
 def block_hero(ids, b):
     bg = {}
     if b.get("image"):
         bg = {"background_background": "classic",
               "background_image": {"url": b["image"], "id": "", "source": "library"},
               "background_position": "center center", "background_size": "cover"}
-    return container(
+    return section(
         ids,
-        [
+        [column(ids, 100, [
             heading(ids, b["kicker"], "p", "pes-kicker"),
             heading(ids, b["title"], "h1", "pes-h1"),
             text(ids, b["text"], "pes-lead"),
             button(ids, b["button"]),
-        ],
+        ])],
         "pes-section pes-hero",
-        flex_justify_content="center",
-        flex_align_items="flex-start",
-        flex_gap=gap(18),
-        min_height=px(640),
-        min_height_mobile=px(520),
-        padding=box(80, 24, 80, 24),
+        title="Hero",
+        height="min-height",
+        custom_height=px(640),
+        custom_height_mobile=px(520),
+        column_position="middle",
+        padding=box(80, 0, 80, 0),
         background_overlay_background="gradient",
         background_overlay_color="rgba(0,0,0,0.78)",
         background_overlay_color_stop=px(0, "%"),
@@ -130,110 +157,82 @@ def block_hero(ids, b):
 def block_feature(ids, b):
     reverse = b.get("layout") == "image-left"
     frame = "pes-frame pes-frame-blue" if b.get("frame") == "blue" else "pes-frame"
-    copy = container(
-        ids,
-        [
-            heading(ids, b["title"], "h2", "pes-h2"),
-            heading(ids, b["subtitle"], "p", "pes-subhead"),
-            text(ids, b["text"]),
-            button(ids, b["button"]),
-        ],
-        inner=True,
-        width=px(48, "%"), width_mobile=px(100, "%"),
-        flex_gap=gap(16), flex_justify_content="center",
-    )
-    media = container(ids, [image(ids, b.get("image"), frame, b["title"])], inner=True,
-                      width=px(46, "%"), width_mobile=px(100, "%"))
-    return container(
+    copy = column(ids, 50, [
+        heading(ids, b["title"], "h2", "pes-h2"),
+        heading(ids, b["subtitle"], "p", "pes-subhead"),
+        text(ids, b["text"]),
+        button(ids, b["button"]),
+    ], content_position="center")
+    media = column(ids, 50, [image(ids, b.get("image"), frame, b["title"])], content_position="center")
+    return section(
         ids,
         [media, copy] if reverse else [copy, media],
         "pes-section pes-feature" + (" pes-feature-reverse" if reverse else ""),
-        flex_direction="row",
-        flex_direction_mobile="column",
-        flex_align_items="center",
-        flex_justify_content="space-between",
-        flex_gap=gap(48),
-        padding=box(110, 24, 110, 24),
-        padding_mobile=box(70, 20, 70, 20),
+        title=f"Feature – {b['title']}",
+        gap="extended",
+        structure="20",
+        column_position="middle",
+        padding=box(110, 0, 110, 0),
+        padding_mobile=box(70, 0, 70, 0),
     )
 
 
 def block_process(ids, b):
     steps = [
-        container(
-            ids,
-            [
-                heading(ids, str(i), "h3", "pes-step-num"),
-                container(ids, [icon(ids, s["icon"], "pes-step-icon"), text(ids, s["text"])],
-                          "pes-step-card", inner=True, flex_gap=gap(20),
-                          padding=box(30, 24, 30, 24)),
-            ],
-            "pes-step",
-            inner=True,
-            width=px(30, "%"), width_mobile=px(100, "%"),
-            flex_align_items="center",
-        )
+        column(ids, 33.333, [
+            heading(ids, str(i), "h3", "pes-step-num"),
+            icon_box(ids, s["icon"], "pes-step-card", description=s["text"]),
+        ], "pes-step")
         for i, s in enumerate(b["steps"], 1)
     ]
-    row = container(ids, steps, inner=True, flex_direction="row", flex_direction_mobile="column",
-                    flex_justify_content="space-between", flex_gap=gap(32, 56))
-    return container(
+    cards = section(ids, steps, "pes-steps", inner=True, gap="extended", structure="30")
+    return section(
         ids,
-        [heading(ids, b["title"], "h2", "pes-title-circuit"), row],
+        [column(ids, 100, [heading(ids, b["title"], "h2", "pes-title-circuit"), cards])],
         "pes-section pes-process",
-        flex_align_items="center",
-        flex_gap=gap(48),
-        padding=box(60, 24, 120, 24),
+        title="Our Process",
+        padding=box(60, 0, 120, 0),
     )
 
 
 def block_cta(ids, b):
-    left = container(
+    return section(
         ids,
         [
-            icon(ids, "far fa-calendar-alt", "pes-cta-icon"),
-            container(ids, [heading(ids, b["title"], "h2", "pes-cta-title"),
-                            heading(ids, b["subtitle"], "p", "pes-cta-sub")],
-                      "pes-cta-text", inner=True, width=px(100, "%"), width_mobile=px(100, "%"),
-                      flex_gap=gap(4)),
+            column(ids, 70, [icon_box(ids, "far fa-calendar-alt", "pes-cta-box", b["title"],
+                                      b["subtitle"], position="left", title_tag="h2")],
+                   content_position="center"),
+            column(ids, 30, [button(ids, b["button"], "pes-btn-solid pes-align-right")],
+                   content_position="center"),
         ],
-        inner=True,
-        width=px(75, "%"), width_mobile=px(100, "%"),
-        flex_direction="row", flex_align_items="center", flex_gap=gap(20),
-        flex_wrap="nowrap",
-    )
-    return container(
-        ids,
-        [left, button(ids, b["button"], "pes-btn-solid")],
         "pes-cta",
-        flex_direction="row",
-        flex_direction_mobile="column",
-        flex_align_items="center",
-        flex_align_items_mobile="flex-start",
-        flex_justify_content="space-between",
-        flex_gap=gap(24),
-        padding=box(36, 24, 36, 24),
+        title="CTA – Schedule a consultation",
+        structure="20",
+        column_position="middle",
+        padding=box(30, 0, 30, 0),
     )
 
 
 def block_header(ids, b):
-    return container(
+    return section(
         ids,
         [
-            image(ids, b.get("logo"), "pes-logo"),
-            widget(ids, "wp-widget-nav_menu", "pes-nav", wp={"title": "", "nav_menu": ""}),
-            button(ids, b["button"], "pes-btn-solid"),
+            column(ids, 18, [image(ids, b.get("logo"), "pes-logo")], content_position="center"),
+            column(ids, 64, [widget(ids, "wp-widget-nav_menu", "pes-nav", wp={"title": "", "nav_menu": ""})],
+                   content_position="center"),
+            column(ids, 18, [button(ids, b["button"], "pes-btn-solid pes-align-right")],
+                   content_position="center"),
         ],
         "pes-header",
-        flex_direction="row",
-        flex_align_items="center",
-        flex_justify_content="space-between",
-        flex_gap=gap(24),
-        padding=box(14, 24, 14, 24),
+        title="Header",
+        structure="30",
+        column_position="middle",
+        padding=box(8, 0, 8, 0),
     )
 
 
 BLOCKS = {
+    "styles": block_styles,
     "hero": block_hero,
     "feature": block_feature,
     "process": block_process,
@@ -241,6 +240,7 @@ BLOCKS = {
     "header": block_header,
 }
 
+STYLES_BLOCK = {"type": "styles"}
 HEADER_DEFAULTS = {"type": "header", "logo": "", "button": {"text": "Get A Quote", "url": "/contact/"}}
 
 
@@ -275,113 +275,124 @@ def write_json(path, data):
 def build(content_path, seen_blocks):
     page = json.loads(Path(content_path).read_text())
     ids = Ids(page["slug"])
-    sections = [BLOCKS[b["type"]](ids, b) for b in page["blocks"]]
+    sections = [block_styles(ids)] + [BLOCKS[b["type"]](ids, b) for b in page["blocks"]]
     write_json(DIST / f"{page['slug']}.json",
                template(page["title"], "page", sections, PAGE_SETTINGS))
     write_preview(DIST / "preview" / f"{page['slug']}.html", page["title"],
                   [BLOCKS["header"](ids, HEADER_DEFAULTS)] + sections)
 
     # one standalone file per block variant (first occurrence wins)
-    for b in page["blocks"] + [HEADER_DEFAULTS]:
+    for b in [STYLES_BLOCK] + page["blocks"] + [HEADER_DEFAULTS]:
         name = block_name(b)
         if name in seen_blocks:
             continue
         seen_blocks.add(name)
         title = "PES – " + name[4:].replace("-", " ").title()
         write_json(DIST / "blocks" / f"{name}.json",
-                   template(title, "container", [BLOCKS[b["type"]](Ids(name), b)]))
+                   template(title, "section", [BLOCKS[b["type"]](Ids(name), b)]))
 
 
 # ---------------------------------------------------------------------------
 # Preview: renders the same element tree with Elementor-like markup so the
 # CSS can be checked in a browser without WordPress. Approximate only.
 # ---------------------------------------------------------------------------
-FLEX = {"flex-start": "flex-start", "center": "center", "flex-end": "flex-end",
-        "space-between": "space-between"}
+PREVIEW_IMAGES = []
+PREVIEW_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>'
 
 
 def render(el):
     s = el["settings"]
-    if el["elType"] == "container":
-        style = [f"flex-direction:{s.get('flex_direction', 'column')}"]
-        if "flex_align_items" in s:
-            style.append(f"align-items:{FLEX[s['flex_align_items']]}")
-        if "flex_justify_content" in s:
-            style.append(f"justify-content:{FLEX[s['flex_justify_content']]}")
-        if "flex_gap" in s:
-            style.append(f"gap:{s['flex_gap']['row']}px {s['flex_gap']['column']}px")
-        if "width" in s:
-            style.append(f"width:{s['width']['size']}%")
-        if "min_height" in s:
-            style.append(f"min-height:{s['min_height']['size']}{s['min_height']['unit']}")
-        if "padding" in s:
+    if el["elType"] == "section":
+        style = []
+        if s.get("padding"):
             p = s["padding"]
-            style.append(f"padding:{p['top']}px {p['right']}px {p['bottom']}px {p['left']}px")
-        if s.get("background_overlay_background") == "gradient":
-            style.append("--pv-overlay:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.05) 80%)")
+            style.append(f"padding:{p['top']}px 0 {p['bottom']}px")
         bg_url = s.get("background_image", {}).get("url")
         if not bg_url and "pes-hero" in s.get("css_classes", ""):
             bg_url = "img/hero.jpg"  # preview stand-in only
         if bg_url:
             style.append(f"background-image:url({bg_url});background-size:cover;background-position:center")
+        overlay = ('<div class="elementor-background-overlay"></div>'
+                   if s.get("background_overlay_background") else "")
+        cstyle = f"min-height:{s['custom_height']['size']}px" if s.get("height") == "min-height" else ""
+        layout = "elementor-section-full_width" if s.get("layout") == "full_width" else "elementor-section-boxed"
+        middle = " pv-middle" if s.get("column_position") == "middle" else ""
         kids = "".join(render(c) for c in el["elements"])
-        mobile = " pv-stack" if s.get("flex_direction_mobile") == "column" else ""
-        inner_style = ";".join(x for x in style if not x.startswith(("padding", "min-height", "width", "background", "--")))
-        if s.get("content_width") == "boxed":
-            outer = ";".join(x for x in style if x.startswith(("padding", "min-height", "background", "--")))
-            return (f'<div class="elementor-element e-con e-con-boxed{mobile} {s.get("css_classes", "")}" style="{outer}">'
-                    f'<div class="e-con-inner{mobile}" style="{inner_style}">{kids}</div></div>')
-        return (f'<div class="elementor-element e-con e-con-full{mobile} {s.get("css_classes", "")}" '
-                f'style="{";".join(style)}">{kids}</div>')
+        return (f'<section class="elementor-section elementor-element {layout}{middle} {s.get("css_classes", "")}" '
+                f'style="{";".join(style)}">{overlay}'
+                f'<div class="elementor-container elementor-column-gap-{s.get("gap", "default")}" style="{cstyle}">'
+                f'{kids}</div></section>')
+    if el["elType"] == "column":
+        center = " pv-center" if s.get("content_position") == "center" else ""
+        kids = "".join(render(c) for c in el["elements"])
+        return (f'<div class="elementor-column elementor-element{center} {s.get("css_classes", "")}" '
+                f'style="width:{s["_inline_size"]}%"><div class="elementor-widget-wrap elementor-element-populated">'
+                f'{kids}</div></div>')
 
     kind = el["widgetType"]
+    extra = ""
     if kind == "heading":
         tag = s["header_size"]
         body = f'<{tag} class="elementor-heading-title">{s["title"]}</{tag}>'
     elif kind == "text-editor":
         body = s["editor"]
+    elif kind == "html":
+        body = s["html"]
     elif kind == "button":
-        body = (f'<a class="elementor-button" href="{html.escape(s["link"]["url"])}">'
+        body = (f'<div class="elementor-button-wrapper"><a class="elementor-button" href="{html.escape(s["link"]["url"])}">'
                 f'<span class="elementor-button-content-wrapper"><span class="elementor-button-text">'
-                f'{s["text"]}</span></span></a>')
+                f'{s["text"]}</span></span></a></div>')
     elif kind == "image":
         if "pes-logo" in s.get("_css_classes", ""):
             src = "img/logo.png"
         else:
             src = s.get("image", {}).get("url") or (PREVIEW_IMAGES.pop(0) if PREVIEW_IMAGES else "")
         body = f'<img src="{src}" alt="">'
-    elif kind == "icon":
-        body = f'<div class="elementor-icon-wrapper"><div class="elementor-icon">{PREVIEW_ICON}</div></div>'
+    elif kind == "icon-box":
+        extra = f" elementor-position-{s['position']} elementor-view-default"
+        title = (f'<{s["title_size"]} class="elementor-icon-box-title"><span>{s["title_text"]}</span>'
+                 f'</{s["title_size"]}>' if s["title_text"] else "")
+        body = (f'<div class="elementor-icon-box-wrapper"><div class="elementor-icon-box-icon">'
+                f'<span class="elementor-icon">{PREVIEW_ICON}</span></div>'
+                f'<div class="elementor-icon-box-content">{title}'
+                f'<p class="elementor-icon-box-description">{s["description_text"]}</p></div></div>')
     elif kind == "wp-widget-nav_menu":
         items = ["Solution", "Service O&amp;M", "Projects", "Company", "Contact Us", "Industry"]
         body = '<ul class="menu">' + "".join(
             f'<li class="menu-item menu-item-has-children"><a href="#">{i}</a></li>' for i in items) + "</ul>"
     else:
         body = ""
-    return (f'<div class="elementor-element elementor-widget elementor-widget-{kind} {s.get("_css_classes", "")}">'
+    return (f'<div class="elementor-element elementor-widget elementor-widget-{kind}{extra} {s.get("_css_classes", "")}">'
             f'<div class="elementor-widget-container">{body}</div></div>')
 
 
-PREVIEW_IMAGES = []
-PREVIEW_ICON = ('<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>')
-
+# Minimal stand-in for Elementor's own frontend CSS.
 PREVIEW_BASE_CSS = """
-*{box-sizing:border-box} body{margin:0;background:#1b1b1c}
-.e-con{display:flex;position:relative}
-.e-con-boxed{flex-direction:column;align-items:center}
-.e-con-inner{display:flex;width:100%;max-width:1140px;margin:0 auto}
-.e-con-full{display:flex}
-.e-con[style*="--pv-overlay"]::before{content:"";position:absolute;inset:0;background:var(--pv-overlay)}
-.e-con[style*="--pv-overlay"]>.e-con-inner{position:relative}
-.elementor-heading-title{margin:0;padding:0}
+*{box-sizing:border-box} body{margin:0;background:#fff;font-family:sans-serif}
+.elementor-section{position:relative}
+.elementor-background-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.05) 80%)}
+.elementor-container{display:flex;margin:0 auto;position:relative}
+.elementor-section-boxed>.elementor-container{max-width:1140px}
+.pv-middle>.elementor-container{align-items:center}
+.elementor-column{display:flex;min-height:1px;position:relative}
+.elementor-widget-wrap{display:flex;flex-wrap:wrap;align-content:flex-start;width:100%;position:relative}
+.pv-center>.elementor-widget-wrap{align-content:center}
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated{padding:10px}
+.elementor-column-gap-extended>.elementor-column>.elementor-element-populated{padding:15px}
+.elementor-widget-wrap>.elementor-element{width:100%}
+.elementor-widget:not(:last-child){margin-bottom:20px}
+.elementor-heading-title{margin:0;padding:0;line-height:1}
 .elementor-widget-container p{margin:0 0 1em}
 .elementor-button{display:inline-block;text-decoration:none}
-.elementor-widget-image img{max-width:100%;height:auto}
-.elementor-widget-icon .elementor-icon-wrapper{text-align:center}
-.elementor-icon{display:inline-block;line-height:1}
+.elementor-widget-image{text-align:center}
+.elementor-widget-image img{max-width:100%;height:auto;vertical-align:middle}
+.elementor-icon{display:inline-block;line-height:1;font-size:50px}
 .elementor-icon svg{width:1em;height:1em;display:block}
+.elementor-widget-icon-box .elementor-icon-box-wrapper{text-align:center}
+.elementor-icon-box-title{margin:0}
+.elementor-icon-box-description{margin:0}
 .pes-logo img{height:44px;width:auto}
-@media(max-width:767px){.pv-stack{flex-direction:column!important}.pv-stack>.e-con{width:100%!important}}
+@media(max-width:767px){.elementor-container{flex-wrap:wrap}.elementor-column{width:100%!important}}
 """
 
 
@@ -389,13 +400,12 @@ def write_preview(path, title, sections):
     path.parent.mkdir(parents=True, exist_ok=True)
     preview_dir = ROOT / "dist" / "preview" / "img"
     PREVIEW_IMAGES[:] = sorted(f"img/{p.name}" for p in preview_dir.glob("frame-*.jpg")) if preview_dir.exists() else []
-    css = (ROOT / "css" / "pes-global.css").read_text()
     body = "".join(render(s) for s in sections)
     path.write_text(
         f"<!doctype html><html><head><meta charset='utf-8'>"
         f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
         f"<title>{html.escape(re.sub('<[^>]+>', ' ', title))} – preview</title>"
-        f"<style>{PREVIEW_BASE_CSS}</style><style>{css}</style></head>"
+        f"<style>{PREVIEW_BASE_CSS}</style></head>"
         f"<body><div class='elementor elementor-preview'>{body}</div></body></html>\n")
     print("wrote", path.relative_to(ROOT.parent))
 

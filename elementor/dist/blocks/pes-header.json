@@ -1,77 +1,112 @@
 {
   "version": "0.4",
   "title": "PES – Header",
-  "type": "container",
+  "type": "section",
   "page_settings": [],
   "content": [
     {
-      "id": "ce90b56",
-      "elType": "container",
+      "id": "2ad45cb",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "row",
-        "css_classes": "pes-header",
-        "flex_align_items": "center",
-        "flex_justify_content": "space-between",
-        "flex_gap": {
-          "column": "24",
-          "row": "24",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
           "unit": "px",
-          "size": 24
+          "size": 1140,
+          "sizes": []
         },
+        "css_classes": "pes-header",
+        "_title": "Header",
+        "structure": "30",
+        "column_position": "middle",
         "padding": {
           "unit": "px",
-          "top": "14",
-          "right": "24",
-          "bottom": "14",
-          "left": "24",
+          "top": "8",
+          "right": "0",
+          "bottom": "8",
+          "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
-          "id": "e41e963",
-          "elType": "widget",
-          "widgetType": "image",
-          "isInner": false,
-          "settings": {
-            "image_size": "full",
-            "_css_classes": "pes-logo"
-          },
-          "elements": []
-        },
-        {
           "id": "91941e4",
-          "elType": "widget",
-          "widgetType": "wp-widget-nav_menu",
+          "elType": "column",
           "isInner": false,
           "settings": {
-            "wp": {
-              "title": "",
-              "nav_menu": ""
-            },
-            "_css_classes": "pes-nav"
+            "_column_size": 50,
+            "_inline_size": 18,
+            "content_position": "center"
           },
-          "elements": []
+          "elements": [
+            {
+              "id": "e41e963",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image_size": "full",
+                "_css_classes": "pes-logo"
+              },
+              "elements": []
+            }
+          ]
         },
         {
-          "id": "c29fd89",
-          "elType": "widget",
-          "widgetType": "button",
+          "id": "ce90b56",
+          "elType": "column",
           "isInner": false,
           "settings": {
-            "text": "Get A Quote",
-            "link": {
-              "url": "/contact/",
-              "is_external": "",
-              "nofollow": "",
-              "custom_attributes": ""
-            },
-            "_css_classes": "pes-btn-solid"
+            "_column_size": 50,
+            "_inline_size": 64,
+            "content_position": "center"
           },
-          "elements": []
+          "elements": [
+            {
+              "id": "c29fd89",
+              "elType": "widget",
+              "widgetType": "wp-widget-nav_menu",
+              "isInner": false,
+              "settings": {
+                "wp": {
+                  "title": "",
+                  "nav_menu": ""
+                },
+                "_css_classes": "pes-nav"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "2ba2f15",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 18,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "b1909a1",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Get A Quote",
+                "link": {
+                  "url": "/contact/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-right"
+              },
+              "elements": []
+            }
+          ]
         }
       ]
     }

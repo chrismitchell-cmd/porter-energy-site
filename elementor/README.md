@@ -1,119 +1,148 @@
 # Porter Energy Systems – Elementor page kit
 
 A reusable Elementor build of the page in `mockup/` (the PES Website Template).
-The page is made of **blocks** (hero, feature row, process, CTA banner). Every
-block gets its look from **one shared stylesheet**, so a new page is just
-"insert blocks, change text and photos".
+
+- **`dist/pes-page-template.json`** is the only file you need. It holds the whole page
+  **and its styles**, so nothing has to be pasted into the Customizer.
+- It uses classic Elementor **Sections and Columns**, which work on every Elementor
+  version (free or Pro, with or without the newer "Container" feature).
 
 ```
 elementor/
-├── css/pes-global.css          ← the whole look (colors, fonts, frames, circuit lines)
-├── dist/pes-page-template.json ← full page, ready to import
-├── dist/blocks/*.json          ← each block on its own, ready to import
-├── dist/preview/*.html         ← browser preview (open locally, no WordPress needed)
-├── content/home.json           ← the text that the templates are built from
+├── dist/pes-page-template.json ← import this
+├── dist/blocks/*.json          ← optional: single sections to add rows to a page
+├── dist/preview/*.html         ← browser preview of the result
+├── css/pes-global.css          ← the styles (already inside the template)
+├── content/home.json           ← the text the templates are built from
 ├── scripts/build.py            ← rebuilds dist/ from content/*.json
 └── mockup/                     ← the original design images
 ```
 
 ---
 
-## 1. One-time setup on the WordPress site
+## Part A – Import the template (one time, about 2 minutes)
 
-1. **Add the stylesheet.** Copy everything in `css/pes-global.css` and paste it into
-   **Elementor → Site Settings → Custom CSS** (Elementor Pro) *or*
-   **Appearance → Customize → Additional CSS** (no Pro needed). It also loads the
-   Saira and Inter fonts.
-2. **Import the templates.** Go to **Templates → Saved Templates → Import Templates** and
-   import `dist/pes-page-template.json` and every file in `dist/blocks/`.
-   You'll then have these in **My Templates**:
+1. Download **`pes-page-template.json`** to your computer. Don't open or unzip it.
+2. Log in to WordPress. In the left menu, hover over **Templates** and click **Saved Templates**.
+   (Older Elementor versions: **Elementor → Templates**, or **Templates → Theme Builder → Saved Templates**.)
+3. Click the **Import Templates** button at the top of the page, next to the page title.
+4. Click **Choose File**, pick `pes-page-template.json`, and click **Import Now**.
+5. ✅ A template called **PES – Page Template** now appears in the list.
 
-   | Template                       | What it is                                        |
-   |--------------------------------|---------------------------------------------------|
-   | PES – Page Template            | The whole page from the mockup                    |
-   | PES – Hero                     | Big photo header with kicker, H1, text, button    |
-   | PES – Feature Image Right      | Text left, orange-framed photo right              |
-   | PES – Feature Image Left       | Navy-framed photo left, text right                |
-   | PES – Process                  | "Our Process" with 3 numbered cards               |
-   | PES – Cta                      | Blue "Schedule a consultation" banner             |
-   | PES – Header                   | Logo / menu / Get A Quote bar (see section 4)     |
+## Part B – Make a page with it (repeat for every new page)
 
-## 2. Making a new page
+1. Go to **Pages → Add New Page**. Type a title such as *Commercial Solar*.
+   Leave the content area empty.
+2. Click **Edit with Elementor** (blue button at the top). If you only see the block editor,
+   click **Save draft** first and the button appears.
+3. In the middle of the empty Elementor page, click the **grey folder icon** (“Add Template”).
+4. In the pop-up, click the **My Templates** tab. Hover over **PES – Page Template** and click **Insert**.
+5. If asked *“Apply the settings of this template?”*, click **Apply** (or **Yes**).
+6. ✅ The page now looks like the mockup. Edit it:
+   - **Text:** click any heading, paragraph or button and type.
+     For a button, also change the **Link** box in the left panel.
+   - **Photos:** click a grey placeholder image → **Choose Image** in the left panel.
+   - **Hero background photo:** hover over the hero, click its handle (the small
+     **⋮⋮** tab at the top edge) → **Style** tab → **Background** → **Image**.
+   - **Call Now button:** change the link from `tel:+10000000000` to the real number.
+7. Click **Publish** (or **Save Draft** to review first).
 
-1. **Pages → Add New**, give it a title, click **Edit with Elementor**.
-2. Click the **folder icon** (Add Template) → **My Templates** → **PES – Page Template** → **Insert**.
-   Say **Yes** when asked to apply the page settings (full-width, hidden title, dark background).
-3. Click each heading, text and button to change the words, and click each image to choose
-   a photo from the Media Library. For the hero photo, select the hero section →
-   **Style → Background → Image**.
-4. Need more or fewer rows? Right-click a section → **Duplicate** or **Delete**, or insert
-   any block from **My Templates**. Drag sections to reorder them.
+### If the page has white gaps or shows the page title
 
-Shortcut: once one page is finished, you can also copy it with a duplicate-post plugin
-(for example *Yoast Duplicate Post*) and only change the text.
+Click the **gear icon** (bottom-left of Elementor, or top-left in newer versions) →
+**Page Layout** → choose **Elementor Full Width**, and switch **Hide Title** on.
 
-## 3. Rules that keep the design consistent
+### Don't delete the yellow “PES Styles” bar
 
-Each part of the design is styled by a CSS class set in **Advanced → CSS Classes**.
-**Don't delete these classes.** To style something new the same way, give it the same class.
+At the top of the page in the editor you'll see a thin yellow bar that says
+*“PES Styles – keep this section”*. It holds the design's colors, fonts and shapes.
+Visitors never see it. If it's deleted, the page loses its styling.
 
-| Class                        | Put it on                | Gives you                                          |
-|------------------------------|--------------------------|----------------------------------------------------|
-| `pes-section`                | a section (container)    | dark grid background                               |
-| `pes-hero`                   | hero section             | orange line along the bottom                       |
-| `pes-feature`                | feature section          | orange circuit lines on the left                   |
-| `pes-feature-reverse`        | feature section (+ above)| circuit lines on the right instead                 |
-| `pes-kicker`                 | heading                  | small caps line ("SOLAR • STORAGE …")              |
-| `pes-h1` / `pes-h2`          | heading                  | big hero title / uppercase section title           |
-| `pes-subhead`                | heading                  | bold white sub-line ("Put your property to work.") |
-| `pes-lead` / `pes-body`      | text editor              | hero intro text / normal body text                 |
-| `pes-btn`                    | button                   | dark italic button with orange outline             |
-| `pes-btn-solid`              | button                   | orange gradient button                             |
-| `pes-frame`                  | image                    | orange frame with angled corners                   |
-| `pes-frame pes-frame-blue`   | image                    | navy frame, corners mirrored                       |
-| `pes-title-circuit`          | heading                  | centred title with circuit lines on both sides     |
-| `pes-step`                   | process column           | holds the number + card                            |
-| `pes-step-num`               | heading                  | big white step number                              |
-| `pes-step-card`              | container                | white card with angled corner and navy edge        |
-| `pes-cta`, `pes-cta-*`       | CTA banner parts         | blue banner, lightning bolt, divider line          |
+## Adding, removing and reordering rows
 
-Anything set in a widget's own **Style** tab overrides these defaults for that one
-widget, so one-off changes are fine. To change something site-wide (such as the orange
-color), edit the variables at the top of `pes-global.css` and paste the file in again.
+- **Copy a row:** right-click the row's handle → **Duplicate**.
+- **Delete a row:** right-click the row's handle → **Delete**.
+- **Move a row:** drag its handle up or down. You can also use the **Navigator**
+  (right-click → Navigator) to drag rows.
+- **Add a row from the kit:** import the files in `dist/blocks/` the same way as in
+  Part A. Then click the folder icon → **My Templates** → insert the block you want.
 
-## 4. Header and CTA banner: set them up once, not on every page
+---
 
-These two repeat on every page, so they shouldn't be copied into each one:
+## How the styling works
 
-- **Header:** with Elementor Pro, go to **Templates → Theme Builder → Header**, insert
-  **PES – Header**, choose your menu in the menu widget, and set it to show on the entire site.
-  Without Pro, keep the theme's header and style it there. The page template does
-  **not** include the header.
-- **CTA banner:** with Elementor Pro, drop a **Template** widget pointing at **PES – Cta**
-  on each page (or put it in the Theme Builder footer). Editing the template then updates
-  every page at once.
+Each part of the design gets its look from a CSS class set on the element under
+**Advanced → CSS Classes**. Keep these classes when editing. To give a new element the
+same look, add the same class.
 
-## 5. Building pages from a content file (optional)
+| Class                        | Put it on              | Gives you                                          |
+|------------------------------|------------------------|----------------------------------------------------|
+| `pes-section`                | section                | dark grid background                               |
+| `pes-hero`                   | hero section           | orange line along the bottom                       |
+| `pes-feature`                | feature section        | orange circuit lines on the left                   |
+| `pes-feature-reverse`        | feature section (+ above) | circuit lines on the right instead              |
+| `pes-kicker`                 | heading                | small caps line ("SOLAR • STORAGE …")              |
+| `pes-h1` / `pes-h2`          | heading                | big hero title / uppercase section title           |
+| `pes-subhead`                | heading                | bold white sub-line                                |
+| `pes-lead` / `pes-body`      | text editor            | hero intro text / normal body text                 |
+| `pes-btn`                    | button                 | dark italic button with orange outline             |
+| `pes-btn-solid`              | button                 | orange gradient button                             |
+| `pes-frame`                  | image                  | orange frame with angled corners                   |
+| `pes-frame pes-frame-blue`   | image                  | navy frame, corners mirrored                       |
+| `pes-title-circuit`          | heading                | centred title with circuit lines on both sides     |
+| `pes-step-num`               | heading                | big white step number                              |
+| `pes-step-card`              | icon box               | white card with angled corner and navy edge        |
+| `pes-cta`                    | section                | blue banner with lightning bolt                    |
+| `pes-cta-box`                | icon box               | calendar icon, divider line, title and subtitle    |
 
-The files in `dist/` are generated. To make a page in code (or have Claude make one),
-copy `content/home.json`, change the text, URLs and blocks, then run:
+Anything you set in a widget's own **Style** tab overrides these defaults for that widget.
+
+### Optional: one stylesheet for the whole site
+
+Once you have several pages, you can move the styles to one place so a change (such as
+a new orange) updates every page. Paste `css/pes-global.css` into **Appearance → Customize →
+Additional CSS** (or **Elementor → Site Settings → Custom CSS** with Pro), click **Publish**,
+then delete the yellow **PES Styles** bar from each page. Leaving both in place is harmless too.
+
+## Header and CTA banner
+
+- **Header:** the page template doesn't include the header, because your theme or Elementor Pro's
+  Theme Builder supplies it on every page. With Pro, import `dist/blocks/pes-header.json`, go to
+  **Templates → Theme Builder → Header → Add New**, insert **PES – Header**, choose your menu in the
+  menu widget, and set it to show on the **Entire Site**.
+- **CTA banner:** it's part of the page template. With Pro, you can swap it for a **Template**
+  widget pointing at **PES – Cta**, so editing the banner once updates every page.
+
+## Building pages from a content file (optional)
+
+The files in `dist/` are generated. To make a page from text (or have Claude make one), copy
+`content/home.json`, change the text, URLs and blocks, then run:
 
 ```bash
-python3 elementor/scripts/build.py                  # builds every file in content/
-python3 elementor/scripts/build.py elementor/content/my-page.json
+python3 elementor/scripts/build.py
 ```
 
-Then import the new `dist/<slug>.json`. Available block types: `hero`,
-`feature` (`"layout": "image-right" | "image-left"`, `"frame": "orange" | "blue"`),
-`process`, and `cta`. Images are optional; when there isn't one, Elementor's placeholder appears.
+Then import the new `dist/<slug>.json`. Block types: `hero`, `feature`
+(`"layout": "image-right" | "image-left"`, `"frame": "orange" | "blue"`), `process`, `cta`.
 
 ## Placeholders to replace before going live
 
-- **Photos:** the templates use Elementor's grey placeholder. The photos in the preview are
-  crops of the mockup and are for preview only.
-- **Process icons:** Font Awesome *solar panel*, *bolt* and *charging station*. Swap them in the
-  icon widget, or upload the custom line icons as SVGs.
-- **Call Now** links to `tel:+10000000000`. Put in the real phone number.
+- **Photos:** the template uses Elementor's grey placeholder. The photos in the preview
+  are crops of the mockup and are for preview only.
+- **Process icons:** Font Awesome *solar panel*, *bolt* and *charging station*. Click the
+  card and pick another icon, or upload your custom SVG icons.
+- **Call Now** links to `tel:+10000000000`. Put in the real number.
 - **Button links** (`/contact/`, `/commercial-solar/` …) are guesses. Point them at the real pages.
 - The mockup's "SHEDULE" is spelled "Schedule". The third feature row repeats
   "Commercial Solar" exactly as in the mockup.
+
+## Troubleshooting
+
+| What you see | Fix |
+|---|---|
+| Import says **“Invalid file”** or **“This file type is not allowed”** | Make sure the file still ends in `.json`. Some browsers add `.txt`, and Macs sometimes unzip or rename downloads. Download it again and import the `.json` itself. |
+| **Import Templates** button is missing | Your user needs the Administrator role. |
+| Template imported but **My Templates is empty** in the pop-up | Reload the editor page. Check the template appears under **Templates → Saved Templates**. |
+| Page is **white/unstyled** after inserting | The yellow **PES Styles** bar was deleted or not inserted. Insert the template again, or paste `css/pes-global.css` into **Appearance → Customize → Additional CSS**. |
+| Styles show in the editor but **not on the live page** | Clear the cache. On GoDaddy, go to the WordPress dashboard → **GoDaddy/Managed WordPress → Flush Cache**. Then go to **Elementor → Tools → Regenerate CSS & Data**. |
+| Header/footer from the theme is missing or doubled | Set **Page Layout** to **Elementor Full Width** (see above). |

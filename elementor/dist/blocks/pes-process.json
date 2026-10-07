@@ -1,322 +1,197 @@
 {
   "version": "0.4",
   "title": "PES – Process",
-  "type": "container",
+  "type": "section",
   "page_settings": [],
   "content": [
     {
-      "id": "0849e45",
-      "elType": "container",
+      "id": "bf7d2d1",
+      "elType": "section",
       "isInner": false,
       "settings": {
-        "content_width": "boxed",
-        "flex_direction": "column",
-        "css_classes": "pes-section pes-process",
-        "flex_align_items": "center",
-        "flex_gap": {
-          "column": "48",
-          "row": "48",
-          "isLinked": true,
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
           "unit": "px",
-          "size": 48
+          "size": 1140,
+          "sizes": []
         },
+        "css_classes": "pes-section pes-process",
+        "_title": "Our Process",
         "padding": {
           "unit": "px",
           "top": "60",
-          "right": "24",
+          "right": "0",
           "bottom": "120",
-          "left": "24",
+          "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
-          "id": "da74fe1",
-          "elType": "widget",
-          "widgetType": "heading",
+          "id": "de28b2f",
+          "elType": "column",
           "isInner": false,
           "settings": {
-            "title": "Our Process",
-            "header_size": "h2",
-            "_css_classes": "pes-title-circuit"
-          },
-          "elements": []
-        },
-        {
-          "id": "7d67a2b",
-          "elType": "container",
-          "isInner": true,
-          "settings": {
-            "content_width": "full",
-            "flex_direction": "row",
-            "flex_direction_mobile": "column",
-            "flex_justify_content": "space-between",
-            "flex_gap": {
-              "column": "32",
-              "row": "56",
-              "isLinked": false,
-              "unit": "px",
-              "size": 32
-            }
+            "_column_size": 100,
+            "_inline_size": 100
           },
           "elements": [
             {
-              "id": "931730c",
-              "elType": "container",
+              "id": "9d0c67e",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Our Process",
+                "header_size": "h2",
+                "_css_classes": "pes-title-circuit"
+              },
+              "elements": []
+            },
+            {
+              "id": "25f68d1",
+              "elType": "section",
               "isInner": true,
               "settings": {
-                "content_width": "full",
-                "flex_direction": "column",
-                "css_classes": "pes-step",
-                "width": {
-                  "unit": "%",
-                  "size": 30,
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
                   "sizes": []
                 },
-                "width_mobile": {
-                  "unit": "%",
-                  "size": 100,
-                  "sizes": []
-                },
-                "flex_align_items": "center"
+                "css_classes": "pes-steps",
+                "structure": "30"
               },
               "elements": [
                 {
-                  "id": "8a3cbdc",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "1",
-                    "header_size": "h3",
-                    "_css_classes": "pes-step-num"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "5eed411",
-                  "elType": "container",
+                  "id": "6e01d19",
+                  "elType": "column",
                   "isInner": true,
                   "settings": {
-                    "content_width": "full",
-                    "flex_direction": "column",
-                    "css_classes": "pes-step-card",
-                    "flex_gap": {
-                      "column": "20",
-                      "row": "20",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 20
-                    },
-                    "padding": {
-                      "unit": "px",
-                      "top": "30",
-                      "right": "24",
-                      "bottom": "30",
-                      "left": "24",
-                      "isLinked": false
-                    }
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-step"
                   },
                   "elements": [
                     {
+                      "id": "8a3cbdc",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "1",
+                        "header_size": "h3",
+                        "_css_classes": "pes-step-num"
+                      },
+                      "elements": []
+                    },
+                    {
                       "id": "d86d97a",
                       "elType": "widget",
-                      "widgetType": "icon",
+                      "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
                           "value": "fas fa-solar-panel",
                           "library": "fa-solid"
                         },
-                        "align": "center",
-                        "_css_classes": "pes-step-icon"
-                      },
-                      "elements": []
-                    },
-                    {
-                      "id": "6e01d19",
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "isInner": false,
-                      "settings": {
-                        "editor": "<p>Integrated energy systems built for businesses, organization.</p>",
-                        "_css_classes": "pes-body"
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "",
+                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-step-card"
                       },
                       "elements": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "id": "25f68d1",
-              "elType": "container",
-              "isInner": true,
-              "settings": {
-                "content_width": "full",
-                "flex_direction": "column",
-                "css_classes": "pes-step",
-                "width": {
-                  "unit": "%",
-                  "size": 30,
-                  "sizes": []
                 },
-                "width_mobile": {
-                  "unit": "%",
-                  "size": 100,
-                  "sizes": []
-                },
-                "flex_align_items": "center"
-              },
-              "elements": [
                 {
                   "id": "ad125fe",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "2",
-                    "header_size": "h3",
-                    "_css_classes": "pes-step-num"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "62281a2",
-                  "elType": "container",
+                  "elType": "column",
                   "isInner": true,
                   "settings": {
-                    "content_width": "full",
-                    "flex_direction": "column",
-                    "css_classes": "pes-step-card",
-                    "flex_gap": {
-                      "column": "20",
-                      "row": "20",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 20
-                    },
-                    "padding": {
-                      "unit": "px",
-                      "top": "30",
-                      "right": "24",
-                      "bottom": "30",
-                      "left": "24",
-                      "isLinked": false
-                    }
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "70da78a",
+                      "id": "5eed411",
                       "elType": "widget",
-                      "widgetType": "icon",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "2",
+                        "header_size": "h3",
+                        "_css_classes": "pes-step-num"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "931730c",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
                           "value": "fas fa-bolt",
                           "library": "fa-solid"
                         },
-                        "align": "center",
-                        "_css_classes": "pes-step-icon"
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "",
+                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-step-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "62281a2",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-step"
+                  },
+                  "elements": [
+                    {
+                      "id": "70da78a",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "3",
+                        "header_size": "h3",
+                        "_css_classes": "pes-step-num"
                       },
                       "elements": []
                     },
                     {
                       "id": "2d8ce36",
                       "elType": "widget",
-                      "widgetType": "text-editor",
-                      "isInner": false,
-                      "settings": {
-                        "editor": "<p>Integrated energy systems built for businesses, organization.</p>",
-                        "_css_classes": "pes-body"
-                      },
-                      "elements": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "cec062a",
-              "elType": "container",
-              "isInner": true,
-              "settings": {
-                "content_width": "full",
-                "flex_direction": "column",
-                "css_classes": "pes-step",
-                "width": {
-                  "unit": "%",
-                  "size": 30,
-                  "sizes": []
-                },
-                "width_mobile": {
-                  "unit": "%",
-                  "size": 100,
-                  "sizes": []
-                },
-                "flex_align_items": "center"
-              },
-              "elements": [
-                {
-                  "id": "9d0c67e",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "3",
-                    "header_size": "h3",
-                    "_css_classes": "pes-step-num"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "58005c7",
-                  "elType": "container",
-                  "isInner": true,
-                  "settings": {
-                    "content_width": "full",
-                    "flex_direction": "column",
-                    "css_classes": "pes-step-card",
-                    "flex_gap": {
-                      "column": "20",
-                      "row": "20",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 20
-                    },
-                    "padding": {
-                      "unit": "px",
-                      "top": "30",
-                      "right": "24",
-                      "bottom": "30",
-                      "left": "24",
-                      "isLinked": false
-                    }
-                  },
-                  "elements": [
-                    {
-                      "id": "de28b2f",
-                      "elType": "widget",
-                      "widgetType": "icon",
+                      "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
                           "value": "fas fa-charging-station",
                           "library": "fa-solid"
                         },
-                        "align": "center",
-                        "_css_classes": "pes-step-icon"
-                      },
-                      "elements": []
-                    },
-                    {
-                      "id": "bf7d2d1",
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "isInner": false,
-                      "settings": {
-                        "editor": "<p>Integrated energy systems built for businesses, organization.</p>",
-                        "_css_classes": "pes-body"
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "",
+                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-step-card"
                       },
                       "elements": []
                     }

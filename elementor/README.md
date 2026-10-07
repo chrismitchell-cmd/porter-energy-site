@@ -39,6 +39,9 @@ elementor/
 4. In the pop-up, click the **My Templates** tab. Hover over **PES – Page Template** and click **Insert**.
 5. If asked *“Apply the settings of this template?”*, click **Apply** (or **Yes**).
 6. ✅ The page now looks like the mockup. Edit it:
+   - **Logo and menu (header):** click the grey image at the top left → **Choose Image** → your logo.
+     Click the menu area → in the left panel pick your menu under **Menu**
+     (create one first under **Appearance → Menus** if needed).
    - **Text:** click any heading, paragraph or button and type.
      For a button, also change the **Link** box in the left panel.
    - **Photos:** click a grey placeholder image → **Choose Image** in the left panel.
@@ -47,10 +50,14 @@ elementor/
    - **Call Now button:** change the link from `tel:+10000000000` to the real number.
 7. Click **Publish** (or **Save Draft** to review first).
 
-### If the page has white gaps or shows the page title
+### If you see two headers, white gaps, or the page title
 
-Click the **gear icon** (bottom-left of Elementor, or top-left in newer versions) →
-**Page Layout** → choose **Elementor Full Width**, and switch **Hide Title** on.
+The template brings its own header (logo, menu, Get A Quote). If your theme's header also
+shows above it, click the **gear icon** (Page Settings) → **Page Layout** → choose
+**Elementor Canvas**. That hides the theme's header and footer on this page.
+To keep the theme's footer but hide only its header, use **Elementor Full Width** and turn the
+header off in your theme settings, or use Elementor Pro's Theme Builder (see below).
+Also switch **Hide Title** on.
 
 ### Don't delete the yellow “PES Styles” bar
 
@@ -85,10 +92,14 @@ same look, add the same class.
 | `pes-h1` / `pes-h2`          | heading                | big hero title / uppercase section title           |
 | `pes-subhead`                | heading                | bold white sub-line                                |
 | `pes-lead` / `pes-body`      | text editor            | hero intro text / normal body text                 |
-| `pes-btn`                    | button                 | dark italic button with orange outline             |
-| `pes-btn-solid`              | button                 | orange gradient button                             |
-| `pes-frame`                  | image                  | orange frame with angled corners                   |
-| `pes-frame pes-frame-blue`   | image                  | navy frame, corners mirrored                       |
+| `pes-btn`                    | button                 | transparent button, orange→gold gradient border, angled corners |
+| `pes-btn pes-btn-more`       | button                 | same, italic text + gradient arrow ("Learn More →") |
+| `pes-btn-solid`              | button                 | orange→gold gradient fill, angled corners ("Get A Quote") |
+| `pes-btn-pill`               | button                 | rounded orange pill ("Call Now")                   |
+| `pes-frame`                  | image                  | orange→gold gradient frame, angled corners         |
+| `pes-frame pes-frame-blue`   | image                  | navy frame, angled corners                         |
+| `pes-header`                 | section                | dark header bar with the stepped gold line and tab |
+| `pes-logo`                   | image                  | logo sizing in the header                          |
 | `pes-title-circuit`          | heading                | centred title with circuit lines on both sides     |
 | `pes-step-num`               | heading                | big white step number                              |
 | `pes-step-card`              | icon box               | white card with angled corner and navy edge        |
@@ -106,10 +117,12 @@ then delete the yellow **PES Styles** bar from each page. Leaving both in place 
 
 ## Header and CTA banner
 
-- **Header:** the page template doesn't include the header, because your theme or Elementor Pro's
-  Theme Builder supplies it on every page. With Pro, import `dist/blocks/pes-header.json`, go to
-  **Templates → Theme Builder → Header → Add New**, insert **PES – Header**, choose your menu in the
-  menu widget, and set it to show on the **Entire Site**.
+- **Header:** the page template includes the header (logo, menu, Get A Quote), sitting over the
+  hero photo like the mockup. With Elementor Pro you can make it site-wide instead: import
+  `dist/blocks/pes-header.json`, go to **Templates → Theme Builder → Header → Add New**, insert
+  **PES – Header**, choose your menu, set it to show on the **Entire Site**, and then delete the
+  Header row from each page. On phones the menu is hidden. Pro's **Nav Menu** widget adds a
+  hamburger menu if you need one.
 - **CTA banner:** it's part of the page template. With Pro, you can swap it for a **Template**
   widget pointing at **PES – Cta**, so editing the banner once updates every page.
 
@@ -129,6 +142,7 @@ Then import the new `dist/<slug>.json`. Block types: `hero`, `feature`
 
 - **Photos:** the template uses Elementor's grey placeholder. The photos in the preview
   are crops of the mockup and are for preview only.
+- **Logo:** pick your logo in the header image (a dark/black logo box works best, as in the mockup).
 - **Process icons:** Font Awesome *solar panel*, *bolt* and *charging station*. Click the
   card and pick another icon, or upload your custom SVG icons.
 - **Call Now** links to `tel:+10000000000`. Put in the real number.

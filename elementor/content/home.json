@@ -17,7 +17,7 @@
       "title": "Commercial Solar",
       "subtitle": "Put your property to work.",
       "text": "Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs",
-      "button": { "text": "Learn More →", "url": "/commercial-solar/" },
+      "button": { "text": "Learn More", "url": "/commercial-solar/" },
       "image": ""
     },
     {
@@ -27,7 +27,7 @@
       "title": "Battery Energy Storage",
       "subtitle": "Put your property to work.",
       "text": "Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.",
-      "button": { "text": "Learn More →", "url": "/battery-energy-storage/" },
+      "button": { "text": "Learn More", "url": "/battery-energy-storage/" },
       "image": ""
     },
     {
@@ -37,7 +37,7 @@
       "title": "Commercial Solar",
       "subtitle": "Put your property to work.",
       "text": "Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs",
-      "button": { "text": "Learn More →", "url": "/commercial-solar/" },
+      "button": { "text": "Learn More", "url": "/commercial-solar/" },
       "image": ""
     },
     {

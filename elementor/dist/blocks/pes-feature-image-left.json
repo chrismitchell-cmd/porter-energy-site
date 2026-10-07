@@ -112,14 +112,14 @@
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Learn More →",
+                "text": "Learn More",
                 "link": {
                   "url": "/battery-energy-storage/",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""
                 },
-                "_css_classes": "pes-btn"
+                "_css_classes": "pes-btn pes-btn-more"
               },
               "elements": []
             }

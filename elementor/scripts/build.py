@@ -161,7 +161,7 @@ def block_feature(ids, b):
         heading(ids, b["title"], "h2", "pes-h2"),
         heading(ids, b["subtitle"], "p", "pes-subhead"),
         text(ids, b["text"]),
-        button(ids, b["button"]),
+        button(ids, b["button"], "pes-btn pes-btn-more"),
     ], content_position="center")
     media = column(ids, 50, [image(ids, b.get("image"), frame, b["title"])], content_position="center")
     return section(
@@ -202,14 +202,14 @@ def block_cta(ids, b):
             column(ids, 70, [icon_box(ids, "far fa-calendar-alt", "pes-cta-box", b["title"],
                                       b["subtitle"], position="left", title_tag="h2")],
                    content_position="center"),
-            column(ids, 30, [button(ids, b["button"], "pes-btn-solid pes-align-right")],
+            column(ids, 30, [button(ids, b["button"], "pes-btn-pill pes-align-right")],
                    content_position="center"),
         ],
         "pes-cta",
         title="CTA – Schedule a consultation",
         structure="20",
         column_position="middle",
-        padding=box(30, 0, 30, 0),
+        padding=box(48, 0, 48, 0),
     )
 
 
@@ -217,17 +217,20 @@ def block_header(ids, b):
     return section(
         ids,
         [
-            column(ids, 18, [image(ids, b.get("logo"), "pes-logo")], content_position="center"),
-            column(ids, 64, [widget(ids, "wp-widget-nav_menu", "pes-nav", wp={"title": "", "nav_menu": ""})],
-                   content_position="center"),
-            column(ids, 18, [button(ids, b["button"], "pes-btn-solid pes-align-right")],
-                   content_position="center"),
+            column(ids, 18, [image(ids, b.get("logo"), "pes-logo", "Porter Energy Systems")],
+                   content_position="center", _inline_size_mobile=50),
+            column(ids, 60, [widget(ids, "wp-widget-nav_menu", "pes-nav", wp={"title": "", "nav_menu": ""})],
+                   content_position="center", hide_mobile="hidden-mobile"),
+            column(ids, 22, [button(ids, b["button"], "pes-btn-solid pes-align-right")],
+                   "pes-header-cta", _inline_size_mobile=50),
         ],
         "pes-header",
         title="Header",
+        layout="full_width",
         structure="30",
         column_position="middle",
-        padding=box(8, 0, 8, 0),
+        padding=box(6, 40, 6, 40),
+        padding_mobile=box(6, 12, 6, 12),
     )
 
 
@@ -275,14 +278,15 @@ def write_json(path, data):
 def build(content_path, seen_blocks):
     page = json.loads(Path(content_path).read_text())
     ids = Ids(page["slug"])
-    sections = [block_styles(ids)] + [BLOCKS[b["type"]](ids, b) for b in page["blocks"]]
+    header = page.get("header", HEADER_DEFAULTS)
+    sections = ([block_styles(ids), block_header(ids, header)]
+                + [BLOCKS[b["type"]](ids, b) for b in page["blocks"]])
     write_json(DIST / f"{page['slug']}.json",
                template(page["title"], "page", sections, PAGE_SETTINGS))
-    write_preview(DIST / "preview" / f"{page['slug']}.html", page["title"],
-                  [BLOCKS["header"](ids, HEADER_DEFAULTS)] + sections)
+    write_preview(DIST / "preview" / f"{page['slug']}.html", page["title"], sections)
 
     # one standalone file per block variant (first occurrence wins)
-    for b in [STYLES_BLOCK] + page["blocks"] + [HEADER_DEFAULTS]:
+    for b in [STYLES_BLOCK, header] + page["blocks"]:
         name = block_name(b)
         if name in seen_blocks:
             continue
@@ -298,6 +302,15 @@ def build(content_path, seen_blocks):
 # ---------------------------------------------------------------------------
 PREVIEW_IMAGES = []
 PREVIEW_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>'
+PREVIEW_CALENDAR = ('<svg viewBox="0 0 448 512" width="1em" height="1em"><path d="M0 464c0 26.5 21.5 48 48 48h352'
+                    'c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40'
+                    'c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40'
+                    'c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40'
+                    'c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40'
+                    'c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76'
+                    'c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76'
+                    'c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16'
+                    'c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"/></svg>')
 
 
 def render(el):
@@ -306,7 +319,7 @@ def render(el):
         style = []
         if s.get("padding"):
             p = s["padding"]
-            style.append(f"padding:{p['top']}px 0 {p['bottom']}px")
+            style.append(f"padding:{p['top']}px {p['right']}px {p['bottom']}px {p['left']}px")
         bg_url = s.get("background_image", {}).get("url")
         if not bg_url and "pes-hero" in s.get("css_classes", ""):
             bg_url = "img/hero.jpg"  # preview stand-in only
@@ -324,6 +337,8 @@ def render(el):
                 f'{kids}</div></section>')
     if el["elType"] == "column":
         center = " pv-center" if s.get("content_position") == "center" else ""
+        center += " elementor-hidden-mobile" if s.get("hide_mobile") else ""
+        center += " pv-half-mobile" if s.get("_inline_size_mobile") == 50 else ""
         kids = "".join(render(c) for c in el["elements"])
         return (f'<div class="elementor-column elementor-element{center} {s.get("css_classes", "")}" '
                 f'style="width:{s["_inline_size"]}%"><div class="elementor-widget-wrap elementor-element-populated">'
@@ -350,10 +365,11 @@ def render(el):
         body = f'<img src="{src}" alt="">'
     elif kind == "icon-box":
         extra = f" elementor-position-{s['position']} elementor-view-default"
+        icon_svg = PREVIEW_CALENDAR if "calendar" in s["selected_icon"]["value"] else PREVIEW_ICON
         title = (f'<{s["title_size"]} class="elementor-icon-box-title"><span>{s["title_text"]}</span>'
                  f'</{s["title_size"]}>' if s["title_text"] else "")
         body = (f'<div class="elementor-icon-box-wrapper"><div class="elementor-icon-box-icon">'
-                f'<span class="elementor-icon">{PREVIEW_ICON}</span></div>'
+                f'<span class="elementor-icon">{icon_svg}</span></div>'
                 f'<div class="elementor-icon-box-content">{title}'
                 f'<p class="elementor-icon-box-description">{s["description_text"]}</p></div></div>')
     elif kind == "wp-widget-nav_menu":
@@ -392,7 +408,8 @@ PREVIEW_BASE_CSS = """
 .elementor-icon-box-title{margin:0}
 .elementor-icon-box-description{margin:0}
 .pes-logo img{height:44px;width:auto}
-@media(max-width:767px){.elementor-container{flex-wrap:wrap}.elementor-column{width:100%!important}}
+@media(max-width:767px){.elementor-container{flex-wrap:wrap}.elementor-column{width:100%!important}
+.elementor-column.pv-half-mobile{width:50%!important}.elementor-hidden-mobile{display:none!important}}
 """
 
 

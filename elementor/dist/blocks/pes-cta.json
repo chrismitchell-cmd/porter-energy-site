@@ -22,9 +22,9 @@
         "column_position": "middle",
         "padding": {
           "unit": "px",
-          "top": "30",
+          "top": "48",
           "right": "0",
-          "bottom": "30",
+          "bottom": "48",
           "left": "0",
           "isLinked": false
         }
@@ -85,7 +85,7 @@
                   "nofollow": "",
                   "custom_attributes": ""
                 },
-                "_css_classes": "pes-btn-solid pes-align-right"
+                "_css_classes": "pes-btn-pill pes-align-right"
               },
               "elements": []
             }

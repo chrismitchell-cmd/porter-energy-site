@@ -13,23 +13,34 @@
    Anything you change in a widget's own Style tab still wins over these.
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Inter:wght@400;500;600&family=Poppins:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Rajdhani:wght@500;600;700&display=swap");
 
 :root {
-  --pes-bg: #1b1b1c;
+  /* The one orange→gold gradient used on every orange line, border and button */
+  --pes-orange: #dd7033;
+  --pes-amber: #eaa24e;
+  --pes-gold: #f8da72;
+  --pes-gradient: linear-gradient(90deg, var(--pes-orange) 0%, var(--pes-amber) 50%, var(--pes-gold) 100%);
+
+  --pes-bg: #1b1a1a;
   --pes-bg-grid: rgba(255, 255, 255, 0.035);
-  --pes-orange: #e9792b;
-  --pes-orange-light: #f5a04a;
-  --pes-navy: #2c3f7c;
-  --pes-blue-deep: #071a6b;
-  --pes-blue-bright: #1f4fe0;
+  --pes-navy: #2d4a8f;
   --pes-white: #ffffff;
   --pes-text: #e9e9ea;
   --pes-text-dark: #1d1d1f;
   --pes-font-head: "Saira", "Arial Narrow", sans-serif;
   --pes-font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --pes-cut: 22px; /* size of the angled corners on frames and cards */
-  --pes-circuit: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='60' viewBox='0 0 320 60' fill='none'%3E%3Cpath d='M0 8H118' stroke='%23e9792b' stroke-width='2'/%3E%3Ccircle cx='123' cy='8' r='5' fill='%23e9792b'/%3E%3Cpath d='M0 46H34L52 28H264' stroke='%23e9792b' stroke-width='2'/%3E%3Ccircle cx='270' cy='28' r='5' fill='%23e9792b'/%3E%3C/svg%3E");
+  --pes-font-ui: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --pes-font-cta: "Rajdhani", "Arial Narrow", sans-serif;
+
+  --pes-circuit: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='60' viewBox='0 0 320 60' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='280' y2='0'%3E%3Cstop offset='0' stop-color='%23F8DA72'/%3E%3Cstop offset='.5' stop-color='%23EAA24E'/%3E%3Cstop offset='1' stop-color='%23DD7033'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 8H118' stroke='url%28%23g%29' stroke-width='2'/%3E%3Ccircle cx='123' cy='8' r='5' fill='url%28%23g%29'/%3E%3Cpath d='M0 46H34L52 28H264' stroke='url%28%23g%29' stroke-width='2'/%3E%3Ccircle cx='270' cy='28' r='5' fill='url%28%23g%29'/%3E%3C/svg%3E");
+  --pes-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10' viewBox='0 0 24 10' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='24' y2='0'%3E%3Cstop offset='0' stop-color='%23DD7033'/%3E%3Cstop offset='1' stop-color='%23F8DA72'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 5H20' stroke='url%28%23g%29' stroke-width='2'/%3E%3Cpath d='M17 1.5 22.5 5 17 8.5Z' fill='url%28%23g%29'/%3E%3C/svg%3E");
+  --pes-bolt: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 250' preserveAspectRatio='xMidYMid slice' fill='none'%3E%3Cpath d='M115 -20H215L155 66H250L85 270H-5L95 130H0Z' stroke='%2370c6ff' stroke-width='4' stroke-linejoin='miter'/%3E%3C/svg%3E");
+
+  /* header shape: the dark bar steps up into a tab on the right */
+  --pes-header-h: 150px;
+  --pes-tab-start: 365px; /* distance from the right edge where the line starts to climb */
+  --pes-tab-end: 270px;   /* distance from the right edge where it reaches the top level */
 }
 
 /* --------------------------------------------------------------------------
@@ -48,7 +59,6 @@
   font: 600 12px/1.4 var(--pes-font-body);
   color: #6b4e00;
 }
-.elementor-editor-active .elementor .pes-styles .elementor-widget-html { min-height: 0; }
 
 /* --------------------------------------------------------------------------
    Sections – dark grid background
@@ -63,10 +73,108 @@
   color: var(--pes-text);
   font-family: var(--pes-font-body);
 }
-.elementor .pes-section a.elementor-button,
-.elementor .pes-cta a.elementor-button,
-.elementor .pes-header a.elementor-button { text-decoration: none; }
-.elementor .pes-align-right .elementor-button-wrapper { text-align: right; }
+
+/* --------------------------------------------------------------------------
+   Header
+   A transparent section that sits over the hero. A dark bar (::before) is cut
+   so that the right-hand side shows the hero photo, and an orange→gold line
+   (::after) runs along its bottom edge, climbs, and continues across the top
+   of the tab – like the mockup.
+   -------------------------------------------------------------------------- */
+.elementor .pes-header {
+  position: relative;
+  z-index: 20;
+  min-height: var(--pes-header-h);
+  margin-bottom: calc(var(--pes-header-h) * -1);
+  background: transparent;
+}
+.elementor .pes-header > .elementor-container { position: relative; z-index: 2; min-height: var(--pes-header-h); }
+.elementor .pes-header::before,
+.elementor .pes-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.elementor .pes-header::before {
+  background-color: var(--pes-bg);
+  background-image:
+    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px);
+  background-size: 96px 96px;
+  clip-path: polygon(0 0, 100% 0, 100% 50%,
+    calc(100% - var(--pes-tab-end)) 50%,
+    calc(100% - var(--pes-tab-start)) 100%,
+    0 100%);
+}
+.elementor .pes-header::after {
+  background: var(--pes-gradient);
+  clip-path: polygon(0 calc(100% - 4px),
+    calc(100% - var(--pes-tab-start) - 2px) calc(100% - 4px),
+    calc(100% - var(--pes-tab-end) - 2px) calc(50% - 4px),
+    100% calc(50% - 4px),
+    100% 50%,
+    calc(100% - var(--pes-tab-end)) 50%,
+    calc(100% - var(--pes-tab-start)) 100%,
+    0 100%);
+}
+.elementor .pes-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 58px;
+  object-fit: contain;
+}
+.elementor .pes-logo.elementor-widget-image { text-align: left; }
+/* push the Get A Quote button down into the tab, below the gold line */
+.elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 78px; padding-bottom: 6px; }
+
+/* menu (WordPress Menu widget) */
+.elementor .pes-header .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px 34px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.elementor .pes-header .menu > li { position: relative; }
+.elementor .pes-header .menu a {
+  font-family: var(--pes-font-ui);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--pes-white);
+  text-decoration: none;
+}
+.elementor .pes-header .menu a:hover { color: var(--pes-gold); }
+.elementor .pes-header .menu > li > a::after { /* small chevron like the mockup */
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 0 3px 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+.elementor .pes-header .menu > li:not(.menu-item-has-children) > a::after { display: none; }
+.elementor .pes-header .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -14px;
+  z-index: 50;
+  min-width: 220px;
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  background: #111;
+  border-top: 2px solid var(--pes-orange);
+}
+.elementor .pes-header li:hover > .sub-menu,
+.elementor .pes-header li:focus-within > .sub-menu { display: block; }
+.elementor .pes-header .sub-menu a { display: block; padding: 8px 14px; font-weight: 500; }
 
 /* --------------------------------------------------------------------------
    Shared type
@@ -79,7 +187,6 @@
   text-transform: uppercase;
   color: var(--pes-white);
 }
-
 .elementor .pes-h1 .elementor-heading-title {
   font-family: var(--pes-font-head);
   font-size: clamp(48px, 7vw, 92px);
@@ -87,7 +194,6 @@
   line-height: 0.95;
   color: var(--pes-white);
 }
-
 .elementor .pes-h2 .elementor-heading-title {
   font-family: var(--pes-font-head);
   font-size: clamp(32px, 4vw, 46px);
@@ -96,14 +202,12 @@
   text-transform: uppercase;
   color: var(--pes-white);
 }
-
 .elementor .pes-subhead .elementor-heading-title {
   font-family: var(--pes-font-body);
   font-size: 19px;
   font-weight: 600;
   color: var(--pes-white);
 }
-
 .elementor .pes-lead,
 .elementor .pes-body {
   font-family: var(--pes-font-body);
@@ -116,50 +220,118 @@
 
 /* --------------------------------------------------------------------------
    Buttons
-   pes-btn         – dark button, orange outline, italic ("Learn More →")
-   pes-btn-solid   – orange gradient fill ("Get A Quote", "Call Now")
+   pes-btn              – TRANSPARENT button with an orange→gold gradient
+                          border and angled top-left / bottom-right corners
+   pes-btn pes-btn-more – same, italic text + gradient arrow ("Learn More →")
+   pes-btn-solid        – orange→gold gradient fill, same angled corners
+                          ("Get A Quote" in the header)
+   pes-btn-pill         – rounded orange pill ("Call Now")
    -------------------------------------------------------------------------- */
 .elementor .pes-btn .elementor-button,
-.elementor .pes-btn-solid .elementor-button {
-  font-family: var(--pes-font-head);
-  font-weight: 600;
+.elementor .pes-btn-solid .elementor-button,
+.elementor .pes-btn-pill .elementor-button {
+  --pes-cut: 9px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--pes-font-ui);
+  font-weight: 700;
   line-height: 1;
-  border-radius: 6px;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s;
-}
-
-.elementor .pes-btn .elementor-button {
-  padding: 10px 16px;
-  font-size: 15px;
-  font-style: italic;
   color: var(--pes-white);
-  background: rgba(0, 0, 0, 0.55);
-  border: 2px solid var(--pes-orange);
-}
-.elementor .pes-btn .elementor-button:hover {
-  background: var(--pes-orange);
-  color: var(--pes-white);
-}
-
-.elementor .pes-btn-solid .elementor-button {
-  padding: 14px 26px;
-  font-size: 17px;
-  color: var(--pes-white);
-  background: linear-gradient(180deg, var(--pes-orange-light), var(--pes-orange));
+  text-decoration: none;
   border: 0;
-  box-shadow: 0 4px 14px rgba(233, 121, 43, 0.35);
+  box-shadow: none;
+  transition: filter 0.2s, transform 0.2s;
 }
-.elementor .pes-btn-solid .elementor-button:hover {
-  transform: translateY(-1px);
+.elementor .pes-btn .elementor-button,
+.elementor .pes-btn-solid .elementor-button {
+  border-radius: 0;
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+}
+
+/* outline: background stays transparent in every state */
+.elementor .pes-btn .elementor-button,
+.elementor .pes-btn .elementor-button:hover,
+.elementor .pes-btn .elementor-button:focus,
+.elementor .pes-btn .elementor-button:active,
+.elementor .pes-btn .elementor-button:visited {
+  background: transparent !important;
   color: var(--pes-white);
 }
+.elementor .pes-btn .elementor-button {
+  padding: 12px 22px;
+  font-size: 15px;
+}
+.elementor .pes-btn .elementor-button::before { /* the 2px gradient border, following the angled corners */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--pes-gradient);
+  pointer-events: none;
+  clip-path: polygon(evenodd,
+    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,
+    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),
+    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);
+}
+.elementor .pes-btn .elementor-button:hover { filter: drop-shadow(0 0 6px rgba(234, 162, 78, 0.55)); }
+.elementor .pes-btn .elementor-button-content-wrapper { position: relative; display: inline-flex; align-items: center; }
+
+.elementor .pes-btn-more .elementor-button { padding: 10px 18px; font-size: 14px; font-style: italic; font-weight: 600; }
+.elementor .pes-btn-more .elementor-button-text::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 10px;
+  margin-left: 12px;
+  vertical-align: middle;
+  background: var(--pes-arrow) no-repeat center / contain;
+}
+
+.elementor .pes-btn-solid .elementor-button,
+.elementor .pes-btn-solid .elementor-button:hover,
+.elementor .pes-btn-solid .elementor-button:focus {
+  background: var(--pes-gradient) !important;
+  color: var(--pes-white);
+}
+.elementor .pes-btn-solid .elementor-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  text-shadow: 0 1px 2px rgba(120, 50, 0, 0.35);
+}
+.elementor .pes-btn-solid .elementor-button:hover { filter: brightness(1.06); }
+
+.elementor .pes-btn-pill .elementor-button,
+.elementor .pes-btn-pill .elementor-button:hover,
+.elementor .pes-btn-pill .elementor-button:focus {
+  background: #ef7828 !important;
+  color: var(--pes-white);
+}
+.elementor .pes-btn-pill .elementor-button {
+  padding: 13px 40px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-style: italic;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.elementor .pes-btn-pill .elementor-button:hover { transform: translateY(-1px); }
+
+.elementor .pes-align-right .elementor-button-wrapper { text-align: right; }
 
 /* --------------------------------------------------------------------------
    Hero
    -------------------------------------------------------------------------- */
-.elementor .pes-hero {
-  border-bottom: 3px solid var(--pes-orange);
+.elementor .pes-hero::after { /* orange→gold line along the bottom */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--pes-gradient);
+  z-index: 3;
 }
+.elementor .pes-hero > .elementor-container { padding-top: var(--pes-header-h); }
 
 /* --------------------------------------------------------------------------
    Feature row (text + framed image)
@@ -182,27 +354,39 @@
   transform: scaleX(-1);
 }
 
-/* Framed image with two angled corners.
-   pes-frame        – orange frame (cuts top-right / bottom-left)
-   pes-frame-blue   – navy frame   (cuts top-left / bottom-right)        */
-.elementor .pes-frame {
-  --pes-frame-color: var(--pes-orange);
-  --pes-frame-shape: polygon(0 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut), 100% 100%, var(--pes-cut) 100%, 0 calc(100% - var(--pes-cut)));
-  padding: 5px;
-  background: var(--pes-frame-color);
-  clip-path: var(--pes-frame-shape);
-  filter: drop-shadow(0 0 18px rgba(233, 121, 43, 0.25));
+/* Framed image: thin border, dark gap, then the photo – all four corners angled.
+   pes-frame        – orange→gold gradient border
+   pes-frame-blue   – navy border                                          */
+.elementor .pes-frame.elementor-widget-image {
+  --pes-cut: 20px;
+  --pes-shape: polygon(var(--pes-cut) 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut),
+    100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,
+    0 calc(100% - var(--pes-cut)), 0 var(--pes-cut));
+  position: relative;
+  padding: 10px;
+  background: var(--pes-gradient);
+  clip-path: var(--pes-shape);
 }
-.elementor .pes-frame-blue {
-  --pes-frame-color: var(--pes-navy);
-  --pes-frame-shape: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+.elementor .pes-frame-blue.elementor-widget-image { background: var(--pes-navy); }
+.elementor .pes-frame.elementor-widget-image::before { /* dark gap inside the border */
+  content: "";
+  position: absolute;
+  inset: 3px;
+  --pes-cut: 19px;
+  background: var(--pes-bg);
+  clip-path: var(--pes-shape);
 }
+.elementor .pes-frame.elementor-widget-image .elementor-widget-container,
+.elementor .pes-frame.elementor-widget-image img { position: relative; }
 .elementor .pes-frame img {
+  --pes-cut: 15px;
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  clip-path: var(--pes-frame-shape);
+  clip-path: polygon(var(--pes-cut) 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut),
+    100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,
+    0 calc(100% - var(--pes-cut)), 0 var(--pes-cut));
 }
 
 /* --------------------------------------------------------------------------
@@ -235,9 +419,8 @@
 
 /* --------------------------------------------------------------------------
    Process steps
-   pes-step         – the column (number on top, card below)
    pes-step-num     – the big number heading
-   pes-step-card    – white card with cut corner + navy edge
+   pes-step-card    – icon box: white card with cut corner + navy edge
    -------------------------------------------------------------------------- */
 .elementor .pes-step-num .elementor-heading-title {
   font-family: var(--pes-font-head);
@@ -260,8 +443,7 @@
   background: var(--pes-white);
   box-shadow: 6px 6px 0 var(--pes-navy);
 }
-/* angled top-right corner: a triangle in the page colour with a navy edge */
-.elementor .pes-step-card.elementor-widget::before {
+.elementor .pes-step-card.elementor-widget::before { /* angled top-right corner */
   content: "";
   position: absolute;
   top: 0;
@@ -294,20 +476,20 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 70% 50%, rgba(46, 110, 255, 0.55), transparent 60%),
-    linear-gradient(100deg, #020c3a 0%, var(--pes-blue-deep) 45%, var(--pes-blue-bright) 100%);
+    radial-gradient(ellipse 45% 110% at 62% 15%, rgba(32, 66, 205, 0.95) 0%, rgba(22, 44, 150, 0.6) 45%, transparent 75%),
+    linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%);
   color: var(--pes-white);
 }
-.elementor .pes-cta::after { /* lightning bolt */
+.elementor .pes-cta::after { /* neon lightning bolt */
   content: "";
   position: absolute;
-  right: 22%;
-  top: -10%;
-  width: 140px;
-  height: 130%;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140' fill='none'%3E%3Cpath d='M62 2 18 78h30L32 138 84 52H54L70 2Z' stroke='%2385c8ff' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
-  filter: drop-shadow(0 0 10px #4fb4ff) drop-shadow(0 0 22px #2e7bff);
-  opacity: 0.9;
+  top: 0;
+  bottom: 0;
+  left: 63%;
+  width: 16%;
+  min-width: 150px;
+  background: var(--pes-bolt) no-repeat center / 100% 100%;
+  filter: drop-shadow(0 0 4px #7fd0ff) drop-shadow(0 0 12px #2f8bff) drop-shadow(0 0 26px #1d5cff);
   pointer-events: none;
 }
 .elementor .pes-cta > .elementor-container { position: relative; z-index: 1; }
@@ -315,24 +497,26 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 22px;
+  gap: 0;
   text-align: left;
 }
-.elementor .pes-cta-box .elementor-icon-box-icon { margin: 0; flex: none; }
+.elementor .pes-cta-box .elementor-icon-box-icon {
+  flex: none;
+  margin: 0;
+  padding-right: 26px;
+  margin-right: 26px;
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
 .elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon {
-  font-size: 46px;
+  font-size: 56px;
   color: var(--pes-white);
   fill: var(--pes-white);
 }
 .elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-white); }
-.elementor .pes-cta-box .elementor-icon-box-content {
-  border-left: 2px solid rgba(255, 255, 255, 0.6);
-  padding-left: 20px;
-}
 .elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon-box-title {
-  margin: 0 0 4px;
-  font-family: var(--pes-font-head);
-  font-size: clamp(22px, 2.6vw, 30px);
+  margin: 0 0 2px;
+  font-family: var(--pes-font-cta);
+  font-size: clamp(24px, 2.6vw, 34px);
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
@@ -340,65 +524,30 @@
 }
 .elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon-box-description {
   margin: 0;
-  font-family: var(--pes-font-body);
-  font-size: 17px;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--pes-font-cta);
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.92);
 }
-
-/* --------------------------------------------------------------------------
-   Header (only if you build the header with the PES header block)
-   -------------------------------------------------------------------------- */
-.elementor .pes-header {
-  background: var(--pes-bg);
-  border-bottom: 2px solid var(--pes-orange);
-}
-.elementor .pes-header .menu {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 4px 28px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.elementor .pes-header .menu > li { position: relative; }
-.elementor .pes-header .menu a {
-  font-family: var(--pes-font-body);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--pes-white);
-  text-decoration: none;
-}
-.elementor .pes-header .menu a:hover { color: var(--pes-orange); }
-.elementor .pes-header .menu > .menu-item-has-children > a::after { content: " \25BE"; font-size: 0.8em; }
-.elementor .pes-header .sub-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: -14px;
-  z-index: 50;
-  min-width: 220px;
-  margin: 0;
-  padding: 10px 0;
-  list-style: none;
-  background: #111;
-  border-top: 2px solid var(--pes-orange);
-}
-.elementor .pes-header li:hover > .sub-menu,
-.elementor .pes-header li:focus-within > .sub-menu { display: block; }
-.elementor .pes-header .sub-menu a { display: block; padding: 8px 14px; font-weight: 500; }
 
 /* --------------------------------------------------------------------------
    Mobile
    -------------------------------------------------------------------------- */
 @media (max-width: 767px) {
+  :root { --pes-header-h: 80px; }
+  .elementor .pes-header::before { clip-path: none; }
+  .elementor .pes-header::after { clip-path: none; top: auto; height: 3px; }
+  .elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 10px; padding-bottom: 10px; }
+  .elementor .pes-logo img { height: 44px; }
+  .elementor .pes-header .pes-btn-solid .elementor-button { padding: 11px 16px; font-size: 14px; }
   .elementor .pes-feature::before,
   .elementor .pes-title-circuit::before,
   .elementor .pes-title-circuit::after { display: none; }
   .elementor .pes-step-num .elementor-heading-title { font-size: 72px; }
-  .elementor .pes-cta::after { right: -20px; opacity: 0.45; }
-  .elementor .pes-cta-box .elementor-icon-box-content { border-left: 0; padding-left: 0; }
+  .elementor .pes-cta::after { left: auto; right: -40px; opacity: 0.45; }
+  .elementor .pes-cta-box .elementor-icon-box-icon { padding-right: 16px; margin-right: 16px; }
+  .elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon { font-size: 42px; }
   .elementor .pes-align-right .elementor-button-wrapper { text-align: left; }
-  .elementor .pes-header .menu { display: none; } /* use a mobile menu / Nav Menu widget on phones */
+  .elementor .pes-header .pes-align-right .elementor-button-wrapper { text-align: right; }
 }

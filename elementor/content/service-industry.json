@@ -1,0 +1,104 @@
+{
+  "title": "PES – Service / Industry Template",
+  "slug": "pes-service-industry-template",
+  "blocks": [
+    {
+      "type": "hero",
+      "align": "center",
+      "title": "Compelling Heading That Includes Solution/Service Name",
+      "text": "Subheader – one or two short sentences that support the header and pack a punch.",
+      "button": { "text": "Main CTA – More Than Learn More / Contact Us", "url": "/contact/", "style": "pes-btn-solid pes-align-center" },
+      "image": "",
+      "video": ""
+    },
+    {
+      "type": "intro",
+      "kicker": "Repeat Service / Industry Name",
+      "title": "What Is Service/Industry?",
+      "accent": "Goal Is To Provide Complete Clarity",
+      "text": "Supporting clarity about the service or industry.",
+      "points": [
+        { "title": "Common Misconception 1", "text": "Supporting content that corrects the misconception." },
+        { "title": "Common Misconception 2", "text": "Supporting content that corrects the misconception." }
+      ],
+      "video": "",
+      "button": { "text": "More About Us", "url": "/about/" }
+    },
+    {
+      "type": "band",
+      "kicker": "Why Service / Industry Matters",
+      "title": "Call Out The Main Problem Or Risk This Solves",
+      "accent": "And Make Sure It Packs A Punch",
+      "text": "Support the problem statement with one or two clear and concise sentences.",
+      "image": ""
+    },
+    {
+      "type": "benefits",
+      "kicker": "Key Benefits",
+      "title": "Why Service/Industry May Be Right For You?",
+      "accent": "Say It In Your Own Way",
+      "text": "One or two sentences that support the headline.",
+      "list_title": "Benefits of Service/Industry:",
+      "items": ["Benefit 1", "Benefit 2", "Benefit 3", "Benefit 4", "Benefit 5"],
+      "button": { "text": "I Am Interested In Commercial Solar", "url": "/contact/" },
+      "frame": "orange",
+      "image": ""
+    },
+    {
+      "type": "process",
+      "label": "Process – Doing business with us is easy",
+      "title": "Doing Business With Us Is Easy!",
+      "subtitle": "Just 4 easy steps and you are on your renewable energy journey",
+      "steps": [
+        { "icon": "fas fa-file-invoice-dollar", "title": "Step 1", "text": "Description of step 1." },
+        { "icon": "fas fa-solar-panel", "title": "Step 2", "text": "Description of step 2." },
+        { "icon": "far fa-handshake", "title": "Step 3", "text": "Description of step 3." },
+        { "icon": "far fa-calendar-alt", "title": "Step 4", "text": "Description of step 4." }
+      ],
+      "button": { "text": "Schedule An Appointment", "url": "/contact/" }
+    },
+    {
+      "type": "media",
+      "title": "Punch Line",
+      "accent": "Of Why You Solve The Problem",
+      "text": "Supporting paragraph. Each page gets its own video here.",
+      "video": ""
+    },
+    {
+      "type": "audience",
+      "kicker": "Who Is Service / Industry For",
+      "title": "Punchy Header Calling Out Types Of Customers",
+      "cards": [
+        { "title": "Industry 1", "text": "Supporting description.", "image": "" },
+        { "title": "Industry 2", "text": "Supporting description.", "image": "" },
+        { "title": "Industry 3", "text": "Supporting description.", "image": "" },
+        { "title": "Industry 4", "text": "Supporting description.", "image": "" },
+        { "title": "Industry 5", "text": "Supporting description.", "image": "" }
+      ]
+    },
+    {
+      "type": "testimonials",
+      "kicker": "Hear From Our Customers",
+      "title": "What Our Customers Say About Us",
+      "shortcode": "[trustindex no-registration=google]"
+    },
+    {
+      "type": "faq",
+      "kicker": "Questions",
+      "title": "FAQs About Service/Industry",
+      "items": [
+        { "q": "Question 1", "a": "Answer 1." },
+        { "q": "Question 2", "a": "Answer 2." },
+        { "q": "Question 3", "a": "Answer 3." },
+        { "q": "Question 4", "a": "Answer 4." },
+        { "q": "Question 5", "a": "Answer 5." }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Schedule A Consultation Today",
+      "subtitle": "Powering Progress. Building Confidence.",
+      "button": { "text": "Call Now", "url": "tel:+10000000000" }
+    }
+  ]
+}

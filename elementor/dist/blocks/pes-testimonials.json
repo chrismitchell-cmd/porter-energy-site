@@ -1,0 +1,80 @@
+{
+  "version": "0.4",
+  "title": "PES – Testimonials",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "cb4ba21",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Testimonials",
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "0",
+          "bottom": "60",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "cb66cdb",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "29232c4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Hear From Our Customers",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "47d7e2a",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "What Our Customers Say About Us",
+                "header_size": "h2",
+                "_css_classes": "pes-title-circuit"
+              },
+              "elements": []
+            },
+            {
+              "id": "8997e83",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "isInner": false,
+              "settings": {
+                "shortcode": "[trustindex no-registration=google]",
+                "_css_classes": "pes-reviews"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "version": "0.4",
+  "title": "PES – Faq",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "950e734",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 960,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "FAQs",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "120",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "3a86428",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "f81eb72",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Questions",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "67debf3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "FAQs About Service/Industry",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "239feaa",
+              "elType": "widget",
+              "widgetType": "accordion",
+              "isInner": false,
+              "settings": {
+                "tabs": [
+                  {
+                    "_id": "f03203a",
+                    "tab_title": "Question 1",
+                    "tab_content": "<p>Answer 1.</p>"
+                  },
+                  {
+                    "_id": "717341b",
+                    "tab_title": "Question 2",
+                    "tab_content": "<p>Answer 2.</p>"
+                  },
+                  {
+                    "_id": "23c4dbe",
+                    "tab_title": "Question 3",
+                    "tab_content": "<p>Answer 3.</p>"
+                  },
+                  {
+                    "_id": "313a4ae",
+                    "tab_title": "Question 4",
+                    "tab_content": "<p>Answer 4.</p>"
+                  },
+                  {
+                    "_id": "4d63feb",
+                    "tab_title": "Question 5",
+                    "tab_content": "<p>Answer 5.</p>"
+                  }
+                ],
+                "selected_icon": {
+                  "value": "fas fa-plus",
+                  "library": "fa-solid"
+                },
+                "selected_active_icon": {
+                  "value": "fas fa-minus",
+                  "library": "fa-solid"
+                },
+                "title_html_tag": "h3",
+                "faq_schema": "yes",
+                "_css_classes": "pes-faq"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

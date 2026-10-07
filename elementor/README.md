@@ -2,18 +2,23 @@
 
 A reusable Elementor build of the page in `mockup/` (the PES Website Template).
 
-- **`dist/pes-page-template.json`** is the only file you need. It holds the whole page
-  **and its styles**, so nothing has to be pasted into the Customizer.
+- **`dist/pes-page-template.json`**: the landing page from the first mockup.
+- **`dist/pes-service-industry-template.json`**: the master template for **every service
+  and industry page**. It follows the porter-electrical.com flow in the PES design
+  (screenshots in `mockup/service-industry/`).
+- Each template holds the whole page **and its styles**, so nothing has to be pasted into
+  the Customizer.
 - It uses classic Elementor **Sections and Columns**, which work on every Elementor
   version (free or Pro, with or without the newer "Container" feature).
 
 ```
 elementor/
-├── dist/pes-page-template.json ← import this
+├── dist/pes-page-template.json             ← landing page
+├── dist/pes-service-industry-template.json ← service / industry pages
 ├── dist/blocks/*.json          ← optional: single sections to add rows to a page
 ├── dist/preview/*.html         ← browser preview of the result
 ├── css/pes-global.css          ← the styles (already inside the template)
-├── content/home.json           ← the text the templates are built from
+├── content/*.json              ← the text each template is built from
 ├── scripts/build.py            ← rebuilds dist/ from content/*.json
 └── mockup/                     ← the original design images
 ```
@@ -65,6 +70,35 @@ At the top of the page in the editor you'll see a thin yellow bar that says
 *“PES Styles – keep this section”*. It holds the design's colors, fonts and shapes.
 Visitors never see it. If it's deleted, the page loses its styling.
 
+## Service and industry pages
+
+Import **`pes-service-industry-template.json`** once (Part A), then for each service or industry
+page follow Part B and insert **PES – Service / Industry Template**. Each row's name shows in the
+**Navigator** (right-click → Navigator). From top to bottom:
+
+| # | Row | What to fill in |
+|---|-----|-----------------|
+| 1 | **Header** | Logo and menu (same as the landing page) |
+| 2 | **Hero** | Heading with the service name, 1–2 sentence subheader, main CTA. For a **video background**: select the Hero row → **Style → Background → Video** and paste an MP4 or YouTube link. Otherwise pick a photo under **Classic** |
+| 3 | **Intro – What is it** | Kicker, two-tone heading, clarity paragraph, two common misconceptions, video link, "More About Us" |
+| 4 | **Problem band – Why it matters** | The main problem or risk, plus a background photo (row → **Style → Background**) |
+| 5 | **Key benefits** | Photo, two-tone heading, 5 benefits (Icon List; click **+ Add Item** for more), CTA |
+| 6 | **Process** | 4 steps: icon, title, description, and the "Schedule An Appointment" button |
+| 7 | **Punch line + video** | Two-tone heading, paragraph, this page's own video |
+| 8 | **Who it's for** | 5 photo cards. The description appears on hover. Set each card's photo on its **column** → **Style → Background → Image** |
+| 9 | **Testimonials** | Uses the Trustindex shortcode `[trustindex no-registration=google]` (the Trustindex plugin must be active) |
+| 10 | **FAQs** | Click **+ Add Item** for more questions. FAQ schema is on, so Google can show them in search |
+| 11 | **CTA banner** | Same banner as the landing page |
+
+**Gold words in a heading:** the gold part of a two-tone heading is wrapped in a span, for example
+`What Is Commercial Solar? <span class="pes-accent">Clarity In Plain English</span>`.
+Change the words inside, or move the `<span …>` and `</span>` tags to change which words are gold.
+
+**Videos:** click a video → **Link** → paste the YouTube or Vimeo URL. Until you do, Elementor's
+sample video shows.
+
+**Removing a section:** if a page doesn't need a row (for example the misconceptions), right-click it → **Delete**.
+
 ## Adding, removing and reordering rows
 
 - **Copy a row:** right-click the row's handle → **Duplicate**.
@@ -105,6 +139,18 @@ same look, add the same class.
 | `pes-step-card`              | icon box               | white card with angled corner and navy edge        |
 | `pes-cta`                    | section                | blue banner with lightning bolt                    |
 | `pes-cta-box`                | icon box               | calendar icon, divider line, title and subtitle    |
+| `pes-hero-center`            | hero section (+ `pes-hero`) | centred hero for service / industry pages     |
+| `pes-eyebrow`                | heading                | small gold-gradient label above a heading          |
+| `pes-accent`                 | `<span>` inside a heading | gold-gradient words                             |
+| `pes-h2-mixed`               | heading (+ `pes-h2`)   | big heading without forced capitals                |
+| `pes-center`                 | heading / text         | centred text                                       |
+| `pes-accent-title`           | heading                | small gold-gradient title (misconceptions)         |
+| `pes-band`                   | section                | gradient lines top and bottom (problem band)       |
+| `pes-checklist`              | icon list              | gold check marks with white text                   |
+| `pes-audience-card`          | column                 | photo card with gradient border and hover text     |
+| `pes-card-title` / `pes-card-text` | heading / text   | title and hover description in a photo card       |
+| `pes-faq`                    | accordion              | dark FAQ rows with gradient bar and icons          |
+| `pes-align-center`           | button                 | centres the button                                 |
 
 Anything you set in a widget's own **Style** tab overrides these defaults for that widget.
 
@@ -135,8 +181,14 @@ The files in `dist/` are generated. To make a page from text (or have Claude mak
 python3 elementor/scripts/build.py
 ```
 
-Then import the new `dist/<slug>.json`. Block types: `hero`, `feature`
-(`"layout": "image-right" | "image-left"`, `"frame": "orange" | "blue"`), `process`, `cta`.
+Then import the new `dist/<slug>.json`. For a new service or industry page, copy
+`content/service-industry.json` (for example to `content/commercial-solar.json`), change `title`,
+`slug` and the text, and build.
+
+Block types: `hero` (`"align": "center"`, optional `"video"`), `feature`
+(`"layout": "image-right" | "image-left"`, `"frame": "orange" | "blue"`), `intro`, `band`,
+`benefits`, `process` (any number of steps, optional `subtitle` / `button`), `media`, `audience`,
+`testimonials`, `faq`, `cta`.
 
 ## Placeholders to replace before going live
 

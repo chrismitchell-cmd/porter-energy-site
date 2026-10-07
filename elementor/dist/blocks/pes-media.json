@@ -1,0 +1,102 @@
+{
+  "version": "0.4",
+  "title": "PES – Media",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "b65c786",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Punch line + video",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "ecce95a",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 48,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "496ce7d",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Punch Line <span class=\"pes-accent\">Of Why You Solve The Problem</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "6e9ea26",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Supporting paragraph. Each page gets its own video here.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "968df1a",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 52,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "0585b6d",
+              "elType": "widget",
+              "widgetType": "video",
+              "isInner": false,
+              "settings": {
+                "video_type": "youtube",
+                "_css_classes": "pes-frame"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

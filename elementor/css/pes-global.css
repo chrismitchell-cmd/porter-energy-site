@@ -218,6 +218,54 @@
 .elementor .pes-lead p:last-child,
 .elementor .pes-body p:last-child { margin-bottom: 0; }
 
+/* Gold-gradient words inside a heading: wrap them in <span class="pes-accent">…</span> */
+.elementor .pes-accent,
+.elementor .pes-eyebrow .elementor-heading-title,
+.elementor .pes-accent-title .elementor-heading-title {
+  background: var(--pes-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+/* small gradient label above a heading ("KEY BENEFITS") */
+.elementor .pes-eyebrow .elementor-heading-title {
+  display: inline-block;
+  font-family: var(--pes-font-head);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.elementor .pes-h2-mixed .elementor-heading-title { text-transform: none; }
+.elementor .pes-h4 .elementor-heading-title,
+.elementor .pes-accent-title .elementor-heading-title {
+  font-family: var(--pes-font-head);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.elementor .pes-center,
+.elementor .pes-center .elementor-heading-title { text-align: center; }
+.elementor .pes-center.pes-lead,
+.elementor .pes-center.pes-body { margin-left: auto; margin-right: auto; max-width: 760px; }
+.elementor .pes-points { margin-top: 10px; }
+.elementor .pes-points .pes-body { font-size: 15px; }
+
+/* checklist (Icon List widget) */
+.elementor .pes-checklist .elementor-icon-list-item {
+  padding: 5px 0;
+  font-family: var(--pes-font-body);
+  font-size: 16px;
+  color: var(--pes-white);
+}
+.elementor .pes-checklist .elementor-icon-list-text { color: var(--pes-white); padding-left: 12px; }
+.elementor .pes-checklist .elementor-icon-list-icon { width: auto; }
+.elementor .pes-checklist .elementor-icon-list-icon i { color: var(--pes-amber); font-size: 15px; }
+.elementor .pes-checklist .elementor-icon-list-icon svg { fill: var(--pes-amber); width: 15px; height: 15px; }
+
 /* --------------------------------------------------------------------------
    Buttons
    pes-btn              – TRANSPARENT button with an orange→gold gradient
@@ -317,6 +365,7 @@
 .elementor .pes-btn-pill .elementor-button:hover { transform: translateY(-1px); }
 
 .elementor .pes-align-right .elementor-button-wrapper { text-align: right; }
+.elementor .pes-align-center .elementor-button-wrapper { text-align: center; }
 
 /* --------------------------------------------------------------------------
    Hero
@@ -332,6 +381,35 @@
   z-index: 3;
 }
 .elementor .pes-hero > .elementor-container { padding-top: var(--pes-header-h); }
+/* pes-hero-center – centred hero for service / industry pages */
+.elementor .pes-hero-center .elementor-heading-title,
+.elementor .pes-hero-center .pes-lead,
+.elementor .pes-hero-center .elementor-button-wrapper { text-align: center; }
+.elementor .pes-hero-center .pes-h1 .elementor-heading-title {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: clamp(40px, 5.4vw, 72px);
+  line-height: 1.02;
+}
+.elementor .pes-hero-center .pes-lead { margin: 0 auto 16px; max-width: 720px; font-size: 19px; }
+.elementor .pes-hero-center .pes-btn-solid .elementor-button { padding: 18px 36px; font-size: 19px; }
+
+/* --------------------------------------------------------------------------
+   Problem band – centred statement over a darkened photo
+   -------------------------------------------------------------------------- */
+.elementor .pes-band::before,
+.elementor .pes-band::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--pes-gradient);
+  z-index: 3;
+}
+.elementor .pes-band::before { top: 0; }
+.elementor .pes-band::after { bottom: 0; }
+.elementor .pes-band .pes-h2 .elementor-heading-title { max-width: 1000px; margin: 0 auto; }
 
 /* --------------------------------------------------------------------------
    Feature row (text + framed image)
@@ -354,10 +432,11 @@
   transform: scaleX(-1);
 }
 
-/* Framed image: thin border, dark gap, then the photo – all four corners angled.
+/* Framed image or video: thin border, dark gap, then the media – all four corners angled.
    pes-frame        – orange→gold gradient border
-   pes-frame-blue   – navy border                                          */
-.elementor .pes-frame.elementor-widget-image {
+   pes-frame-blue   – navy border
+   Works on Image and Video widgets.                                       */
+.elementor .pes-frame.elementor-widget {
   --pes-cut: 20px;
   --pes-shape: polygon(var(--pes-cut) 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut),
     100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,
@@ -367,8 +446,8 @@
   background: var(--pes-gradient);
   clip-path: var(--pes-shape);
 }
-.elementor .pes-frame-blue.elementor-widget-image { background: var(--pes-navy); }
-.elementor .pes-frame.elementor-widget-image::before { /* dark gap inside the border */
+.elementor .pes-frame-blue.elementor-widget { background: var(--pes-navy); }
+.elementor .pes-frame.elementor-widget::before { /* dark gap inside the border */
   content: "";
   position: absolute;
   inset: 3px;
@@ -376,46 +455,48 @@
   background: var(--pes-bg);
   clip-path: var(--pes-shape);
 }
-.elementor .pes-frame.elementor-widget-image .elementor-widget-container,
-.elementor .pes-frame.elementor-widget-image img { position: relative; }
-.elementor .pes-frame img {
+.elementor .pes-frame.elementor-widget .elementor-widget-container,
+.elementor .pes-frame.elementor-widget img,
+.elementor .pes-frame.elementor-widget .elementor-wrapper { position: relative; }
+.elementor .pes-frame img,
+.elementor .pes-frame .elementor-wrapper {
   --pes-cut: 15px;
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
   clip-path: polygon(var(--pes-cut) 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut),
     100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,
     0 calc(100% - var(--pes-cut)), 0 var(--pes-cut));
 }
+.elementor .pes-frame img { aspect-ratio: 4 / 3; object-fit: cover; }
 
 /* --------------------------------------------------------------------------
    Section title with circuit lines on both sides ("Our Process")
    -------------------------------------------------------------------------- */
-.elementor .pes-title-circuit {
-  position: relative;
-  width: 100%;
-}
+.elementor .pes-title-circuit { width: 100%; }
 .elementor .pes-title-circuit .elementor-heading-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
   font-family: var(--pes-font-head);
   font-size: clamp(36px, 5vw, 56px);
   font-weight: 700;
   color: var(--pes-white);
   text-align: center;
 }
-.elementor .pes-title-circuit::before,
-.elementor .pes-title-circuit::after {
+/* circuit lines either side of the title; they shrink to fit and never overlap the text */
+.elementor .pes-title-circuit .elementor-heading-title::before,
+.elementor .pes-title-circuit .elementor-heading-title::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  width: min(30%, 320px);
+  flex: 1 1 0;
+  min-width: 40px;
+  max-width: 320px;
   height: 60px;
-  transform: translateY(-30%);
-  background: var(--pes-circuit) no-repeat left top / contain;
+  margin-top: 26px;
+  background: var(--pes-circuit) no-repeat right center / auto 60px;
   pointer-events: none;
 }
-.elementor .pes-title-circuit::before { left: 0; }
-.elementor .pes-title-circuit::after  { right: 0; transform: translateY(-30%) scaleX(-1); }
+.elementor .pes-title-circuit .elementor-heading-title::after { transform: scaleX(-1); }
 
 /* --------------------------------------------------------------------------
    Process steps
@@ -468,6 +549,156 @@
   text-align: left;
   color: var(--pes-text-dark);
 }
+
+.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon-box-title {
+  margin: 0 0 6px;
+  font-family: var(--pes-font-head);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+  color: var(--pes-text-dark);
+}
+.elementor .pes-process .pes-eyebrow { margin-top: -8px; }
+.elementor .pes-steps { margin: 34px 0 30px; }
+
+/* --------------------------------------------------------------------------
+   Who it's for – photo cards (columns with a background image)
+   The description slides in on hover; on touch screens it is always shown.
+   -------------------------------------------------------------------------- */
+.elementor .pes-audience-card > .elementor-widget-wrap {
+  --pes-cut: 18px;
+  position: relative;
+  min-height: 380px;
+  margin: 8px;
+  padding: 34px 22px !important;
+  align-content: flex-start;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+}
+.elementor .pes-audience-card > .elementor-widget-wrap::before { /* darkening */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.25) 60%, rgba(10, 10, 12, 0.6) 100%);
+  transition: background 0.3s;
+}
+.elementor .pes-audience-card > .elementor-widget-wrap::after { /* gradient border on the angled shape */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--pes-gradient);
+  opacity: 0.85;
+  pointer-events: none;
+  clip-path: polygon(evenodd,
+    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,
+    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),
+    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);
+}
+.elementor .pes-audience-card > .elementor-widget-wrap > .elementor-element { position: relative; z-index: 1; }
+.elementor .pes-card-title .elementor-heading-title {
+  font-family: var(--pes-font-head);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--pes-white);
+}
+.elementor .pes-card-title .elementor-heading-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 12px;
+  background: var(--pes-gradient);
+  transition: width 0.35s;
+}
+.elementor .pes-card-text {
+  font-family: var(--pes-font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pes-white);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s, transform 0.35s;
+}
+.elementor .pes-audience-card:hover > .elementor-widget-wrap::before { background: rgba(10, 10, 12, 0.78); }
+.elementor .pes-audience-card:hover .pes-card-title .elementor-heading-title::after { width: 80px; }
+.elementor .pes-audience-card:hover .pes-card-text { opacity: 1; transform: none; }
+@media (hover: none) {
+  .elementor .pes-card-text { opacity: 1; transform: none; }
+  .elementor .pes-card-title .elementor-heading-title::after { width: 80px; }
+  .elementor .pes-audience-card > .elementor-widget-wrap::before { background: rgba(10, 10, 12, 0.7); }
+}
+.elementor .pes-audience { margin-top: 30px; }
+
+/* --------------------------------------------------------------------------
+   Reviews (Trustindex shortcode) and FAQ (Accordion widget)
+   -------------------------------------------------------------------------- */
+.elementor .pes-reviews { margin-top: 20px; }
+.elementor .pes-faq { margin-top: 26px; }
+.elementor .pes-faq .elementor-accordion-item {
+  position: relative;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: #232121;
+}
+.elementor .pes-faq .elementor-accordion-item::before { /* gradient bar on the left */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: var(--pes-gradient);
+}
+.elementor .pes-faq .elementor-tab-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px 20px 28px;
+  border: 0 !important;
+  cursor: pointer;
+}
+.elementor .pes-faq.elementor-widget-accordion .elementor-accordion-title {
+  font-family: var(--pes-font-ui);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--pes-white);
+  text-decoration: none;
+}
+.elementor .pes-faq .elementor-accordion-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  float: none;
+  text-align: center;
+  font-size: 13px;
+  color: var(--pes-bg) !important;
+  background: var(--pes-gradient);
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+.elementor .pes-faq .elementor-accordion-icon i,
+.elementor .pes-faq .elementor-accordion-icon svg { color: var(--pes-bg); fill: var(--pes-bg); }
+.elementor .pes-faq .elementor-tab-title.elementor-active .elementor-accordion-title {
+  background: var(--pes-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.elementor .pes-faq .elementor-tab-content {
+  padding: 0 28px 22px 72px;
+  border: 0 !important;
+  font-family: var(--pes-font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--pes-text);
+}
+.elementor .pes-faq .elementor-tab-content p:last-child { margin-bottom: 0; }
 
 /* --------------------------------------------------------------------------
    CTA banner ("Schedule a consultation today")
@@ -542,9 +773,11 @@
   .elementor .pes-logo img { height: 44px; }
   .elementor .pes-header .pes-btn-solid .elementor-button { padding: 11px 16px; font-size: 14px; }
   .elementor .pes-feature::before,
-  .elementor .pes-title-circuit::before,
-  .elementor .pes-title-circuit::after { display: none; }
+  .elementor .pes-title-circuit .elementor-heading-title::before,
+  .elementor .pes-title-circuit .elementor-heading-title::after { display: none; }
   .elementor .pes-step-num .elementor-heading-title { font-size: 72px; }
+  .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }
+  .elementor .pes-faq .elementor-tab-content { padding-left: 28px; }
   .elementor .pes-cta::after { left: auto; right: -40px; opacity: 0.45; }
   .elementor .pes-cta-box .elementor-icon-box-icon { padding-right: 16px; margin-right: 16px; }
   .elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon { font-size: 42px; }

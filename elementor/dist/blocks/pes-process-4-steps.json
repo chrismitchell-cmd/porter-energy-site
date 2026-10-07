@@ -1,11 +1,11 @@
 {
   "version": "0.4",
-  "title": "PES – Process",
+  "title": "PES – Process 4 Steps",
   "type": "section",
   "page_settings": [],
   "content": [
     {
-      "id": "bf7d2d1",
+      "id": "85c667e",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -17,7 +17,7 @@
           "sizes": []
         },
         "css_classes": "pes-section pes-process",
-        "_title": "Our Process",
+        "_title": "Process – Doing business with us is easy",
         "padding": {
           "unit": "px",
           "top": "80",
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "de28b2f",
+          "id": "0a28831",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -38,19 +38,31 @@
           },
           "elements": [
             {
-              "id": "9d0c67e",
+              "id": "846dea7",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Our Process",
+                "title": "Doing Business With Us Is Easy!",
                 "header_size": "h2",
                 "_css_classes": "pes-title-circuit"
               },
               "elements": []
             },
             {
-              "id": "25f68d1",
+              "id": "d70ec79",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Just 4 easy steps and you are on your renewable energy journey",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "3c10891",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -62,21 +74,21 @@
                   "sizes": []
                 },
                 "css_classes": "pes-steps",
-                "structure": "30"
+                "structure": "40"
               },
               "elements": [
                 {
-                  "id": "6e01d19",
+                  "id": "4001e87",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 33.333,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "8a3cbdc",
+                      "id": "db029aa",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -88,19 +100,19 @@
                       "elements": []
                     },
                     {
-                      "id": "d86d97a",
+                      "id": "44b511f",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-solar-panel",
+                          "value": "fas fa-file-invoice-dollar",
                           "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Step 1",
+                        "description_text": "Description of step 1.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -110,17 +122,17 @@
                   ]
                 },
                 {
-                  "id": "ad125fe",
+                  "id": "15d4770",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 33.333,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "5eed411",
+                      "id": "cdf5bc0",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -132,19 +144,19 @@
                       "elements": []
                     },
                     {
-                      "id": "931730c",
+                      "id": "731936e",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-bolt",
+                          "value": "fas fa-solar-panel",
                           "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Step 2",
+                        "description_text": "Description of step 2.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -154,17 +166,17 @@
                   ]
                 },
                 {
-                  "id": "62281a2",
+                  "id": "55b54c7",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 33.333,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "70da78a",
+                      "id": "88c4e87",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -176,19 +188,63 @@
                       "elements": []
                     },
                     {
-                      "id": "2d8ce36",
+                      "id": "74e36f2",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-charging-station",
-                          "library": "fa-solid"
+                          "value": "far fa-handshake",
+                          "library": "fa-regular"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Step 3",
+                        "description_text": "Description of step 3.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-step-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "f14201b",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-step"
+                  },
+                  "elements": [
+                    {
+                      "id": "9252f17",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "4",
+                        "header_size": "h3",
+                        "_css_classes": "pes-step-num"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "abf6810",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "far fa-calendar-alt",
+                          "library": "fa-regular"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Step 4",
+                        "description_text": "Description of step 4.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -198,6 +254,23 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "0779170",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Schedule An Appointment",
+                "link": {
+                  "url": "/contact/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
             }
           ]
         }

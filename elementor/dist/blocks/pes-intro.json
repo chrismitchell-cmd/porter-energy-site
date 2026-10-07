@@ -1,0 +1,217 @@
+{
+  "version": "0.4",
+  "title": "PES – Intro",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "a4e7623",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Intro – What is it",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "b9f88d8",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 55,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "8d416ca",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Repeat Service / Industry Name",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow"
+              },
+              "elements": []
+            },
+            {
+              "id": "7f26f9b",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "What Is Service/Industry? <span class=\"pes-accent\">Goal Is To Provide Complete Clarity</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "8285e4d",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Supporting clarity about the service or industry.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "9d8fa19",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "default",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-points",
+                "structure": "20"
+              },
+              "elements": [
+                {
+                  "id": "8218220",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 50
+                  },
+                  "elements": [
+                    {
+                      "id": "36a43be",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Common Misconception 1",
+                        "header_size": "h3",
+                        "_css_classes": "pes-h4 pes-accent-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "6478452",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting content that corrects the misconception.</p>",
+                        "_css_classes": "pes-body"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "23254cf",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 50
+                  },
+                  "elements": [
+                    {
+                      "id": "223c7a3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Common Misconception 2",
+                        "header_size": "h3",
+                        "_css_classes": "pes-h4 pes-accent-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5626bb",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting content that corrects the misconception.</p>",
+                        "_css_classes": "pes-body"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "49865c0",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 45,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "fadd52b",
+              "elType": "widget",
+              "widgetType": "video",
+              "isInner": false,
+              "settings": {
+                "video_type": "youtube",
+                "_css_classes": "pes-frame pes-frame-blue"
+              },
+              "elements": []
+            },
+            {
+              "id": "ce811ca",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "More About Us",
+                "link": {
+                  "url": "/about/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

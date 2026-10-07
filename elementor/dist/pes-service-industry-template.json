@@ -1,6 +1,6 @@
 {
   "version": "0.4",
-  "title": "PES – Page Template",
+  "title": "PES – Service / Industry Template",
   "type": "page",
   "page_settings": {
     "template": "elementor_header_footer",
@@ -10,7 +10,7 @@
   },
   "content": [
     {
-      "id": "3ddd741",
+      "id": "0a8a590",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -26,7 +26,7 @@
       },
       "elements": [
         {
-          "id": "8af1dfe",
+          "id": "881e14b",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -35,7 +35,7 @@
           },
           "elements": [
             {
-              "id": "666f00c",
+              "id": "2193848",
               "elType": "widget",
               "widgetType": "html",
               "isInner": false,
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "id": "f18fc3d",
+      "id": "f6f9052",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -84,7 +84,7 @@
       },
       "elements": [
         {
-          "id": "a7c9eb1",
+          "id": "984fb01",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -95,7 +95,7 @@
           },
           "elements": [
             {
-              "id": "0677bb8",
+              "id": "ba23593",
               "elType": "widget",
               "widgetType": "image",
               "isInner": false,
@@ -108,7 +108,7 @@
           ]
         },
         {
-          "id": "fb72d90",
+          "id": "9b884c8",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -119,7 +119,7 @@
           },
           "elements": [
             {
-              "id": "b5bd372",
+              "id": "9f57330",
               "elType": "widget",
               "widgetType": "wp-widget-nav_menu",
               "isInner": false,
@@ -135,7 +135,7 @@
           ]
         },
         {
-          "id": "13207ef",
+          "id": "9219022",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -146,7 +146,7 @@
           },
           "elements": [
             {
-              "id": "2f50cd9",
+              "id": "ee95ade",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "id": "b2d662f",
+      "id": "e1bdfb0",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -178,17 +178,17 @@
           "size": 1140,
           "sizes": []
         },
-        "css_classes": "pes-section pes-hero",
+        "css_classes": "pes-section pes-hero pes-hero-center",
         "_title": "Hero",
         "height": "min-height",
         "custom_height": {
           "unit": "px",
-          "size": 640,
+          "size": 680,
           "sizes": []
         },
         "custom_height_mobile": {
           "unit": "px",
-          "size": 520,
+          "size": 560,
           "sizes": []
         },
         "column_position": "middle",
@@ -200,28 +200,12 @@
           "left": "0",
           "isLinked": false
         },
-        "background_overlay_background": "gradient",
-        "background_overlay_color": "rgba(0,0,0,0.78)",
-        "background_overlay_color_stop": {
-          "unit": "%",
-          "size": 0,
-          "sizes": []
-        },
-        "background_overlay_color_b": "rgba(0,0,0,0.05)",
-        "background_overlay_color_b_stop": {
-          "unit": "%",
-          "size": 80,
-          "sizes": []
-        },
-        "background_overlay_gradient_angle": {
-          "unit": "deg",
-          "size": 90,
-          "sizes": []
-        }
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(12,12,14,0.62)"
       },
       "elements": [
         {
-          "id": "afa2bca",
+          "id": "5b78da0",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -230,54 +214,42 @@
           },
           "elements": [
             {
-              "id": "f703df4",
+              "id": "9017905",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Solar • Storage • EV • Electrical",
-                "header_size": "p",
-                "_css_classes": "pes-kicker"
-              },
-              "elements": []
-            },
-            {
-              "id": "53e8dca",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Control<br>Your Power",
+                "title": "Compelling Heading That Includes Solution/Service Name",
                 "header_size": "h1",
                 "_css_classes": "pes-h1"
               },
               "elements": []
             },
             {
-              "id": "4d3fad1",
+              "id": "178f654",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
               "settings": {
-                "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
+                "editor": "<p>Subheader – one or two short sentences that support the header and pack a punch.</p>",
                 "_css_classes": "pes-lead"
               },
               "elements": []
             },
             {
-              "id": "f8e4fde",
+              "id": "3b5c348",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Get A Quote",
+                "text": "Main CTA – More Than Learn More / Contact Us",
                 "link": {
                   "url": "/contact/",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""
                 },
-                "_css_classes": "pes-btn"
+                "_css_classes": "pes-btn-solid pes-align-center"
               },
               "elements": []
             }
@@ -286,7 +258,7 @@
       ]
     },
     {
-      "id": "d48e5f3",
+      "id": "7f69303",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -298,7 +270,7 @@
           "sizes": []
         },
         "css_classes": "pes-section pes-feature",
-        "_title": "Feature – Commercial Solar",
+        "_title": "Intro – What is it",
         "structure": "20",
         "column_position": "middle",
         "padding": {
@@ -320,87 +292,173 @@
       },
       "elements": [
         {
-          "id": "8d4fdaf",
+          "id": "1ffaaba",
           "elType": "column",
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 50,
+            "_inline_size": 55,
             "content_position": "center"
           },
           "elements": [
             {
-              "id": "867eaa1",
+              "id": "0895eb9",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Commercial Solar",
+                "title": "Repeat Service / Industry Name",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow"
+              },
+              "elements": []
+            },
+            {
+              "id": "7a0c9b4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "What Is Service/Industry? <span class=\"pes-accent\">Goal Is To Provide Complete Clarity</span>",
                 "header_size": "h2",
                 "_css_classes": "pes-h2"
               },
               "elements": []
             },
             {
-              "id": "998192e",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Put your property to work.",
-                "header_size": "p",
-                "_css_classes": "pes-subhead"
-              },
-              "elements": []
-            },
-            {
-              "id": "5d38654",
+              "id": "439ce8a",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
               "settings": {
-                "editor": "<p>Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs</p>",
+                "editor": "<p>Supporting clarity about the service or industry.</p>",
                 "_css_classes": "pes-body"
               },
               "elements": []
             },
             {
-              "id": "b9c1033",
-              "elType": "widget",
-              "widgetType": "button",
-              "isInner": false,
+              "id": "3d2c5a5",
+              "elType": "section",
+              "isInner": true,
               "settings": {
-                "text": "Learn More",
-                "link": {
-                  "url": "/commercial-solar/",
-                  "is_external": "",
-                  "nofollow": "",
-                  "custom_attributes": ""
+                "layout": "boxed",
+                "gap": "default",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
                 },
-                "_css_classes": "pes-btn pes-btn-more"
+                "css_classes": "pes-points",
+                "structure": "20"
               },
-              "elements": []
+              "elements": [
+                {
+                  "id": "48233c4",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 50
+                  },
+                  "elements": [
+                    {
+                      "id": "1567eec",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Common Misconception 1",
+                        "header_size": "h3",
+                        "_css_classes": "pes-h4 pes-accent-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "28f04a8",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting content that corrects the misconception.</p>",
+                        "_css_classes": "pes-body"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "06717ad",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 50
+                  },
+                  "elements": [
+                    {
+                      "id": "1b2a74d",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Common Misconception 2",
+                        "header_size": "h3",
+                        "_css_classes": "pes-h4 pes-accent-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e27850a",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting content that corrects the misconception.</p>",
+                        "_css_classes": "pes-body"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
         {
-          "id": "df2b76e",
+          "id": "0645b0e",
           "elType": "column",
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 50,
+            "_inline_size": 45,
             "content_position": "center"
           },
           "elements": [
             {
-              "id": "d6b3d66",
+              "id": "947825f",
               "elType": "widget",
-              "widgetType": "image",
+              "widgetType": "video",
               "isInner": false,
               "settings": {
-                "image_size": "full",
-                "_css_classes": "pes-frame"
+                "video_type": "youtube",
+                "_css_classes": "pes-frame pes-frame-blue"
+              },
+              "elements": []
+            },
+            {
+              "id": "b5009b9",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "More About Us",
+                "link": {
+                  "url": "/about/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-align-center"
               },
               "elements": []
             }
@@ -409,7 +467,90 @@
       ]
     },
     {
-      "id": "9ceece6",
+      "id": "6258ee0",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-band",
+        "_title": "Problem band – Why it matters",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(16,16,17,0.82)"
+      },
+      "elements": [
+        {
+          "id": "75e2f80",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "3530bf3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Why Service / Industry Matters",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "9f524c6",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Call Out The Main Problem Or Risk This Solves <span class=\"pes-accent\">And Make Sure It Packs A Punch</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "ad0bd0f",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Support the problem statement with one or two clear and concise sentences.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4e855b",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -421,7 +562,7 @@
           "sizes": []
         },
         "css_classes": "pes-section pes-feature pes-feature-reverse",
-        "_title": "Feature – Battery Energy Storage",
+        "_title": "Key benefits",
         "structure": "20",
         "column_position": "middle",
         "padding": {
@@ -443,204 +584,17 @@
       },
       "elements": [
         {
-          "id": "1ad8e69",
+          "id": "15836b4",
           "elType": "column",
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 50,
+            "_inline_size": 47,
             "content_position": "center"
           },
           "elements": [
             {
-              "id": "4bdd972",
-              "elType": "widget",
-              "widgetType": "image",
-              "isInner": false,
-              "settings": {
-                "image_size": "full",
-                "_css_classes": "pes-frame pes-frame-blue"
-              },
-              "elements": []
-            }
-          ]
-        },
-        {
-          "id": "6a2253b",
-          "elType": "column",
-          "isInner": false,
-          "settings": {
-            "_column_size": 50,
-            "_inline_size": 50,
-            "content_position": "center"
-          },
-          "elements": [
-            {
-              "id": "c7eb37a",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Battery Energy Storage",
-                "header_size": "h2",
-                "_css_classes": "pes-h2"
-              },
-              "elements": []
-            },
-            {
-              "id": "6311dfe",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Put your property to work.",
-                "header_size": "p",
-                "_css_classes": "pes-subhead"
-              },
-              "elements": []
-            },
-            {
-              "id": "1b14de2",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "isInner": false,
-              "settings": {
-                "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
-                "_css_classes": "pes-body"
-              },
-              "elements": []
-            },
-            {
-              "id": "329e32d",
-              "elType": "widget",
-              "widgetType": "button",
-              "isInner": false,
-              "settings": {
-                "text": "Learn More",
-                "link": {
-                  "url": "/battery-energy-storage/",
-                  "is_external": "",
-                  "nofollow": "",
-                  "custom_attributes": ""
-                },
-                "_css_classes": "pes-btn pes-btn-more"
-              },
-              "elements": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "b1978e6",
-      "elType": "section",
-      "isInner": false,
-      "settings": {
-        "layout": "boxed",
-        "gap": "extended",
-        "content_width": {
-          "unit": "px",
-          "size": 1140,
-          "sizes": []
-        },
-        "css_classes": "pes-section pes-feature",
-        "_title": "Feature – Commercial Solar",
-        "structure": "20",
-        "column_position": "middle",
-        "padding": {
-          "unit": "px",
-          "top": "110",
-          "right": "0",
-          "bottom": "110",
-          "left": "0",
-          "isLinked": false
-        },
-        "padding_mobile": {
-          "unit": "px",
-          "top": "70",
-          "right": "0",
-          "bottom": "70",
-          "left": "0",
-          "isLinked": false
-        }
-      },
-      "elements": [
-        {
-          "id": "41ebdf6",
-          "elType": "column",
-          "isInner": false,
-          "settings": {
-            "_column_size": 50,
-            "_inline_size": 50,
-            "content_position": "center"
-          },
-          "elements": [
-            {
-              "id": "7765935",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Commercial Solar",
-                "header_size": "h2",
-                "_css_classes": "pes-h2"
-              },
-              "elements": []
-            },
-            {
-              "id": "f94c672",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Put your property to work.",
-                "header_size": "p",
-                "_css_classes": "pes-subhead"
-              },
-              "elements": []
-            },
-            {
-              "id": "0d7b177",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "isInner": false,
-              "settings": {
-                "editor": "<p>Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs</p>",
-                "_css_classes": "pes-body"
-              },
-              "elements": []
-            },
-            {
-              "id": "e697812",
-              "elType": "widget",
-              "widgetType": "button",
-              "isInner": false,
-              "settings": {
-                "text": "Learn More",
-                "link": {
-                  "url": "/commercial-solar/",
-                  "is_external": "",
-                  "nofollow": "",
-                  "custom_attributes": ""
-                },
-                "_css_classes": "pes-btn pes-btn-more"
-              },
-              "elements": []
-            }
-          ]
-        },
-        {
-          "id": "18b2589",
-          "elType": "column",
-          "isInner": false,
-          "settings": {
-            "_column_size": 50,
-            "_inline_size": 50,
-            "content_position": "center"
-          },
-          "elements": [
-            {
-              "id": "1ef9a39",
+              "id": "e0cac5e",
               "elType": "widget",
               "widgetType": "image",
               "isInner": false,
@@ -651,11 +605,139 @@
               "elements": []
             }
           ]
+        },
+        {
+          "id": "b1e4b97",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 53,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "0f6202b",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Key Benefits",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow"
+              },
+              "elements": []
+            },
+            {
+              "id": "f77f496",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Why Service/Industry May Be Right For You? <span class=\"pes-accent\">Say It In Your Own Way</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "5c8ce9d",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>One or two sentences that support the headline.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "2ed536a",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Benefits of Service/Industry:",
+                "header_size": "h3",
+                "_css_classes": "pes-subhead"
+              },
+              "elements": []
+            },
+            {
+              "id": "90c4f90",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "_id": "a1614c2",
+                    "text": "Benefit 1",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "42d8bea",
+                    "text": "Benefit 2",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "5a8bfc8",
+                    "text": "Benefit 3",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "3c8d785",
+                    "text": "Benefit 4",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "843d13d",
+                    "text": "Benefit 5",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  }
+                ],
+                "_css_classes": "pes-checklist"
+              },
+              "elements": []
+            },
+            {
+              "id": "a6bdf55",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "I Am Interested In Commercial Solar",
+                "link": {
+                  "url": "/contact/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid"
+              },
+              "elements": []
+            }
+          ]
         }
       ]
     },
     {
-      "id": "d6ecf26",
+      "id": "c5760d4",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -667,7 +749,7 @@
           "sizes": []
         },
         "css_classes": "pes-section pes-process",
-        "_title": "Our Process",
+        "_title": "Process – Doing business with us is easy",
         "padding": {
           "unit": "px",
           "top": "80",
@@ -679,7 +761,7 @@
       },
       "elements": [
         {
-          "id": "7464bf2",
+          "id": "709800a",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -688,19 +770,31 @@
           },
           "elements": [
             {
-              "id": "a2c2b18",
+              "id": "e0fcea3",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Our Process",
+                "title": "Doing Business With Us Is Easy!",
                 "header_size": "h2",
                 "_css_classes": "pes-title-circuit"
               },
               "elements": []
             },
             {
-              "id": "939b109",
+              "id": "09fbb26",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Just 4 easy steps and you are on your renewable energy journey",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "6e0bedf",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -712,21 +806,21 @@
                   "sizes": []
                 },
                 "css_classes": "pes-steps",
-                "structure": "30"
+                "structure": "40"
               },
               "elements": [
                 {
-                  "id": "9242cfb",
+                  "id": "17e26bc",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 33.333,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "c4ed8fc",
+                      "id": "93e1e8c",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -738,19 +832,19 @@
                       "elements": []
                     },
                     {
-                      "id": "4c2aa35",
+                      "id": "a90f15f",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-solar-panel",
+                          "value": "fas fa-file-invoice-dollar",
                           "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Step 1",
+                        "description_text": "Description of step 1.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -760,17 +854,17 @@
                   ]
                 },
                 {
-                  "id": "1838a52",
+                  "id": "58dfea6",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 33.333,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "865e923",
+                      "id": "20eb905",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -782,19 +876,19 @@
                       "elements": []
                     },
                     {
-                      "id": "eb2da79",
+                      "id": "c551435",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-bolt",
+                          "value": "fas fa-solar-panel",
                           "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Step 2",
+                        "description_text": "Description of step 2.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -804,17 +898,17 @@
                   ]
                 },
                 {
-                  "id": "767d910",
+                  "id": "43a72ee",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 33.333,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-step"
                   },
                   "elements": [
                     {
-                      "id": "a1a10e9",
+                      "id": "3652dee",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -826,22 +920,431 @@
                       "elements": []
                     },
                     {
-                      "id": "8813ad8",
+                      "id": "d925831",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-charging-station",
-                          "library": "fa-solid"
+                          "value": "far fa-handshake",
+                          "library": "fa-regular"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Step 3",
+                        "description_text": "Description of step 3.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2e579d9",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-step"
+                  },
+                  "elements": [
+                    {
+                      "id": "bf1e346",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "4",
+                        "header_size": "h3",
+                        "_css_classes": "pes-step-num"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "bb3e639",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "far fa-calendar-alt",
+                          "library": "fa-regular"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Step 4",
+                        "description_text": "Description of step 4.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-step-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0d5b5c6",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Schedule An Appointment",
+                "link": {
+                  "url": "/contact/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4fd3c50",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Punch line + video",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "c0cd9b8",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 48,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "67f7bf2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Punch Line <span class=\"pes-accent\">Of Why You Solve The Problem</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "e65d8a6",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Supporting paragraph. Each page gets its own video here.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "747cdc6",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 52,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "2a65037",
+              "elType": "widget",
+              "widgetType": "video",
+              "isInner": false,
+              "settings": {
+                "video_type": "youtube",
+                "_css_classes": "pes-frame"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "919cae8",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Who it's for",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "635e25c",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "2758132",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Who Is Service / Industry For",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "910229d",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Punchy Header Calling Out Types Of Customers",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "c01e857",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "narrow",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-audience",
+                "structure": "50"
+              },
+              "elements": [
+                {
+                  "id": "5a8c9b6",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "9d1d598",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 1",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "294e604",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "0ce8d7e",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "fbd101b",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 2",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c58ee0f",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "bd32615",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "36ad12d",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 3",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a6bd17d",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "5d268e0",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "694a0ff",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 4",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "3384faa",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "be6e392",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "f5252d0",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 5",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4b91622",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
                       },
                       "elements": []
                     }
@@ -854,7 +1357,187 @@
       ]
     },
     {
-      "id": "65dfb32",
+      "id": "5e59d12",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Testimonials",
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "0",
+          "bottom": "60",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "5a86016",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "9b420de",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Hear From Our Customers",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "9f2285f",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "What Our Customers Say About Us",
+                "header_size": "h2",
+                "_css_classes": "pes-title-circuit"
+              },
+              "elements": []
+            },
+            {
+              "id": "6aa564a",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "isInner": false,
+              "settings": {
+                "shortcode": "[trustindex no-registration=google]",
+                "_css_classes": "pes-reviews"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5dc212d",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 960,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "FAQs",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "120",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "728c202",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "ce4136a",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Questions",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "b3643c2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "FAQs About Service/Industry",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "4cbac00",
+              "elType": "widget",
+              "widgetType": "accordion",
+              "isInner": false,
+              "settings": {
+                "tabs": [
+                  {
+                    "_id": "bfb0e66",
+                    "tab_title": "Question 1",
+                    "tab_content": "<p>Answer 1.</p>"
+                  },
+                  {
+                    "_id": "b2b53a6",
+                    "tab_title": "Question 2",
+                    "tab_content": "<p>Answer 2.</p>"
+                  },
+                  {
+                    "_id": "7ab1698",
+                    "tab_title": "Question 3",
+                    "tab_content": "<p>Answer 3.</p>"
+                  },
+                  {
+                    "_id": "224734d",
+                    "tab_title": "Question 4",
+                    "tab_content": "<p>Answer 4.</p>"
+                  },
+                  {
+                    "_id": "5d856a3",
+                    "tab_title": "Question 5",
+                    "tab_content": "<p>Answer 5.</p>"
+                  }
+                ],
+                "selected_icon": {
+                  "value": "fas fa-plus",
+                  "library": "fa-solid"
+                },
+                "selected_active_icon": {
+                  "value": "fas fa-minus",
+                  "library": "fa-solid"
+                },
+                "title_html_tag": "h3",
+                "faq_schema": "yes",
+                "_css_classes": "pes-faq"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9549fd4",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -880,7 +1563,7 @@
       },
       "elements": [
         {
-          "id": "c9fcc83",
+          "id": "83dac8b",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -890,7 +1573,7 @@
           },
           "elements": [
             {
-              "id": "c4597b6",
+              "id": "79d940e",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -912,7 +1595,7 @@
           ]
         },
         {
-          "id": "b9dcac6",
+          "id": "706a712",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -922,7 +1605,7 @@
           },
           "elements": [
             {
-              "id": "e16d6de",
+              "id": "49be486",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,

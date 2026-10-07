@@ -1,0 +1,262 @@
+{
+  "version": "0.4",
+  "title": "PES – Audience",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "6c861a9",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Who it's for",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "d2c2afc",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "734b93b",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Who Is Service / Industry For",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "d3dce1d",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Punchy Header Calling Out Types Of Customers",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "534beaf",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "narrow",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-audience",
+                "structure": "50"
+              },
+              "elements": [
+                {
+                  "id": "4a5fa47",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "8259ea0",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 1",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4eb84b9",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "a5ea31e",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "06698d2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 2",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "3961768",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "9820b55",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "ba09b92",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 3",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "97b8b1a",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "067dd75",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "afdc309",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 4",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "cbc32b5",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "778e062",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 20.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "34821c2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Industry 5",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "20a4514",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Supporting description.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

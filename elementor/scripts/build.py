@@ -430,7 +430,7 @@ PAGE_SETTINGS = {
     "template": "elementor_header_footer",  # "Elementor Full Width": keeps the theme header/footer
     "hide_title": "yes",
     "background_background": "classic",
-    "background_color": "#1B1B1C",
+    "background_color": "#1B1A1A",
 }
 
 

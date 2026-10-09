@@ -137,7 +137,7 @@ same look, add the same class.
 | `pes-btn-pill`               | button                 | rounded orange pill ("Call Now")                   |
 | `pes-frame`                  | image                  | orange→gold gradient frame, angled corners         |
 | `pes-frame pes-frame-blue`   | image                  | navy frame, angled corners                         |
-| `pes-frame-grip`             | image / video (+ `pes-frame`) | "tool grip" edge: top and bottom rise into a ribbed centre section, like a jobsite-speaker bumper. Works with orange and navy frames |
+| `pes-frame-grip`             | image / video (+ `pes-frame`) | "tool grip" edge: the middle of the top and bottom line steps in and runs through a row of grip notches, like a jobsite-speaker bumper. Works with orange and navy frames |
 | `pes-header`                 | section                | dark header bar with the stepped gold line and tab |
 | `pes-logo`                   | image                  | logo sizing in the header                          |
 | `pes-title-circuit`          | heading                | centred title with circuit lines on both sides     |

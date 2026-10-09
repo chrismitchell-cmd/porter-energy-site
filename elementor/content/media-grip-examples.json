@@ -9,7 +9,7 @@
       "grip": true,
       "title": "Image Block – Grip Edge",
       "subtitle": "Orange-gradient frame with the tool-grip top and bottom.",
-      "text": "Add pes-frame-grip next to pes-frame on any Image widget to raise the top and bottom edges into a ribbed grip, like the bumper on a jobsite speaker.",
+      "text": "Add pes-frame-grip next to pes-frame on any Image widget to recess the middle of the top and bottom line and cut grip notches into it, like the bumper on a jobsite speaker.",
       "button": { "text": "Learn More", "url": "/commercial-solar/" },
       "image": ""
     },

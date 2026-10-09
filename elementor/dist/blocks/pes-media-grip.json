@@ -1,0 +1,102 @@
+{
+  "version": "0.4",
+  "title": "PES – Media Grip",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "3434173",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Punch line + video",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "3d4f9f0",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 48,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "d621bec",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Video Block <span class=\"pes-accent\">With The Grip Edge</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "de3808d",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>The same edge works on Video widgets. Paste the YouTube or Vimeo link and the frame and grip stay in place.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "5dff5fd",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 52,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "30cead2",
+              "elType": "widget",
+              "widgetType": "video",
+              "isInner": false,
+              "settings": {
+                "video_type": "youtube",
+                "_css_classes": "pes-frame pes-frame-grip"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

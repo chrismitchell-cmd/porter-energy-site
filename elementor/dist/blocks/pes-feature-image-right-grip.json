@@ -1,0 +1,131 @@
+{
+  "version": "0.4",
+  "title": "PES – Feature Image Right Grip",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "649daef",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Feature – Image Block – Grip Edge",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "7733f19",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "938e984",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Image Block – Grip Edge",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "2004357",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Orange-gradient frame with the tool-grip top and bottom.",
+                "header_size": "p",
+                "_css_classes": "pes-subhead"
+              },
+              "elements": []
+            },
+            {
+              "id": "cb7baee",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Add pes-frame-grip next to pes-frame on any Image widget to raise the top and bottom edges into a ribbed grip, like the bumper on a jobsite speaker.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "a8472b2",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Learn More",
+                "link": {
+                  "url": "/commercial-solar/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "fe208eb",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "dd633e3",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image_size": "full",
+                "_css_classes": "pes-frame pes-frame-grip"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "PES – Image & Video Grip Examples",
+  "slug": "pes-media-grip-examples",
+  "blocks": [
+    {
+      "type": "feature",
+      "layout": "image-right",
+      "frame": "orange",
+      "grip": true,
+      "title": "Image Block – Grip Edge",
+      "subtitle": "Orange-gradient frame with the tool-grip top and bottom.",
+      "text": "Add pes-frame-grip next to pes-frame on any Image widget to raise the top and bottom edges into a ribbed grip, like the bumper on a jobsite speaker.",
+      "button": { "text": "Learn More", "url": "/commercial-solar/" },
+      "image": ""
+    },
+    {
+      "type": "media",
+      "grip": true,
+      "title": "Video Block",
+      "accent": "With The Grip Edge",
+      "text": "The same edge works on Video widgets. Paste the YouTube or Vimeo link and the frame and grip stay in place.",
+      "video": ""
+    },
+    {
+      "type": "feature",
+      "layout": "image-left",
+      "frame": "blue",
+      "grip": true,
+      "title": "Navy Frame – Grip Edge",
+      "subtitle": "The grip works on the navy frame too.",
+      "text": "Use pes-frame pes-frame-blue pes-frame-grip for the navy version.",
+      "button": { "text": "Learn More", "url": "/battery-energy-storage/" },
+      "image": ""
+    }
+  ]
+}

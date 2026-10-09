@@ -97,6 +97,11 @@ Change the words inside, or move the `<span …>` and `</span>` tags to change w
 **Videos:** click a video → **Link** → paste the YouTube or Vimeo URL. Until you do, Elementor's
 sample video shows.
 
+**Tool-grip edge on images and videos:** select the image or video → **Advanced → CSS Classes** and
+add `pes-frame-grip` after the existing classes, for example `pes-frame pes-frame-grip` or
+`pes-frame pes-frame-blue pes-frame-grip`. Remove it to go back to the straight edge. See
+`dist/pes-media-grip-examples.json` for a ready-made example of each.
+
 **Removing a section:** if a page doesn't need a row (for example the misconceptions), right-click it → **Delete**.
 
 ## Adding, removing and reordering rows
@@ -132,6 +137,7 @@ same look, add the same class.
 | `pes-btn-pill`               | button                 | rounded orange pill ("Call Now")                   |
 | `pes-frame`                  | image                  | orange→gold gradient frame, angled corners         |
 | `pes-frame pes-frame-blue`   | image                  | navy frame, angled corners                         |
+| `pes-frame-grip`             | image / video (+ `pes-frame`) | "tool grip" edge: top and bottom rise into a ribbed centre section, like a jobsite-speaker bumper. Works with orange and navy frames |
 | `pes-header`                 | section                | dark header bar with the stepped gold line and tab |
 | `pes-logo`                   | image                  | logo sizing in the header                          |
 | `pes-title-circuit`          | heading                | centred title with circuit lines on both sides     |

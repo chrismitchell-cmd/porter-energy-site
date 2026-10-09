@@ -85,9 +85,11 @@
   position: relative;
   z-index: 20;
   min-height: var(--pes-header-h);
-  margin-bottom: calc(var(--pes-header-h) * -1);
   background: transparent;
 }
+/* the hero slides up under the header so its photo shows through the tab;
+   any other section simply starts below the header */
+.elementor .pes-header + .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }
 .elementor .pes-header > .elementor-container { position: relative; z-index: 2; min-height: var(--pes-header-h); }
 .elementor .pes-header::before,
 .elementor .pes-header::after {
@@ -468,6 +470,42 @@
     0 calc(100% - var(--pes-cut)), 0 var(--pes-cut));
 }
 .elementor .pes-frame img { aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* pes-frame-grip – add to a framed image/video (with pes-frame) for a "tool grip" edge:
+   like the bumper on a jobsite speaker, the top and bottom border rise into a raised
+   centre section with angled shoulders and subtle ribbing.                              */
+.elementor .pes-frame.pes-frame-grip.elementor-widget {
+  --pes-grip-h: 12px;      /* how far the grip rises above the frame line */
+  --pes-grip-w: 42%;       /* width of the raised section */
+  --pes-grip-slope: 16px;  /* width of each angled shoulder */
+  --g0: calc(50% - var(--pes-grip-w) / 2);
+  --g1: calc(50% + var(--pes-grip-w) / 2);
+  padding: calc(var(--pes-grip-h) + 10px) 10px;
+  clip-path: polygon(
+    0 calc(var(--pes-grip-h) + var(--pes-cut)), var(--pes-cut) var(--pes-grip-h),
+    calc(var(--g0) - var(--pes-grip-slope)) var(--pes-grip-h), var(--g0) 0,
+    var(--g1) 0, calc(var(--g1) + var(--pes-grip-slope)) var(--pes-grip-h),
+    calc(100% - var(--pes-cut)) var(--pes-grip-h), 100% calc(var(--pes-grip-h) + var(--pes-cut)),
+    100% calc(100% - var(--pes-grip-h) - var(--pes-cut)), calc(100% - var(--pes-cut)) calc(100% - var(--pes-grip-h)),
+    calc(var(--g1) + var(--pes-grip-slope)) calc(100% - var(--pes-grip-h)), var(--g1) 100%,
+    var(--g0) 100%, calc(var(--g0) - var(--pes-grip-slope)) calc(100% - var(--pes-grip-h)),
+    var(--pes-cut) calc(100% - var(--pes-grip-h)), 0 calc(100% - var(--pes-grip-h) - var(--pes-cut)));
+}
+.elementor .pes-frame.pes-frame-grip.elementor-widget::before { /* dark gap starts below the grip */
+  inset: calc(var(--pes-grip-h) + 3px) 3px;
+}
+.elementor .pes-frame.pes-frame-grip.elementor-widget::after { /* ribbing on the raised sections */
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0 2px, transparent 2px 9px) center 3px / calc(var(--pes-grip-w) - 28px) calc(var(--pes-grip-h) - 5px) no-repeat,
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0 2px, transparent 2px 9px) center calc(100% - 3px) / calc(var(--pes-grip-w) - 28px) calc(var(--pes-grip-h) - 5px) no-repeat;
+}
+@media (max-width: 767px) {
+  .elementor .pes-frame.pes-frame-grip.elementor-widget { --pes-grip-h: 9px; --pes-grip-w: 50%; --pes-grip-slope: 12px; }
+}
 
 /* --------------------------------------------------------------------------
    Section title with circuit lines on both sides ("Our Process")

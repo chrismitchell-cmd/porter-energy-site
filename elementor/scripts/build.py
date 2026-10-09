@@ -135,6 +135,12 @@ def bg_image(url, overlay="rgba(16,16,17,0.82)"):
     return s
 
 
+def frame_classes(b, default="orange"):
+    """CSS classes for a framed image/video: colour from "frame", plus the tool-grip edge if "grip"."""
+    classes = "pes-frame" + (" pes-frame-blue" if b.get("frame", default) == "blue" else "")
+    return classes + (" pes-frame-grip" if b.get("grip") else "")
+
+
 def fa(fa_class):
     library = "fa-regular" if fa_class.startswith("far ") else "fa-solid"
     return {"value": fa_class, "library": library}
@@ -205,7 +211,7 @@ def block_hero(ids, b):
 
 def block_feature(ids, b):
     reverse = b.get("layout") == "image-left"
-    frame = "pes-frame pes-frame-blue" if b.get("frame") == "blue" else "pes-frame"
+    frame = frame_classes(b)
     copy = column(ids, 50, [
         heading(ids, b["title"], "h2", "pes-h2"),
         heading(ids, b["subtitle"], "p", "pes-subhead"),
@@ -261,7 +267,7 @@ def block_intro(ids, b):
         heading(ids, two_tone(b["title"], b.get("accent")), "h2", "pes-h2"),
         text(ids, b["text"]),
     ] + ([points] if points else []), content_position="center")
-    media = column(ids, 45, [video(ids, b.get("video"), "pes-frame pes-frame-blue", "img/video.jpg")]
+    media = column(ids, 45, [video(ids, b.get("video"), frame_classes(b, "blue"), "img/video.jpg")]
                    + ([button(ids, b["button"], "pes-btn pes-align-center")] if b.get("button") else []),
                    content_position="center")
     return section(ids, [copy, media], "pes-section pes-feature", title="Intro – What is it",
@@ -282,7 +288,7 @@ def block_band(ids, b):
 
 def block_benefits(ids, b):
     """Key benefits – framed photo | kicker, two-tone heading, text, checklist, CTA."""
-    frame = "pes-frame pes-frame-blue" if b.get("frame") == "blue" else "pes-frame"
+    frame = frame_classes(b)
     media = column(ids, 47, [image(ids, b.get("image"), frame, b["title"], "img/sunset.jpg")],
                    content_position="center")
     copy = column(ids, 53, [
@@ -305,7 +311,7 @@ def block_media(ids, b):
         text(ids, b["text"]),
     ] + ([button(ids, b["button"], "pes-btn pes-btn-more")] if b.get("button") else []),
         content_position="center")
-    media = column(ids, 52, [video(ids, b.get("video"), "pes-frame", "img/video.jpg")], content_position="center")
+    media = column(ids, 52, [video(ids, b.get("video"), frame_classes(b), "img/video.jpg")], content_position="center")
     return section(ids, [copy, media], "pes-section pes-feature", title="Punch line + video",
                    gap="extended", structure="20", column_position="middle",
                    padding=box(110, 0, 110, 0), padding_mobile=box(70, 0, 70, 0))
@@ -410,7 +416,9 @@ HEADER_DEFAULTS = {"type": "header", "logo": "", "button": {"text": "Get A Quote
 
 def block_name(b):
     if b["type"] == "feature":
-        return f"pes-feature-{b.get('layout', 'image-right')}"
+        return f"pes-feature-{b.get('layout', 'image-right')}" + ("-grip" if b.get("grip") else "")
+    if b["type"] == "media" and b.get("grip"):
+        return "pes-media-grip"
     if b["type"] == "hero" and b.get("align") == "center":
         return "pes-hero-center"
     if b["type"] == "process" and len(b["steps"]) != 3:

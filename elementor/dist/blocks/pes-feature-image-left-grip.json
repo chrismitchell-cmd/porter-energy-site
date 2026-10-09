@@ -1,0 +1,131 @@
+{
+  "version": "0.4",
+  "title": "PES – Feature Image Left Grip",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "27656d6",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature pes-feature-reverse",
+        "_title": "Feature – Navy Frame – Grip Edge",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "69aebc9",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "ee016fe",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image_size": "full",
+                "_css_classes": "pes-frame pes-frame-blue pes-frame-grip"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "3ba1c23",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 50,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "c75b227",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Navy Frame – Grip Edge",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "a5c6346",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "The grip works on the navy frame too.",
+                "header_size": "p",
+                "_css_classes": "pes-subhead"
+              },
+              "elements": []
+            },
+            {
+              "id": "ec0a9cd",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Use pes-frame pes-frame-blue pes-frame-grip for the navy version.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "3e504c3",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Learn More",
+                "link": {
+                  "url": "/battery-energy-storage/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

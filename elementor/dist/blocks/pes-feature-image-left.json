@@ -10,7 +10,7 @@
       "isInner": false,
       "settings": {
         "layout": "boxed",
-        "gap": "extended",
+        "gap": "wider",
         "content_width": {
           "unit": "px",
           "size": 1140,

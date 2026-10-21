@@ -224,7 +224,7 @@ def block_feature(ids, b):
         [media, copy] if reverse else [copy, media],
         "pes-section pes-feature" + (" pes-feature-reverse" if reverse else ""),
         title=f"Feature – {b['title']}",
-        gap="extended",
+        gap="wider",
         structure="20",
         column_position="middle",
         padding=box(110, 0, 110, 0),
@@ -271,7 +271,7 @@ def block_intro(ids, b):
                    + ([button(ids, b["button"], "pes-btn pes-align-center")] if b.get("button") else []),
                    content_position="center")
     return section(ids, [copy, media], "pes-section pes-feature", title="Intro – What is it",
-                   gap="extended", structure="20", column_position="middle",
+                   gap="wider", structure="20", column_position="middle",
                    padding=box(110, 0, 110, 0), padding_mobile=box(70, 0, 70, 0))
 
 
@@ -300,7 +300,7 @@ def block_benefits(ids, b):
         button(ids, b["button"], "pes-btn-solid"),
     ], content_position="center")
     return section(ids, [media, copy], "pes-section pes-feature pes-feature-reverse", title="Key benefits",
-                   gap="extended", structure="20", column_position="middle",
+                   gap="wider", structure="20", column_position="middle",
                    padding=box(110, 0, 110, 0), padding_mobile=box(70, 0, 70, 0))
 
 
@@ -313,7 +313,7 @@ def block_media(ids, b):
         content_position="center")
     media = column(ids, 52, [video(ids, b.get("video"), frame_classes(b), "img/video.jpg")], content_position="center")
     return section(ids, [copy, media], "pes-section pes-feature", title="Punch line + video",
-                   gap="extended", structure="20", column_position="middle",
+                   gap="wider", structure="20", column_position="middle",
                    padding=box(110, 0, 110, 0), padding_mobile=box(70, 0, 70, 0))
 
 
@@ -598,6 +598,7 @@ PREVIEW_BASE_CSS = """
 .pv-center>.elementor-widget-wrap{align-content:center}
 .elementor-column-gap-default>.elementor-column>.elementor-element-populated{padding:10px}
 .elementor-column-gap-extended>.elementor-column>.elementor-element-populated{padding:15px}
+.elementor-column-gap-wider>.elementor-column>.elementor-element-populated{padding:30px}
 .elementor-widget-wrap>.elementor-element{width:100%}
 .elementor-widget:not(:last-child){margin-bottom:20px}
 .elementor-heading-title{margin:0;padding:0;line-height:1}

@@ -6,7 +6,7 @@ A reusable Elementor build of the page in `mockup/` (the PES Website Template).
 - **`dist/pes-service-industry-template.json`**: the master template for **every service
   and industry page**. It follows the porter-electrical.com flow in the PES design
   (screenshots in `mockup/service-industry/`).
-- Each template holds the whole page **and its styles**, so nothing has to be pasted into
+- Templates hold only the page content. The styles live in **Site Settings → Custom CSS** (`dist/pes-site.min.css`) and the header is the site-wide Theme Builder header (`dist/blocks/pes-header.json`), so nothing has to be repeated on each page.
   the Customizer.
 - It uses classic Elementor **Sections and Columns**, which work on every Elementor
   version (free or Pro, with or without the newer "Container" feature).

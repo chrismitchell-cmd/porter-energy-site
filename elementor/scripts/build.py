@@ -492,11 +492,14 @@ def build(content_path, seen_blocks):
     page = json.loads(Path(content_path).read_text())
     ids = Ids(page["slug"])
     header = page.get("header", HEADER_DEFAULTS)
-    sections = ([block_styles(ids), block_header(ids, header)]
-                + [BLOCKS[b["type"]](ids, b) for b in page["blocks"]])
+    content = [BLOCKS[b["type"]](ids, b) for b in page["blocks"]]
+    # The page template holds only the page's own content: the styles live in
+    # Site Settings > Custom CSS and the header is the site-wide Theme Builder header.
     write_json(DIST / f"{page['slug']}.json",
-               template(page["title"], "page", sections, PAGE_SETTINGS))
-    write_preview(DIST / "preview" / f"{page['slug']}.html", page["title"], sections)
+               template(page["title"], "page", content, PAGE_SETTINGS))
+    # The preview shows the page as it appears on the site, header and styles included.
+    write_preview(DIST / "preview" / f"{page['slug']}.html", page["title"],
+                  [block_styles(ids), block_header(ids, header)] + content)
 
     # one standalone file per block variant (first occurrence wins)
     for b in [STYLES_BLOCK, header] + page["blocks"]:

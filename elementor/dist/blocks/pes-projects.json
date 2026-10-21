@@ -1,0 +1,293 @@
+{
+  "version": "0.4",
+  "title": "PES – Projects",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "7a4e7bd",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Featured projects",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "c2ad097",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "0d4dd99",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Featured Projects",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "91ab017",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Recent <span class=\"pes-accent\">Work</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "6dc1505",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "30"
+              },
+              "elements": [
+                {
+                  "id": "6a90687",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card pes-project-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "d1a8d97",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-project-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e97760b",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Project Name",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "d912b78",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>[Size] kW · [Town], NH</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "b325355",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "See Full Details",
+                        "link": {
+                          "url": "/our-projects/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-btn pes-btn-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "010377c",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card pes-project-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "b08cdf1",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-project-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "19092a2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Project Name",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "ab779ca",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>[Size] kW · [Town], NH</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a5ce95e",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "See Full Details",
+                        "link": {
+                          "url": "/our-projects/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-btn pes-btn-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "8631043",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card pes-project-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "e73dc22",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-project-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4f0ee4e",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Project Name",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "3ff4090",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>[Size] kW · [Town], NH</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f0a65da",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "See Full Details",
+                        "link": {
+                          "url": "/our-projects/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-btn pes-btn-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ed5f57d",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "View All Projects",
+                "link": {
+                  "url": "/our-projects/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

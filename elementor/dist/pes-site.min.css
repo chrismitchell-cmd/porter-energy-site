@@ -66,7 +66,7 @@ calc(100% - var(--pes-tab-start)) 100%,
 .elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container  { position: absolute !important; top: 100% !important; left: 0 !important; right: 0 !important; width: auto !important; max-width: none !important; z-index: 60; margin: 0 !important; border-top: 3px solid var(--pes-orange); border-image: var(--pes-gradient) 1; box-shadow: 0 18px 30px rgba(0, 0, 0, 0.45); }
 .elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container > .elementor-nav-menu > li { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
 .elementor .pes-nav .elementor-nav-menu--dropdown .sub-menu a { padding-left: 36px !important; font-size: 14px; color: rgba(255, 255, 255, 0.85) !important; }
-.elementor .pes-header .pes-btn-solid .elementor-button { white-space: nowrap; }
+.elementor .pes-header .pes-btn-solid .elementor-button { white-space: nowrap; padding: 13px 22px; font-size: 16px; }
 @media (min-width: 1025px) and (max-width: 1280px)  { .elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { gap: 4px 20px; }
 .elementor .pes-nav .elementor-nav-menu--main .elementor-item,
 .elementor .pes-header .menu a { font-size: 14px; }
@@ -79,8 +79,10 @@ calc(100% - var(--pes-tab-start)) 100%,
 .elementor .pes-subhead .elementor-heading-title  { font-family: var(--pes-font-body); font-size: 19px; font-weight: 600; color: var(--pes-white); }
 .elementor .pes-lead,
 .elementor .pes-body  { font-family: var(--pes-font-body); color: var(--pes-text); }
-.elementor .pes-lead { font-size: 18px; line-height: 1.5; max-width: 520px; }
-.elementor .pes-body { font-size: 16px; line-height: 1.75; max-width: 440px; }
+.elementor .pes-lead { width: 100%; font-size: 18px; line-height: 1.5; }
+.elementor .pes-body { width: 100%; font-size: 16px; line-height: 1.75; }
+.elementor .pes-lead p { max-width: 520px; }
+.elementor .pes-body p { max-width: 440px; }
 .elementor .pes-lead p:last-child,
 .elementor .pes-body p:last-child { margin-bottom: 0; }
 .elementor .pes-accent,
@@ -92,8 +94,8 @@ calc(100% - var(--pes-tab-start)) 100%,
 .elementor .pes-accent-title .elementor-heading-title  { font-family: var(--pes-font-head); font-size: 22px; font-weight: 700; line-height: 1.15; }
 .elementor .pes-center,
 .elementor .pes-center .elementor-heading-title { text-align: center; }
-.elementor .pes-center.pes-lead,
-.elementor .pes-center.pes-body { margin-left: auto; margin-right: auto; max-width: 760px; }
+.elementor .pes-center.pes-lead p,
+.elementor .pes-center.pes-body p { margin-left: auto; margin-right: auto; max-width: 760px; }
 .elementor .pes-points { margin-top: 10px; }
 .elementor .pes-points .pes-body { font-size: 15px; }
 .elementor .pes-checklist .elementor-icon-list-item  { padding: 5px 0; font-family: var(--pes-font-body); font-size: 16px; color: var(--pes-white); }
@@ -142,7 +144,8 @@ calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px ca
 .elementor .pes-hero-center .pes-lead,
 .elementor .pes-hero-center .elementor-button-wrapper { text-align: center; }
 .elementor .pes-hero-center .pes-h1 .elementor-heading-title  { max-width: 1000px; margin: 0 auto; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02; }
-.elementor .pes-hero-center .pes-lead { margin: 0 auto 16px; max-width: 720px; font-size: 19px; }
+.elementor .pes-hero-center .pes-lead { margin-bottom: 16px; font-size: 19px; }
+.elementor .pes-hero-center .pes-lead p { margin-left: auto; margin-right: auto; max-width: 720px; }
 .elementor .pes-hero-center .pes-btn-solid .elementor-button { padding: 18px 36px; font-size: 19px; }
 .elementor .pes-band::before,
 .elementor .pes-band::after  { content: ""; position: absolute; left: 0; right: 0; height: 3px; background: var(--pes-gradient); z-index: 3; }
@@ -293,6 +296,42 @@ calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px ca
 .elementor .pes-area-list .elementor-icon-list-icon svg { fill: var(--pes-orange); width: 14px; height: 14px; }
 .elementor .pes-area-list .elementor-icon-list-text { color: var(--pes-white); padding-left: 8px; }
 .elementor .pes-area-list + .elementor-widget-button { margin-top: 30px; }
+.elementor .pes-btn-inline { display: inline-block; margin-right: 14px; }
+.elementor .pes-hero-center .pes-btn-inline { margin: 0 7px; }
+.elementor .pes-hero-center .elementor-widget-wrap:has(> .pes-btn-inline) { justify-content: center; }
+.elementor .pes-partners { border-top: 1px solid rgba(255, 255, 255, 0.06); border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+.elementor .pes-partners .pes-h2 .elementor-heading-title { font-size: clamp(26px, 3vw, 36px); }
+.elementor .pes-logo-marquee { margin-top: 26px; }
+.elementor .pes-logo-marquee .swiper-wrapper { transition-timing-function: linear !important; }
+.elementor .pes-logo-marquee .swiper-slide { display: flex; align-items: center; justify-content: center; height: 90px; }
+.elementor .pes-logo-marquee .swiper-slide-image  { max-height: 70px; width: auto; object-fit: contain; filter: grayscale(1) brightness(1.8); opacity: 0.75; transition: filter 0.3s, opacity 0.3s; }
+.elementor .pes-logo-marquee .swiper-slide:hover .swiper-slide-image { filter: none; opacity: 1; }
+.elementor .pes-service-card .elementor-icon-box-title a::after  { content: "Learn More"; display: block; margin-top: 14px; font-family: var(--pes-font-ui); font-size: 13px; font-style: italic; font-weight: 600; letter-spacing: 0.02em; color: var(--pes-amber); order: 3; }
+.elementor .pes-service-card .elementor-icon-box-content { display: flex; flex-direction: column; }
+.elementor .pes-service-card .elementor-icon-box-title { order: 1; }
+.elementor .pes-service-card .elementor-icon-box-description { order: 2; }
+.elementor .pes-project-card > .elementor-widget-wrap { padding: 14px 14px 26px !important; }
+.elementor .pes-project-img img  { --pes-cut: 14px; display: block; width: 100%; height: 240px; object-fit: cover; clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut)); }
+.elementor .pes-project-card .pes-job-title,
+.elementor .pes-project-card .pes-card-note,
+.elementor .pes-project-card .elementor-widget-button { padding: 0 12px; }
+.elementor .pes-project-card .pes-job-title { margin-top: 6px; }
+.elementor .pes-posts { margin-top: 34px; }
+.elementor .pes-posts .elementor-post  { --pes-cut: 18px; position: relative; background: #232121; clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut)); transition: transform 0.25s ease; }
+.elementor .pes-posts .elementor-post::after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--pes-gradient); }
+.elementor .pes-posts .elementor-post:hover { transform: translateY(-4px); }
+.elementor .pes-posts .elementor-post__thumbnail__link { margin-bottom: 0 !important; }
+.elementor .pes-posts .elementor-post__text { padding: 22px 22px 28px; }
+.elementor .pes-posts .elementor-post__title,
+.elementor .pes-posts .elementor-post__title a  { font-family: var(--pes-font-head); font-size: 22px; font-weight: 700; line-height: 1.2; color: var(--pes-white); text-decoration: none; }
+.elementor .pes-posts .elementor-post__title a:hover { color: var(--pes-orange); }
+.elementor .pes-posts .elementor-post__meta-data  { margin-top: 8px; font-family: var(--pes-font-head); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pes-amber); }
+.elementor .pes-posts .elementor-post__excerpt p { margin: 12px 0 0; font-family: var(--pes-font-body); font-size: 15px; line-height: 1.6; color: var(--pes-text); }
+.elementor .pes-posts .elementor-post__read-more  { display: inline-block; margin-top: 14px; font-family: var(--pes-font-ui); font-size: 14px; font-style: italic; font-weight: 600; color: var(--pes-amber); text-decoration: none; }
+.elementor .pes-posts .elementor-post__read-more:hover { color: var(--pes-orange); }
+.elementor .pes-posts + .elementor-widget-button { margin-top: 30px; }
 .elementor .pes-cta  { position: relative; overflow: hidden; background:
 radial-gradient(ellipse 45% 110% at 62% 15%, rgba(32, 66, 205, 0.95) 0%, rgba(22, 44, 150, 0.6) 45%, transparent 75%),
 linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%); color: var(--pes-white); }
@@ -311,7 +350,6 @@ linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%); color: var(--pes
 .elementor .pes-header .pes-nav-col > .elementor-widget-wrap { padding-top: 10px; padding-bottom: 10px; }
 .elementor .pes-nav .elementor-menu-toggle { font-size: 22px; padding: 6px; }
 .elementor .pes-logo img { height: 44px; }
-.elementor .pes-header .pes-btn-solid .elementor-button { padding: 11px 16px; font-size: 14px; }
 .elementor .pes-feature::before,
 .elementor .pes-title-circuit .elementor-heading-title::before,
 .elementor .pes-title-circuit .elementor-heading-title::after { display: none; }
@@ -319,6 +357,8 @@ linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%); color: var(--pes
 .elementor .pes-section > .elementor-column-gap-wider > .elementor-column > .elementor-element-populated { padding: 15px; }
 .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }
 .elementor .pes-job-card > .elementor-widget-wrap { margin: 8px 0; }
+.elementor .pes-btn-inline { margin: 0 0 12px; }
+.elementor .pes-header .pes-btn-solid .elementor-button { padding: 10px 12px; font-size: 13px; }
 .elementor .pes-form-panel > .elementor-widget-wrap { padding: 24px 16px !important; }
 .elementor .pes-form-placeholder { min-height: 320px; }
 .elementor .pes-faq .elementor-tab-content { padding-left: 28px; }

@@ -1,14 +1,29 @@
 {
-  "title": "PES – Page Template",
-  "slug": "pes-page-template",
+  "title": "PES – Home",
+  "slug": "pes-home",
   "blocks": [
     {
       "type": "hero",
       "kicker": "Solar • Storage • EV • Electrical",
       "title": "Control<br>Your Power",
-      "text": "Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.",
-      "button": { "text": "Get A Quote", "url": "/contact/" },
+      "text": "Integrated solar, battery storage, EV charging and electrical systems for New Hampshire homes and businesses, installed by licensed electricians.",
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment",
+        "style": "pes-btn-solid"
+      },
+      "button2": {
+        "text": "Call 603-340-0500",
+        "url": "tel:+16033400500"
+      },
       "image": ""
+    },
+    {
+      "type": "partners",
+      "kicker": "Our Partners",
+      "title": "We Partner With The",
+      "accent": "Best In The Industry",
+      "logos": []
     },
     {
       "type": "feature",
@@ -16,8 +31,11 @@
       "frame": "orange",
       "title": "Commercial Solar",
       "subtitle": "Put your property to work.",
-      "text": "Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs",
-      "button": { "text": "Learn More", "url": "/commercial-solar/" },
+      "text": "Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs.",
+      "button": {
+        "text": "Learn More",
+        "url": "/commercial-solar/"
+      },
       "image": ""
     },
     {
@@ -25,35 +43,188 @@
       "layout": "image-left",
       "frame": "blue",
       "title": "Battery Energy Storage",
-      "subtitle": "Put your property to work.",
+      "subtitle": "Keep the power on.",
       "text": "Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.",
-      "button": { "text": "Learn More", "url": "/battery-energy-storage/" },
+      "button": {
+        "text": "Learn More",
+        "url": "/battery-energy-storage/"
+      },
       "image": ""
     },
     {
-      "type": "feature",
-      "layout": "image-right",
-      "frame": "orange",
-      "title": "Commercial Solar",
-      "subtitle": "Put your property to work.",
-      "text": "Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs",
-      "button": { "text": "Learn More", "url": "/commercial-solar/" },
-      "image": ""
+      "type": "service_grid",
+      "label": "More services",
+      "kicker": "What We Do",
+      "title": "Complete Energy",
+      "accent": "Solutions",
+      "services": [
+        {
+          "icon": "fas fa-charging-station",
+          "title": "EV Charging",
+          "text": "Home and commercial EV charger installation.",
+          "url": "/ev-charging/"
+        },
+        {
+          "icon": "fas fa-bolt",
+          "title": "Generators",
+          "text": "Standby generators that keep you running through outages.",
+          "url": "/generators/"
+        },
+        {
+          "icon": "fas fa-plug",
+          "title": "Electrical",
+          "text": "Licensed electrical work from upgrades to new installs.",
+          "url": "/electrical/"
+        },
+        {
+          "icon": "fas fa-tools",
+          "title": "Service O&M",
+          "text": "Monitoring, maintenance and repairs for existing systems.",
+          "url": "/service-om/"
+        }
+      ],
+      "button": {
+        "text": "View All Services",
+        "url": "/our-services/"
+      }
     },
     {
-      "type": "process",
-      "title": "Our Process",
-      "steps": [
-        { "icon": "fas fa-solar-panel", "text": "Integrated energy systems built for businesses, organization." },
-        { "icon": "fas fa-bolt", "text": "Integrated energy systems built for businesses, organization." },
-        { "icon": "fas fa-charging-station", "text": "Integrated energy systems built for businesses, organization." }
+      "type": "audience",
+      "kicker": "Who We Serve",
+      "title": "Energy Solutions For Every Property",
+      "cards": [
+        {
+          "title": "Homeowners",
+          "text": "Lower bills and backup power for your home.",
+          "image": ""
+        },
+        {
+          "title": "Industry 1",
+          "text": "Supporting description.",
+          "image": ""
+        },
+        {
+          "title": "Industry 2",
+          "text": "Supporting description.",
+          "image": ""
+        },
+        {
+          "title": "Industry 3",
+          "text": "Supporting description.",
+          "image": ""
+        },
+        {
+          "title": "Industry 4",
+          "text": "Supporting description.",
+          "image": ""
+        }
       ]
     },
     {
+      "type": "why",
+      "kicker": "Why Choose Us",
+      "title": "Why Porter",
+      "accent": "Energy Systems",
+      "text": "A renewable energy solution and solar installer you can trust.",
+      "cards": [
+        {
+          "icon": "fas fa-certificate",
+          "title": "Licensed Electricians",
+          "text": "Your installation and wiring not only look great, but last well beyond their expected life span."
+        },
+        {
+          "icon": "fas fa-map-marker-alt",
+          "title": "Local NH Installer",
+          "text": "Based in Deerfield, NH, so the team that installs your system is the team down the road."
+        },
+        {
+          "icon": "fas fa-award",
+          "title": "15+ Years Experience",
+          "text": "Solar, battery system, EV charging and generator installation experience you can count on."
+        },
+        {
+          "icon": "fas fa-handshake",
+          "title": "Competitive Pricing",
+          "text": "We are owner-operated and confident our pricing will be competitive."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "label": "Process",
+      "title": "Our Process",
+      "subtitle": "Getting started is easy",
+      "steps": [
+        {
+          "icon": "far fa-calendar-alt",
+          "title": "Book",
+          "text": "Book an appointment and tell us about your property and goals."
+        },
+        {
+          "icon": "fas fa-solar-panel",
+          "title": "Design",
+          "text": "We assess your site and design the right system for you."
+        },
+        {
+          "icon": "fas fa-bolt",
+          "title": "Install",
+          "text": "Our licensed team installs and connects your system."
+        }
+      ],
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      }
+    },
+    {
+      "type": "projects",
+      "kicker": "Featured Projects",
+      "title": "Recent",
+      "accent": "Work",
+      "projects": [
+        {
+          "title": "Project Name",
+          "meta": "[Size] kW · [Town], NH"
+        },
+        {
+          "title": "Project Name",
+          "meta": "[Size] kW · [Town], NH"
+        },
+        {
+          "title": "Project Name",
+          "meta": "[Size] kW · [Town], NH"
+        }
+      ],
+      "button": {
+        "text": "View All Projects",
+        "url": "/our-projects/"
+      }
+    },
+    {
+      "type": "testimonials",
+      "kicker": "Hear From Our Customers",
+      "title": "What Our Customers Say About Us",
+      "shortcode": "[trustindex no-registration=google]"
+    },
+    {
+      "type": "posts",
+      "kicker": "From The Blog",
+      "title": "Energy Tips &",
+      "accent": "News",
+      "count": 3,
+      "button": {
+        "text": "View All Posts",
+        "url": "/blog/"
+      }
+    },
+    {
       "type": "cta",
-      "title": "Schedule A Consultation Today",
+      "title": "Book An Appointment Today",
       "subtitle": "Powering Progress. Building Confidence.",
-      "button": { "text": "Call Now", "url": "tel:+16033400500" }
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      }
     }
   ]
 }

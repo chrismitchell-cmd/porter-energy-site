@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "a76f9ae",
+      "id": "56be8c0",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -59,7 +59,7 @@
       },
       "elements": [
         {
-          "id": "ca928db",
+          "id": "a76f9ae",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -97,7 +97,7 @@
               "widgetType": "text-editor",
               "isInner": false,
               "settings": {
-                "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
+                "editor": "<p>Integrated solar, battery storage, EV charging and electrical systems for New Hampshire homes and businesses, installed by licensed electricians.</p>",
                 "_css_classes": "pes-lead"
               },
               "elements": []
@@ -108,14 +108,33 @@
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Get A Quote",
+                "text": "Book An Appointment",
                 "link": {
-                  "url": "/contact/",
+                  "url": "/contact-us/#book-appointment",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""
                 },
-                "_css_classes": "pes-btn"
+                "_css_classes": "pes-btn-solid pes-btn-inline",
+                "_element_width": "auto"
+              },
+              "elements": []
+            },
+            {
+              "id": "ca928db",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Call 603-340-0500",
+                "link": {
+                  "url": "tel:+16033400500",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-inline",
+                "_element_width": "auto"
               },
               "elements": []
             }

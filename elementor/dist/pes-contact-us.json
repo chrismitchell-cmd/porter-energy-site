@@ -276,6 +276,7 @@
         },
         "css_classes": "pes-section pes-feature",
         "_title": "Form – GoHighLevel embed",
+        "_element_id": "book-appointment",
         "structure": "20",
         "column_position": "middle",
         "padding": {
@@ -312,7 +313,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Request A Consultation",
+                "title": "Book An Appointment",
                 "header_size": "p",
                 "_css_classes": "pes-eyebrow"
               },
@@ -596,7 +597,7 @@
                 },
                 "view": "default",
                 "position": "left",
-                "title_text": "Schedule A Consultation Today",
+                "title_text": "Book An Appointment Today",
                 "description_text": "Powering Progress. Building Confidence.",
                 "title_size": "h2",
                 "content_vertical_alignment": "middle",
@@ -622,9 +623,9 @@
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Call Now",
+                "text": "Book An Appointment",
                 "link": {
-                  "url": "tel:+16033400500",
+                  "url": "/contact-us/#book-appointment",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""

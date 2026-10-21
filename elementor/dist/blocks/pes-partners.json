@@ -1,0 +1,99 @@
+{
+  "version": "0.4",
+  "title": "PES – Partners",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "aa403eb",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-partners",
+        "_title": "Partners – logo scroller",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "60",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "e88d72f",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "5ab95ce",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Our Partners",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "6d4f536",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "We Partner With The <span class=\"pes-accent\">Best In The Industry</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "11c00a7",
+              "elType": "widget",
+              "widgetType": "image-carousel",
+              "isInner": false,
+              "settings": {
+                "carousel": [],
+                "thumbnail_size": "medium",
+                "slides_to_show": "6",
+                "slides_to_show_tablet": "4",
+                "slides_to_show_mobile": "3",
+                "slides_to_scroll": "1",
+                "navigation": "none",
+                "image_stretch": "no",
+                "autoplay": "yes",
+                "autoplay_speed": 0,
+                "pause_on_hover": "no",
+                "pause_on_interaction": "no",
+                "infinite": "yes",
+                "speed": 4000,
+                "image_spacing": "custom",
+                "image_spacing_custom": {
+                  "unit": "px",
+                  "size": 48,
+                  "sizes": []
+                },
+                "_css_classes": "pes-logo-marquee"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

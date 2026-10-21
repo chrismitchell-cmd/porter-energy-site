@@ -85,9 +85,9 @@
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Main CTA – More Than Learn More / Contact Us",
+                "text": "Book An Appointment",
                 "link": {
-                  "url": "/contact/",
+                  "url": "/contact-us/#book-appointment",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""
@@ -836,9 +836,9 @@
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Schedule An Appointment",
+                "text": "Book An Appointment",
                 "link": {
-                  "url": "/contact/",
+                  "url": "/contact-us/#book-appointment",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""
@@ -1427,7 +1427,7 @@
                 },
                 "view": "default",
                 "position": "left",
-                "title_text": "Schedule A Consultation Today",
+                "title_text": "Book An Appointment Today",
                 "description_text": "Powering Progress. Building Confidence.",
                 "title_size": "h2",
                 "content_vertical_alignment": "middle",
@@ -1453,9 +1453,9 @@
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Call Now",
+                "text": "Book An Appointment",
                 "link": {
-                  "url": "tel:+16033400500",
+                  "url": "/contact-us/#book-appointment",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""

@@ -18,6 +18,7 @@
         },
         "css_classes": "pes-section pes-feature",
         "_title": "Form – GoHighLevel embed",
+        "_element_id": "book-appointment",
         "structure": "20",
         "column_position": "middle",
         "padding": {
@@ -54,7 +55,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Request A Consultation",
+                "title": "Book An Appointment",
                 "header_size": "p",
                 "_css_classes": "pes-eyebrow"
               },

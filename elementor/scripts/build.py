@@ -193,8 +193,15 @@ def block_hero(ids, b):
     widgets = ([heading(ids, b["kicker"], "p", "pes-kicker")] if b.get("kicker") else []) + [
         heading(ids, b["title"], "h1", "pes-h1"),
         text(ids, b["text"], "pes-lead"),
-    ] + ([heading(ids, b["note"], "p", "pes-hero-note")] if b.get("note") else []) + (
-        [button(ids, b["button"])] if b.get("button") else [])
+    ] + ([heading(ids, b["note"], "p", "pes-hero-note")] if b.get("note") else [])
+    btns = [button(ids, b["button"])] if b.get("button") else []
+    if b.get("button2"):
+        btns.append(button(ids, b["button2"], "pes-btn"))
+    if len(btns) > 1:  # side by side
+        for w in btns:
+            w["settings"]["_css_classes"] += " pes-btn-inline"
+            w["settings"]["_element_width"] = "auto"
+    widgets += btns
     tall = b.get("height", 680 if centered else 640)
     return section(
         ids,
@@ -368,6 +375,7 @@ def block_form(ids, b):
     form = column(ids, 58, [widget(ids, "html", "pes-form-embed", html=placeholder)], "pes-form-panel",
                   content_position="center")
     return section(ids, [copy, form], "pes-section pes-feature", title="Form – GoHighLevel embed",
+                   _element_id="book-appointment",
                    gap="wider", structure="20", column_position="middle",
                    padding=box(90, 0, 100, 0), padding_mobile=box(60, 0, 70, 0))
 
@@ -463,6 +471,60 @@ def block_areas(ids, b):
     tail = [button(ids, b["button"], "pes-btn pes-btn-more pes-align-center")] if b.get("button") else []
     return section(ids, [column(ids, 100, section_intro(ids, b) + [chips] + tail)],
                    "pes-section pes-areas", title="Service areas", padding=box(60, 0, 110, 0))
+
+
+def block_partners(ids, b):
+    """Partners – logos scrolling in a continuous loop (Image Carousel; add logos to its gallery)."""
+    logos = [{"id": "", "url": u} for u in b.get("logos", [])]
+    w = widget(ids, "image-carousel", "pes-logo-marquee", carousel=logos, thumbnail_size="medium",
+               slides_to_show="6", slides_to_show_tablet="4", slides_to_show_mobile="3",
+               slides_to_scroll="1", navigation="none", image_stretch="no",
+               autoplay="yes", autoplay_speed=0, pause_on_hover="no", pause_on_interaction="no",
+               infinite="yes", speed=b.get("speed", 4000), image_spacing="custom",
+               image_spacing_custom=px(48))
+    PREVIEW_SRC[w["id"]] = len(b.get("logos", [])) or 8
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [w])],
+                   "pes-section pes-partners", title="Partners – logo scroller", padding=box(60, 0, 60, 0))
+
+
+def block_service_grid(ids, b):
+    """Compact grid of the remaining services – each card links to its service page."""
+    cards = [column(ids, round(100 / len(b["services"]), 3),
+                    [icon_box(ids, c["icon"], "pes-contact-card pes-why-card pes-service-card",
+                              c["title"], c["text"], link=c.get("url", ""))])
+             for c in b["services"]]
+    tail = [button(ids, b["button"], "pes-btn pes-btn-more pes-align-center")] if b.get("button") else []
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [card_grid(ids, cards)] + tail)],
+                   "pes-section", title=b.get("label", "More services"), padding=box(40, 0, 100, 0))
+
+
+def block_projects(ids, b):
+    """Featured projects – photo, name, size and location, See Full Details."""
+    cards = []
+    for i, pr in enumerate(b["projects"]):
+        img = image(ids, pr.get("image"), "pes-project-img", pr["title"],
+                    ["img/frame-1.jpg", "img/frame-2.jpg", "img/frame-3.jpg"][i % 3])
+        cards.append(column(ids, round(100 / len(b["projects"]), 3), [
+            img,
+            heading(ids, pr["title"], "h3", "pes-job-title"),
+            text(ids, pr["meta"], "pes-card-note"),
+            button(ids, {"text": "See Full Details", "url": pr.get("url", b.get("url", "/our-projects/"))},
+                   "pes-btn pes-btn-more"),
+        ], "pes-job-card pes-project-card"))
+    tail = [button(ids, b["button"], "pes-btn-solid pes-align-center")] if b.get("button") else []
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [card_grid(ids, cards)] + tail)],
+                   "pes-section", title="Featured projects", padding=box(100, 0, 110, 0))
+
+
+def block_posts(ids, b):
+    """Latest blog posts – Elementor Pro Posts widget, pulls the newest posts automatically."""
+    w = widget(ids, "posts", "pes-posts", _skin="classic", classic_columns="3", classic_columns_mobile="1",
+               classic_posts_per_page=b.get("count", 3), classic_thumbnail="top", classic_title_tag="h3",
+               classic_excerpt_length=20, classic_meta_data=["date"], classic_read_more_text="Read More",
+               classic_show_read_more="yes", posts_post_type="post")
+    tail = [button(ids, b["button"], "pes-btn pes-btn-more pes-align-center")] if b.get("button") else []
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [w] + tail)],
+                   "pes-section", title="Latest from the blog", padding=box(100, 0, 110, 0))
 
 
 def block_testimonials(ids, b):
@@ -576,6 +638,10 @@ BLOCKS = {
     "faq": block_faq,
     "contact_cards": block_contact_cards,
     "why": block_why,
+    "partners": block_partners,
+    "service_grid": block_service_grid,
+    "projects": block_projects,
+    "posts": block_posts,
     "team": block_team,
     "jobs": block_jobs,
     "licenses": block_licenses,
@@ -587,7 +653,8 @@ BLOCKS = {
 }
 
 STYLES_BLOCK = {"type": "styles"}
-HEADER_DEFAULTS = {"type": "header", "logo": "", "button": {"text": "Get A Quote", "url": "/contact/"}}
+HEADER_DEFAULTS = {"type": "header", "logo": "",
+                   "button": {"text": "Book An Appointment", "url": "/contact-us/#book-appointment"}}
 
 
 def block_name(b):
@@ -770,6 +837,20 @@ def render(el):
             f'<a class="elementor-accordion-title" href="#">{t["tab_title"]}</a></div>'
             f'<div class="elementor-tab-content" style="display:{"block" if n == 0 else "none"}">{t["tab_content"]}</div></div>'
             for n, t in enumerate(s["tabs"])) + "</div>"
+    elif kind == "image-carousel":
+        n = PREVIEW_SRC.get(el["id"], 8) if isinstance(PREVIEW_SRC.get(el["id"]), int) else 8
+        logo = ('<div class="pv-logo">PARTNER {k}</div>')
+        items = "".join(logo.format(k=k % n + 1) for k in range(n * 2))
+        body = f'<div class="pv-marquee"><div class="pv-marquee-track">{items}</div></div>'
+    elif kind == "posts":
+        cards = "".join(
+            f'<article class="elementor-post"><a class="elementor-post__thumbnail__link" href="#"><div class="elementor-post__thumbnail">'
+            f'<img src="img/frame-{k}.jpg" alt=""></div></a><div class="elementor-post__text">'
+            f'<h3 class="elementor-post__title"><a href="#">Blog post title number {k} goes here</a></h3>'
+            f'<div class="elementor-post__meta-data"><span class="elementor-post-date">October {k}, 2026</span></div>'
+            f'<div class="elementor-post__excerpt"><p>The first lines of the post appear here automatically as a short excerpt…</p></div>'
+            f'<a class="elementor-post__read-more" href="#">Read More</a></div></article>' for k in (1, 2, 3))
+        body = f'<div class="elementor-posts-container elementor-posts elementor-grid">{cards}</div>'
     elif kind == "flip-box":
         src = s.get("image", {}).get("url") or PREVIEW_SRC.get(el["id"], "")
         btn = (f'<a class="elementor-flip-box__button elementor-button" href="#">{s["button_text"]}</a>'
@@ -855,6 +936,13 @@ PREVIEW_BASE_CSS = """
 .elementor-flip-box:hover .elementor-flip-box__front{transform:rotateY(-180deg)}
 .elementor-flip-box:hover .elementor-flip-box__back{transform:none}
 .elementor-inline-items{display:flex;flex-wrap:wrap}
+.pv-marquee{overflow:hidden}.pv-marquee-track{display:flex;gap:48px;width:max-content;animation:pvm 30s linear infinite}
+.pv-logo{width:150px;height:70px;display:grid;place-items:center;border:1px dashed #666;color:#999;font:600 13px sans-serif}
+@keyframes pvm{to{transform:translateX(-50%)}}
+.elementor-posts{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.elementor-post__thumbnail img{width:100%;display:block}
+.elementor-widget-wrap>.elementor-element.pes-btn-inline{width:auto}
+@media(max-width:767px){.elementor-posts{grid-template-columns:1fr}}
 .elementor-column-gap-narrow>.elementor-column>.elementor-element-populated{padding:5px}
 .pes-logo img{height:44px;width:auto}
 .elementor-nav-menu{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0}

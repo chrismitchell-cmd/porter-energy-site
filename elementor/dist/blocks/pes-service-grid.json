@@ -1,0 +1,252 @@
+{
+  "version": "0.4",
+  "title": "PES – Service Grid",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "559a704",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "More services",
+        "padding": {
+          "unit": "px",
+          "top": "40",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "e8b6439",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "47be28d",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "What We Do",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "6acabf1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Complete Energy <span class=\"pes-accent\">Solutions</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "1d20979",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "40"
+              },
+              "elements": [
+                {
+                  "id": "6056088",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "672b098",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "link": {
+                          "url": "/ev-charging/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-charging-station",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "EV Charging",
+                        "description_text": "Home and commercial EV charger installation.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card pes-service-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "98d5980",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "d748bea",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "link": {
+                          "url": "/generators/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-bolt",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Generators",
+                        "description_text": "Standby generators that keep you running through outages.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card pes-service-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "fec11b0",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "189d6a2",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "link": {
+                          "url": "/electrical/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-plug",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Electrical",
+                        "description_text": "Licensed electrical work from upgrades to new installs.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card pes-service-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "489e291",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "5da4ad4",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "link": {
+                          "url": "/service-om/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-tools",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Service O&M",
+                        "description_text": "Monitoring, maintenance and repairs for existing systems.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card pes-service-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0944900",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "View All Services",
+                "link": {
+                  "url": "/our-services/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

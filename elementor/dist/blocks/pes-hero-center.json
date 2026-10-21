@@ -92,9 +92,9 @@
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Contact Us",
+                "text": "Book An Appointment",
                 "link": {
-                  "url": "/contact-us/",
+                  "url": "/contact-us/#book-appointment",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""

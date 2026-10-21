@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "bf7d2d1",
+      "id": "cec062a",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -17,7 +17,7 @@
           "sizes": []
         },
         "css_classes": "pes-section pes-process",
-        "_title": "Our Process",
+        "_title": "Process",
         "padding": {
           "unit": "px",
           "top": "80",
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "de28b2f",
+          "id": "58005c7",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -46,6 +46,18 @@
                 "title": "Our Process",
                 "header_size": "h2",
                 "_css_classes": "pes-title-circuit"
+              },
+              "elements": []
+            },
+            {
+              "id": "de28b2f",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Getting started is easy",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
               },
               "elements": []
             },
@@ -94,13 +106,13 @@
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-solar-panel",
-                          "library": "fa-solid"
+                          "value": "far fa-calendar-alt",
+                          "library": "fa-regular"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Book",
+                        "description_text": "Book an appointment and tell us about your property and goals.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -138,13 +150,13 @@
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-bolt",
+                          "value": "fas fa-solar-panel",
                           "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Design",
+                        "description_text": "We assess your site and design the right system for you.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -182,13 +194,13 @@
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-charging-station",
+                          "value": "fas fa-bolt",
                           "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "",
-                        "description_text": "Integrated energy systems built for businesses, organization.",
+                        "title_text": "Install",
+                        "description_text": "Our licensed team installs and connects your system.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -198,6 +210,23 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "bf7d2d1",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book An Appointment",
+                "link": {
+                  "url": "/contact-us/#book-appointment",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
             }
           ]
         }

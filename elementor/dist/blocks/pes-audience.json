@@ -43,7 +43,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Who Is Service / Industry For",
+                "title": "Who We Serve",
                 "header_size": "p",
                 "_css_classes": "pes-eyebrow pes-center"
               },
@@ -55,7 +55,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Punchy Header Calling Out Types Of Customers",
+                "title": "Energy Solutions For Every Property",
                 "header_size": "h2",
                 "_css_classes": "pes-h2 pes-h2-mixed pes-center"
               },
@@ -93,7 +93,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 1",
+                        "title": "Homeowners",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -105,7 +105,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Supporting description.</p>",
+                        "editor": "<p>Lower bills and backup power for your home.</p>",
                         "_css_classes": "pes-card-text"
                       },
                       "elements": []
@@ -128,7 +128,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 2",
+                        "title": "Industry 1",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -163,7 +163,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 3",
+                        "title": "Industry 2",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -198,7 +198,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 4",
+                        "title": "Industry 3",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -233,7 +233,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 5",
+                        "title": "Industry 4",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },

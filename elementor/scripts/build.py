@@ -498,6 +498,57 @@ def block_service_grid(ids, b):
                    "pes-section", title=b.get("label", "More services"), padding=box(40, 0, 100, 0))
 
 
+TOGGLE_JS = """<script>
+(function () {
+  function init(root) {
+    var sec = root.closest('.pes-energy');
+    if (!sec || sec.dataset.pesTabs) return;
+    sec.dataset.pesTabs = '1';
+    var btns = sec.querySelectorAll('.pes-toggle button');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        btns.forEach(function (b) { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-selected', b === btn); });
+        sec.querySelectorAll('.pes-tab-panel').forEach(function (p) {
+          p.classList.toggle('is-active', p.classList.contains('pes-tab-' + btn.dataset.tab));
+        });
+      });
+    });
+  }
+  document.querySelectorAll('.pes-toggle').forEach(init);
+  document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.pes-toggle').forEach(init); });
+})();
+</script>"""
+
+
+def service_card(ids, c, width):
+    """Image, title, description; the title link stretches over the whole card."""
+    link = {"url": c.get("url", ""), "is_external": "", "nofollow": "", "custom_attributes": ""}
+    img = image(ids, c.get("image"), "pes-svc-img", c["title"], c.get("preview"))
+    title = widget(ids, "heading", "pes-svc-title", title=c["title"], header_size="h3", link=link)
+    return column(ids, width, [img, title, text(ids, c["text"], "pes-svc-text"),
+                               heading(ids, "Learn More", "span", "pes-svc-more")], "pes-svc-card")
+
+
+def block_energy_tabs(ids, b):
+    """Energy management – toggle between two groups of linked service cards."""
+    tabs = b["tabs"]
+    btns = "".join(
+        f'<button type="button" role="tab" data-tab="{t["key"]}" aria-selected="{"true" if i == 0 else "false"}"'
+        f'{" class=\"is-active\"" if i == 0 else ""}>{t["label"]}</button>' for i, t in enumerate(tabs))
+    toggle = widget(ids, "html", "pes-toggle-widget",
+                    html=f'<div class="pes-toggle" role="tablist">{btns}</div>\n{TOGGLE_JS}')
+    panels = []
+    for i, t in enumerate(tabs):
+        n = len(t["cards"])
+        sec = section(ids, [service_card(ids, c, round(100 / n, 3)) for c in t["cards"]],
+                      f'pes-tab-panel pes-tab-{t["key"]}' + (" is-active" if i == 0 else ""),
+                      inner=True, title=f"Toggle – {t['label']} cards", gap="extended", structure=f"{n}0")
+        panels.append(sec)
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [toggle] + panels)],
+                   "pes-section pes-energy", title="Energy management – Solutions / O&M toggle",
+                   padding=box(100, 0, 110, 0))
+
+
 def block_projects(ids, b):
     """Featured projects – photo, name, size and location, See Full Details."""
     cards = []
@@ -639,6 +690,7 @@ BLOCKS = {
     "contact_cards": block_contact_cards,
     "why": block_why,
     "partners": block_partners,
+    "energy_tabs": block_energy_tabs,
     "service_grid": block_service_grid,
     "projects": block_projects,
     "posts": block_posts,
@@ -784,7 +836,9 @@ def render(el):
     extra = ""
     if kind == "heading":
         tag = s["header_size"]
-        body = f'<{tag} class="elementor-heading-title">{s["title"]}</{tag}>'
+        inner = (f'<a href="{html.escape(s["link"]["url"])}">{s["title"]}</a>' if s.get("link", {}).get("url")
+                 else s["title"])
+        body = f'<{tag} class="elementor-heading-title">{inner}</{tag}>'
     elif kind == "text-editor":
         body = s["editor"]
     elif kind == "html":

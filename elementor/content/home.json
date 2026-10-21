@@ -26,67 +26,81 @@
       "logos": []
     },
     {
-      "type": "feature",
-      "layout": "image-right",
-      "frame": "orange",
-      "title": "Commercial Solar",
-      "subtitle": "Put your property to work.",
-      "text": "Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs.",
-      "button": {
-        "text": "Learn More",
-        "url": "/commercial-solar/"
-      },
-      "image": ""
-    },
-    {
-      "type": "feature",
-      "layout": "image-left",
-      "frame": "blue",
-      "title": "Battery Energy Storage",
-      "subtitle": "Keep the power on.",
-      "text": "Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.",
-      "button": {
-        "text": "Learn More",
-        "url": "/battery-energy-storage/"
-      },
-      "image": ""
-    },
-    {
-      "type": "service_grid",
-      "label": "More services",
-      "kicker": "What We Do",
+      "type": "energy_tabs",
+      "kicker": "Energy Management",
       "title": "Complete Energy",
-      "accent": "Solutions",
-      "services": [
+      "accent": "Management",
+      "text": "From new systems to keeping existing ones performing at their best.",
+      "tabs": [
         {
-          "icon": "fas fa-charging-station",
-          "title": "EV Charging",
-          "text": "Home and commercial EV charger installation.",
-          "url": "/ev-charging/"
+          "key": "solutions",
+          "label": "Solutions",
+          "cards": [
+            {
+              "title": "Commercial Solar",
+              "text": "Generate more of your own power and reduce long-term energy costs.",
+              "url": "/commercial-solar/",
+              "image": "",
+              "preview": "img/frame-1.jpg"
+            },
+            {
+              "title": "Battery Energy Storage",
+              "text": "Store energy for backup power, peak shaving and greater control.",
+              "url": "/battery-energy-storage/",
+              "image": "",
+              "preview": "img/frame-2.jpg"
+            },
+            {
+              "title": "EV Charging",
+              "text": "Home and commercial EV charger installation, done right.",
+              "url": "/ev-charging/",
+              "image": "",
+              "preview": "img/frame-3.jpg"
+            },
+            {
+              "title": "Generators",
+              "text": "Standby generators that keep you running through every outage.",
+              "url": "/generators/",
+              "image": "",
+              "preview": "img/sunset.jpg"
+            }
+          ]
         },
         {
-          "icon": "fas fa-bolt",
-          "title": "Generators",
-          "text": "Standby generators that keep you running through outages.",
-          "url": "/generators/"
-        },
-        {
-          "icon": "fas fa-plug",
-          "title": "Electrical",
-          "text": "Licensed electrical work from upgrades to new installs.",
-          "url": "/electrical/"
-        },
-        {
-          "icon": "fas fa-tools",
-          "title": "Service O&M",
-          "text": "Monitoring, maintenance and repairs for existing systems.",
-          "url": "/service-om/"
+          "key": "om",
+          "label": "O&M Services",
+          "cards": [
+            {
+              "title": "Preventive Maintenance",
+              "text": "Scheduled inspections and upkeep that protect your system's output.",
+              "url": "/preventive-maintenance/",
+              "image": "",
+              "preview": "img/frame-2.jpg"
+            },
+            {
+              "title": "System Monitoring",
+              "text": "We watch performance so issues are caught before they cost you.",
+              "url": "/system-monitoring/",
+              "image": "",
+              "preview": "img/frame-1.jpg"
+            },
+            {
+              "title": "Repairs & Troubleshooting",
+              "text": "Fast diagnosis and repair for solar, battery and electrical systems.",
+              "url": "/repairs/",
+              "image": "",
+              "preview": "img/sunset.jpg"
+            },
+            {
+              "title": "System Takeovers",
+              "text": "Installed by someone else? We service and support existing systems.",
+              "url": "/system-takeovers/",
+              "image": "",
+              "preview": "img/frame-3.jpg"
+            }
+          ]
         }
-      ],
-      "button": {
-        "text": "View All Services",
-        "url": "/our-services/"
-      }
+      ]
     },
     {
       "type": "audience",

@@ -1,0 +1,641 @@
+{
+  "version": "0.4",
+  "title": "PES – Energy Tabs",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "5a8793c",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-energy",
+        "_title": "Energy management – Solutions / O&M toggle",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "9b5b494",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "a84bdfd",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Energy Management",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "574c2fc",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Complete Energy <span class=\"pes-accent\">Management</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "300fc06",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>From new systems to keeping existing ones performing at their best.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "8435ef1",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"pes-toggle\" role=\"tablist\"><button type=\"button\" role=\"tab\" data-tab=\"solutions\" aria-selected=\"true\" class=\"is-active\">Solutions</button><button type=\"button\" role=\"tab\" data-tab=\"om\" aria-selected=\"false\">O&M Services</button></div>\n<script>\n(function () {\n  function init(root) {\n    var sec = root.closest('.pes-energy');\n    if (!sec || sec.dataset.pesTabs) return;\n    sec.dataset.pesTabs = '1';\n    var btns = sec.querySelectorAll('.pes-toggle button');\n    btns.forEach(function (btn) {\n      btn.addEventListener('click', function () {\n        btns.forEach(function (b) { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-selected', b === btn); });\n        sec.querySelectorAll('.pes-tab-panel').forEach(function (p) {\n          p.classList.toggle('is-active', p.classList.contains('pes-tab-' + btn.dataset.tab));\n        });\n      });\n    });\n  }\n  document.querySelectorAll('.pes-toggle').forEach(init);\n  document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.pes-toggle').forEach(init); });\n})();\n</script>",
+                "_css_classes": "pes-toggle-widget"
+              },
+              "elements": []
+            },
+            {
+              "id": "93f0b99",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-tab-panel pes-tab-solutions is-active",
+                "_title": "Toggle – Solutions cards",
+                "structure": "40"
+              },
+              "elements": [
+                {
+                  "id": "212e418",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "56eefb6",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "d1b3b57",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Commercial Solar",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/commercial-solar/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "ddae526",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Generate more of your own power and reduce long-term energy costs.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5eab00a",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "d634a96",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "0fd28cd",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4ce95ed",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Battery Energy Storage",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/battery-energy-storage/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5cd9710",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Store energy for backup power, peak shaving and greater control.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c31a864",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "8ddcf03",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "e001299",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "efeab6e",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "EV Charging",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/ev-charging/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "23e3256",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Home and commercial EV charger installation, done right.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "8751146",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "80fc874",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "52cef16",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e3fc7ac",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Generators",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/generators/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "adc4f63",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Standby generators that keep you running through every outage.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "597bfe9",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "582d322",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-tab-panel pes-tab-om",
+                "_title": "Toggle – O&M Services cards",
+                "structure": "40"
+              },
+              "elements": [
+                {
+                  "id": "729bc69",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "839ddc0",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "9afc845",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Preventive Maintenance",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/preventive-maintenance/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4fe3d93",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Scheduled inspections and upkeep that protect your system's output.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "0899faa",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "7438d75",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "5e167b8",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "01b2efd",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "System Monitoring",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/system-monitoring/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4be39f3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>We watch performance so issues are caught before they cost you.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "80fcf02",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "e6ec634",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "b6ae933",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "abc95d5",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Repairs & Troubleshooting",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/repairs/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "34a2386",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Fast diagnosis and repair for solar, battery and electrical systems.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f56517f",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "757f11b",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "dfd9a45",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "76cd5de",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "System Takeovers",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/system-takeovers/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c544005",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Installed by someone else? We service and support existing systems.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "6b6cf6e",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

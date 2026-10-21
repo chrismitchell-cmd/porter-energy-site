@@ -239,253 +239,7 @@
       ]
     },
     {
-      "id": "27d9db7",
-      "elType": "section",
-      "isInner": false,
-      "settings": {
-        "layout": "boxed",
-        "gap": "wider",
-        "content_width": {
-          "unit": "px",
-          "size": 1140,
-          "sizes": []
-        },
-        "css_classes": "pes-section pes-feature",
-        "_title": "Feature – Commercial Solar",
-        "structure": "20",
-        "column_position": "middle",
-        "padding": {
-          "unit": "px",
-          "top": "110",
-          "right": "0",
-          "bottom": "110",
-          "left": "0",
-          "isLinked": false
-        },
-        "padding_mobile": {
-          "unit": "px",
-          "top": "70",
-          "right": "0",
-          "bottom": "70",
-          "left": "0",
-          "isLinked": false
-        }
-      },
-      "elements": [
-        {
-          "id": "0d731be",
-          "elType": "column",
-          "isInner": false,
-          "settings": {
-            "_column_size": 50,
-            "_inline_size": 50,
-            "content_position": "center"
-          },
-          "elements": [
-            {
-              "id": "6901a99",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Commercial Solar",
-                "header_size": "h2",
-                "_css_classes": "pes-h2"
-              },
-              "elements": []
-            },
-            {
-              "id": "02f9219",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Put your property to work.",
-                "header_size": "p",
-                "_css_classes": "pes-subhead"
-              },
-              "elements": []
-            },
-            {
-              "id": "da137a8",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "isInner": false,
-              "settings": {
-                "editor": "<p>Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs.</p>",
-                "_css_classes": "pes-body"
-              },
-              "elements": []
-            },
-            {
-              "id": "bc94383",
-              "elType": "widget",
-              "widgetType": "button",
-              "isInner": false,
-              "settings": {
-                "text": "Learn More",
-                "link": {
-                  "url": "/commercial-solar/",
-                  "is_external": "",
-                  "nofollow": "",
-                  "custom_attributes": ""
-                },
-                "_css_classes": "pes-btn pes-btn-more"
-              },
-              "elements": []
-            }
-          ]
-        },
-        {
-          "id": "70e228f",
-          "elType": "column",
-          "isInner": false,
-          "settings": {
-            "_column_size": 50,
-            "_inline_size": 50,
-            "content_position": "center"
-          },
-          "elements": [
-            {
-              "id": "99172a9",
-              "elType": "widget",
-              "widgetType": "image",
-              "isInner": false,
-              "settings": {
-                "image_size": "full",
-                "_css_classes": "pes-frame"
-              },
-              "elements": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "4765fa8",
-      "elType": "section",
-      "isInner": false,
-      "settings": {
-        "layout": "boxed",
-        "gap": "wider",
-        "content_width": {
-          "unit": "px",
-          "size": 1140,
-          "sizes": []
-        },
-        "css_classes": "pes-section pes-feature pes-feature-reverse",
-        "_title": "Feature – Battery Energy Storage",
-        "structure": "20",
-        "column_position": "middle",
-        "padding": {
-          "unit": "px",
-          "top": "110",
-          "right": "0",
-          "bottom": "110",
-          "left": "0",
-          "isLinked": false
-        },
-        "padding_mobile": {
-          "unit": "px",
-          "top": "70",
-          "right": "0",
-          "bottom": "70",
-          "left": "0",
-          "isLinked": false
-        }
-      },
-      "elements": [
-        {
-          "id": "9c3862e",
-          "elType": "column",
-          "isInner": false,
-          "settings": {
-            "_column_size": 50,
-            "_inline_size": 50,
-            "content_position": "center"
-          },
-          "elements": [
-            {
-              "id": "74d8d51",
-              "elType": "widget",
-              "widgetType": "image",
-              "isInner": false,
-              "settings": {
-                "image_size": "full",
-                "_css_classes": "pes-frame pes-frame-blue"
-              },
-              "elements": []
-            }
-          ]
-        },
-        {
-          "id": "4ad86bd",
-          "elType": "column",
-          "isInner": false,
-          "settings": {
-            "_column_size": 50,
-            "_inline_size": 50,
-            "content_position": "center"
-          },
-          "elements": [
-            {
-              "id": "4c052b8",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Battery Energy Storage",
-                "header_size": "h2",
-                "_css_classes": "pes-h2"
-              },
-              "elements": []
-            },
-            {
-              "id": "575e7e0",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Keep the power on.",
-                "header_size": "p",
-                "_css_classes": "pes-subhead"
-              },
-              "elements": []
-            },
-            {
-              "id": "1be6483",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "isInner": false,
-              "settings": {
-                "editor": "<p>Integrated energy systems built for businesses, organizations, and properties that need reliable power, greater efficiency, and long-term control.</p>",
-                "_css_classes": "pes-body"
-              },
-              "elements": []
-            },
-            {
-              "id": "76355d1",
-              "elType": "widget",
-              "widgetType": "button",
-              "isInner": false,
-              "settings": {
-                "text": "Learn More",
-                "link": {
-                  "url": "/battery-energy-storage/",
-                  "is_external": "",
-                  "nofollow": "",
-                  "custom_attributes": ""
-                },
-                "_css_classes": "pes-btn pes-btn-more"
-              },
-              "elements": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "c059f60",
+      "id": "98d5b86",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -496,20 +250,20 @@
           "size": 1140,
           "sizes": []
         },
-        "css_classes": "pes-section",
-        "_title": "More services",
+        "css_classes": "pes-section pes-energy",
+        "_title": "Energy management – Solutions / O&M toggle",
         "padding": {
           "unit": "px",
-          "top": "40",
+          "top": "100",
           "right": "0",
-          "bottom": "100",
+          "bottom": "110",
           "left": "0",
           "isLinked": false
         }
       },
       "elements": [
         {
-          "id": "d3e1d8c",
+          "id": "a20cf33",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -518,31 +272,53 @@
           },
           "elements": [
             {
-              "id": "1d04454",
+              "id": "246cd40",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "What We Do",
+                "title": "Energy Management",
                 "header_size": "p",
                 "_css_classes": "pes-eyebrow pes-center"
               },
               "elements": []
             },
             {
-              "id": "723ab7a",
+              "id": "eb6c635",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Complete Energy <span class=\"pes-accent\">Solutions</span>",
+                "title": "Complete Energy <span class=\"pes-accent\">Management</span>",
                 "header_size": "h2",
                 "_css_classes": "pes-h2 pes-h2-mixed pes-center"
               },
               "elements": []
             },
             {
-              "id": "0f23079",
+              "id": "ccf18e1",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>From new systems to keeping existing ones performing at their best.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "6901a99",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"pes-toggle\" role=\"tablist\"><button type=\"button\" role=\"tab\" data-tab=\"solutions\" aria-selected=\"true\" class=\"is-active\">Solutions</button><button type=\"button\" role=\"tab\" data-tab=\"om\" aria-selected=\"false\">O&M Services</button></div>\n<script>\n(function () {\n  function init(root) {\n    var sec = root.closest('.pes-energy');\n    if (!sec || sec.dataset.pesTabs) return;\n    sec.dataset.pesTabs = '1';\n    var btns = sec.querySelectorAll('.pes-toggle button');\n    btns.forEach(function (btn) {\n      btn.addEventListener('click', function () {\n        btns.forEach(function (b) { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-selected', b === btn); });\n        sec.querySelectorAll('.pes-tab-panel').forEach(function (p) {\n          p.classList.toggle('is-active', p.classList.contains('pes-tab-' + btn.dataset.tab));\n        });\n      });\n    });\n  }\n  document.querySelectorAll('.pes-toggle').forEach(init);\n  document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.pes-toggle').forEach(init); });\n})();\n</script>",
+                "_css_classes": "pes-toggle-widget"
+              },
+              "elements": []
+            },
+            {
+              "id": "77c79fd",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -553,153 +329,262 @@
                   "size": 1140,
                   "sizes": []
                 },
-                "css_classes": "pes-card-grid",
+                "css_classes": "pes-tab-panel pes-tab-solutions is-active",
+                "_title": "Toggle – Solutions cards",
                 "structure": "40"
               },
               "elements": [
                 {
-                  "id": "e5445d3",
+                  "id": "99172a9",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
                   },
                   "elements": [
                     {
-                      "id": "8ec6361",
+                      "id": "02f9219",
                       "elType": "widget",
-                      "widgetType": "icon-box",
+                      "widgetType": "image",
                       "isInner": false,
                       "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "da137a8",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Commercial Solar",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/commercial-solar/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "bc94383",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Generate more of your own power and reduce long-term energy costs.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "0d731be",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1be6483",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "70e228f",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "27d9db7",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Battery Energy Storage",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/battery-energy-storage/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4c052b8",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Store energy for backup power, peak shaving and greater control.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "575e7e0",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "4765fa8",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "76355d1",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4ad86bd",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "EV Charging",
+                        "header_size": "h3",
                         "link": {
                           "url": "/ev-charging/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
                         },
-                        "selected_icon": {
-                          "value": "fas fa-charging-station",
-                          "library": "fa-solid"
-                        },
-                        "view": "default",
-                        "position": "top",
-                        "title_text": "EV Charging",
-                        "description_text": "Home and commercial EV charger installation.",
-                        "title_size": "h3",
-                        "content_vertical_alignment": "middle",
-                        "_css_classes": "pes-contact-card pes-why-card pes-service-card"
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "74d8d51",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Home and commercial EV charger installation, done right.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "9c3862e",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
                       },
                       "elements": []
                     }
                   ]
                 },
                 {
-                  "id": "6364e8b",
+                  "id": "655da92",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
                   },
                   "elements": [
                     {
-                      "id": "eb73798",
+                      "id": "8ec6361",
                       "elType": "widget",
-                      "widgetType": "icon-box",
+                      "widgetType": "image",
                       "isInner": false,
                       "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5445d3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Generators",
+                        "header_size": "h3",
                         "link": {
                           "url": "/generators/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
                         },
-                        "selected_icon": {
-                          "value": "fas fa-bolt",
-                          "library": "fa-solid"
-                        },
-                        "view": "default",
-                        "position": "top",
-                        "title_text": "Generators",
-                        "description_text": "Standby generators that keep you running through outages.",
-                        "title_size": "h3",
-                        "content_vertical_alignment": "middle",
-                        "_css_classes": "pes-contact-card pes-why-card pes-service-card"
+                        "_css_classes": "pes-svc-title"
                       },
                       "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "77c79fd",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": {
-                    "_column_size": 50,
-                    "_inline_size": 25.0
-                  },
-                  "elements": [
+                    },
                     {
-                      "id": "655da92",
+                      "id": "eb73798",
                       "elType": "widget",
-                      "widgetType": "icon-box",
+                      "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "link": {
-                          "url": "/electrical/",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        },
-                        "selected_icon": {
-                          "value": "fas fa-plug",
-                          "library": "fa-solid"
-                        },
-                        "view": "default",
-                        "position": "top",
-                        "title_text": "Electrical",
-                        "description_text": "Licensed electrical work from upgrades to new installs.",
-                        "title_size": "h3",
-                        "content_vertical_alignment": "middle",
-                        "_css_classes": "pes-contact-card pes-why-card pes-service-card"
+                        "editor": "<p>Standby generators that keep you running through every outage.</p>",
+                        "_css_classes": "pes-svc-text"
                       },
                       "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "d9ed8f2",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": {
-                    "_column_size": 50,
-                    "_inline_size": 25.0
-                  },
-                  "elements": [
+                    },
                     {
-                      "id": "e7b2fe5",
+                      "id": "6364e8b",
                       "elType": "widget",
-                      "widgetType": "icon-box",
+                      "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "link": {
-                          "url": "/service-om/",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        },
-                        "selected_icon": {
-                          "value": "fas fa-tools",
-                          "library": "fa-solid"
-                        },
-                        "view": "default",
-                        "position": "top",
-                        "title_text": "Service O&M",
-                        "description_text": "Monitoring, maintenance and repairs for existing systems.",
-                        "title_size": "h3",
-                        "content_vertical_alignment": "middle",
-                        "_css_classes": "pes-contact-card pes-why-card pes-service-card"
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
                       },
                       "elements": []
                     }
@@ -708,28 +593,286 @@
               ]
             },
             {
-              "id": "19ce178",
-              "elType": "widget",
-              "widgetType": "button",
-              "isInner": false,
+              "id": "2cbbb66",
+              "elType": "section",
+              "isInner": true,
               "settings": {
-                "text": "View All Services",
-                "link": {
-                  "url": "/our-services/",
-                  "is_external": "",
-                  "nofollow": "",
-                  "custom_attributes": ""
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
                 },
-                "_css_classes": "pes-btn pes-btn-more pes-align-center"
+                "css_classes": "pes-tab-panel pes-tab-om",
+                "_title": "Toggle – O&M Services cards",
+                "structure": "40"
               },
-              "elements": []
+              "elements": [
+                {
+                  "id": "723ab7a",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "e7b2fe5",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "d9ed8f2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Preventive Maintenance",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/preventive-maintenance/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "19ce178",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Scheduled inspections and upkeep that protect your system's output.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "1d04454",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "816ef76",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "0f23079",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "d3e1d8c",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "System Monitoring",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/system-monitoring/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c059f60",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>We watch performance so issues are caught before they cost you.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "3e5fec8",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "58f52a0",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "c641a95",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "9e83aae",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Repairs & Troubleshooting",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/repairs/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "79f1a2f",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Fast diagnosis and repair for solar, battery and electrical systems.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "fb84267",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "892aab8",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "1768551",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "49ccfb8",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "System Takeovers",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/system-takeovers/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f206041",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Installed by someone else? We service and support existing systems.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "0480737",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "id": "99c5985",
+      "id": "3fc5a72",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -753,7 +896,7 @@
       },
       "elements": [
         {
-          "id": "ea147af",
+          "id": "764bea2",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -762,7 +905,7 @@
           },
           "elements": [
             {
-              "id": "a20cf33",
+              "id": "9ac55c7",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -774,7 +917,7 @@
               "elements": []
             },
             {
-              "id": "98d5b86",
+              "id": "5571e3f",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -786,7 +929,7 @@
               "elements": []
             },
             {
-              "id": "ccf18e1",
+              "id": "37b8389",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -802,7 +945,7 @@
               },
               "elements": [
                 {
-                  "id": "c641a95",
+                  "id": "7a53092",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -812,7 +955,7 @@
                   },
                   "elements": [
                     {
-                      "id": "3e5fec8",
+                      "id": "ea147af",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -824,7 +967,7 @@
                       "elements": []
                     },
                     {
-                      "id": "816ef76",
+                      "id": "99c5985",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -837,7 +980,7 @@
                   ]
                 },
                 {
-                  "id": "fb84267",
+                  "id": "ad65e7c",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -847,7 +990,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9e83aae",
+                      "id": "03d1ae6",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -859,7 +1002,7 @@
                       "elements": []
                     },
                     {
-                      "id": "79f1a2f",
+                      "id": "248f651",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -872,7 +1015,7 @@
                   ]
                 },
                 {
-                  "id": "49ccfb8",
+                  "id": "c803dc4",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -882,7 +1025,7 @@
                   },
                   "elements": [
                     {
-                      "id": "58f52a0",
+                      "id": "6052d68",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -894,7 +1037,7 @@
                       "elements": []
                     },
                     {
-                      "id": "1768551",
+                      "id": "45c7de9",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -907,7 +1050,7 @@
                   ]
                 },
                 {
-                  "id": "892aab8",
+                  "id": "351f3fa",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -917,7 +1060,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f206041",
+                      "id": "3df43f1",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -929,7 +1072,7 @@
                       "elements": []
                     },
                     {
-                      "id": "0480737",
+                      "id": "3136ddc",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -942,7 +1085,7 @@
                   ]
                 },
                 {
-                  "id": "eb6c635",
+                  "id": "049237f",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -952,7 +1095,7 @@
                   },
                   "elements": [
                     {
-                      "id": "2cbbb66",
+                      "id": "34ba82f",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -964,7 +1107,7 @@
                       "elements": []
                     },
                     {
-                      "id": "246cd40",
+                      "id": "bda8bb3",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -983,7 +1126,7 @@
       ]
     },
     {
-      "id": "37b8389",
+      "id": "81869c3",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1007,7 +1150,7 @@
       },
       "elements": [
         {
-          "id": "049237f",
+          "id": "b8b456a",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1016,7 +1159,7 @@
           },
           "elements": [
             {
-              "id": "3136ddc",
+              "id": "7857aa2",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1028,7 +1171,7 @@
               "elements": []
             },
             {
-              "id": "351f3fa",
+              "id": "2f48394",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1040,7 +1183,7 @@
               "elements": []
             },
             {
-              "id": "34ba82f",
+              "id": "38d5224",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -1051,7 +1194,7 @@
               "elements": []
             },
             {
-              "id": "bda8bb3",
+              "id": "856af37",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -1067,7 +1210,7 @@
               },
               "elements": [
                 {
-                  "id": "03d1ae6",
+                  "id": "d97ac64",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1076,7 +1219,7 @@
                   },
                   "elements": [
                     {
-                      "id": "7a53092",
+                      "id": "b24b076",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -1098,7 +1241,7 @@
                   ]
                 },
                 {
-                  "id": "ad65e7c",
+                  "id": "3c569d2",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1107,7 +1250,7 @@
                   },
                   "elements": [
                     {
-                      "id": "248f651",
+                      "id": "a4d9cd8",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -1129,7 +1272,7 @@
                   ]
                 },
                 {
-                  "id": "45c7de9",
+                  "id": "9a6a8cf",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1138,7 +1281,7 @@
                   },
                   "elements": [
                     {
-                      "id": "6052d68",
+                      "id": "40bf0c3",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -1160,7 +1303,7 @@
                   ]
                 },
                 {
-                  "id": "3df43f1",
+                  "id": "79dfbdd",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1169,7 +1312,7 @@
                   },
                   "elements": [
                     {
-                      "id": "c803dc4",
+                      "id": "dddacbf",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -1197,7 +1340,7 @@
       ]
     },
     {
-      "id": "38d5224",
+      "id": "ff7eacb",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1221,7 +1364,7 @@
       },
       "elements": [
         {
-          "id": "2f48394",
+          "id": "34bb04b",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1230,7 +1373,7 @@
           },
           "elements": [
             {
-              "id": "dddacbf",
+              "id": "26705eb",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1242,7 +1385,7 @@
               "elements": []
             },
             {
-              "id": "79dfbdd",
+              "id": "6794809",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1254,7 +1397,7 @@
               "elements": []
             },
             {
-              "id": "9a6a8cf",
+              "id": "65da9b2",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -1270,7 +1413,7 @@
               },
               "elements": [
                 {
-                  "id": "764bea2",
+                  "id": "75fa7cf",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1280,7 +1423,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9ac55c7",
+                      "id": "ee1ade5",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1292,7 +1435,7 @@
                       "elements": []
                     },
                     {
-                      "id": "5571e3f",
+                      "id": "a439cf1",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -1314,7 +1457,7 @@
                   ]
                 },
                 {
-                  "id": "d97ac64",
+                  "id": "33a0992",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1324,7 +1467,7 @@
                   },
                   "elements": [
                     {
-                      "id": "3fc5a72",
+                      "id": "ebcd2fa",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1336,7 +1479,7 @@
                       "elements": []
                     },
                     {
-                      "id": "b24b076",
+                      "id": "247d3a3",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -1358,7 +1501,7 @@
                   ]
                 },
                 {
-                  "id": "40bf0c3",
+                  "id": "7a5f7de",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1368,7 +1511,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a4d9cd8",
+                      "id": "35deaad",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1380,7 +1523,7 @@
                       "elements": []
                     },
                     {
-                      "id": "3c569d2",
+                      "id": "410e029",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -1404,7 +1547,7 @@
               ]
             },
             {
-              "id": "7857aa2",
+              "id": "b3d75d0",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -1425,7 +1568,7 @@
       ]
     },
     {
-      "id": "3fbb8e3",
+      "id": "006841f",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1449,7 +1592,7 @@
       },
       "elements": [
         {
-          "id": "e298866",
+          "id": "8f60c0e",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1458,7 +1601,7 @@
           },
           "elements": [
             {
-              "id": "34bb04b",
+              "id": "58ab127",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1470,7 +1613,7 @@
               "elements": []
             },
             {
-              "id": "ff7eacb",
+              "id": "5b40bb7",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1482,7 +1625,7 @@
               "elements": []
             },
             {
-              "id": "4e78d53",
+              "id": "0422e2d",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -1498,7 +1641,7 @@
               },
               "elements": [
                 {
-                  "id": "a439cf1",
+                  "id": "cfb7aa3",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1508,7 +1651,7 @@
                   },
                   "elements": [
                     {
-                      "id": "856af37",
+                      "id": "4e78d53",
                       "elType": "widget",
                       "widgetType": "image",
                       "isInner": false,
@@ -1519,7 +1662,7 @@
                       "elements": []
                     },
                     {
-                      "id": "b8b456a",
+                      "id": "e298866",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1531,7 +1674,7 @@
                       "elements": []
                     },
                     {
-                      "id": "81869c3",
+                      "id": "3fbb8e3",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -1542,7 +1685,7 @@
                       "elements": []
                     },
                     {
-                      "id": "ee1ade5",
+                      "id": "c17a91c",
                       "elType": "widget",
                       "widgetType": "button",
                       "isInner": false,
@@ -1561,7 +1704,7 @@
                   ]
                 },
                 {
-                  "id": "35deaad",
+                  "id": "0d87e00",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1571,7 +1714,7 @@
                   },
                   "elements": [
                     {
-                      "id": "75fa7cf",
+                      "id": "1f38f22",
                       "elType": "widget",
                       "widgetType": "image",
                       "isInner": false,
@@ -1582,7 +1725,7 @@
                       "elements": []
                     },
                     {
-                      "id": "ebcd2fa",
+                      "id": "661f5f6",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1594,7 +1737,7 @@
                       "elements": []
                     },
                     {
-                      "id": "247d3a3",
+                      "id": "a4fe94d",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -1605,7 +1748,7 @@
                       "elements": []
                     },
                     {
-                      "id": "33a0992",
+                      "id": "fa6e7ce",
                       "elType": "widget",
                       "widgetType": "button",
                       "isInner": false,
@@ -1624,7 +1767,7 @@
                   ]
                 },
                 {
-                  "id": "6794809",
+                  "id": "686daf5",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1634,7 +1777,7 @@
                   },
                   "elements": [
                     {
-                      "id": "410e029",
+                      "id": "1517ac4",
                       "elType": "widget",
                       "widgetType": "image",
                       "isInner": false,
@@ -1645,7 +1788,7 @@
                       "elements": []
                     },
                     {
-                      "id": "7a5f7de",
+                      "id": "1739b73",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1657,7 +1800,7 @@
                       "elements": []
                     },
                     {
-                      "id": "65da9b2",
+                      "id": "13c0f91",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -1668,7 +1811,7 @@
                       "elements": []
                     },
                     {
-                      "id": "26705eb",
+                      "id": "0a9ea60",
                       "elType": "widget",
                       "widgetType": "button",
                       "isInner": false,
@@ -1689,7 +1832,7 @@
               ]
             },
             {
-              "id": "b3d75d0",
+              "id": "9aa59fa",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -1710,7 +1853,7 @@
       ]
     },
     {
-      "id": "a4fe94d",
+      "id": "2b285a7",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1734,7 +1877,7 @@
       },
       "elements": [
         {
-          "id": "661f5f6",
+          "id": "438ba43",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1743,7 +1886,7 @@
           },
           "elements": [
             {
-              "id": "c17a91c",
+              "id": "75c2d87",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1755,7 +1898,7 @@
               "elements": []
             },
             {
-              "id": "cfb7aa3",
+              "id": "7710a2f",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1767,7 +1910,7 @@
               "elements": []
             },
             {
-              "id": "1f38f22",
+              "id": "5d5fbb9",
               "elType": "widget",
               "widgetType": "shortcode",
               "isInner": false,
@@ -1782,7 +1925,7 @@
       ]
     },
     {
-      "id": "0a9ea60",
+      "id": "d019d55",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1806,7 +1949,7 @@
       },
       "elements": [
         {
-          "id": "13c0f91",
+          "id": "011f3b0",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1815,7 +1958,7 @@
           },
           "elements": [
             {
-              "id": "1517ac4",
+              "id": "45f5091",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1827,7 +1970,7 @@
               "elements": []
             },
             {
-              "id": "1739b73",
+              "id": "b0131bf",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1839,7 +1982,7 @@
               "elements": []
             },
             {
-              "id": "fa6e7ce",
+              "id": "966fa43",
               "elType": "widget",
               "widgetType": "posts",
               "isInner": false,
@@ -1862,7 +2005,7 @@
               "elements": []
             },
             {
-              "id": "0d87e00",
+              "id": "a5e62de",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -1883,7 +2026,7 @@
       ]
     },
     {
-      "id": "0422e2d",
+      "id": "ffd9687",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1909,7 +2052,7 @@
       },
       "elements": [
         {
-          "id": "9aa59fa",
+          "id": "453af75",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1919,7 +2062,7 @@
           },
           "elements": [
             {
-              "id": "686daf5",
+              "id": "4325a31",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -1941,7 +2084,7 @@
           ]
         },
         {
-          "id": "5b40bb7",
+          "id": "f77eeb3",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1951,7 +2094,7 @@
           },
           "elements": [
             {
-              "id": "58ab127",
+              "id": "bd33481",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,

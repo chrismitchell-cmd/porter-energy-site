@@ -78,7 +78,7 @@
               "widgetType": "text-editor",
               "isInner": false,
               "settings": {
-                "editor": "<p>Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs.</p>",
+                "editor": "<p>Commercial solar systems designed to help businesses generate more of their own power and reduce long-term energy costs</p>",
                 "_css_classes": "pes-body"
               },
               "elements": []

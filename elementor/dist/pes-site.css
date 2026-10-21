@@ -1228,6 +1228,147 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 .elementor .pes-posts + .elementor-widget-button { margin-top: 30px; }
 
 /* --------------------------------------------------------------------------
+   Energy management toggle (home page)
+   pes-energy       – the section
+   pes-toggle       – Solutions | O&M Services switch (HTML widget)
+   pes-tab-panel    – a row of cards; only the active one shows (both show in the editor)
+   pes-svc-card     – image, title, description; the whole card is the link
+   -------------------------------------------------------------------------- */
+.elementor .pes-toggle-widget { text-align: center; }
+.elementor .pes-toggle {
+  display: inline-flex;
+  margin: 30px auto 10px;
+  padding: 5px;
+  gap: 4px;
+  background: #121111;
+  border: 1px solid rgba(234, 162, 78, 0.45);
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+}
+.elementor .pes-toggle button {
+  padding: 13px 30px;
+  font-family: var(--pes-font-ui);
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  clip-path: polygon(9px 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%, 0 9px);
+  transition: color 0.25s, background 0.25s;
+}
+.elementor .pes-toggle button:hover { color: var(--pes-white); background: rgba(255, 255, 255, 0.06); }
+.elementor .pes-toggle button.is-active { color: var(--pes-white); background: var(--pes-gradient); text-shadow: 0 1px 2px rgba(120, 50, 0, 0.35); }
+.elementor .pes-toggle button:focus-visible { outline: 2px solid var(--pes-gold); outline-offset: 2px; }
+
+.elementor .pes-tab-panel { display: none; margin-top: 26px; }
+.elementor .pes-tab-panel.is-active { display: block; animation: pes-fade-up 0.45s ease both; }
+.elementor-editor-active .elementor .pes-tab-panel { display: block; }
+.elementor-editor-active .elementor .pes-tab-panel + .pes-tab-panel { margin-top: 50px; padding-top: 30px; border-top: 1px dashed rgba(234, 162, 78, 0.5); }
+@keyframes pes-fade-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+.elementor .pes-svc-card > .elementor-widget-wrap {
+  --pes-cut: 20px;
+  position: relative;
+  height: 100%;
+  margin: 8px;
+  padding: 0 0 24px !important;
+  align-content: flex-start;
+  background: #232121;
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+  transition: transform 0.35s cubic-bezier(.2, .8, .2, 1), filter 0.35s, background 0.35s;
+}
+.elementor .pes-svc-card > .elementor-widget-wrap::after { /* gradient border, brighter on hover */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: var(--pes-gradient);
+  opacity: 0.45;
+  pointer-events: none;
+  transition: opacity 0.35s;
+  clip-path: polygon(evenodd,
+    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,
+    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),
+    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);
+}
+.elementor .pes-svc-card { transition: filter 0.35s; }
+.elementor .pes-svc-card:hover { filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 18px rgba(234, 162, 78, 0.35)); }
+.elementor .pes-svc-card:hover > .elementor-widget-wrap { transform: translateY(-10px); background: #2a2727; }
+.elementor .pes-svc-card:hover > .elementor-widget-wrap::after { opacity: 1; }
+.elementor .pes-svc-card > .elementor-widget-wrap > .elementor-element { margin-bottom: 0; }
+
+.elementor .pes-svc-img { position: relative; overflow: hidden; }
+.elementor .pes-svc-img img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transform: scale(1.001);
+  transition: transform 0.6s cubic-bezier(.2, .8, .2, 1), filter 0.6s;
+}
+.elementor .pes-svc-img .elementor-widget-container::after { /* bottom fade + gradient line */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(35, 33, 33, 0.95) 100%);
+  border-bottom: 3px solid transparent;
+  border-image: var(--pes-gradient) 1;
+  pointer-events: none;
+}
+.elementor .pes-svc-card:hover .pes-svc-img img { transform: scale(1.1); filter: saturate(1.15) brightness(1.05); }
+
+.elementor .pes-svc-title, .elementor .pes-svc-text, .elementor .pes-svc-more { padding: 0 22px; }
+.elementor .pes-svc-title { margin-top: 18px; }
+.elementor .pes-svc-title .elementor-heading-title,
+.elementor .pes-svc-title .elementor-heading-title a {
+  font-family: var(--pes-font-head);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--pes-white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.elementor .pes-svc-title .elementor-heading-title a::after { /* makes the whole card clickable */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+}
+.elementor .pes-svc-card:hover .pes-svc-title .elementor-heading-title,
+.elementor .pes-svc-card:hover .pes-svc-title .elementor-heading-title a { color: var(--pes-orange); }
+.elementor .pes-svc-text { margin-top: 10px; }
+.elementor .pes-svc-text, .elementor .pes-svc-text p { font-family: var(--pes-font-body); font-size: 15px; line-height: 1.6; color: var(--pes-text); }
+.elementor .pes-svc-text p:last-child { margin-bottom: 0; }
+.elementor .pes-svc-more { margin-top: 16px; }
+.elementor .pes-svc-more .elementor-heading-title {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--pes-font-ui);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--pes-amber);
+}
+.elementor .pes-svc-more .elementor-heading-title::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 10px;
+  margin-left: 10px;
+  background: var(--pes-arrow) no-repeat center / contain;
+  transition: transform 0.35s cubic-bezier(.2, .8, .2, 1);
+}
+.elementor .pes-svc-card:hover .pes-svc-more .elementor-heading-title::after { transform: translateX(8px); }
+@media (prefers-reduced-motion: reduce) {
+  .elementor .pes-svc-card:hover > .elementor-widget-wrap,
+  .elementor .pes-svc-card:hover .pes-svc-img img { transform: none; }
+  .elementor .pes-tab-panel.is-active { animation: none; }
+}
+
+/* --------------------------------------------------------------------------
    CTA banner ("Schedule a consultation today")
    -------------------------------------------------------------------------- */
 .elementor .pes-cta {
@@ -1309,6 +1450,8 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }
   .elementor .pes-job-card > .elementor-widget-wrap { margin: 8px 0; }
   .elementor .pes-btn-inline { margin: 0 0 12px; }
+  .elementor .pes-toggle button { padding: 11px 16px; font-size: 14px; }
+  .elementor .pes-svc-card > .elementor-widget-wrap { margin: 8px 0; }
   .elementor .pes-header .pes-btn-solid .elementor-button { padding: 10px 12px; font-size: 13px; }
   .elementor .pes-form-panel > .elementor-widget-wrap { padding: 24px 16px !important; }
   .elementor .pes-form-placeholder { min-height: 320px; }

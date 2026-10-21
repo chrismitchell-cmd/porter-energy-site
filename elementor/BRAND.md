@@ -23,12 +23,13 @@ These are the colors and fonts the PES Elementor templates use (from `css/pes-gl
 | PES Gold             | `#F8DA72` | End of the brand gradient, link hover |
 | PES Background       | `#1B1A1A` | Page and section background |
 | PES Panel            | `#232121` | FAQ rows and other slightly raised panels |
+| PES Black            | `#121111` | Header bar, menu dropdowns and the mobile menu |
 | PES White            | `#FFFFFF` | Headings, button text, white cards |
 | PES Dark Text        | `#1D1D1F` | Text on white cards |
-| PES CTA Blue – Top   | `#10206A` | Header bar and CTA banner gradient (top) |
-| PES CTA Blue – Mid   | `#0A1850` | Header bar and CTA banner gradient (middle), menu dropdowns |
+| PES CTA Blue – Top   | `#10206A` | CTA banner gradient (top) |
+| PES CTA Blue – Mid   | `#0A1850` | CTA banner gradient (middle) |
 | PES CTA Blue – Deep  | `#020F24` | CTA banner gradient (bottom) |
-| PES CTA Glow Blue    | `#2042CD` | Soft glow in the header and CTA banner |
+| PES CTA Glow Blue    | `#2042CD` | Bright glow in the CTA banner |
 | PES Neon Blue        | `#70C6FF` | Neon lightning bolt line |
 
 ## The brand gradient

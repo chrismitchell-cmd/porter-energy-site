@@ -28,6 +28,7 @@
   --pes-blue-top: #10206a;   /* brand blues – header bar and CTA banner */
   --pes-blue-mid: #0a1850;
   --pes-blue-glow: rgba(32, 66, 205, 0.55);
+  --pes-black: #121111;      /* header bar and menus: a touch darker than the page */
   --pes-white: #ffffff;
   --pes-text: #e9e9ea;
   --pes-text-dark: #1d1d1f;
@@ -104,14 +105,13 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   inset: 0;
   pointer-events: none;
 }
-.elementor .pes-header::before { /* brand-navy bar, same blues as the CTA banner and the logo */
-  background-color: var(--pes-blue-mid);
+.elementor .pes-header::before { /* black bar with the same faint grid as the rest of the site */
+  background-color: var(--pes-black);
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    radial-gradient(ellipse 55% 160% at 28% 0%, var(--pes-blue-glow), transparent 70%),
-    linear-gradient(180deg, var(--pes-blue-top) 0%, var(--pes-blue-mid) 100%);
-  background-size: 96px 96px, 96px 96px, 100% 100%, 100% 100%;
+    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px),
+    linear-gradient(180deg, var(--pes-black) 0%, var(--pes-bg) 100%);
+  background-size: 96px 96px, 96px 96px, 100% 100%;
   clip-path: polygon(0 0, 100% 0, 100% 50%,
     calc(100% - var(--pes-tab-end)) 50%,
     calc(100% - var(--pes-tab-start)) 100%,
@@ -158,7 +158,7 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   text-decoration: none;
 }
 .elementor .pes-header .menu a:hover,
-.elementor .pes-header .menu .current-menu-item > a { color: var(--pes-gold); }
+.elementor .pes-header .menu .current-menu-item > a { color: var(--pes-orange); }
 .elementor .pes-header .menu > li > a::after { /* small chevron like the mockup */
   content: "";
   display: inline-block;
@@ -180,13 +180,14 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   margin: 0;
   padding: 10px 0;
   list-style: none;
-  background: var(--pes-blue-mid);
+  background: var(--pes-black);
   border-top: 2px solid var(--pes-orange);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 .elementor .pes-header li:hover > .sub-menu,
 .elementor .pes-header li:focus-within > .sub-menu { display: block; }
 .elementor .pes-header .sub-menu a { display: block; padding: 8px 14px; font-weight: 500; }
+.elementor .pes-header .sub-menu a:hover { color: var(--pes-white); background: var(--pes-orange); }
 
 /* Elementor Pro Nav Menu in the header (pes-nav): full menu on desktop,
    hamburger + navy dropdown panel on tablet and phone. */
@@ -200,12 +201,13 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   text-decoration: none !important;
   white-space: nowrap;
 }
-.elementor .pes-nav .elementor-nav-menu--main .elementor-item:is(:hover, :focus, .elementor-item-active, .highlighted) { color: var(--pes-gold) !important; }
+.elementor .pes-nav .elementor-nav-menu--main .elementor-item:is(:hover, :focus, .elementor-item-active, .highlighted) { color: var(--pes-orange) !important; }
+.elementor .pes-nav .elementor-item:is(:hover, :focus, .highlighted) .sub-arrow { color: var(--pes-orange); }
 .elementor .pes-nav .sub-arrow { margin-left: 6px; padding: 0 !important; color: var(--pes-amber); font-size: 9px; }
 .elementor .pes-nav .sub-arrow svg { fill: var(--pes-amber); width: 9px; height: 9px; }
 .elementor .pes-nav .elementor-nav-menu--main .sub-menu,
 .elementor .pes-nav .elementor-nav-menu--dropdown {
-  background: var(--pes-blue-mid) !important;
+  background: var(--pes-black) !important;
 }
 .elementor .pes-nav .elementor-nav-menu--main .sub-menu {
   min-width: 230px !important;
@@ -223,8 +225,8 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   background: transparent !important;
 }
 .elementor .pes-nav .elementor-nav-menu--dropdown a:is(:hover, :focus, .elementor-item-active, .highlighted) {
-  color: var(--pes-gold) !important;
-  background: rgba(255, 255, 255, 0.06) !important;
+  color: var(--pes-white) !important;
+  background: var(--pes-orange) !important;
 }
 /* hamburger button */
 .elementor .pes-nav .elementor-menu-toggle {
@@ -234,10 +236,10 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   font-size: 26px;
   color: var(--pes-white) !important;
   background: transparent !important;
-  border: 2px solid rgba(248, 218, 114, 0.6);
+  border: 2px solid rgba(221, 112, 51, 0.7);
 }
 .elementor .pes-nav .elementor-menu-toggle:hover,
-.elementor .pes-nav .elementor-menu-toggle.elementor-active { color: var(--pes-gold) !important; border-color: var(--pes-gold); }
+.elementor .pes-nav .elementor-menu-toggle.elementor-active { color: var(--pes-orange) !important; border-color: var(--pes-orange); }
 .elementor .pes-nav .elementor-menu-toggle svg { fill: currentColor; }
 /* the dropdown panel that opens from the hamburger: full width, straight under the header */
 .elementor .pes-header .pes-nav-col,

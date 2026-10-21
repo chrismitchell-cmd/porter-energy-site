@@ -136,9 +136,8 @@ def bg_image(url, overlay="rgba(16,16,17,0.82)"):
 
 
 def frame_classes(b, default="orange"):
-    """CSS classes for a framed image/video: colour from "frame", plus the tool-grip edge if "grip"."""
-    classes = "pes-frame" + (" pes-frame-blue" if b.get("frame", default) == "blue" else "")
-    return classes + (" pes-frame-grip" if b.get("grip") else "")
+    """CSS classes for a framed image/video: orange-gradient line, or navy with "frame": "blue"."""
+    return "pes-frame" + (" pes-frame-blue" if b.get("frame", default) == "blue" else "")
 
 
 def fa(fa_class):
@@ -416,9 +415,7 @@ HEADER_DEFAULTS = {"type": "header", "logo": "", "button": {"text": "Get A Quote
 
 def block_name(b):
     if b["type"] == "feature":
-        return f"pes-feature-{b.get('layout', 'image-right')}" + ("-grip" if b.get("grip") else "")
-    if b["type"] == "media" and b.get("grip"):
-        return "pes-media-grip"
+        return f"pes-feature-{b.get('layout', 'image-right')}"
     if b["type"] == "hero" and b.get("align") == "center":
         return "pes-hero-center"
     if b["type"] == "process" and len(b["steps"]) != 3:

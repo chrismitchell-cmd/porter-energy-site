@@ -1,0 +1,188 @@
+{
+  "title": "PES – Projects",
+  "slug": "pes-projects",
+  "blocks": [
+    {
+      "type": "hero",
+      "align": "center",
+      "height": 560,
+      "kicker": "Our Projects",
+      "title": "Our Solar and Renewable Energy Projects",
+      "text": "We have successfully completed hundreds of solar and renewable energy projects throughout New Hampshire, Maine, and Massachusetts. Looking for your next project? Give us a call!",
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment",
+        "style": "pes-btn-solid pes-align-center"
+      },
+      "button2": {
+        "text": "Call 603-340-0500",
+        "url": "tel:+16033400500"
+      },
+      "image": ""
+    },
+    {
+      "type": "project_gallery",
+      "kicker": "Our Projects",
+      "title": "Browse Our Solar &",
+      "accent": "Renewable Energy Projects",
+      "text": "Filter by type, click a photo to see more of the project, and open the details for size and location.",
+      "categories": [
+        {
+          "key": "commercial-solar",
+          "label": "Commercial Solar"
+        },
+        {
+          "key": "residential-solar",
+          "label": "Residential Solar"
+        },
+        {
+          "key": "solar-farms",
+          "label": "Solar Farms"
+        },
+        {
+          "key": "battery-storage",
+          "label": "Battery Storage"
+        },
+        {
+          "key": "ev-infrastructure",
+          "label": "EV Infrastructure"
+        },
+        {
+          "key": "electrical-infrastructure",
+          "label": "Electrical Infrastructure"
+        }
+      ],
+      "projects": [
+        {
+          "category": "commercial-solar",
+          "title": "Commercial Solar – Manchester, NH",
+          "summary": "TownePlace Suites by Marriott",
+          "size": "95.2 kW · 224 Trina Solar panels, 3 Solis inverters",
+          "location": "Manchester, NH",
+          "description": "Rooftop solar array for TownePlace Suites by Marriott. [Add a short description of the project, goals and results.]",
+          "images": [],
+          "preview": [
+            "img/frame-1.jpg",
+            "img/frame-2.jpg",
+            "img/frame-3.jpg",
+            "img/sunset.jpg"
+          ]
+        },
+        {
+          "category": "commercial-solar",
+          "title": "Commercial Solar – Newbury, MA",
+          "summary": "First Parish Church",
+          "size": "29.68 kW · 56 Silfab 530 W modules, Enphase IQ8P micro-inverters",
+          "location": "Newbury, MA",
+          "description": "Ground-mount solar array for First Parish Church. [Add a short description of the project, goals and results.]",
+          "images": [],
+          "preview": [
+            "img/frame-2.jpg",
+            "img/frame-3.jpg",
+            "img/sunset.jpg",
+            "img/hero.jpg"
+          ]
+        },
+        {
+          "category": "commercial-solar",
+          "title": "Commercial Solar – Barrington, NH",
+          "summary": "Barrington Public Library",
+          "size": "68.715 kW · 111 solar panels (540 W), 3 Fronius inverters",
+          "location": "Barrington, NH",
+          "description": "Rooftop solar for the Barrington Public Library. [Add a short description of the project, goals and results.]",
+          "images": [],
+          "preview": [
+            "img/frame-3.jpg",
+            "img/sunset.jpg",
+            "img/hero.jpg",
+            "img/frame-1.jpg"
+          ]
+        },
+        {
+          "category": "residential-solar",
+          "title": "Residential Solar – [Town], NH",
+          "summary": "[Short one-line summary]",
+          "size": "[Size] kW · [panels / inverters]",
+          "location": "[Town, State]",
+          "description": "[Project description.]",
+          "images": [],
+          "preview": [
+            "img/sunset.jpg",
+            "img/hero.jpg",
+            "img/frame-1.jpg",
+            "img/frame-2.jpg"
+          ]
+        },
+        {
+          "category": "solar-farms",
+          "title": "Solar Farm – [Town], NH",
+          "summary": "[Short one-line summary]",
+          "size": "[Size] kW · [panels / inverters]",
+          "location": "[Town, State]",
+          "description": "[Project description.]",
+          "images": [],
+          "preview": [
+            "img/hero.jpg",
+            "img/frame-1.jpg",
+            "img/frame-2.jpg",
+            "img/frame-3.jpg"
+          ]
+        },
+        {
+          "category": "battery-storage",
+          "title": "Battery Storage – [Town], NH",
+          "summary": "[Short one-line summary]",
+          "size": "[Size] kWh · [battery system]",
+          "location": "[Town, State]",
+          "description": "[Project description.]",
+          "images": [],
+          "preview": [
+            "img/frame-1.jpg",
+            "img/frame-2.jpg",
+            "img/frame-3.jpg",
+            "img/sunset.jpg"
+          ]
+        },
+        {
+          "category": "ev-infrastructure",
+          "title": "EV Charging – [Town], NH",
+          "summary": "[Short one-line summary]",
+          "size": "[Number] chargers · [Level 2 / DC fast]",
+          "location": "[Town, State]",
+          "description": "[Project description.]",
+          "images": [],
+          "preview": [
+            "img/frame-2.jpg",
+            "img/frame-3.jpg",
+            "img/sunset.jpg",
+            "img/hero.jpg"
+          ]
+        },
+        {
+          "category": "electrical-infrastructure",
+          "title": "Electrical Infrastructure – [Town], NH",
+          "summary": "[Short one-line summary]",
+          "size": "[Service size / scope]",
+          "location": "[Town, State]",
+          "description": "[Project description.]",
+          "images": [],
+          "preview": [
+            "img/frame-3.jpg",
+            "img/sunset.jpg",
+            "img/hero.jpg",
+            "img/frame-1.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Book An Appointment Today",
+      "subtitle": "Powering Progress. Building Confidence.",
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      }
+    }
+  ]
+}

@@ -613,6 +613,73 @@ def block_projects(ids, b):
                    "pes-section", title="Featured projects", padding=box(100, 0, 110, 0))
 
 
+FILTER_JS = """<script>
+(function () {
+  function init(bar) {
+    if (bar.dataset.pesReady) return;
+    bar.dataset.pesReady = '1';
+    var sec = bar.closest('.pes-projects');
+    bar.querySelectorAll('button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var f = btn.dataset.filter;
+        bar.querySelectorAll('button').forEach(function (b) {
+          b.classList.toggle('is-active', b === btn); b.setAttribute('aria-pressed', b === btn);
+        });
+        sec.querySelectorAll('.pes-proj-card').forEach(function (card) {
+          var show = f === 'all' || card.classList.contains('pes-cat-' + f);
+          card.classList.toggle('is-hidden', !show);
+        });
+      });
+    });
+  }
+  function run() { document.querySelectorAll('.pes-filter').forEach(init); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+  window.addEventListener('elementor/frontend/init', run);
+})();
+</script>"""
+
+
+def slug(t):
+    return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
+
+
+def project_card(ids, pr, cats, k):
+    """Photo gallery (first photo shows, click opens all in the lightbox), category, title,
+    short line, and a See Project Details toggle with size / location / description."""
+    cat = pr["category"]
+    pics = pr.get("images") or []
+    gallery = widget(ids, "image-gallery", "pes-proj-gallery",
+                     wp_gallery=[{"id": "", "url": u} for u in pics], thumbnail_size="large",
+                     gallery_columns="1", gallery_link="file", open_lightbox="yes", gallery_rand="")
+    PREVIEW_SRC[gallery["id"]] = pr.get("preview", [])
+    details = (f'<ul class="pes-proj-facts"><li><strong>Size:</strong> {pr["size"]}</li>'
+               f'<li><strong>Location:</strong> {pr["location"]}</li></ul><p>{pr["description"]}</p>')
+    toggle = widget(ids, "toggle", "pes-proj-toggle", tabs=[{"_id": ids(), "tab_title": "See Project Details",
+                    "tab_content": details}], selected_icon=fa("fas fa-chevron-down"),
+                    selected_active_icon=fa("fas fa-chevron-up"), icon_align="right", title_html_tag="div")
+    return column(ids, 33.333, [
+        gallery,
+        heading(ids, cats[cat], "p", "pes-proj-cat"),
+        heading(ids, pr["title"], "h3", "pes-proj-title"),
+        text(ids, pr["summary"], "pes-proj-summary"),
+        toggle,
+    ], f"pes-proj-card pes-cat-{cat}")
+
+
+def block_project_gallery(ids, b):
+    """Projects page – category filter bar over a grid of project cards (rows of three)."""
+    cats = {c["key"]: c["label"] for c in b["categories"]}
+    btns = '<button type="button" class="is-active" data-filter="all" aria-pressed="true">All</button>' + "".join(
+        f'<button type="button" data-filter="{c["key"]}" aria-pressed="false">{c["label"]}</button>'
+        for c in b["categories"])
+    bar = widget(ids, "html", "pes-filter-widget", html=f'<div class="pes-filter" role="group" aria-label="Filter projects">{btns}</div>\n{FILTER_JS}')
+    cards = [project_card(ids, pr, cats, k) for k, pr in enumerate(b["projects"])]
+    rows = [section(ids, cards[i:i + 3], "pes-proj-row", inner=True, gap="extended", structure=f"{len(cards[i:i + 3])}0",
+                    title="Projects row (3 cards)") for i in range(0, len(cards), 3)]
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [bar] + rows, "pes-proj-grid")],
+                   "pes-section pes-projects", title="Projects – filter + cards", padding=box(90, 0, 110, 0))
+
+
 def block_posts(ids, b):
     """Latest blog posts – Elementor Pro Posts widget, pulls the newest posts automatically."""
     w = widget(ids, "posts", "pes-posts", _skin="classic", classic_columns="3", classic_columns_mobile="1",
@@ -741,6 +808,7 @@ BLOCKS = {
     "service_grid": block_service_grid,
     "projects": block_projects,
     "posts": block_posts,
+    "project_gallery": block_project_gallery,
     "team": block_team,
     "jobs": block_jobs,
     "licenses": block_licenses,
@@ -814,7 +882,7 @@ def build(content_path, seen_blocks):
         seen_blocks.add(name)
         title = "PES – " + name[4:].replace("-", " ").title()
         write_json(DIST / "blocks" / f"{name}.json",
-                   template(title, "section", [BLOCKS[b["type"]](Ids(name), b)]))
+                   template(title, "section", [BLOCKS[b["type"]](Ids("block:" + name), b)]))
 
 
 # ---------------------------------------------------------------------------
@@ -943,6 +1011,19 @@ def render(el):
             f'<a class="elementor-accordion-title" href="#">{t["tab_title"]}</a></div>'
             f'<div class="elementor-tab-content" style="display:{"block" if n == 0 else "none"}">{t["tab_content"]}</div></div>'
             for n, t in enumerate(s["tabs"])) + "</div>"
+    elif kind == "image-gallery":
+        pics = [p["url"] for p in s.get("wp_gallery", [])] or PREVIEW_SRC.get(el["id"]) or ["img/placeholder.jpg"]
+        body = '<div class="gallery">' + "".join(
+            f'<figure class="gallery-item"><div class="gallery-icon"><a href="{u}" data-elementor-open-lightbox="yes">'
+            f'<img src="{u}" alt=""></a></div></figure>' for u in pics) + '</div>'
+    elif kind == "toggle":
+        t = s["tabs"][0]
+        body = (f'<div class="elementor-toggle"><div class="elementor-toggle-item">'
+                f'<div class="elementor-tab-title" onclick="this.classList.toggle(\'elementor-active\');'
+                f'this.nextElementSibling.style.display=this.classList.contains(\'elementor-active\')?\'block\':\'none\'">'
+                f'<span class="elementor-toggle-icon elementor-toggle-icon-right"><span class="elementor-toggle-icon-closed">&#9662;</span></span>'
+                f'<a class="elementor-toggle-title" href="#" onclick="return false">{t["tab_title"]}</a></div>'
+                f'<div class="elementor-tab-content" style="display:none">{t["tab_content"]}</div></div></div>')
     elif kind == "image-carousel":
         n = PREVIEW_SRC.get(el["id"], 8) if isinstance(PREVIEW_SRC.get(el["id"]), int) else 8
         logo = ('<div class="pv-logo">PARTNER {k}</div>')

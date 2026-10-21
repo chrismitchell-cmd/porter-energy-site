@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "bc03799",
+      "id": "e43eb09",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -39,7 +39,7 @@
       },
       "elements": [
         {
-          "id": "2c65ab1",
+          "id": "4a50add",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -49,7 +49,7 @@
           },
           "elements": [
             {
-              "id": "220dd74",
+              "id": "8701fcb",
               "elType": "widget",
               "widgetType": "image",
               "isInner": false,
@@ -62,7 +62,7 @@
           ]
         },
         {
-          "id": "a3eeac5",
+          "id": "dd81695",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -72,7 +72,7 @@
           },
           "elements": [
             {
-              "id": "8a6c9df",
+              "id": "d4ddf5d",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -84,7 +84,7 @@
               "elements": []
             },
             {
-              "id": "a77a791",
+              "id": "df118e1",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -96,7 +96,7 @@
               "elements": []
             },
             {
-              "id": "7981fc0",
+              "id": "44c8136",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -107,7 +107,7 @@
               "elements": []
             },
             {
-              "id": "e2d4a3e",
+              "id": "45473ee",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -119,14 +119,14 @@
               "elements": []
             },
             {
-              "id": "2c2d084",
+              "id": "5a80eae",
               "elType": "widget",
               "widgetType": "icon-list",
               "isInner": false,
               "settings": {
                 "icon_list": [
                   {
-                    "_id": "4882f06",
+                    "_id": "413d26c",
                     "text": "Benefit 1",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -134,7 +134,7 @@
                     }
                   },
                   {
-                    "_id": "2774514",
+                    "_id": "dd00539",
                     "text": "Benefit 2",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -142,7 +142,7 @@
                     }
                   },
                   {
-                    "_id": "db9e350",
+                    "_id": "a5c6636",
                     "text": "Benefit 3",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -150,7 +150,7 @@
                     }
                   },
                   {
-                    "_id": "ef5f8d2",
+                    "_id": "84977a9",
                     "text": "Benefit 4",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -158,7 +158,7 @@
                     }
                   },
                   {
-                    "_id": "3371711",
+                    "_id": "cec9027",
                     "text": "Benefit 5",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -171,7 +171,7 @@
               "elements": []
             },
             {
-              "id": "0c5f1f1",
+              "id": "4f27df9",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,

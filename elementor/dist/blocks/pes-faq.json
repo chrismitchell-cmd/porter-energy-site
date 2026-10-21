@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "950e734",
+      "id": "9488cef",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "3a86428",
+          "id": "87a7972",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -38,7 +38,7 @@
           },
           "elements": [
             {
-              "id": "f81eb72",
+              "id": "c3efabc",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -50,7 +50,7 @@
               "elements": []
             },
             {
-              "id": "67debf3",
+              "id": "4015568",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -62,34 +62,34 @@
               "elements": []
             },
             {
-              "id": "239feaa",
+              "id": "48f4891",
               "elType": "widget",
               "widgetType": "accordion",
               "isInner": false,
               "settings": {
                 "tabs": [
                   {
-                    "_id": "f03203a",
+                    "_id": "918f136",
                     "tab_title": "Question 1",
                     "tab_content": "<p>Answer 1.</p>"
                   },
                   {
-                    "_id": "717341b",
+                    "_id": "20127ae",
                     "tab_title": "Question 2",
                     "tab_content": "<p>Answer 2.</p>"
                   },
                   {
-                    "_id": "23c4dbe",
+                    "_id": "4e67c5e",
                     "tab_title": "Question 3",
                     "tab_content": "<p>Answer 3.</p>"
                   },
                   {
-                    "_id": "313a4ae",
+                    "_id": "294e2b7",
                     "tab_title": "Question 4",
                     "tab_content": "<p>Answer 4.</p>"
                   },
                   {
-                    "_id": "4d63feb",
+                    "_id": "85dcf9e",
                     "tab_title": "Question 5",
                     "tab_content": "<p>Answer 5.</p>"
                   }

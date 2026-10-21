@@ -341,6 +341,7 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 /* tablet: hamburger replaces the menu, the tab stays */
 @media (max-width: 1024px) {
   .elementor .pes-nav .elementor-menu-toggle { display: inline-flex; }
+  body:not(.elementor-editor-active) .elementor .pes-proj-card { width: 50% !important; }
   .elementor .pes-header .pes-header-cta > .elementor-widget-wrap { justify-content: flex-end; }
 }
 
@@ -1532,6 +1533,193 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 .elementor .pes-why-row + .elementor-widget-button { margin-top: 14px; }
 
 /* --------------------------------------------------------------------------
+   Projects page
+   pes-filter        – category buttons (HTML widget)
+   pes-proj-row      – a row of three cards; on the live site the rows merge into one
+                       flowing grid so filtered cards close up without gaps
+   pes-proj-card     – card column; its category is the pes-cat-… class
+   pes-proj-gallery  – Basic Gallery: first photo shows, click opens all in the lightbox
+   pes-proj-toggle   – Toggle widget: See Project Details
+   -------------------------------------------------------------------------- */
+.elementor .pes-filter-widget { text-align: center; }
+.elementor .pes-filter { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 30px 0 20px; }
+.elementor .pes-filter button {
+  padding: 11px 20px;
+  font-family: var(--pes-font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.8);
+  background: #232121;
+  border: 1px solid rgba(234, 162, 78, 0.35);
+  border-radius: 0;
+  cursor: pointer;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+.elementor .pes-filter button:hover { color: var(--pes-white); background: #2c2929; transform: translateY(-2px); }
+.elementor .pes-filter button.is-active { color: var(--pes-white); background: var(--pes-gradient); border-color: transparent; text-shadow: 0 1px 2px rgba(120, 50, 0, 0.35); }
+.elementor .pes-filter button:focus-visible { outline: 2px solid var(--pes-gold); outline-offset: 2px; }
+
+body:not(.elementor-editor-active) .elementor .pes-proj-row,
+body:not(.elementor-editor-active) .elementor .pes-proj-row > .elementor-container { display: contents; }
+.elementor .pes-proj-card.is-hidden { display: none !important; }
+.elementor .pes-proj-card:not(.is-hidden) { animation: pes-fade-up 0.4s ease both; }
+
+.elementor .pes-proj-card > .elementor-widget-wrap {
+  --pes-cut: 20px;
+  position: relative;
+  height: 100%;
+  margin: 8px;
+  padding: 0 0 18px !important;
+  align-content: flex-start;
+  background: #232121;
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+  transition: transform 0.3s ease, background 0.3s;
+}
+.elementor .pes-proj-card > .elementor-widget-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: var(--pes-gradient);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  clip-path: polygon(evenodd,
+    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,
+    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),
+    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);
+}
+.elementor .pes-proj-card:hover > .elementor-widget-wrap { transform: translateY(-6px); background: #2a2727; }
+.elementor .pes-proj-card:hover > .elementor-widget-wrap::after { opacity: 1; }
+.elementor .pes-proj-card > .elementor-widget-wrap > .elementor-element { margin-bottom: 0; }
+
+/* gallery: only the first photo shows; the rest open in the lightbox */
+.elementor .pes-proj-gallery .gallery { display: block; margin: 0 !important; }
+.elementor .pes-proj-gallery .gallery-item { position: relative; display: block; width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+.elementor .pes-proj-gallery .gallery-item:not(:first-child) { display: none; }
+.elementor .pes-proj-gallery .gallery-icon { overflow: hidden; }
+.elementor .pes-proj-gallery .gallery-icon a { position: relative; display: block; cursor: zoom-in; }
+.elementor .pes-proj-gallery img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 0 !important;
+  transition: transform 0.6s cubic-bezier(.2, .8, .2, 1);
+}
+.elementor .pes-proj-gallery .gallery-icon a::after { /* "View photos" badge */
+  content: "View Photos";
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 8px 12px 8px 32px;
+  font-family: var(--pes-font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--pes-white);
+  background: rgba(18, 17, 17, 0.82) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EAA24E'%3E%3Cpath d='M4 5h3l2-2h6l2 2h3a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z'/%3E%3C/svg%3E") no-repeat 10px center / 15px;
+  border: 1px solid rgba(234, 162, 78, 0.6);
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+  transition: background-color 0.3s;
+}
+.elementor .pes-proj-gallery .gallery-icon a::before { /* gradient line under the photo */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 3px;
+  background: var(--pes-gradient);
+}
+.elementor .pes-proj-card:hover .pes-proj-gallery img { transform: scale(1.07); }
+.elementor .pes-proj-gallery .gallery-icon a:hover::after { background-color: rgba(221, 112, 51, 0.92); }
+.elementor .pes-proj-gallery .gallery-caption { display: none; }
+
+.elementor .pes-proj-cat, .elementor .pes-proj-title, .elementor .pes-proj-summary, .elementor .pes-proj-toggle { padding: 0 20px; }
+.elementor .pes-proj-cat { margin-top: 18px; }
+.elementor .pes-proj-cat .elementor-heading-title {
+  display: inline-block;
+  font-family: var(--pes-font-head);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--pes-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.elementor .pes-proj-title { margin-top: 6px; }
+.elementor .pes-proj-title .elementor-heading-title { font-family: var(--pes-font-head); font-size: 22px; font-weight: 700; line-height: 1.2; color: var(--pes-white); }
+.elementor .pes-proj-summary { margin-top: 8px; }
+.elementor .pes-proj-summary, .elementor .pes-proj-summary p { font-family: var(--pes-font-body); font-size: 15px; line-height: 1.55; color: var(--pes-text); }
+.elementor .pes-proj-summary p:last-child { margin-bottom: 0; }
+
+/* See Project Details */
+.elementor .pes-proj-toggle { margin-top: 16px; }
+.elementor .pes-proj-toggle .elementor-toggle-item { border: 0 !important; }
+.elementor .pes-proj-toggle .elementor-tab-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px !important;
+  border: 0 !important;
+  cursor: pointer;
+  clip-path: polygon(9px 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%, 0 9px);
+  transition: background 0.25s;
+}
+.elementor .pes-proj-toggle .elementor-tab-title::before { /* gradient outline */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--pes-gradient);
+  pointer-events: none;
+  clip-path: polygon(evenodd,
+    9px 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%, 0 9px, 9px 0,
+    10px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 10px), calc(100% - 10px) calc(100% - 2px), 2px calc(100% - 2px), 2px 10px, 10px 2px);
+}
+.elementor .pes-proj-toggle .elementor-tab-title:hover,
+.elementor .pes-proj-toggle .elementor-tab-title.elementor-active { background: var(--pes-gradient); }
+.elementor .pes-proj-toggle .elementor-toggle-title {
+  order: 1;
+  font-family: var(--pes-font-ui);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--pes-white) !important;
+  text-decoration: none;
+}
+.elementor .pes-proj-toggle .elementor-toggle-icon { order: 2; float: none; width: auto; color: var(--pes-amber); font-size: 12px; }
+.elementor .pes-proj-toggle .elementor-tab-title:is(:hover, .elementor-active) .elementor-toggle-icon { color: var(--pes-white); }
+.elementor .pes-proj-toggle .elementor-toggle-icon svg { fill: currentColor; width: 12px; height: 12px; }
+.elementor .pes-proj-toggle .elementor-tab-content {
+  padding: 16px 4px 4px !important;
+  border: 0 !important;
+  font-family: var(--pes-font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pes-text);
+}
+.elementor .pes-proj-toggle .elementor-tab-content p:last-child { margin-bottom: 0; }
+.elementor .pes-proj-facts { margin: 0 0 12px; padding: 0; list-style: none; }
+.elementor .pes-proj-facts li { padding: 7px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+.elementor .pes-proj-facts strong {
+  display: inline-block;
+  min-width: 82px;
+  font-family: var(--pes-font-head);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pes-amber);
+}
+
+/* --------------------------------------------------------------------------
    CTA banner ("Schedule a consultation today")
    -------------------------------------------------------------------------- */
 .elementor .pes-cta {
@@ -1613,6 +1801,9 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }
   .elementor .pes-job-card > .elementor-widget-wrap { margin: 8px 0; }
   .elementor .pes-btn-inline { margin: 0 0 12px; }
+  .elementor .pes-filter button { padding: 9px 14px; font-size: 13px; }
+  .elementor .pes-proj-card > .elementor-widget-wrap { margin: 8px 0; }
+  body:not(.elementor-editor-active) .elementor .pes-proj-card { width: 100% !important; }
   .elementor .pes-toggle button { padding: 11px 16px; font-size: 14px; }
   .elementor .pes-svc-card > .elementor-widget-wrap { margin: 8px 0; }
   .elementor .pes-header .pes-btn-solid .elementor-button { padding: 10px 12px; font-size: 13px; }

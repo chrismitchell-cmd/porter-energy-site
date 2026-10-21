@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "aa403eb",
+      "id": "6c5d626",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "e88d72f",
+          "id": "9dd1294",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -38,7 +38,7 @@
           },
           "elements": [
             {
-              "id": "5ab95ce",
+              "id": "2816006",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -50,7 +50,7 @@
               "elements": []
             },
             {
-              "id": "6d4f536",
+              "id": "2e4f499",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -62,7 +62,7 @@
               "elements": []
             },
             {
-              "id": "11c00a7",
+              "id": "4cb7bf4",
               "elType": "widget",
               "widgetType": "image-carousel",
               "isInner": false,

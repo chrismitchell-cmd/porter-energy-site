@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "e6eb6af",
+      "id": "f69b879",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -40,7 +40,7 @@
       },
       "elements": [
         {
-          "id": "f6ba087",
+          "id": "cedc098",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -50,7 +50,7 @@
           },
           "elements": [
             {
-              "id": "d8c1508",
+              "id": "da7dafd",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -62,7 +62,7 @@
               "elements": []
             },
             {
-              "id": "9a0bf65",
+              "id": "ea2354c",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -74,7 +74,7 @@
               "elements": []
             },
             {
-              "id": "4954ab9",
+              "id": "00daefb",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -85,7 +85,7 @@
               "elements": []
             },
             {
-              "id": "9ccb037",
+              "id": "3643bf6",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -97,14 +97,14 @@
               "elements": []
             },
             {
-              "id": "01b1c37",
+              "id": "f7cc345",
               "elType": "widget",
               "widgetType": "icon-list",
               "isInner": false,
               "settings": {
                 "icon_list": [
                   {
-                    "_id": "5c84491",
+                    "_id": "9696d7e",
                     "text": "We review your request",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -112,7 +112,7 @@
                     }
                   },
                   {
-                    "_id": "173dc35",
+                    "_id": "b7ef1a8",
                     "text": "A team member contacts you to talk through your project",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -120,7 +120,7 @@
                     }
                   },
                   {
-                    "_id": "7214f23",
+                    "_id": "bf7bc43",
                     "text": "We schedule a site visit if it makes sense",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -128,7 +128,7 @@
                     }
                   },
                   {
-                    "_id": "60c4e17",
+                    "_id": "f1e9489",
                     "text": "You get a clear proposal with no pressure",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -141,7 +141,7 @@
               "elements": []
             },
             {
-              "id": "3935d74",
+              "id": "369d740",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -155,7 +155,7 @@
           ]
         },
         {
-          "id": "ea67bad",
+          "id": "02c36f3",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -166,7 +166,7 @@
           },
           "elements": [
             {
-              "id": "dd6eec5",
+              "id": "217b807",
               "elType": "widget",
               "widgetType": "html",
               "isInner": false,

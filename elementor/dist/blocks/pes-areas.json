@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "e03b489",
+      "id": "7447f6f",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "1ecf90c",
+          "id": "d7b2ead",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -38,7 +38,7 @@
           },
           "elements": [
             {
-              "id": "e203be3",
+              "id": "c921bf5",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -50,7 +50,7 @@
               "elements": []
             },
             {
-              "id": "42e2ee9",
+              "id": "b86bb85",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -62,7 +62,7 @@
               "elements": []
             },
             {
-              "id": "189e9ce",
+              "id": "f61ccb8",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -73,7 +73,7 @@
               "elements": []
             },
             {
-              "id": "4f81721",
+              "id": "e2bb36f",
               "elType": "widget",
               "widgetType": "icon-list",
               "isInner": false,
@@ -81,7 +81,7 @@
                 "view": "inline",
                 "icon_list": [
                   {
-                    "_id": "f05bc19",
+                    "_id": "29669de",
                     "text": "Deerfield, NH",
                     "selected_icon": {
                       "value": "fas fa-map-marker-alt",
@@ -89,7 +89,7 @@
                     }
                   },
                   {
-                    "_id": "e812591",
+                    "_id": "bb77382",
                     "text": "[City / Region]",
                     "selected_icon": {
                       "value": "fas fa-map-marker-alt",
@@ -97,7 +97,7 @@
                     }
                   },
                   {
-                    "_id": "ca7a21e",
+                    "_id": "5a91d88",
                     "text": "[City / Region]",
                     "selected_icon": {
                       "value": "fas fa-map-marker-alt",
@@ -105,7 +105,7 @@
                     }
                   },
                   {
-                    "_id": "db3dabf",
+                    "_id": "8ca71d8",
                     "text": "[City / Region]",
                     "selected_icon": {
                       "value": "fas fa-map-marker-alt",
@@ -113,7 +113,7 @@
                     }
                   },
                   {
-                    "_id": "990571e",
+                    "_id": "2adf528",
                     "text": "[City / Region]",
                     "selected_icon": {
                       "value": "fas fa-map-marker-alt",
@@ -121,7 +121,7 @@
                     }
                   },
                   {
-                    "_id": "33ae2c5",
+                    "_id": "866d3d0",
                     "text": "[City / Region]",
                     "selected_icon": {
                       "value": "fas fa-map-marker-alt",
@@ -129,7 +129,7 @@
                     }
                   },
                   {
-                    "_id": "59d72b6",
+                    "_id": "b7ee268",
                     "text": "[City / Region]",
                     "selected_icon": {
                       "value": "fas fa-map-marker-alt",
@@ -137,7 +137,7 @@
                     }
                   },
                   {
-                    "_id": "14cd6f5",
+                    "_id": "67ab0e2",
                     "text": "[City / Region]",
                     "selected_icon": {
                       "value": "fas fa-map-marker-alt",
@@ -150,7 +150,7 @@
               "elements": []
             },
             {
-              "id": "e068d8f",
+              "id": "e566898",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,

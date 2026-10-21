@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "3d573fe",
+      "id": "60d9e03",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -30,7 +30,7 @@
       },
       "elements": [
         {
-          "id": "6d06a3f",
+          "id": "9a6aa41",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -39,7 +39,7 @@
           },
           "elements": [
             {
-              "id": "ebd0118",
+              "id": "b0687bf",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -67,7 +67,7 @@
           ]
         },
         {
-          "id": "119ed62",
+          "id": "a99e192",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -76,7 +76,7 @@
           },
           "elements": [
             {
-              "id": "9b1049c",
+              "id": "64b8861",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -104,7 +104,7 @@
           ]
         },
         {
-          "id": "5bf8972",
+          "id": "dc1b440",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -113,7 +113,7 @@
           },
           "elements": [
             {
-              "id": "194d30f",
+              "id": "e31da1b",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,

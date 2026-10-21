@@ -1,0 +1,869 @@
+{
+  "version": "0.4",
+  "title": "PES – Project Gallery",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "d0266c3",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-projects",
+        "_title": "Projects – filter + cards",
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "c833bc1",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100,
+            "css_classes": "pes-proj-grid"
+          },
+          "elements": [
+            {
+              "id": "aff9fae",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Our Projects",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "a836117",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Browse Our Solar & <span class=\"pes-accent\">Renewable Energy Projects</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "c3620af",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Filter by type, click a photo to see more of the project, and open the details for size and location.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "2ffa191",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"pes-filter\" role=\"group\" aria-label=\"Filter projects\"><button type=\"button\" class=\"is-active\" data-filter=\"all\" aria-pressed=\"true\">All</button><button type=\"button\" data-filter=\"commercial-solar\" aria-pressed=\"false\">Commercial Solar</button><button type=\"button\" data-filter=\"residential-solar\" aria-pressed=\"false\">Residential Solar</button><button type=\"button\" data-filter=\"solar-farms\" aria-pressed=\"false\">Solar Farms</button><button type=\"button\" data-filter=\"battery-storage\" aria-pressed=\"false\">Battery Storage</button><button type=\"button\" data-filter=\"ev-infrastructure\" aria-pressed=\"false\">EV Infrastructure</button><button type=\"button\" data-filter=\"electrical-infrastructure\" aria-pressed=\"false\">Electrical Infrastructure</button></div>\n<script>\n(function () {\n  function init(bar) {\n    if (bar.dataset.pesReady) return;\n    bar.dataset.pesReady = '1';\n    var sec = bar.closest('.pes-projects');\n    bar.querySelectorAll('button').forEach(function (btn) {\n      btn.addEventListener('click', function () {\n        var f = btn.dataset.filter;\n        bar.querySelectorAll('button').forEach(function (b) {\n          b.classList.toggle('is-active', b === btn); b.setAttribute('aria-pressed', b === btn);\n        });\n        sec.querySelectorAll('.pes-proj-card').forEach(function (card) {\n          var show = f === 'all' || card.classList.contains('pes-cat-' + f);\n          card.classList.toggle('is-hidden', !show);\n        });\n      });\n    });\n  }\n  function run() { document.querySelectorAll('.pes-filter').forEach(init); }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();\n  window.addEventListener('elementor/frontend/init', run);\n})();\n</script>",
+                "_css_classes": "pes-filter-widget"
+              },
+              "elements": []
+            },
+            {
+              "id": "7fcba60",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-proj-row",
+                "_title": "Projects row (3 cards)",
+                "structure": "30"
+              },
+              "elements": [
+                {
+                  "id": "be15375",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-proj-card pes-cat-commercial-solar"
+                  },
+                  "elements": [
+                    {
+                      "id": "e61c401",
+                      "elType": "widget",
+                      "widgetType": "image-gallery",
+                      "isInner": false,
+                      "settings": {
+                        "wp_gallery": [],
+                        "thumbnail_size": "large",
+                        "gallery_columns": "1",
+                        "gallery_link": "file",
+                        "open_lightbox": "yes",
+                        "gallery_rand": "",
+                        "_css_classes": "pes-proj-gallery"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "fa6c0f1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Commercial Solar",
+                        "header_size": "p",
+                        "_css_classes": "pes-proj-cat"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4f1aad3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Commercial Solar – Manchester, NH",
+                        "header_size": "h3",
+                        "_css_classes": "pes-proj-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "98edab4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>TownePlace Suites by Marriott</p>",
+                        "_css_classes": "pes-proj-summary"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a79e12c",
+                      "elType": "widget",
+                      "widgetType": "toggle",
+                      "isInner": false,
+                      "settings": {
+                        "tabs": [
+                          {
+                            "_id": "da385bd",
+                            "tab_title": "See Project Details",
+                            "tab_content": "<ul class=\"pes-proj-facts\"><li><strong>Size:</strong> 95.2 kW · 224 Trina Solar panels, 3 Solis inverters</li><li><strong>Location:</strong> Manchester, NH</li></ul><p>Rooftop solar array for TownePlace Suites by Marriott. [Add a short description of the project, goals and results.]</p>"
+                          }
+                        ],
+                        "selected_icon": {
+                          "value": "fas fa-chevron-down",
+                          "library": "fa-solid"
+                        },
+                        "selected_active_icon": {
+                          "value": "fas fa-chevron-up",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "title_html_tag": "div",
+                        "_css_classes": "pes-proj-toggle"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1b835c7",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-proj-card pes-cat-commercial-solar"
+                  },
+                  "elements": [
+                    {
+                      "id": "939303f",
+                      "elType": "widget",
+                      "widgetType": "image-gallery",
+                      "isInner": false,
+                      "settings": {
+                        "wp_gallery": [],
+                        "thumbnail_size": "large",
+                        "gallery_columns": "1",
+                        "gallery_link": "file",
+                        "open_lightbox": "yes",
+                        "gallery_rand": "",
+                        "_css_classes": "pes-proj-gallery"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "dbc7e43",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Commercial Solar",
+                        "header_size": "p",
+                        "_css_classes": "pes-proj-cat"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e2de5a7",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Commercial Solar – Newbury, MA",
+                        "header_size": "h3",
+                        "_css_classes": "pes-proj-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4650d7f",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>First Parish Church</p>",
+                        "_css_classes": "pes-proj-summary"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "815fab9",
+                      "elType": "widget",
+                      "widgetType": "toggle",
+                      "isInner": false,
+                      "settings": {
+                        "tabs": [
+                          {
+                            "_id": "5696d2b",
+                            "tab_title": "See Project Details",
+                            "tab_content": "<ul class=\"pes-proj-facts\"><li><strong>Size:</strong> 29.68 kW · 56 Silfab 530 W modules, Enphase IQ8P micro-inverters</li><li><strong>Location:</strong> Newbury, MA</li></ul><p>Ground-mount solar array for First Parish Church. [Add a short description of the project, goals and results.]</p>"
+                          }
+                        ],
+                        "selected_icon": {
+                          "value": "fas fa-chevron-down",
+                          "library": "fa-solid"
+                        },
+                        "selected_active_icon": {
+                          "value": "fas fa-chevron-up",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "title_html_tag": "div",
+                        "_css_classes": "pes-proj-toggle"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "a258bbe",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-proj-card pes-cat-commercial-solar"
+                  },
+                  "elements": [
+                    {
+                      "id": "efde760",
+                      "elType": "widget",
+                      "widgetType": "image-gallery",
+                      "isInner": false,
+                      "settings": {
+                        "wp_gallery": [],
+                        "thumbnail_size": "large",
+                        "gallery_columns": "1",
+                        "gallery_link": "file",
+                        "open_lightbox": "yes",
+                        "gallery_rand": "",
+                        "_css_classes": "pes-proj-gallery"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "d8ac52b",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Commercial Solar",
+                        "header_size": "p",
+                        "_css_classes": "pes-proj-cat"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "237adf4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Commercial Solar – Barrington, NH",
+                        "header_size": "h3",
+                        "_css_classes": "pes-proj-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "358e2bc",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Barrington Public Library</p>",
+                        "_css_classes": "pes-proj-summary"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "09d5c65",
+                      "elType": "widget",
+                      "widgetType": "toggle",
+                      "isInner": false,
+                      "settings": {
+                        "tabs": [
+                          {
+                            "_id": "7d91051",
+                            "tab_title": "See Project Details",
+                            "tab_content": "<ul class=\"pes-proj-facts\"><li><strong>Size:</strong> 68.715 kW · 111 solar panels (540 W), 3 Fronius inverters</li><li><strong>Location:</strong> Barrington, NH</li></ul><p>Rooftop solar for the Barrington Public Library. [Add a short description of the project, goals and results.]</p>"
+                          }
+                        ],
+                        "selected_icon": {
+                          "value": "fas fa-chevron-down",
+                          "library": "fa-solid"
+                        },
+                        "selected_active_icon": {
+                          "value": "fas fa-chevron-up",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "title_html_tag": "div",
+                        "_css_classes": "pes-proj-toggle"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "9b44f22",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-proj-row",
+                "_title": "Projects row (3 cards)",
+                "structure": "30"
+              },
+              "elements": [
+                {
+                  "id": "12528c5",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-proj-card pes-cat-residential-solar"
+                  },
+                  "elements": [
+                    {
+                      "id": "b3582d3",
+                      "elType": "widget",
+                      "widgetType": "image-gallery",
+                      "isInner": false,
+                      "settings": {
+                        "wp_gallery": [],
+                        "thumbnail_size": "large",
+                        "gallery_columns": "1",
+                        "gallery_link": "file",
+                        "open_lightbox": "yes",
+                        "gallery_rand": "",
+                        "_css_classes": "pes-proj-gallery"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "86a89c6",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Residential Solar",
+                        "header_size": "p",
+                        "_css_classes": "pes-proj-cat"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "fd1822f",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Residential Solar – [Town], NH",
+                        "header_size": "h3",
+                        "_css_classes": "pes-proj-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "1aadd73",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>[Short one-line summary]</p>",
+                        "_css_classes": "pes-proj-summary"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "473d6dc",
+                      "elType": "widget",
+                      "widgetType": "toggle",
+                      "isInner": false,
+                      "settings": {
+                        "tabs": [
+                          {
+                            "_id": "9ee71db",
+                            "tab_title": "See Project Details",
+                            "tab_content": "<ul class=\"pes-proj-facts\"><li><strong>Size:</strong> [Size] kW · [panels / inverters]</li><li><strong>Location:</strong> [Town, State]</li></ul><p>[Project description.]</p>"
+                          }
+                        ],
+                        "selected_icon": {
+                          "value": "fas fa-chevron-down",
+                          "library": "fa-solid"
+                        },
+                        "selected_active_icon": {
+                          "value": "fas fa-chevron-up",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "title_html_tag": "div",
+                        "_css_classes": "pes-proj-toggle"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "720f277",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-proj-card pes-cat-solar-farms"
+                  },
+                  "elements": [
+                    {
+                      "id": "ba9f4dc",
+                      "elType": "widget",
+                      "widgetType": "image-gallery",
+                      "isInner": false,
+                      "settings": {
+                        "wp_gallery": [],
+                        "thumbnail_size": "large",
+                        "gallery_columns": "1",
+                        "gallery_link": "file",
+                        "open_lightbox": "yes",
+                        "gallery_rand": "",
+                        "_css_classes": "pes-proj-gallery"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "b6f6d53",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Solar Farms",
+                        "header_size": "p",
+                        "_css_classes": "pes-proj-cat"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "604fce7",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Solar Farm – [Town], NH",
+                        "header_size": "h3",
+                        "_css_classes": "pes-proj-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "97bcbd3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>[Short one-line summary]</p>",
+                        "_css_classes": "pes-proj-summary"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a809fa2",
+                      "elType": "widget",
+                      "widgetType": "toggle",
+                      "isInner": false,
+                      "settings": {
+                        "tabs": [
+                          {
+                            "_id": "a233969",
+                            "tab_title": "See Project Details",
+                            "tab_content": "<ul class=\"pes-proj-facts\"><li><strong>Size:</strong> [Size] kW · [panels / inverters]</li><li><strong>Location:</strong> [Town, State]</li></ul><p>[Project description.]</p>"
+                          }
+                        ],
+                        "selected_icon": {
+                          "value": "fas fa-chevron-down",
+                          "library": "fa-solid"
+                        },
+                        "selected_active_icon": {
+                          "value": "fas fa-chevron-up",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "title_html_tag": "div",
+                        "_css_classes": "pes-proj-toggle"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "01af866",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-proj-card pes-cat-battery-storage"
+                  },
+                  "elements": [
+                    {
+                      "id": "3bd1c93",
+                      "elType": "widget",
+                      "widgetType": "image-gallery",
+                      "isInner": false,
+                      "settings": {
+                        "wp_gallery": [],
+                        "thumbnail_size": "large",
+                        "gallery_columns": "1",
+                        "gallery_link": "file",
+                        "open_lightbox": "yes",
+                        "gallery_rand": "",
+                        "_css_classes": "pes-proj-gallery"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5e40e22",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Battery Storage",
+                        "header_size": "p",
+                        "_css_classes": "pes-proj-cat"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "645b3aa",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Battery Storage – [Town], NH",
+                        "header_size": "h3",
+                        "_css_classes": "pes-proj-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4e3348e",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>[Short one-line summary]</p>",
+                        "_css_classes": "pes-proj-summary"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "2f01463",
+                      "elType": "widget",
+                      "widgetType": "toggle",
+                      "isInner": false,
+                      "settings": {
+                        "tabs": [
+                          {
+                            "_id": "9f987f1",
+                            "tab_title": "See Project Details",
+                            "tab_content": "<ul class=\"pes-proj-facts\"><li><strong>Size:</strong> [Size] kWh · [battery system]</li><li><strong>Location:</strong> [Town, State]</li></ul><p>[Project description.]</p>"
+                          }
+                        ],
+                        "selected_icon": {
+                          "value": "fas fa-chevron-down",
+                          "library": "fa-solid"
+                        },
+                        "selected_active_icon": {
+                          "value": "fas fa-chevron-up",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "title_html_tag": "div",
+                        "_css_classes": "pes-proj-toggle"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2c7013b",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-proj-row",
+                "_title": "Projects row (3 cards)",
+                "structure": "20"
+              },
+              "elements": [
+                {
+                  "id": "c4f91cb",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-proj-card pes-cat-ev-infrastructure"
+                  },
+                  "elements": [
+                    {
+                      "id": "77f0101",
+                      "elType": "widget",
+                      "widgetType": "image-gallery",
+                      "isInner": false,
+                      "settings": {
+                        "wp_gallery": [],
+                        "thumbnail_size": "large",
+                        "gallery_columns": "1",
+                        "gallery_link": "file",
+                        "open_lightbox": "yes",
+                        "gallery_rand": "",
+                        "_css_classes": "pes-proj-gallery"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "2d32185",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "EV Infrastructure",
+                        "header_size": "p",
+                        "_css_classes": "pes-proj-cat"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4e87c62",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "EV Charging – [Town], NH",
+                        "header_size": "h3",
+                        "_css_classes": "pes-proj-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "2e0435c",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>[Short one-line summary]</p>",
+                        "_css_classes": "pes-proj-summary"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "7944c37",
+                      "elType": "widget",
+                      "widgetType": "toggle",
+                      "isInner": false,
+                      "settings": {
+                        "tabs": [
+                          {
+                            "_id": "b5a4f6b",
+                            "tab_title": "See Project Details",
+                            "tab_content": "<ul class=\"pes-proj-facts\"><li><strong>Size:</strong> [Number] chargers · [Level 2 / DC fast]</li><li><strong>Location:</strong> [Town, State]</li></ul><p>[Project description.]</p>"
+                          }
+                        ],
+                        "selected_icon": {
+                          "value": "fas fa-chevron-down",
+                          "library": "fa-solid"
+                        },
+                        "selected_active_icon": {
+                          "value": "fas fa-chevron-up",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "title_html_tag": "div",
+                        "_css_classes": "pes-proj-toggle"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "8758705",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-proj-card pes-cat-electrical-infrastructure"
+                  },
+                  "elements": [
+                    {
+                      "id": "767b8d0",
+                      "elType": "widget",
+                      "widgetType": "image-gallery",
+                      "isInner": false,
+                      "settings": {
+                        "wp_gallery": [],
+                        "thumbnail_size": "large",
+                        "gallery_columns": "1",
+                        "gallery_link": "file",
+                        "open_lightbox": "yes",
+                        "gallery_rand": "",
+                        "_css_classes": "pes-proj-gallery"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "ffe42da",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Electrical Infrastructure",
+                        "header_size": "p",
+                        "_css_classes": "pes-proj-cat"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4b72975",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Electrical Infrastructure – [Town], NH",
+                        "header_size": "h3",
+                        "_css_classes": "pes-proj-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "9216982",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>[Short one-line summary]</p>",
+                        "_css_classes": "pes-proj-summary"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "eda2234",
+                      "elType": "widget",
+                      "widgetType": "toggle",
+                      "isInner": false,
+                      "settings": {
+                        "tabs": [
+                          {
+                            "_id": "a01dbd4",
+                            "tab_title": "See Project Details",
+                            "tab_content": "<ul class=\"pes-proj-facts\"><li><strong>Size:</strong> [Service size / scope]</li><li><strong>Location:</strong> [Town, State]</li></ul><p>[Project description.]</p>"
+                          }
+                        ],
+                        "selected_icon": {
+                          "value": "fas fa-chevron-down",
+                          "library": "fa-solid"
+                        },
+                        "selected_active_icon": {
+                          "value": "fas fa-chevron-up",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "title_html_tag": "div",
+                        "_css_classes": "pes-proj-toggle"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

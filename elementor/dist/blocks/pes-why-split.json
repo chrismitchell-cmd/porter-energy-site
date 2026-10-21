@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "7bbea37",
+      "id": "9dcd1c2",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -39,7 +39,7 @@
       },
       "elements": [
         {
-          "id": "e3719bd",
+          "id": "d4bf236",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -49,7 +49,7 @@
           },
           "elements": [
             {
-              "id": "84aa117",
+              "id": "291c400",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -61,7 +61,7 @@
               "elements": []
             },
             {
-              "id": "f95fb0f",
+              "id": "932a780",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -73,7 +73,7 @@
               "elements": []
             },
             {
-              "id": "df6d525",
+              "id": "05ab03a",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -84,7 +84,7 @@
               "elements": []
             },
             {
-              "id": "ae7f298",
+              "id": "d7ef712",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -104,7 +104,7 @@
               "elements": []
             },
             {
-              "id": "a5d4ad2",
+              "id": "9230860",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -124,7 +124,7 @@
               "elements": []
             },
             {
-              "id": "b820ec1",
+              "id": "9ef2aa1",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -144,7 +144,7 @@
               "elements": []
             },
             {
-              "id": "a94e6ad",
+              "id": "45dbf53",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -164,7 +164,7 @@
               "elements": []
             },
             {
-              "id": "f0f2560",
+              "id": "1bd73ee",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -183,7 +183,7 @@
           ]
         },
         {
-          "id": "8ad6a46",
+          "id": "5a4103e",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -193,7 +193,7 @@
           },
           "elements": [
             {
-              "id": "95ca6d4",
+              "id": "2e7468a",
               "elType": "widget",
               "widgetType": "image",
               "isInner": false,

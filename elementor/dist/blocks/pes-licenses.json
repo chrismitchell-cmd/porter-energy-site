@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "8a534e9",
+      "id": "b4ebd19",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "2c364a2",
+          "id": "8ceb2af",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -38,7 +38,7 @@
           },
           "elements": [
             {
-              "id": "670ab84",
+              "id": "45f18c4",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -50,7 +50,7 @@
               "elements": []
             },
             {
-              "id": "d2deb01",
+              "id": "8d181b6",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -62,7 +62,7 @@
               "elements": []
             },
             {
-              "id": "5f22e10",
+              "id": "e0be48a",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -73,7 +73,7 @@
               "elements": []
             },
             {
-              "id": "c2b5505",
+              "id": "2358131",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -89,7 +89,7 @@
               },
               "elements": [
                 {
-                  "id": "3909924",
+                  "id": "e5acaa5",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -99,7 +99,7 @@
                   },
                   "elements": [
                     {
-                      "id": "46aea43",
+                      "id": "536bc3f",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -111,14 +111,14 @@
                       "elements": []
                     },
                     {
-                      "id": "ef2dfaa",
+                      "id": "fba4013",
                       "elType": "widget",
                       "widgetType": "icon-list",
                       "isInner": false,
                       "settings": {
                         "icon_list": [
                           {
-                            "_id": "694981d",
+                            "_id": "b9f4731",
                             "text": "[License type – e.g. Master Electrician]",
                             "selected_icon": {
                               "value": "fas fa-check",
@@ -126,7 +126,7 @@
                             }
                           },
                           {
-                            "_id": "aa351a2",
+                            "_id": "b54aa7f",
                             "text": "[License type]",
                             "selected_icon": {
                               "value": "fas fa-check",
@@ -139,7 +139,7 @@
                       "elements": []
                     },
                     {
-                      "id": "b811012",
+                      "id": "e8dfafe",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -152,7 +152,7 @@
                   ]
                 },
                 {
-                  "id": "d32fc57",
+                  "id": "2923dc6",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -162,7 +162,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9709818",
+                      "id": "3021a01",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -174,14 +174,14 @@
                       "elements": []
                     },
                     {
-                      "id": "7717ea9",
+                      "id": "456137b",
                       "elType": "widget",
                       "widgetType": "icon-list",
                       "isInner": false,
                       "settings": {
                         "icon_list": [
                           {
-                            "_id": "b5ecbe5",
+                            "_id": "7558056",
                             "text": "[License type]",
                             "selected_icon": {
                               "value": "fas fa-check",
@@ -189,7 +189,7 @@
                             }
                           },
                           {
-                            "_id": "222fde8",
+                            "_id": "3b35d2e",
                             "text": "[License type]",
                             "selected_icon": {
                               "value": "fas fa-check",
@@ -202,7 +202,7 @@
                       "elements": []
                     },
                     {
-                      "id": "66bba87",
+                      "id": "52ea682",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -215,7 +215,7 @@
                   ]
                 },
                 {
-                  "id": "5f7cb0d",
+                  "id": "d6ff076",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -225,7 +225,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a48e274",
+                      "id": "13245ce",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -237,14 +237,14 @@
                       "elements": []
                     },
                     {
-                      "id": "762f8aa",
+                      "id": "8e4fcf2",
                       "elType": "widget",
                       "widgetType": "icon-list",
                       "isInner": false,
                       "settings": {
                         "icon_list": [
                           {
-                            "_id": "354c24c",
+                            "_id": "3e03f15",
                             "text": "[License type]",
                             "selected_icon": {
                               "value": "fas fa-check",
@@ -252,7 +252,7 @@
                             }
                           },
                           {
-                            "_id": "036bf9f",
+                            "_id": "69e31a6",
                             "text": "[License type]",
                             "selected_icon": {
                               "value": "fas fa-check",
@@ -265,7 +265,7 @@
                       "elements": []
                     },
                     {
-                      "id": "b6be3f4",
+                      "id": "364e46d",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,

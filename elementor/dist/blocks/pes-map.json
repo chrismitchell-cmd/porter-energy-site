@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "8a9513d",
+      "id": "b9e61e3",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "d6ed23f",
+          "id": "f94d0d5",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -38,7 +38,7 @@
           },
           "elements": [
             {
-              "id": "051a3f3",
+              "id": "4f4dc06",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -50,7 +50,7 @@
               "elements": []
             },
             {
-              "id": "4f1790a",
+              "id": "97ea847",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -62,7 +62,7 @@
               "elements": []
             },
             {
-              "id": "3ab0d90",
+              "id": "f3ae4d8",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -73,7 +73,7 @@
               "elements": []
             },
             {
-              "id": "8b1a841",
+              "id": "fc20af4",
               "elType": "widget",
               "widgetType": "google_maps",
               "isInner": false,
@@ -95,7 +95,7 @@
               "elements": []
             },
             {
-              "id": "534cb48",
+              "id": "8491c13",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,

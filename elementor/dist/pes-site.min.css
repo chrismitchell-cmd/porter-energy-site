@@ -209,6 +209,37 @@ calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px ca
 .elementor .pes-faq .elementor-tab-title.elementor-active .elementor-accordion-title  { background: var(--pes-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .elementor .pes-faq .elementor-tab-content  { padding: 0 28px 22px 72px; border: 0 !important; font-family: var(--pes-font-body); font-size: 16px; line-height: 1.7; color: var(--pes-text); }
 .elementor .pes-faq .elementor-tab-content p:last-child { margin-bottom: 0; }
+.elementor .pes-hero-note .elementor-heading-title  { display: inline-block; font-family: var(--pes-font-head); font-size: 18px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--pes-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.elementor .pes-hero-center .pes-hero-note { text-align: center; margin-bottom: 18px; }
+.elementor .pes-note-left { margin-top: 10px; }
+.elementor .pes-contact-card.elementor-widget  { --pes-cut: 20px; position: relative; height: 100%; padding: 44px 26px; background: var(--pes-panel, #232121); clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut)); transition: transform 0.25s ease; }
+.elementor .pes-contact-card.elementor-widget::after  { content: ""; position: absolute; inset: 0; background: var(--pes-gradient); pointer-events: none; clip-path: polygon(evenodd,
+var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,
+calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),
+calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px); }
+.elementor .pes-contact-card.elementor-widget:hover { transform: translateY(-4px); }
+.elementor .pes-contact-card .elementor-icon-box-wrapper { text-align: center; }
+.elementor .pes-contact-card .elementor-icon-box-icon { margin-bottom: 18px; }
+.elementor .pes-contact-card.elementor-widget-icon-box .elementor-icon { font-size: 46px; color: var(--pes-orange); fill: var(--pes-orange); }
+.elementor .pes-contact-card.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-orange); }
+.elementor .pes-contact-card.elementor-widget-icon-box .elementor-icon-box-title  { margin: 0 0 8px; font-family: var(--pes-font-head); font-size: 26px; font-weight: 700; color: var(--pes-white); }
+.elementor .pes-contact-card.elementor-widget-icon-box .elementor-icon-box-title a { color: inherit; text-decoration: none; }
+.elementor .pes-contact-card.elementor-widget-icon-box .elementor-icon-box-description  { margin: 0; font-family: var(--pes-font-body); font-size: 17px; color: var(--pes-text); overflow-wrap: anywhere; }
+.elementor .pes-contact-card:hover .elementor-icon-box-title { color: var(--pes-orange); }
+.elementor .pes-form-panel > .elementor-widget-wrap  { --pes-cut: 22px; position: relative; padding: 36px 32px !important; background: var(--pes-panel, #232121); clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut)); }
+.elementor .pes-form-panel > .elementor-widget-wrap::before  { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--pes-gradient); }
+.elementor .pes-form-embed { width: 100%; }
+.elementor .pes-form-embed iframe { display: block; width: 100% !important; border: 0; }
+.elementor .pes-form-placeholder  { display: grid; place-items: center; min-height: 460px; padding: 30px; border: 2px dashed rgba(234, 162, 78, 0.6); font-family: var(--pes-font-ui); font-size: 20px; font-weight: 600; line-height: 1.5; text-align: center; color: var(--pes-white); }
+.elementor .pes-form-placeholder small { font-size: 14px; font-weight: 400; color: var(--pes-text); }
+.elementor .pes-map.elementor-widget { margin-top: 30px; }
+.elementor .pes-frame .elementor-custom-embed  { --pes-cut: 15px; position: relative; clip-path: polygon(var(--pes-cut) 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut),
+100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,
+0 calc(100% - var(--pes-cut)), 0 var(--pes-cut)); }
+.elementor .pes-frame .elementor-custom-embed iframe { display: block; filter: grayscale(0.35) contrast(1.05); }
+.elementor .pes-map + .elementor-widget-button { margin-top: 26px; }
 .elementor .pes-cta  { position: relative; overflow: hidden; background:
 radial-gradient(ellipse 45% 110% at 62% 15%, rgba(32, 66, 205, 0.95) 0%, rgba(22, 44, 150, 0.6) 45%, transparent 75%),
 linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%); color: var(--pes-white); }
@@ -234,6 +265,8 @@ linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%); color: var(--pes
 .elementor .pes-step-num .elementor-heading-title { font-size: 72px; }
 .elementor .pes-section > .elementor-column-gap-wider > .elementor-column > .elementor-element-populated { padding: 15px; }
 .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }
+.elementor .pes-form-panel > .elementor-widget-wrap { padding: 24px 16px !important; }
+.elementor .pes-form-placeholder { min-height: 320px; }
 .elementor .pes-faq .elementor-tab-content { padding-left: 28px; }
 .elementor .pes-cta::after { left: auto; right: -40px; opacity: 0.45; }
 .elementor .pes-cta-box .elementor-icon-box-icon { padding-right: 16px; margin-right: 16px; }

@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "fd391a9",
+      "id": "5261c77",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -21,12 +21,12 @@
         "height": "min-height",
         "custom_height": {
           "unit": "px",
-          "size": 680,
+          "size": 540,
           "sizes": []
         },
         "custom_height_mobile": {
           "unit": "px",
-          "size": 560,
+          "size": 540,
           "sizes": []
         },
         "column_position": "middle",
@@ -43,7 +43,7 @@
       },
       "elements": [
         {
-          "id": "e406744",
+          "id": "6c831ae",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -57,32 +57,56 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Compelling Heading That Includes Solution/Service Name",
-                "header_size": "h1",
-                "_css_classes": "pes-h1"
+                "title": "Contact Us",
+                "header_size": "p",
+                "_css_classes": "pes-kicker"
               },
               "elements": []
             },
             {
               "id": "79faacd",
               "elType": "widget",
-              "widgetType": "text-editor",
+              "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "editor": "<p>Subheader – one or two short sentences that support the header and pack a punch.</p>",
-                "_css_classes": "pes-lead"
+                "title": "Call Us, Visit Us, or Email Us",
+                "header_size": "h1",
+                "_css_classes": "pes-h1"
               },
               "elements": []
             },
             {
               "id": "ef1b482",
               "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Questions about solar, battery storage, EV charging or service for an existing system? Talk to the Porter Energy Systems team.</p>",
+                "_css_classes": "pes-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "e406744",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Hours of Operation: Monday–Friday 8:30am – 4:30pm",
+                "header_size": "p",
+                "_css_classes": "pes-hero-note"
+              },
+              "elements": []
+            },
+            {
+              "id": "fd391a9",
+              "elType": "widget",
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Main CTA – More Than Learn More / Contact Us",
+                "text": "Call 603-340-0500",
                 "link": {
-                  "url": "/contact/",
+                  "url": "tel:+16033400500",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""

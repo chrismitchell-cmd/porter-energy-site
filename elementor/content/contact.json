@@ -1,0 +1,56 @@
+{
+  "title": "PES – Contact Us",
+  "slug": "pes-contact-us",
+  "blocks": [
+    {
+      "type": "hero",
+      "align": "center",
+      "height": 540,
+      "kicker": "Contact Us",
+      "title": "Call Us, Visit Us, or Email Us",
+      "text": "Questions about solar, battery storage, EV charging or service for an existing system? Talk to the Porter Energy Systems team.",
+      "note": "Hours of Operation: Monday–Friday 8:30am – 4:30pm",
+      "button": { "text": "Call 603-340-0500", "url": "tel:+16033400500", "style": "pes-btn-solid pes-align-center" },
+      "image": ""
+    },
+    {
+      "type": "contact_cards",
+      "cards": [
+        { "icon": "fas fa-phone-alt", "title": "Call Us", "text": "603-340-0500", "url": "tel:+16033400500" },
+        { "icon": "fas fa-map-marker-alt", "title": "Visit Us", "text": "38A North Road, Deerfield, NH 03037", "url": "https://www.google.com/maps/search/?api=1&query=38A+North+Road+Deerfield+NH+03037" },
+        { "icon": "far fa-envelope", "title": "Email Us", "text": "info@porter-electrical.com", "url": "mailto:info@porter-electrical.com" }
+      ]
+    },
+    {
+      "type": "form",
+      "kicker": "Request A Consultation",
+      "title": "Tell Us About",
+      "accent": "Your Project",
+      "text": "Share a few details and a member of our team will reach out to talk through your goals, your property and the right next step.",
+      "list_title": "What happens next:",
+      "items": [
+        "We review your request",
+        "A team member contacts you to talk through your project",
+        "We schedule a site visit if it makes sense",
+        "You get a clear proposal with no pressure"
+      ],
+      "note": "Mon–Fri 8:30am – 4:30pm"
+    },
+    {
+      "type": "map",
+      "kicker": "Visit Us",
+      "title": "Find Us In",
+      "accent": "Deerfield, NH",
+      "text": "38A North Road, Deerfield, NH 03037",
+      "address": "38A North Road, Deerfield, NH 03037",
+      "zoom": 12,
+      "button": { "text": "Get Directions", "url": "https://www.google.com/maps/dir/?api=1&destination=38A+North+Road+Deerfield+NH+03037" }
+    },
+    {
+      "type": "cta",
+      "title": "Schedule A Consultation Today",
+      "subtitle": "Powering Progress. Building Confidence.",
+      "button": { "text": "Call Now", "url": "tel:+16033400500" }
+    }
+  ]
+}

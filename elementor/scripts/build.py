@@ -146,8 +146,9 @@ def fa(fa_class):
     return {"value": fa_class, "library": library}
 
 
-def icon_box(ids, fa_class, classes, title="", description="", position="top", title_tag="h3"):
-    return widget(ids, "icon-box", classes, selected_icon=fa(fa_class), view="default",
+def icon_box(ids, fa_class, classes, title="", description="", position="top", title_tag="h3", link=""):
+    extra = {"link": {"url": link, "is_external": "", "nofollow": "", "custom_attributes": ""}} if link else {}
+    return widget(ids, "icon-box", classes, **extra, selected_icon=fa(fa_class), view="default",
                   position=position, title_text=title, description_text=description,
                   title_size=title_tag, content_vertical_alignment="middle")
 
@@ -192,16 +193,17 @@ def block_hero(ids, b):
     widgets = ([heading(ids, b["kicker"], "p", "pes-kicker")] if b.get("kicker") else []) + [
         heading(ids, b["title"], "h1", "pes-h1"),
         text(ids, b["text"], "pes-lead"),
-        button(ids, b["button"]),
-    ]
+    ] + ([heading(ids, b["note"], "p", "pes-hero-note")] if b.get("note") else []) + (
+        [button(ids, b["button"])] if b.get("button") else [])
+    tall = b.get("height", 680 if centered else 640)
     return section(
         ids,
         [column(ids, 100, widgets)],
         "pes-section pes-hero" + (" pes-hero-center" if centered else ""),
         title="Hero",
         height="min-height",
-        custom_height=px(680 if centered else 640),
-        custom_height_mobile=px(560 if centered else 520),
+        custom_height=px(tall),
+        custom_height_mobile=px(min(tall, 560 if centered else 520)),
         column_position="middle",
         padding=box(80, 0, 80, 0),
         **overlay,
@@ -339,6 +341,48 @@ def block_audience(ids, b):
     ])], "pes-section", title="Who it's for", padding=box(100, 0, 110, 0))
 
 
+def block_contact_cards(ids, b):
+    """Call / Visit / Email cards – each whole card is a link (tel:, map, mailto:)."""
+    n = len(b["cards"])
+    cols = [column(ids, round(100 / n, 3),
+                   [icon_box(ids, c["icon"], "pes-contact-card", c["title"], c["text"], link=c.get("url", ""))])
+            for c in b["cards"]]
+    return section(ids, cols, "pes-section pes-contact-cards", title="Contact cards",
+                   gap="extended", structure=f"{n}0", padding=box(70, 0, 40, 0))
+
+
+def block_form(ids, b):
+    """Text + checklist | a panel holding an HTML widget for the GoHighLevel form embed."""
+    copy = column(ids, 42, [
+        heading(ids, b["kicker"], "p", "pes-eyebrow"),
+        heading(ids, two_tone(b["title"], b.get("accent")), "h2", "pes-h2"),
+        text(ids, b["text"]),
+        heading(ids, b["list_title"], "h3", "pes-subhead"),
+        icon_list(ids, b["items"], "pes-checklist"),
+    ] + ([heading(ids, b["note"], "p", "pes-hero-note pes-note-left")] if b.get("note") else []),
+        content_position="center")
+    placeholder = ('<!-- PASTE YOUR GOHIGHLEVEL FORM EMBED CODE HERE (replace this whole box) -->\n'
+                   '<div class="pes-form-placeholder">GoHighLevel form goes here<br>'
+                   '<small>Edit this HTML widget and paste the embed code from GoHighLevel</small></div>')
+    form = column(ids, 58, [widget(ids, "html", "pes-form-embed", html=placeholder)], "pes-form-panel",
+                  content_position="center")
+    return section(ids, [copy, form], "pes-section pes-feature", title="Form – GoHighLevel embed",
+                   gap="wider", structure="20", column_position="middle",
+                   padding=box(90, 0, 100, 0), padding_mobile=box(60, 0, 70, 0))
+
+
+def block_map(ids, b):
+    w = widget(ids, "google_maps", "pes-frame pes-map", address=b["address"], zoom=px(b.get("zoom", 12)),
+               height=px(420), prevent_scroll="yes")
+    return section(ids, [column(ids, 100, [
+        heading(ids, b["kicker"], "p", "pes-eyebrow pes-center"),
+        heading(ids, two_tone(b["title"], b.get("accent")), "h2", "pes-h2 pes-h2-mixed pes-center"),
+        text(ids, b["text"], "pes-lead pes-center"),
+        w,
+    ] + ([button(ids, b["button"], "pes-btn pes-btn-more pes-align-center")] if b.get("button") else []))],
+        "pes-section", title="Map – Visit us", padding=box(80, 0, 100, 0))
+
+
 def block_testimonials(ids, b):
     return section(ids, [column(ids, 100, [
         heading(ids, b["kicker"], "p", "pes-eyebrow pes-center"),
@@ -448,6 +492,9 @@ BLOCKS = {
     "audience": block_audience,
     "testimonials": block_testimonials,
     "faq": block_faq,
+    "contact_cards": block_contact_cards,
+    "form": block_form,
+    "map": block_map,
     "cta": block_cta,
     "header": block_header,
 }
@@ -463,7 +510,7 @@ def block_name(b):
         return "pes-hero-center"
     if b["type"] == "process" and len(b["steps"]) != 3:
         return f"pes-process-{len(b['steps'])}-steps"
-    return f"pes-{b['type']}"
+    return f"pes-{b['type'].replace('_', '-')}"
 
 
 # ---------------------------------------------------------------------------
@@ -521,6 +568,11 @@ PREVIEW_SUBMENUS = {
     "Solution": ["Commercial Solar", "Battery Energy Storage", "EV Charging", "Electrical"],
     "Service O&amp;M": ["Operations &amp; Maintenance", "Monitoring", "Repairs"],
     "Industry": ["Agriculture", "Municipal", "Commercial Real Estate"],
+}
+PREVIEW_ICONS = {
+    "phone": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>',
+    "map": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>',
+    "envelope": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7l-8 5z"/></svg>',
 }
 PREVIEW_IMAGES = []
 PREVIEW_SRC = {}  # element id -> stand-in image used only by the HTML preview
@@ -596,7 +648,9 @@ def render(el):
         body = f'<img src="{src}" alt="">'
     elif kind == "icon-box":
         extra = f" elementor-position-{s['position']} elementor-view-default"
-        icon_svg = PREVIEW_CALENDAR if "calendar" in s["selected_icon"]["value"] else PREVIEW_ICON
+        v = s["selected_icon"]["value"]
+        icon_svg = next((svg for k, svg in PREVIEW_ICONS.items() if k in v),
+                        PREVIEW_CALENDAR if "calendar" in v else PREVIEW_ICON)
         title = (f'<{s["title_size"]} class="elementor-icon-box-title"><span>{s["title_text"]}</span>'
                  f'</{s["title_size"]}>' if s["title_text"] else "")
         body = (f'<div class="elementor-icon-box-wrapper"><div class="elementor-icon-box-icon">'
@@ -623,6 +677,10 @@ def render(el):
             f'<a class="elementor-accordion-title" href="#">{t["tab_title"]}</a></div>'
             f'<div class="elementor-tab-content" style="display:{"block" if n == 0 else "none"}">{t["tab_content"]}</div></div>'
             for n, t in enumerate(s["tabs"])) + "</div>"
+    elif kind == "google_maps":
+        q = html.escape(s["address"])
+        body = (f'<div class="elementor-custom-embed"><div style="height:{s["height"]["size"]}px;display:grid;place-items:center;'
+                f'background:#2b2b2d;color:#bbb;font:15px sans-serif;text-align:center">Google Map<br>{q}</div></div>')
     elif kind == "shortcode":
         body = (f'<div class="elementor-shortcode"><div style="padding:40px;text-align:center;color:#999;'
                 f'border:1px dashed #555">Google reviews from {html.escape(s["shortcode"])} appear here</div></div>')

@@ -1,0 +1,183 @@
+{
+  "version": "0.4",
+  "title": "PES – Form",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "e6eb6af",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "wider",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Form – GoHighLevel embed",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "f6ba087",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 42,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "d8c1508",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Request A Consultation",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow"
+              },
+              "elements": []
+            },
+            {
+              "id": "9a0bf65",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Tell Us About <span class=\"pes-accent\">Your Project</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "4954ab9",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Share a few details and a member of our team will reach out to talk through your goals, your property and the right next step.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "9ccb037",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "What happens next:",
+                "header_size": "h3",
+                "_css_classes": "pes-subhead"
+              },
+              "elements": []
+            },
+            {
+              "id": "01b1c37",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "_id": "5c84491",
+                    "text": "We review your request",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "173dc35",
+                    "text": "A team member contacts you to talk through your project",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "7214f23",
+                    "text": "We schedule a site visit if it makes sense",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "60c4e17",
+                    "text": "You get a clear proposal with no pressure",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  }
+                ],
+                "_css_classes": "pes-checklist"
+              },
+              "elements": []
+            },
+            {
+              "id": "3935d74",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Mon–Fri 8:30am – 4:30pm",
+                "header_size": "p",
+                "_css_classes": "pes-hero-note pes-note-left"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "ea67bad",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 58,
+            "css_classes": "pes-form-panel",
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "dd6eec5",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<!-- PASTE YOUR GOHIGHLEVEL FORM EMBED CODE HERE (replace this whole box) -->\n<div class=\"pes-form-placeholder\">GoHighLevel form goes here<br><small>Edit this HTML widget and paste the embed code from GoHighLevel</small></div>",
+                "_css_classes": "pes-form-embed"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

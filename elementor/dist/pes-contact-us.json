@@ -1,0 +1,641 @@
+{
+  "version": "0.4",
+  "title": "PES – Contact Us",
+  "type": "page",
+  "page_settings": {
+    "template": "elementor_header_footer",
+    "hide_title": "yes",
+    "background_background": "classic",
+    "background_color": "#1B1A1A"
+  },
+  "content": [
+    {
+      "id": "460fb01",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-hero pes-hero-center",
+        "_title": "Hero",
+        "height": "min-height",
+        "custom_height": {
+          "unit": "px",
+          "size": 540,
+          "sizes": []
+        },
+        "custom_height_mobile": {
+          "unit": "px",
+          "size": 540,
+          "sizes": []
+        },
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(12,12,14,0.62)"
+      },
+      "elements": [
+        {
+          "id": "878d55c",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "1b39e6a",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Contact Us",
+                "header_size": "p",
+                "_css_classes": "pes-kicker"
+              },
+              "elements": []
+            },
+            {
+              "id": "1cf0e32",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Call Us, Visit Us, or Email Us",
+                "header_size": "h1",
+                "_css_classes": "pes-h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "cd3f950",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Questions about solar, battery storage, EV charging or service for an existing system? Talk to the Porter Energy Systems team.</p>",
+                "_css_classes": "pes-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "778fb9a",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Hours of Operation: Monday–Friday 8:30am – 4:30pm",
+                "header_size": "p",
+                "_css_classes": "pes-hero-note"
+              },
+              "elements": []
+            },
+            {
+              "id": "242740e",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Call 603-340-0500",
+                "link": {
+                  "url": "tel:+16033400500",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "53a2b65",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-contact-cards",
+        "_title": "Contact cards",
+        "structure": "30",
+        "padding": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "40",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "7c71dec",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 33.333
+          },
+          "elements": [
+            {
+              "id": "cdc0902",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "link": {
+                  "url": "tel:+16033400500",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "selected_icon": {
+                  "value": "fas fa-phone-alt",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "top",
+                "title_text": "Call Us",
+                "description_text": "603-340-0500",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-contact-card"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "33f231f",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 33.333
+          },
+          "elements": [
+            {
+              "id": "f3bfa56",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "link": {
+                  "url": "https://www.google.com/maps/search/?api=1&query=38A+North+Road+Deerfield+NH+03037",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "selected_icon": {
+                  "value": "fas fa-map-marker-alt",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "top",
+                "title_text": "Visit Us",
+                "description_text": "38A North Road, Deerfield, NH 03037",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-contact-card"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "0344dab",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 33.333
+          },
+          "elements": [
+            {
+              "id": "9264591",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "link": {
+                  "url": "mailto:info@porter-electrical.com",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "selected_icon": {
+                  "value": "far fa-envelope",
+                  "library": "fa-regular"
+                },
+                "view": "default",
+                "position": "top",
+                "title_text": "Email Us",
+                "description_text": "info@porter-electrical.com",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-contact-card"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2b999a7",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "wider",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Form – GoHighLevel embed",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "3c0560f",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 42,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "a7b1379",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Request A Consultation",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow"
+              },
+              "elements": []
+            },
+            {
+              "id": "2028bc5",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Tell Us About <span class=\"pes-accent\">Your Project</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "8c9e030",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Share a few details and a member of our team will reach out to talk through your goals, your property and the right next step.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "c8d18a4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "What happens next:",
+                "header_size": "h3",
+                "_css_classes": "pes-subhead"
+              },
+              "elements": []
+            },
+            {
+              "id": "f10067d",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "_id": "640bc76",
+                    "text": "We review your request",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "a620127",
+                    "text": "A team member contacts you to talk through your project",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "e749578",
+                    "text": "We schedule a site visit if it makes sense",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "661b331",
+                    "text": "You get a clear proposal with no pressure",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    }
+                  }
+                ],
+                "_css_classes": "pes-checklist"
+              },
+              "elements": []
+            },
+            {
+              "id": "1d9dfd0",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Mon–Fri 8:30am – 4:30pm",
+                "header_size": "p",
+                "_css_classes": "pes-hero-note pes-note-left"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "b85cc8e",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 58,
+            "css_classes": "pes-form-panel",
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "e6af10d",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<!-- PASTE YOUR GOHIGHLEVEL FORM EMBED CODE HERE (replace this whole box) -->\n<div class=\"pes-form-placeholder\">GoHighLevel form goes here<br><small>Edit this HTML widget and paste the embed code from GoHighLevel</small></div>",
+                "_css_classes": "pes-form-embed"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1df1761",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Map – Visit us",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "a149791",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "dbba35c",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Visit Us",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "e8ac584",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Find Us In <span class=\"pes-accent\">Deerfield, NH</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "333c8e9",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>38A North Road, Deerfield, NH 03037</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "c2bc203",
+              "elType": "widget",
+              "widgetType": "google_maps",
+              "isInner": false,
+              "settings": {
+                "address": "38A North Road, Deerfield, NH 03037",
+                "zoom": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "height": {
+                  "unit": "px",
+                  "size": 420,
+                  "sizes": []
+                },
+                "prevent_scroll": "yes",
+                "_css_classes": "pes-frame pes-map"
+              },
+              "elements": []
+            },
+            {
+              "id": "4064579",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Get Directions",
+                "link": {
+                  "url": "https://www.google.com/maps/dir/?api=1&destination=38A+North+Road+Deerfield+NH+03037",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "252ce75",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-cta",
+        "_title": "CTA – Schedule a consultation",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "0",
+          "bottom": "48",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "252955e",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 70,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "caef28d",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "far fa-calendar-alt",
+                  "library": "fa-regular"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Schedule A Consultation Today",
+                "description_text": "Powering Progress. Building Confidence.",
+                "title_size": "h2",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-cta-box"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "440f251",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 30,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "3d63798",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Call Now",
+                "link": {
+                  "url": "tel:+16033400500",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-pill pes-align-right"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

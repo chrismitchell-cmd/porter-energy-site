@@ -1,0 +1,146 @@
+{
+  "version": "0.4",
+  "title": "PES – Contact Cards",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "3d573fe",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-contact-cards",
+        "_title": "Contact cards",
+        "structure": "30",
+        "padding": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "40",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "6d06a3f",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 33.333
+          },
+          "elements": [
+            {
+              "id": "ebd0118",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "link": {
+                  "url": "tel:+16033400500",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "selected_icon": {
+                  "value": "fas fa-phone-alt",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "top",
+                "title_text": "Call Us",
+                "description_text": "603-340-0500",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-contact-card"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "119ed62",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 33.333
+          },
+          "elements": [
+            {
+              "id": "9b1049c",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "link": {
+                  "url": "https://www.google.com/maps/search/?api=1&query=38A+North+Road+Deerfield+NH+03037",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "selected_icon": {
+                  "value": "fas fa-map-marker-alt",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "top",
+                "title_text": "Visit Us",
+                "description_text": "38A North Road, Deerfield, NH 03037",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-contact-card"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "5bf8972",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 33.333
+          },
+          "elements": [
+            {
+              "id": "194d30f",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "link": {
+                  "url": "mailto:info@porter-electrical.com",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "selected_icon": {
+                  "value": "far fa-envelope",
+                  "library": "fa-regular"
+                },
+                "view": "default",
+                "position": "top",
+                "title_text": "Email Us",
+                "description_text": "info@porter-electrical.com",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-contact-card"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

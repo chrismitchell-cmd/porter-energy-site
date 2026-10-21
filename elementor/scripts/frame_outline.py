@@ -86,6 +86,7 @@ def polygon(d, inset):
 PAD_X = 16              # left/right: clears the big corner cut
 PAD_Y = T + D + 7       # top/bottom: the recess dips into this space, not into the photo
 PHOTO_CUT = 15          # the photo's own small angled corners (as in the original frame)
+MIN_H, MIN_H_MOBILE = 380, 240  # the photo never gets shorter than this
 BLEED = PAD_X - 10      # frame reaches this far past the column so the photo keeps its original width
 
 print(f"""/* Framed image or video – the PES frame shape.
@@ -126,5 +127,10 @@ print(f"""/* Framed image or video – the PES frame shape.
     100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,
     0 calc(100% - var(--pes-cut)), 0 var(--pes-cut));
 }}
-.elementor .pes-frame img {{ height: auto; max-width: 100%; }}
+/* height follows the photo, but never collapses: short or missing photos fill a sensible
+   minimum and are cropped to fit */
+.elementor .pes-frame img {{ height: auto; max-width: 100%; min-height: {MIN_H}px; object-fit: cover; }}
+@media (max-width: 767px) {{
+  .elementor .pes-frame img {{ min-height: {MIN_H_MOBILE}px; }}
+}}
 """)

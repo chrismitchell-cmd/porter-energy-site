@@ -539,8 +539,7 @@ def render(el):
         if "pes-logo" in s.get("_css_classes", ""):
             src = "img/logo.png"
         else:
-            src = (s.get("image", {}).get("url") or PREVIEW_SRC.get(el["id"])
-                   or (PREVIEW_IMAGES.pop(0) if PREVIEW_IMAGES else ""))
+            src = s.get("image", {}).get("url") or "img/placeholder.jpg"  # like Elementor's own placeholder
         body = f'<img src="{src}" alt="">'
     elif kind == "icon-box":
         extra = f" elementor-position-{s['position']} elementor-view-default"

@@ -472,7 +472,12 @@
     100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,
     0 calc(100% - var(--pes-cut)), 0 var(--pes-cut));
 }
-.elementor .pes-frame img { height: auto; max-width: 100%; }
+/* height follows the photo, but never collapses: short or missing photos fill a sensible
+   minimum and are cropped to fit */
+.elementor .pes-frame img { height: auto; max-width: 100%; min-height: 380px; object-fit: cover; }
+@media (max-width: 767px) {
+  .elementor .pes-frame img { min-height: 240px; }
+}
 
 
 /* --------------------------------------------------------------------------

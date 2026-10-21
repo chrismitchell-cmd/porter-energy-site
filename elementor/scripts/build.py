@@ -377,7 +377,9 @@ def block_header(ids, b):
     return section(
         ids,
         [
-            column(ids, 16, [image(ids, b.get("logo"), "pes-logo", "Porter Energy Systems")],
+            column(ids, 16, [image(ids, b.get("logo"), "pes-logo", "Porter Energy Systems"),
+                             widget(ids, "html", "pes-header-styles",
+                                    html=f"<style>\n{header_css()}\n</style>")],
                    content_position="center", _inline_size_tablet=30, _inline_size_mobile=42),
             # Elementor Pro Nav Menu: full menu on desktop, hamburger + dropdown on tablet and phone.
             # It shows the site's first menu until another one is picked in the widget.
@@ -397,6 +399,41 @@ def block_header(ids, b):
         padding=box(6, 40, 6, 40),
         padding_mobile=box(6, 12, 6, 12),
     )
+
+
+HEADER_KEYS = ("pes-header", "pes-nav", "pes-logo", "pes-btn-solid", "pes-align-right",
+               "elementor-location-header", ":is(.pes-btn, .pes-btn-solid")
+
+
+def header_css():
+    """Only the header's rules (plus the colour variables), so the header template is
+    self-contained: it looks right even if Site Settings holds an older stylesheet."""
+    css = re.sub(r"/\*.*?\*/", "", CSS_FILE.read_text(), flags=re.S)
+    css = re.sub(r"@import url\([^)]*\);", "", css)
+    out, i = [], 0
+
+    def rules(text):  # split top-level "selector { body }" chunks
+        chunks, depth, start = [], 0, 0
+        for j, ch in enumerate(text):
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    chunks.append(text[start:j + 1].strip())
+                    start = j + 1
+        return chunks
+
+    for chunk in rules(css):
+        head = chunk[:chunk.index("{")]
+        if head.strip().startswith("@media"):
+            inner = [r for r in rules(chunk[chunk.index("{") + 1:-1])
+                     if any(k in r[:r.index("{")] for k in HEADER_KEYS) or r.startswith(":root")]
+            if inner:
+                out.append(head.strip() + " {\n" + "\n".join(inner) + "\n}")
+        elif head.strip() == ":root" or any(k in head for k in HEADER_KEYS):
+            out.append(chunk)
+    return "\n".join(out)
 
 
 BLOCKS = {

@@ -136,6 +136,7 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   object-fit: contain;
 }
 .elementor .pes-logo.elementor-widget-image { text-align: left; }
+.elementor .pes-header-styles { position: absolute; width: 0; height: 0; overflow: hidden; margin: 0 !important; }
 /* push the Get A Quote button down into the tab, below the gold line */
 .elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 78px; padding-bottom: 6px; }
 

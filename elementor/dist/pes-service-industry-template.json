@@ -40,7 +40,7 @@
               "widgetType": "html",
               "isInner": false,
               "settings": {
-                "html": "<style>\n/* ==========================================================================\n   Porter Energy Systems – Elementor styles\n   --------------------------------------------------------------------------\n   This CSS already ships inside the \"PES – Page Template\" (in the hidden\n   \"PES Styles\" section at the top of the page), so you don't need to paste\n   it anywhere for the page to look right.\n\n   Optional: to style the whole site from one place, paste this file into\n   Appearance > Customize > Additional CSS (or Elementor Pro > Site Settings >\n   Custom CSS) and then you can delete the \"PES Styles\" section from pages.\n\n   Every block is styled by a \"pes-\" class (Elementor: Advanced > CSS Classes).\n   Anything you change in a widget's own Style tab still wins over these.\n   ========================================================================== */\n\n@import url(\"https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Inter:wght@400;500;600&family=Poppins:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Rajdhani:wght@500;600;700&display=swap\");\n\n:root {\n  /* The one orange→gold gradient used on every orange line, border and button */\n  --pes-orange: #dd7033;\n  --pes-amber: #eaa24e;\n  --pes-gold: #f8da72;\n  --pes-gradient: linear-gradient(90deg, var(--pes-orange) 0%, var(--pes-amber) 50%, var(--pes-gold) 100%);\n\n  --pes-bg: #1b1a1a;\n  --pes-bg-grid: rgba(255, 255, 255, 0.035);\n  --pes-navy: #2d4a8f;\n  --pes-blue-top: #10206a;   /* brand blues – header bar and CTA banner */\n  --pes-blue-mid: #0a1850;\n  --pes-blue-glow: rgba(32, 66, 205, 0.55);\n  --pes-black: #121111;      /* header bar and menus: a touch darker than the page */\n  --pes-white: #ffffff;\n  --pes-text: #e9e9ea;\n  --pes-text-dark: #1d1d1f;\n  --pes-font-head: \"Saira\", \"Arial Narrow\", sans-serif;\n  --pes-font-body: \"Inter\", \"Helvetica Neue\", Arial, sans-serif;\n  --pes-font-ui: \"Poppins\", \"Helvetica Neue\", Arial, sans-serif;\n  --pes-font-cta: \"Rajdhani\", \"Arial Narrow\", sans-serif;\n\n  --pes-circuit: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='60' viewBox='0 0 320 60' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='280' y2='0'%3E%3Cstop offset='0' stop-color='%23F8DA72'/%3E%3Cstop offset='.5' stop-color='%23EAA24E'/%3E%3Cstop offset='1' stop-color='%23DD7033'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 8H118' stroke='url%28%23g%29' stroke-width='2'/%3E%3Ccircle cx='123' cy='8' r='5' fill='url%28%23g%29'/%3E%3Cpath d='M0 46H34L52 28H264' stroke='url%28%23g%29' stroke-width='2'/%3E%3Ccircle cx='270' cy='28' r='5' fill='url%28%23g%29'/%3E%3C/svg%3E\");\n  --pes-arrow: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10' viewBox='0 0 24 10' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='24' y2='0'%3E%3Cstop offset='0' stop-color='%23DD7033'/%3E%3Cstop offset='1' stop-color='%23F8DA72'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 5H20' stroke='url%28%23g%29' stroke-width='2'/%3E%3Cpath d='M17 1.5 22.5 5 17 8.5Z' fill='url%28%23g%29'/%3E%3C/svg%3E\");\n  --pes-bolt: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 250' preserveAspectRatio='xMidYMid slice' fill='none'%3E%3Cpath d='M115 -20H215L155 66H250L85 270H-5L95 130H0Z' stroke='%2370c6ff' stroke-width='4' stroke-linejoin='miter'/%3E%3C/svg%3E\");\n\n  /* header shape: the dark bar steps up into a tab on the right */\n  --pes-header-h: 150px;\n  --pes-tab-start: 365px; /* distance from the right edge where the line starts to climb */\n  --pes-tab-end: 270px;   /* distance from the right edge where it reaches the top level */\n}\n\n/* --------------------------------------------------------------------------\n   The hidden section that carries these styles inside the page template.\n   Hidden on the live site; shown as a slim labelled bar inside the editor.\n   -------------------------------------------------------------------------- */\n.elementor .pes-styles { display: none; }\n.elementor-editor-active .elementor .pes-styles {\n  display: block;\n  padding: 6px 12px;\n  background: #fff3cd;\n  border: 1px dashed #b88600;\n}\n.elementor-editor-active .elementor .pes-styles::before {\n  content: \"PES Styles – keep this section. It is hidden on the live site.\";\n  font: 600 12px/1.4 var(--pes-font-body);\n  color: #6b4e00;\n}\n\n/* --------------------------------------------------------------------------\n   Sections – dark grid background\n   -------------------------------------------------------------------------- */\n.elementor .pes-section {\n  position: relative;\n  background-color: var(--pes-bg);\n  background-image:\n    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px);\n  background-size: 96px 96px;\n  color: var(--pes-text);\n  font-family: var(--pes-font-body);\n}\n\n/* --------------------------------------------------------------------------\n   Header\n   A transparent section that sits over the hero. A dark bar (::before) is cut\n   so that the right-hand side shows the hero photo, and an orange→gold line\n   (::after) runs along its bottom edge, climbs, and continues across the top\n   of the tab – like the mockup.\n   -------------------------------------------------------------------------- */\n.elementor .pes-header {\n  position: relative;\n  z-index: 20;\n  min-height: var(--pes-header-h);\n  background: transparent;\n}\n/* the hero slides up under the header so its photo shows through the tab;\n   any other section simply starts below the header */\n.elementor .pes-header + .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }\n/* same when the header is a site-wide Theme Builder header (it then lives outside the page) */\nbody:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }\n.elementor-location-header:has(.pes-header) { position: relative; z-index: 20; }\n.elementor .pes-header > .elementor-container { position: relative; z-index: 2; min-height: var(--pes-header-h); }\n.elementor .pes-header::before,\n.elementor .pes-header::after {\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n}\n.elementor .pes-header::before { /* black bar with the same faint grid as the rest of the site */\n  background-color: var(--pes-black);\n  background-image:\n    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(180deg, var(--pes-black) 0%, var(--pes-bg) 100%);\n  background-size: 96px 96px, 96px 96px, 100% 100%;\n  clip-path: polygon(0 0, 100% 0, 100% 50%,\n    calc(100% - var(--pes-tab-end)) 50%,\n    calc(100% - var(--pes-tab-start)) 100%,\n    0 100%);\n}\n.elementor .pes-header::after {\n  background: var(--pes-gradient);\n  clip-path: polygon(0 calc(100% - 4px),\n    calc(100% - var(--pes-tab-start) - 2px) calc(100% - 4px),\n    calc(100% - var(--pes-tab-end) - 2px) calc(50% - 4px),\n    100% calc(50% - 4px),\n    100% 50%,\n    calc(100% - var(--pes-tab-end)) 50%,\n    calc(100% - var(--pes-tab-start)) 100%,\n    0 100%);\n}\n.elementor .pes-logo img {\n  display: block;\n  width: auto;\n  max-width: 100%;\n  height: 58px;\n  object-fit: contain;\n}\n.elementor .pes-logo.elementor-widget-image { text-align: left; }\n/* push the Get A Quote button down into the tab, below the gold line */\n.elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 78px; padding-bottom: 6px; }\n\n/* menu (WordPress Menu widget) */\n.elementor .pes-header .menu {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  gap: 4px 34px;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.elementor .pes-header .menu > li { position: relative; }\n.elementor .pes-header .menu a {\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 600;\n  color: var(--pes-white);\n  text-decoration: none;\n}\n.elementor .pes-header .menu a:hover,\n.elementor .pes-header .menu .current-menu-item > a { color: var(--pes-orange); }\n.elementor .pes-header .menu > li > a::after { /* small chevron like the mockup */\n  content: \"\";\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  margin: 0 0 3px 6px;\n  border-right: 1.5px solid var(--pes-amber);\n  border-bottom: 1.5px solid var(--pes-amber);\n  transform: rotate(45deg);\n}\n.elementor .pes-header .menu > li:not(.menu-item-has-children) > a::after { display: none; }\n.elementor .pes-header .sub-menu {\n  display: none;\n  position: absolute;\n  top: 100%;\n  left: -14px;\n  z-index: 50;\n  min-width: 220px;\n  margin: 0;\n  padding: 10px 0;\n  list-style: none;\n  background: var(--pes-black);\n  border-top: 2px solid var(--pes-orange);\n  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);\n}\n.elementor .pes-header li:hover > .sub-menu,\n.elementor .pes-header li:focus-within > .sub-menu { display: block; }\n.elementor .pes-header .sub-menu a { display: block; padding: 8px 14px; font-weight: 500; }\n.elementor .pes-header .sub-menu a:hover { color: var(--pes-white); background: var(--pes-orange); }\n\n/* Elementor Pro Nav Menu in the header (pes-nav): full menu on desktop,\n   hamburger + navy dropdown panel on tablet and phone. */\n.elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { gap: 4px 34px; }\n.elementor .pes-nav .elementor-nav-menu--main .elementor-item {\n  padding: 8px 0 !important;\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 600;\n  color: var(--pes-white) !important;\n  text-decoration: none !important;\n  white-space: nowrap;\n}\n.elementor .pes-nav .elementor-nav-menu--main .elementor-item:is(:hover, :focus, .elementor-item-active, .highlighted) { color: var(--pes-orange) !important; }\n.elementor .pes-nav .elementor-item:is(:hover, :focus, .highlighted) .sub-arrow { color: var(--pes-orange); }\n.elementor .pes-nav .sub-arrow { margin-left: 6px; padding: 0 !important; color: var(--pes-amber); font-size: 9px; }\n.elementor .pes-nav .sub-arrow svg { fill: var(--pes-amber); width: 9px; height: 9px; }\n.elementor .pes-nav .elementor-nav-menu--main .sub-menu,\n.elementor .pes-nav .elementor-nav-menu--dropdown {\n  background: var(--pes-black) !important;\n}\n.elementor .pes-nav .elementor-nav-menu--main .sub-menu {\n  min-width: 230px !important;\n  padding: 8px 0;\n  border-top: 2px solid var(--pes-orange);\n  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown a {\n  padding: 12px 20px !important;\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 500;\n  color: var(--pes-white) !important;\n  text-decoration: none !important;\n  background: transparent !important;\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown a:is(:hover, :focus, .elementor-item-active, .highlighted) {\n  color: var(--pes-white) !important;\n  background: var(--pes-orange) !important;\n}\n/* hamburger button */\n.elementor .pes-nav .elementor-menu-toggle {\n  width: auto;\n  margin-left: auto;\n  padding: 8px;\n  font-size: 26px;\n  color: var(--pes-white) !important;\n  background: transparent !important;\n  border: 2px solid rgba(221, 112, 51, 0.7);\n}\n.elementor .pes-nav .elementor-menu-toggle:hover,\n.elementor .pes-nav .elementor-menu-toggle.elementor-active { color: var(--pes-orange) !important; border-color: var(--pes-orange); }\n.elementor .pes-nav .elementor-menu-toggle svg { fill: currentColor; }\n/* the dropdown panel that opens from the hamburger: full width, straight under the header */\n.elementor .pes-header .pes-nav-col,\n.elementor .pes-header .pes-nav-col > .elementor-widget-wrap,\n.elementor .pes-header .pes-nav,\n.elementor .pes-header .pes-nav > .elementor-widget-container { position: static; }\n.elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container {\n  position: absolute !important;\n  top: 100% !important;\n  left: 0 !important;\n  right: 0 !important;\n  width: auto !important;\n  max-width: none !important;\n  z-index: 60;\n  margin: 0 !important;\n  border-top: 3px solid var(--pes-orange);\n  border-image: var(--pes-gradient) 1;\n  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.45);\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container > .elementor-nav-menu > li { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }\n.elementor .pes-nav .elementor-nav-menu--dropdown .sub-menu a { padding-left: 36px !important; font-size: 14px; color: rgba(255, 255, 255, 0.85) !important; }\n.elementor .pes-header .pes-btn-solid .elementor-button { white-space: nowrap; }\n\n/* medium screens: keep the full menu on one line */\n@media (min-width: 1025px) and (max-width: 1280px) {\n  .elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { gap: 4px 20px; }\n  .elementor .pes-nav .elementor-nav-menu--main .elementor-item,\n  .elementor .pes-header .menu a { font-size: 14px; }\n  .elementor .pes-header .menu { gap: 4px 20px; }\n}\n/* tablet: hamburger replaces the menu, the tab stays */\n@media (max-width: 1024px) {\n  .elementor .pes-nav .elementor-menu-toggle { display: inline-flex; }\n  .elementor .pes-header .pes-header-cta > .elementor-widget-wrap { justify-content: flex-end; }\n}\n\n/* --------------------------------------------------------------------------\n   Shared type\n   -------------------------------------------------------------------------- */\n.elementor .pes-kicker .elementor-heading-title {\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-h1 .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: clamp(48px, 7vw, 92px);\n  font-weight: 700;\n  line-height: 0.95;\n  color: var(--pes-white);\n}\n.elementor .pes-h2 .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: clamp(32px, 4vw, 46px);\n  font-weight: 800;\n  line-height: 1.05;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-subhead .elementor-heading-title {\n  font-family: var(--pes-font-body);\n  font-size: 19px;\n  font-weight: 600;\n  color: var(--pes-white);\n}\n.elementor .pes-lead,\n.elementor .pes-body {\n  font-family: var(--pes-font-body);\n  color: var(--pes-text);\n}\n.elementor .pes-lead { font-size: 18px; line-height: 1.5; max-width: 520px; }\n.elementor .pes-body { font-size: 16px; line-height: 1.75; max-width: 440px; }\n.elementor .pes-lead p:last-child,\n.elementor .pes-body p:last-child { margin-bottom: 0; }\n\n/* Gold-gradient words inside a heading: wrap them in <span class=\"pes-accent\">…</span> */\n.elementor .pes-accent,\n.elementor .pes-eyebrow .elementor-heading-title,\n.elementor .pes-accent-title .elementor-heading-title {\n  background: var(--pes-gradient);\n  -webkit-background-clip: text;\n  background-clip: text;\n  color: transparent;\n  -webkit-text-fill-color: transparent;\n  -webkit-box-decoration-break: clone;\n  box-decoration-break: clone;\n}\n/* small gradient label above a heading (\"KEY BENEFITS\") */\n.elementor .pes-eyebrow .elementor-heading-title {\n  display: inline-block;\n  font-family: var(--pes-font-head);\n  font-size: 16px;\n  font-weight: 700;\n  letter-spacing: 0.12em;\n  text-transform: uppercase;\n}\n.elementor .pes-h2-mixed .elementor-heading-title { text-transform: none; }\n.elementor .pes-h4 .elementor-heading-title,\n.elementor .pes-accent-title .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: 22px;\n  font-weight: 700;\n  line-height: 1.15;\n}\n.elementor .pes-center,\n.elementor .pes-center .elementor-heading-title { text-align: center; }\n.elementor .pes-center.pes-lead,\n.elementor .pes-center.pes-body { margin-left: auto; margin-right: auto; max-width: 760px; }\n.elementor .pes-points { margin-top: 10px; }\n.elementor .pes-points .pes-body { font-size: 15px; }\n\n/* checklist (Icon List widget) */\n.elementor .pes-checklist .elementor-icon-list-item {\n  padding: 5px 0;\n  font-family: var(--pes-font-body);\n  font-size: 16px;\n  color: var(--pes-white);\n}\n.elementor .pes-checklist .elementor-icon-list-text { color: var(--pes-white); padding-left: 12px; }\n.elementor .pes-checklist .elementor-icon-list-icon { width: auto; }\n.elementor .pes-checklist .elementor-icon-list-icon i { color: var(--pes-amber); font-size: 15px; }\n.elementor .pes-checklist .elementor-icon-list-icon svg { fill: var(--pes-amber); width: 15px; height: 15px; }\n\n/* --------------------------------------------------------------------------\n   Buttons\n   pes-btn              – TRANSPARENT button with an orange→gold gradient\n                          border and angled top-left / bottom-right corners\n   pes-btn pes-btn-more – same, italic text + gradient arrow (\"Learn More →\")\n   pes-btn-solid        – orange→gold gradient fill, same angled corners\n                          (\"Get A Quote\" in the header)\n   pes-btn-pill         – rounded orange pill (\"Call Now\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn-solid .elementor-button,\n.elementor .pes-btn-pill .elementor-button {\n  --pes-cut: 9px;\n  position: relative;\n  display: inline-flex;\n  align-items: center;\n  font-family: var(--pes-font-ui);\n  font-weight: 700;\n  line-height: 1;\n  color: var(--pes-white);\n  text-decoration: none;\n  border: 0;\n  box-shadow: none;\n}\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn-solid .elementor-button {\n  border-radius: 0;\n  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),\n    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));\n}\n\n/* outline: background stays transparent in every state */\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn .elementor-button:hover,\n.elementor .pes-btn .elementor-button:focus,\n.elementor .pes-btn .elementor-button:active,\n.elementor .pes-btn .elementor-button:visited {\n  background: transparent !important;\n  color: var(--pes-white);\n}\n.elementor .pes-btn .elementor-button {\n  padding: 12px 22px;\n  font-size: 15px;\n}\n.elementor .pes-btn .elementor-button::before { /* the 2px gradient border, following the angled corners */\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: var(--pes-gradient);\n  pointer-events: none;\n  clip-path: polygon(evenodd,\n    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,\n    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),\n    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);\n}\n.elementor .pes-btn .elementor-button-content-wrapper { position: relative; display: inline-flex; align-items: center; }\n\n.elementor .pes-btn-more .elementor-button { padding: 10px 18px; font-size: 14px; font-style: italic; font-weight: 600; }\n.elementor .pes-btn-more .elementor-button-text::after {\n  content: \"\";\n  display: inline-block;\n  width: 24px;\n  height: 10px;\n  margin-left: 12px;\n  vertical-align: middle;\n  background: var(--pes-arrow) no-repeat center / contain;\n}\n\n.elementor .pes-btn-solid .elementor-button,\n.elementor .pes-btn-solid .elementor-button:hover,\n.elementor .pes-btn-solid .elementor-button:focus {\n  background: var(--pes-gradient) !important;\n  color: var(--pes-white);\n}\n.elementor .pes-btn-solid .elementor-button {\n  padding: 15px 30px;\n  font-size: 18px;\n  text-shadow: 0 1px 2px rgba(120, 50, 0, 0.35);\n}\n\n.elementor .pes-btn-pill .elementor-button,\n.elementor .pes-btn-pill .elementor-button:hover,\n.elementor .pes-btn-pill .elementor-button:focus {\n  background: #ef7828 !important;\n  color: var(--pes-white);\n}\n.elementor .pes-btn-pill .elementor-button {\n  padding: 13px 40px;\n  border-radius: 999px;\n  font-size: 16px;\n  font-style: italic;\n  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);\n}\n\n.elementor .pes-align-right .elementor-button-wrapper { text-align: right; }\n.elementor .pes-align-center .elementor-button-wrapper { text-align: center; }\n\n/* Hover: every PES button grows slightly and glows orange-gold.\n   The angled buttons are cut to shape, which would also cut off a glow drawn on the\n   button itself, so their glow is drawn on the wrapper around them instead.          */\n.elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button {\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n}\n.elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button:is(:hover, :focus-visible) {\n  transform: scale(1.05);\n}\n.elementor :is(.pes-btn, .pes-btn-solid) .elementor-button-wrapper { transition: filter 0.25s ease; }\n.elementor :is(.pes-btn, .pes-btn-solid) .elementor-button-wrapper:has(.elementor-button:is(:hover, :focus-visible)) {\n  filter: drop-shadow(0 0 8px rgba(234, 162, 78, 0.7)) drop-shadow(0 0 20px rgba(221, 112, 51, 0.35));\n}\n.elementor .pes-btn-pill .elementor-button:is(:hover, :focus-visible) {\n  box-shadow: 0 0 14px rgba(239, 120, 40, 0.75), 0 0 30px rgba(234, 162, 78, 0.35), 0 6px 18px rgba(0, 0, 0, 0.45);\n}\n@media (prefers-reduced-motion: reduce) {\n  .elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button:is(:hover, :focus-visible) { transform: none; }\n}\n\n/* --------------------------------------------------------------------------\n   Hero\n   -------------------------------------------------------------------------- */\n.elementor .pes-hero::after { /* orange→gold line along the bottom */\n  content: \"\";\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: 3px;\n  background: var(--pes-gradient);\n  z-index: 3;\n}\n.elementor .pes-hero > .elementor-container { padding-top: var(--pes-header-h); }\n/* pes-hero-center – centred hero for service / industry pages */\n.elementor .pes-hero-center .elementor-heading-title,\n.elementor .pes-hero-center .pes-lead,\n.elementor .pes-hero-center .elementor-button-wrapper { text-align: center; }\n.elementor .pes-hero-center .pes-h1 .elementor-heading-title {\n  max-width: 1000px;\n  margin: 0 auto;\n  font-size: clamp(40px, 5.4vw, 72px);\n  line-height: 1.02;\n}\n.elementor .pes-hero-center .pes-lead { margin: 0 auto 16px; max-width: 720px; font-size: 19px; }\n.elementor .pes-hero-center .pes-btn-solid .elementor-button { padding: 18px 36px; font-size: 19px; }\n\n/* --------------------------------------------------------------------------\n   Problem band – centred statement over a darkened photo\n   -------------------------------------------------------------------------- */\n.elementor .pes-band::before,\n.elementor .pes-band::after {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  right: 0;\n  height: 3px;\n  background: var(--pes-gradient);\n  z-index: 3;\n}\n.elementor .pes-band::before { top: 0; }\n.elementor .pes-band::after { bottom: 0; }\n.elementor .pes-band .pes-h2 .elementor-heading-title { max-width: 1000px; margin: 0 auto; }\n\n/* --------------------------------------------------------------------------\n   Feature row (text + framed image)\n   pes-feature           – circuit lines on the LEFT  (text left, image right)\n   pes-feature-reverse   – circuit lines on the RIGHT (image left, text right)\n   -------------------------------------------------------------------------- */\n.elementor .pes-feature::before {\n  content: \"\";\n  position: absolute;\n  top: 40px;\n  left: 0;\n  width: 320px;\n  height: 60px;\n  background: var(--pes-circuit) no-repeat left top / contain;\n  pointer-events: none;\n}\n.elementor .pes-feature-reverse::before {\n  left: auto;\n  right: 0;\n  transform: scaleX(-1);\n}\n\n/* Framed image or video – the PES frame shape.\n   The border line follows the approved outline: big angled corners and a wide recess in\n   the middle third of the top and bottom edges. The photo stays a full rectangle inside\n   it; the recess sits in the space above and below the photo, never over it.\n   Width follows the column and height follows the photo.\n   pes-frame        – orange→gold gradient line\n   pes-frame-blue   – navy line\n   Works on Image and Video widgets. Generated by scripts/frame_outline.py\n   (line 5px, corners 52×28px, recess 18px deep).                       */\n.elementor .pes-frame.elementor-widget {\n  position: relative;\n  width: calc(100% + 12px);   /* photo stays as wide as before; the frame grows outwards */\n  margin-left: -6px;\n  margin-right: -6px;\n  padding: 30px 16px;\n  background: var(--pes-gradient);\n  clip-path: polygon(0px 28px, 52px 0px, 33.33% 0px, calc(33.33% + 22px) 18px, calc(66.67% - 22px) 18px, 66.67% 0px, calc(100% - 52px) 0px, 100% 28px, 100% calc(100% - 28px), calc(100% - 52px) 100%, 66.67% 100%, calc(66.67% - 22px) calc(100% - 18px), calc(33.33% + 22px) calc(100% - 18px), 33.33% 100%, 52px 100%, 0px calc(100% - 28px));\n}\n.elementor .pes-frame-blue.elementor-widget { background: var(--pes-navy); }\n.elementor .pes-frame.elementor-widget::before { /* dark area inside the line */\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: var(--pes-bg);\n  clip-path: polygon(5px 30.99px, 53.26px 5px, calc(33.33% - 1.78px) 5px, calc(33.33% + 20.22px) 23px, calc(66.67% - 20.22px) 23px, calc(66.67% + 1.78px) 5px, calc(100% - 53.26px) 5px, calc(100% - 5px) 30.99px, calc(100% - 5px) calc(100% - 30.99px), calc(100% - 53.26px) calc(100% - 5px), calc(66.67% + 1.78px) calc(100% - 5px), calc(66.67% - 20.22px) calc(100% - 23px), calc(33.33% + 20.22px) calc(100% - 23px), calc(33.33% - 1.78px) calc(100% - 5px), 53.26px calc(100% - 5px), 5px calc(100% - 30.99px));\n}\n.elementor .pes-frame.elementor-widget .elementor-widget-container,\n.elementor .pes-frame.elementor-widget img,\n.elementor .pes-frame.elementor-widget .elementor-wrapper { position: relative; }\n.elementor .pes-frame img,\n.elementor .pes-frame .elementor-wrapper {\n  --pes-cut: 15px;\n  display: block;\n  width: 100%;\n  clip-path: polygon(var(--pes-cut) 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut),\n    100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,\n    0 calc(100% - var(--pes-cut)), 0 var(--pes-cut));\n}\n/* height follows the photo, but never collapses: short or missing photos fill a sensible\n   minimum and are cropped to fit */\n.elementor .pes-frame img { height: auto; max-width: 100%; min-height: 380px; object-fit: cover; }\n@media (max-width: 767px) {\n  .elementor .pes-frame img { min-height: 240px; }\n}\n\n\n/* --------------------------------------------------------------------------\n   Section title with circuit lines on both sides (\"Our Process\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-title-circuit { width: 100%; }\n.elementor .pes-title-circuit .elementor-heading-title {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 28px;\n  font-family: var(--pes-font-head);\n  font-size: clamp(36px, 5vw, 56px);\n  font-weight: 700;\n  color: var(--pes-white);\n  text-align: center;\n}\n/* circuit lines either side of the title; they shrink to fit and never overlap the text */\n.elementor .pes-title-circuit .elementor-heading-title::before,\n.elementor .pes-title-circuit .elementor-heading-title::after {\n  content: \"\";\n  flex: 1 1 0;\n  min-width: 40px;\n  max-width: 320px;\n  height: 60px;\n  margin-top: 26px;\n  background: var(--pes-circuit) no-repeat right center / auto 60px;\n  pointer-events: none;\n}\n.elementor .pes-title-circuit .elementor-heading-title::after { transform: scaleX(-1); }\n\n/* --------------------------------------------------------------------------\n   Process steps\n   pes-step-num     – the big number heading\n   pes-step-card    – icon box: white card with cut corner + navy edge\n   -------------------------------------------------------------------------- */\n.elementor .pes-step-num .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: 92px;\n  font-weight: 700;\n  line-height: 0.8;\n  color: var(--pes-white);\n  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);\n}\n.elementor .pes-step-num.elementor-widget {\n  position: relative;\n  z-index: 2;\n  margin-bottom: -26px;\n  margin-block-end: -26px;\n  text-align: center;\n}\n.elementor .pes-step-card.elementor-widget {\n  position: relative;\n  padding: 30px 24px;\n  background: var(--pes-white);\n  box-shadow: 6px 6px 0 var(--pes-navy);\n}\n.elementor .pes-step-card.elementor-widget::before { /* angled top-right corner */\n  content: \"\";\n  position: absolute;\n  top: 0;\n  right: -6px;\n  width: 36px;\n  height: 36px;\n  background: linear-gradient(to bottom left, var(--pes-bg) 50%, var(--pes-navy) 50%, var(--pes-navy) calc(50% + 4px), transparent calc(50% + 4px));\n  pointer-events: none;\n}\n.elementor .pes-step-card .elementor-icon-box-icon { margin-bottom: 18px; }\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon {\n  font-size: 64px;\n  color: var(--pes-navy);\n  fill: var(--pes-navy);\n}\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-navy); }\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon-box-description {\n  margin: 0;\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  line-height: 1.6;\n  text-align: left;\n  color: var(--pes-text-dark);\n}\n\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon-box-title {\n  margin: 0 0 6px;\n  font-family: var(--pes-font-head);\n  font-size: 22px;\n  font-weight: 700;\n  text-align: left;\n  color: var(--pes-text-dark);\n}\n.elementor .pes-process .pes-eyebrow { margin-top: -8px; }\n.elementor .pes-steps { margin: 34px 0 30px; }\n\n/* --------------------------------------------------------------------------\n   Who it's for – photo cards (columns with a background image)\n   The description slides in on hover; on touch screens it is always shown.\n   -------------------------------------------------------------------------- */\n.elementor .pes-audience-card > .elementor-widget-wrap {\n  --pes-cut: 18px;\n  position: relative;\n  min-height: 380px;\n  margin: 8px;\n  padding: 34px 22px !important;\n  align-content: flex-start;\n  overflow: hidden;\n  background-size: cover;\n  background-position: center;\n  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),\n    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));\n}\n.elementor .pes-audience-card > .elementor-widget-wrap::before { /* darkening */\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(180deg, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.25) 60%, rgba(10, 10, 12, 0.6) 100%);\n  transition: background 0.3s;\n}\n.elementor .pes-audience-card > .elementor-widget-wrap::after { /* gradient border on the angled shape */\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: var(--pes-gradient);\n  opacity: 0.85;\n  pointer-events: none;\n  clip-path: polygon(evenodd,\n    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,\n    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),\n    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);\n}\n.elementor .pes-audience-card > .elementor-widget-wrap > .elementor-element { position: relative; z-index: 1; }\n.elementor .pes-card-title .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: 24px;\n  font-weight: 700;\n  letter-spacing: 0.03em;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-card-title .elementor-heading-title::after {\n  content: \"\";\n  display: block;\n  width: 0;\n  height: 3px;\n  margin-top: 12px;\n  background: var(--pes-gradient);\n  transition: width 0.35s;\n}\n.elementor .pes-card-text {\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  line-height: 1.6;\n  color: var(--pes-white);\n  opacity: 0;\n  transform: translateY(12px);\n  transition: opacity 0.35s, transform 0.35s;\n}\n.elementor .pes-audience-card:hover > .elementor-widget-wrap::before { background: rgba(10, 10, 12, 0.78); }\n.elementor .pes-audience-card:hover .pes-card-title .elementor-heading-title::after { width: 80px; }\n.elementor .pes-audience-card:hover .pes-card-text { opacity: 1; transform: none; }\n@media (hover: none) {\n  .elementor .pes-card-text { opacity: 1; transform: none; }\n  .elementor .pes-card-title .elementor-heading-title::after { width: 80px; }\n  .elementor .pes-audience-card > .elementor-widget-wrap::before { background: rgba(10, 10, 12, 0.7); }\n}\n.elementor .pes-audience { margin-top: 30px; }\n\n/* --------------------------------------------------------------------------\n   Reviews (Trustindex shortcode) and FAQ (Accordion widget)\n   -------------------------------------------------------------------------- */\n.elementor .pes-reviews { margin-top: 20px; }\n.elementor .pes-faq { margin-top: 26px; }\n.elementor .pes-faq .elementor-accordion-item {\n  position: relative;\n  margin-bottom: 12px;\n  border: 1px solid rgba(255, 255, 255, 0.08) !important;\n  background: #232121;\n}\n.elementor .pes-faq .elementor-accordion-item::before { /* gradient bar on the left */\n  content: \"\";\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 4px;\n  background: var(--pes-gradient);\n}\n.elementor .pes-faq .elementor-tab-title {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  padding: 20px 24px 20px 28px;\n  border: 0 !important;\n  cursor: pointer;\n}\n.elementor .pes-faq.elementor-widget-accordion .elementor-accordion-title {\n  font-family: var(--pes-font-ui);\n  font-size: 17px;\n  font-weight: 600;\n  color: var(--pes-white);\n  text-decoration: none;\n}\n.elementor .pes-faq .elementor-accordion-icon {\n  display: grid;\n  place-items: center;\n  flex: none;\n  width: 28px;\n  height: 28px;\n  float: none;\n  text-align: center;\n  font-size: 13px;\n  color: var(--pes-bg) !important;\n  background: var(--pes-gradient);\n  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);\n}\n.elementor .pes-faq .elementor-accordion-icon i,\n.elementor .pes-faq .elementor-accordion-icon svg { color: var(--pes-bg); fill: var(--pes-bg); }\n.elementor .pes-faq .elementor-tab-title.elementor-active .elementor-accordion-title {\n  background: var(--pes-gradient);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n.elementor .pes-faq .elementor-tab-content {\n  padding: 0 28px 22px 72px;\n  border: 0 !important;\n  font-family: var(--pes-font-body);\n  font-size: 16px;\n  line-height: 1.7;\n  color: var(--pes-text);\n}\n.elementor .pes-faq .elementor-tab-content p:last-child { margin-bottom: 0; }\n\n/* --------------------------------------------------------------------------\n   CTA banner (\"Schedule a consultation today\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-cta {\n  position: relative;\n  overflow: hidden;\n  background:\n    radial-gradient(ellipse 45% 110% at 62% 15%, rgba(32, 66, 205, 0.95) 0%, rgba(22, 44, 150, 0.6) 45%, transparent 75%),\n    linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%);\n  color: var(--pes-white);\n}\n.elementor .pes-cta::after { /* neon lightning bolt */\n  content: \"\";\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 63%;\n  width: 16%;\n  min-width: 150px;\n  background: var(--pes-bolt) no-repeat center / 100% 100%;\n  filter: drop-shadow(0 0 4px #7fd0ff) drop-shadow(0 0 12px #2f8bff) drop-shadow(0 0 26px #1d5cff);\n  pointer-events: none;\n}\n.elementor .pes-cta > .elementor-container { position: relative; z-index: 1; }\n.elementor .pes-cta-box .elementor-icon-box-wrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 0;\n  text-align: left;\n}\n.elementor .pes-cta-box .elementor-icon-box-icon {\n  flex: none;\n  margin: 0;\n  padding-right: 26px;\n  margin-right: 26px;\n  border-right: 1px solid rgba(255, 255, 255, 0.35);\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon {\n  font-size: 56px;\n  color: var(--pes-white);\n  fill: var(--pes-white);\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-white); }\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon-box-title {\n  margin: 0 0 2px;\n  font-family: var(--pes-font-cta);\n  font-size: clamp(24px, 2.6vw, 34px);\n  font-weight: 700;\n  line-height: 1.1;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon-box-description {\n  margin: 0;\n  font-family: var(--pes-font-cta);\n  font-size: clamp(17px, 1.7vw, 22px);\n  font-weight: 500;\n  letter-spacing: 0.03em;\n  color: rgba(255, 255, 255, 0.92);\n}\n\n/* --------------------------------------------------------------------------\n   Mobile\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  :root { --pes-header-h: 80px; }\n  .elementor .pes-header::before { clip-path: none; }\n  .elementor .pes-header::after { clip-path: none; top: auto; height: 3px; }\n  .elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 10px; padding-bottom: 10px; }\n  .elementor .pes-header .pes-nav-col > .elementor-widget-wrap { padding-top: 10px; padding-bottom: 10px; }\n  .elementor .pes-nav .elementor-menu-toggle { font-size: 22px; padding: 6px; }\n  .elementor .pes-logo img { height: 44px; }\n  .elementor .pes-header .pes-btn-solid .elementor-button { padding: 11px 16px; font-size: 14px; }\n  .elementor .pes-feature::before,\n  .elementor .pes-title-circuit .elementor-heading-title::before,\n  .elementor .pes-title-circuit .elementor-heading-title::after { display: none; }\n  .elementor .pes-step-num .elementor-heading-title { font-size: 72px; }\n  /* text/image rows stack on phones, so the wide desktop gap isn't needed there */\n  .elementor .pes-section > .elementor-column-gap-wider > .elementor-column > .elementor-element-populated { padding: 15px; }\n  .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }\n  .elementor .pes-faq .elementor-tab-content { padding-left: 28px; }\n  .elementor .pes-cta::after { left: auto; right: -40px; opacity: 0.45; }\n  .elementor .pes-cta-box .elementor-icon-box-icon { padding-right: 16px; margin-right: 16px; }\n  .elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon { font-size: 42px; }\n  .elementor .pes-align-right .elementor-button-wrapper { text-align: left; }\n  .elementor .pes-header .pes-align-right .elementor-button-wrapper { text-align: right; }\n}\n</style>",
+                "html": "<style>\n/* ==========================================================================\n   Porter Energy Systems – Elementor styles\n   --------------------------------------------------------------------------\n   This CSS already ships inside the \"PES – Page Template\" (in the hidden\n   \"PES Styles\" section at the top of the page), so you don't need to paste\n   it anywhere for the page to look right.\n\n   Optional: to style the whole site from one place, paste this file into\n   Appearance > Customize > Additional CSS (or Elementor Pro > Site Settings >\n   Custom CSS) and then you can delete the \"PES Styles\" section from pages.\n\n   Every block is styled by a \"pes-\" class (Elementor: Advanced > CSS Classes).\n   Anything you change in a widget's own Style tab still wins over these.\n   ========================================================================== */\n\n@import url(\"https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Inter:wght@400;500;600&family=Poppins:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Rajdhani:wght@500;600;700&display=swap\");\n\n:root {\n  /* The one orange→gold gradient used on every orange line, border and button */\n  --pes-orange: #dd7033;\n  --pes-amber: #eaa24e;\n  --pes-gold: #f8da72;\n  --pes-gradient: linear-gradient(90deg, var(--pes-orange) 0%, var(--pes-amber) 50%, var(--pes-gold) 100%);\n\n  --pes-bg: #1b1a1a;\n  --pes-bg-grid: rgba(255, 255, 255, 0.035);\n  --pes-navy: #2d4a8f;\n  --pes-blue-top: #10206a;   /* brand blues – header bar and CTA banner */\n  --pes-blue-mid: #0a1850;\n  --pes-blue-glow: rgba(32, 66, 205, 0.55);\n  --pes-black: #121111;      /* header bar and menus: a touch darker than the page */\n  --pes-white: #ffffff;\n  --pes-text: #e9e9ea;\n  --pes-text-dark: #1d1d1f;\n  --pes-font-head: \"Saira\", \"Arial Narrow\", sans-serif;\n  --pes-font-body: \"Inter\", \"Helvetica Neue\", Arial, sans-serif;\n  --pes-font-ui: \"Poppins\", \"Helvetica Neue\", Arial, sans-serif;\n  --pes-font-cta: \"Rajdhani\", \"Arial Narrow\", sans-serif;\n\n  --pes-circuit: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='60' viewBox='0 0 320 60' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='280' y2='0'%3E%3Cstop offset='0' stop-color='%23F8DA72'/%3E%3Cstop offset='.5' stop-color='%23EAA24E'/%3E%3Cstop offset='1' stop-color='%23DD7033'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 8H118' stroke='url%28%23g%29' stroke-width='2'/%3E%3Ccircle cx='123' cy='8' r='5' fill='url%28%23g%29'/%3E%3Cpath d='M0 46H34L52 28H264' stroke='url%28%23g%29' stroke-width='2'/%3E%3Ccircle cx='270' cy='28' r='5' fill='url%28%23g%29'/%3E%3C/svg%3E\");\n  --pes-arrow: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10' viewBox='0 0 24 10' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='24' y2='0'%3E%3Cstop offset='0' stop-color='%23DD7033'/%3E%3Cstop offset='1' stop-color='%23F8DA72'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 5H20' stroke='url%28%23g%29' stroke-width='2'/%3E%3Cpath d='M17 1.5 22.5 5 17 8.5Z' fill='url%28%23g%29'/%3E%3C/svg%3E\");\n  --pes-bolt: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 250' preserveAspectRatio='xMidYMid slice' fill='none'%3E%3Cpath d='M115 -20H215L155 66H250L85 270H-5L95 130H0Z' stroke='%2370c6ff' stroke-width='4' stroke-linejoin='miter'/%3E%3C/svg%3E\");\n\n  /* header shape: the dark bar steps up into a tab on the right */\n  --pes-header-h: 150px;\n  --pes-tab-start: 365px; /* distance from the right edge where the line starts to climb */\n  --pes-tab-end: 270px;   /* distance from the right edge where it reaches the top level */\n}\n\n/* --------------------------------------------------------------------------\n   The hidden section that carries these styles inside the page template.\n   Hidden on the live site; shown as a slim labelled bar inside the editor.\n   -------------------------------------------------------------------------- */\n.elementor .pes-styles { display: none; }\n.elementor-editor-active .elementor .pes-styles {\n  display: block;\n  padding: 6px 12px;\n  background: #fff3cd;\n  border: 1px dashed #b88600;\n}\n.elementor-editor-active .elementor .pes-styles::before {\n  content: \"PES Styles – keep this section. It is hidden on the live site.\";\n  font: 600 12px/1.4 var(--pes-font-body);\n  color: #6b4e00;\n}\n\n/* --------------------------------------------------------------------------\n   Sections – dark grid background\n   -------------------------------------------------------------------------- */\n.elementor .pes-section {\n  position: relative;\n  background-color: var(--pes-bg);\n  background-image:\n    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px);\n  background-size: 96px 96px;\n  color: var(--pes-text);\n  font-family: var(--pes-font-body);\n}\n\n/* --------------------------------------------------------------------------\n   Header\n   A transparent section that sits over the hero. A dark bar (::before) is cut\n   so that the right-hand side shows the hero photo, and an orange→gold line\n   (::after) runs along its bottom edge, climbs, and continues across the top\n   of the tab – like the mockup.\n   -------------------------------------------------------------------------- */\n.elementor .pes-header {\n  position: relative;\n  z-index: 20;\n  min-height: var(--pes-header-h);\n  background: transparent;\n}\n/* the hero slides up under the header so its photo shows through the tab;\n   any other section simply starts below the header */\n.elementor .pes-header + .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }\n/* same when the header is a site-wide Theme Builder header (it then lives outside the page) */\nbody:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }\n.elementor-location-header:has(.pes-header) { position: relative; z-index: 20; }\n.elementor .pes-header > .elementor-container { position: relative; z-index: 2; min-height: var(--pes-header-h); }\n.elementor .pes-header::before,\n.elementor .pes-header::after {\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n}\n.elementor .pes-header::before { /* black bar with the same faint grid as the rest of the site */\n  background-color: var(--pes-black);\n  background-image:\n    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(180deg, var(--pes-black) 0%, var(--pes-bg) 100%);\n  background-size: 96px 96px, 96px 96px, 100% 100%;\n  clip-path: polygon(0 0, 100% 0, 100% 50%,\n    calc(100% - var(--pes-tab-end)) 50%,\n    calc(100% - var(--pes-tab-start)) 100%,\n    0 100%);\n}\n.elementor .pes-header::after {\n  background: var(--pes-gradient);\n  clip-path: polygon(0 calc(100% - 4px),\n    calc(100% - var(--pes-tab-start) - 2px) calc(100% - 4px),\n    calc(100% - var(--pes-tab-end) - 2px) calc(50% - 4px),\n    100% calc(50% - 4px),\n    100% 50%,\n    calc(100% - var(--pes-tab-end)) 50%,\n    calc(100% - var(--pes-tab-start)) 100%,\n    0 100%);\n}\n.elementor .pes-logo img {\n  display: block;\n  width: auto;\n  max-width: 100%;\n  height: 58px;\n  object-fit: contain;\n}\n.elementor .pes-logo.elementor-widget-image { text-align: left; }\n.elementor .pes-header-styles { position: absolute; width: 0; height: 0; overflow: hidden; margin: 0 !important; }\n/* push the Get A Quote button down into the tab, below the gold line */\n.elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 78px; padding-bottom: 6px; }\n\n/* menu (WordPress Menu widget) */\n.elementor .pes-header .menu {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  gap: 4px 34px;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.elementor .pes-header .menu > li { position: relative; }\n.elementor .pes-header .menu a {\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 600;\n  color: var(--pes-white);\n  text-decoration: none;\n}\n.elementor .pes-header .menu a:hover,\n.elementor .pes-header .menu .current-menu-item > a { color: var(--pes-orange); }\n.elementor .pes-header .menu > li > a::after { /* small chevron like the mockup */\n  content: \"\";\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  margin: 0 0 3px 6px;\n  border-right: 1.5px solid var(--pes-amber);\n  border-bottom: 1.5px solid var(--pes-amber);\n  transform: rotate(45deg);\n}\n.elementor .pes-header .menu > li:not(.menu-item-has-children) > a::after { display: none; }\n.elementor .pes-header .sub-menu {\n  display: none;\n  position: absolute;\n  top: 100%;\n  left: -14px;\n  z-index: 50;\n  min-width: 220px;\n  margin: 0;\n  padding: 10px 0;\n  list-style: none;\n  background: var(--pes-black);\n  border-top: 2px solid var(--pes-orange);\n  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);\n}\n.elementor .pes-header li:hover > .sub-menu,\n.elementor .pes-header li:focus-within > .sub-menu { display: block; }\n.elementor .pes-header .sub-menu a { display: block; padding: 8px 14px; font-weight: 500; }\n.elementor .pes-header .sub-menu a:hover { color: var(--pes-white); background: var(--pes-orange); }\n\n/* Elementor Pro Nav Menu in the header (pes-nav): full menu on desktop,\n   hamburger + navy dropdown panel on tablet and phone. */\n.elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { gap: 4px 34px; }\n.elementor .pes-nav .elementor-nav-menu--main .elementor-item {\n  padding: 8px 0 !important;\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 600;\n  color: var(--pes-white) !important;\n  text-decoration: none !important;\n  white-space: nowrap;\n}\n.elementor .pes-nav .elementor-nav-menu--main .elementor-item:is(:hover, :focus, .elementor-item-active, .highlighted) { color: var(--pes-orange) !important; }\n.elementor .pes-nav .elementor-item:is(:hover, :focus, .highlighted) .sub-arrow { color: var(--pes-orange); }\n.elementor .pes-nav .sub-arrow { margin-left: 6px; padding: 0 !important; color: var(--pes-amber); font-size: 9px; }\n.elementor .pes-nav .sub-arrow svg { fill: var(--pes-amber); width: 9px; height: 9px; }\n.elementor .pes-nav .elementor-nav-menu--main .sub-menu,\n.elementor .pes-nav .elementor-nav-menu--dropdown {\n  background: var(--pes-black) !important;\n}\n.elementor .pes-nav .elementor-nav-menu--main .sub-menu {\n  min-width: 230px !important;\n  padding: 8px 0;\n  border-top: 2px solid var(--pes-orange);\n  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown a {\n  padding: 12px 20px !important;\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 500;\n  color: var(--pes-white) !important;\n  text-decoration: none !important;\n  background: transparent !important;\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown a:is(:hover, :focus, .elementor-item-active, .highlighted) {\n  color: var(--pes-white) !important;\n  background: var(--pes-orange) !important;\n}\n/* hamburger button */\n.elementor .pes-nav .elementor-menu-toggle {\n  width: auto;\n  margin-left: auto;\n  padding: 8px;\n  font-size: 26px;\n  color: var(--pes-white) !important;\n  background: transparent !important;\n  border: 2px solid rgba(221, 112, 51, 0.7);\n}\n.elementor .pes-nav .elementor-menu-toggle:hover,\n.elementor .pes-nav .elementor-menu-toggle.elementor-active { color: var(--pes-orange) !important; border-color: var(--pes-orange); }\n.elementor .pes-nav .elementor-menu-toggle svg { fill: currentColor; }\n/* the dropdown panel that opens from the hamburger: full width, straight under the header */\n.elementor .pes-header .pes-nav-col,\n.elementor .pes-header .pes-nav-col > .elementor-widget-wrap,\n.elementor .pes-header .pes-nav,\n.elementor .pes-header .pes-nav > .elementor-widget-container { position: static; }\n.elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container {\n  position: absolute !important;\n  top: 100% !important;\n  left: 0 !important;\n  right: 0 !important;\n  width: auto !important;\n  max-width: none !important;\n  z-index: 60;\n  margin: 0 !important;\n  border-top: 3px solid var(--pes-orange);\n  border-image: var(--pes-gradient) 1;\n  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.45);\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container > .elementor-nav-menu > li { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }\n.elementor .pes-nav .elementor-nav-menu--dropdown .sub-menu a { padding-left: 36px !important; font-size: 14px; color: rgba(255, 255, 255, 0.85) !important; }\n.elementor .pes-header .pes-btn-solid .elementor-button { white-space: nowrap; }\n\n/* medium screens: keep the full menu on one line */\n@media (min-width: 1025px) and (max-width: 1280px) {\n  .elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { gap: 4px 20px; }\n  .elementor .pes-nav .elementor-nav-menu--main .elementor-item,\n  .elementor .pes-header .menu a { font-size: 14px; }\n  .elementor .pes-header .menu { gap: 4px 20px; }\n}\n/* tablet: hamburger replaces the menu, the tab stays */\n@media (max-width: 1024px) {\n  .elementor .pes-nav .elementor-menu-toggle { display: inline-flex; }\n  .elementor .pes-header .pes-header-cta > .elementor-widget-wrap { justify-content: flex-end; }\n}\n\n/* --------------------------------------------------------------------------\n   Shared type\n   -------------------------------------------------------------------------- */\n.elementor .pes-kicker .elementor-heading-title {\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-h1 .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: clamp(48px, 7vw, 92px);\n  font-weight: 700;\n  line-height: 0.95;\n  color: var(--pes-white);\n}\n.elementor .pes-h2 .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: clamp(32px, 4vw, 46px);\n  font-weight: 800;\n  line-height: 1.05;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-subhead .elementor-heading-title {\n  font-family: var(--pes-font-body);\n  font-size: 19px;\n  font-weight: 600;\n  color: var(--pes-white);\n}\n.elementor .pes-lead,\n.elementor .pes-body {\n  font-family: var(--pes-font-body);\n  color: var(--pes-text);\n}\n.elementor .pes-lead { font-size: 18px; line-height: 1.5; max-width: 520px; }\n.elementor .pes-body { font-size: 16px; line-height: 1.75; max-width: 440px; }\n.elementor .pes-lead p:last-child,\n.elementor .pes-body p:last-child { margin-bottom: 0; }\n\n/* Gold-gradient words inside a heading: wrap them in <span class=\"pes-accent\">…</span> */\n.elementor .pes-accent,\n.elementor .pes-eyebrow .elementor-heading-title,\n.elementor .pes-accent-title .elementor-heading-title {\n  background: var(--pes-gradient);\n  -webkit-background-clip: text;\n  background-clip: text;\n  color: transparent;\n  -webkit-text-fill-color: transparent;\n  -webkit-box-decoration-break: clone;\n  box-decoration-break: clone;\n}\n/* small gradient label above a heading (\"KEY BENEFITS\") */\n.elementor .pes-eyebrow .elementor-heading-title {\n  display: inline-block;\n  font-family: var(--pes-font-head);\n  font-size: 16px;\n  font-weight: 700;\n  letter-spacing: 0.12em;\n  text-transform: uppercase;\n}\n.elementor .pes-h2-mixed .elementor-heading-title { text-transform: none; }\n.elementor .pes-h4 .elementor-heading-title,\n.elementor .pes-accent-title .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: 22px;\n  font-weight: 700;\n  line-height: 1.15;\n}\n.elementor .pes-center,\n.elementor .pes-center .elementor-heading-title { text-align: center; }\n.elementor .pes-center.pes-lead,\n.elementor .pes-center.pes-body { margin-left: auto; margin-right: auto; max-width: 760px; }\n.elementor .pes-points { margin-top: 10px; }\n.elementor .pes-points .pes-body { font-size: 15px; }\n\n/* checklist (Icon List widget) */\n.elementor .pes-checklist .elementor-icon-list-item {\n  padding: 5px 0;\n  font-family: var(--pes-font-body);\n  font-size: 16px;\n  color: var(--pes-white);\n}\n.elementor .pes-checklist .elementor-icon-list-text { color: var(--pes-white); padding-left: 12px; }\n.elementor .pes-checklist .elementor-icon-list-icon { width: auto; }\n.elementor .pes-checklist .elementor-icon-list-icon i { color: var(--pes-amber); font-size: 15px; }\n.elementor .pes-checklist .elementor-icon-list-icon svg { fill: var(--pes-amber); width: 15px; height: 15px; }\n\n/* --------------------------------------------------------------------------\n   Buttons\n   pes-btn              – TRANSPARENT button with an orange→gold gradient\n                          border and angled top-left / bottom-right corners\n   pes-btn pes-btn-more – same, italic text + gradient arrow (\"Learn More →\")\n   pes-btn-solid        – orange→gold gradient fill, same angled corners\n                          (\"Get A Quote\" in the header)\n   pes-btn-pill         – rounded orange pill (\"Call Now\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn-solid .elementor-button,\n.elementor .pes-btn-pill .elementor-button {\n  --pes-cut: 9px;\n  position: relative;\n  display: inline-flex;\n  align-items: center;\n  font-family: var(--pes-font-ui);\n  font-weight: 700;\n  line-height: 1;\n  color: var(--pes-white);\n  text-decoration: none;\n  border: 0;\n  box-shadow: none;\n}\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn-solid .elementor-button {\n  border-radius: 0;\n  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),\n    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));\n}\n\n/* outline: background stays transparent in every state */\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn .elementor-button:hover,\n.elementor .pes-btn .elementor-button:focus,\n.elementor .pes-btn .elementor-button:active,\n.elementor .pes-btn .elementor-button:visited {\n  background: transparent !important;\n  color: var(--pes-white);\n}\n.elementor .pes-btn .elementor-button {\n  padding: 12px 22px;\n  font-size: 15px;\n}\n.elementor .pes-btn .elementor-button::before { /* the 2px gradient border, following the angled corners */\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: var(--pes-gradient);\n  pointer-events: none;\n  clip-path: polygon(evenodd,\n    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,\n    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),\n    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);\n}\n.elementor .pes-btn .elementor-button-content-wrapper { position: relative; display: inline-flex; align-items: center; }\n\n.elementor .pes-btn-more .elementor-button { padding: 10px 18px; font-size: 14px; font-style: italic; font-weight: 600; }\n.elementor .pes-btn-more .elementor-button-text::after {\n  content: \"\";\n  display: inline-block;\n  width: 24px;\n  height: 10px;\n  margin-left: 12px;\n  vertical-align: middle;\n  background: var(--pes-arrow) no-repeat center / contain;\n}\n\n.elementor .pes-btn-solid .elementor-button,\n.elementor .pes-btn-solid .elementor-button:hover,\n.elementor .pes-btn-solid .elementor-button:focus {\n  background: var(--pes-gradient) !important;\n  color: var(--pes-white);\n}\n.elementor .pes-btn-solid .elementor-button {\n  padding: 15px 30px;\n  font-size: 18px;\n  text-shadow: 0 1px 2px rgba(120, 50, 0, 0.35);\n}\n\n.elementor .pes-btn-pill .elementor-button,\n.elementor .pes-btn-pill .elementor-button:hover,\n.elementor .pes-btn-pill .elementor-button:focus {\n  background: #ef7828 !important;\n  color: var(--pes-white);\n}\n.elementor .pes-btn-pill .elementor-button {\n  padding: 13px 40px;\n  border-radius: 999px;\n  font-size: 16px;\n  font-style: italic;\n  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);\n}\n\n.elementor .pes-align-right .elementor-button-wrapper { text-align: right; }\n.elementor .pes-align-center .elementor-button-wrapper { text-align: center; }\n\n/* Hover: every PES button grows slightly and glows orange-gold.\n   The angled buttons are cut to shape, which would also cut off a glow drawn on the\n   button itself, so their glow is drawn on the wrapper around them instead.          */\n.elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button {\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n}\n.elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button:is(:hover, :focus-visible) {\n  transform: scale(1.05);\n}\n.elementor :is(.pes-btn, .pes-btn-solid) .elementor-button-wrapper { transition: filter 0.25s ease; }\n.elementor :is(.pes-btn, .pes-btn-solid) .elementor-button-wrapper:has(.elementor-button:is(:hover, :focus-visible)) {\n  filter: drop-shadow(0 0 8px rgba(234, 162, 78, 0.7)) drop-shadow(0 0 20px rgba(221, 112, 51, 0.35));\n}\n.elementor .pes-btn-pill .elementor-button:is(:hover, :focus-visible) {\n  box-shadow: 0 0 14px rgba(239, 120, 40, 0.75), 0 0 30px rgba(234, 162, 78, 0.35), 0 6px 18px rgba(0, 0, 0, 0.45);\n}\n@media (prefers-reduced-motion: reduce) {\n  .elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button:is(:hover, :focus-visible) { transform: none; }\n}\n\n/* --------------------------------------------------------------------------\n   Hero\n   -------------------------------------------------------------------------- */\n.elementor .pes-hero::after { /* orange→gold line along the bottom */\n  content: \"\";\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: 3px;\n  background: var(--pes-gradient);\n  z-index: 3;\n}\n.elementor .pes-hero > .elementor-container { padding-top: var(--pes-header-h); }\n/* pes-hero-center – centred hero for service / industry pages */\n.elementor .pes-hero-center .elementor-heading-title,\n.elementor .pes-hero-center .pes-lead,\n.elementor .pes-hero-center .elementor-button-wrapper { text-align: center; }\n.elementor .pes-hero-center .pes-h1 .elementor-heading-title {\n  max-width: 1000px;\n  margin: 0 auto;\n  font-size: clamp(40px, 5.4vw, 72px);\n  line-height: 1.02;\n}\n.elementor .pes-hero-center .pes-lead { margin: 0 auto 16px; max-width: 720px; font-size: 19px; }\n.elementor .pes-hero-center .pes-btn-solid .elementor-button { padding: 18px 36px; font-size: 19px; }\n\n/* --------------------------------------------------------------------------\n   Problem band – centred statement over a darkened photo\n   -------------------------------------------------------------------------- */\n.elementor .pes-band::before,\n.elementor .pes-band::after {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  right: 0;\n  height: 3px;\n  background: var(--pes-gradient);\n  z-index: 3;\n}\n.elementor .pes-band::before { top: 0; }\n.elementor .pes-band::after { bottom: 0; }\n.elementor .pes-band .pes-h2 .elementor-heading-title { max-width: 1000px; margin: 0 auto; }\n\n/* --------------------------------------------------------------------------\n   Feature row (text + framed image)\n   pes-feature           – circuit lines on the LEFT  (text left, image right)\n   pes-feature-reverse   – circuit lines on the RIGHT (image left, text right)\n   -------------------------------------------------------------------------- */\n.elementor .pes-feature::before {\n  content: \"\";\n  position: absolute;\n  top: 40px;\n  left: 0;\n  width: 320px;\n  height: 60px;\n  background: var(--pes-circuit) no-repeat left top / contain;\n  pointer-events: none;\n}\n.elementor .pes-feature-reverse::before {\n  left: auto;\n  right: 0;\n  transform: scaleX(-1);\n}\n\n/* Framed image or video – the PES frame shape.\n   The border line follows the approved outline: big angled corners and a wide recess in\n   the middle third of the top and bottom edges. The photo stays a full rectangle inside\n   it; the recess sits in the space above and below the photo, never over it.\n   Width follows the column and height follows the photo.\n   pes-frame        – orange→gold gradient line\n   pes-frame-blue   – navy line\n   Works on Image and Video widgets. Generated by scripts/frame_outline.py\n   (line 5px, corners 52×28px, recess 18px deep).                       */\n.elementor .pes-frame.elementor-widget {\n  position: relative;\n  width: calc(100% + 12px);   /* photo stays as wide as before; the frame grows outwards */\n  margin-left: -6px;\n  margin-right: -6px;\n  padding: 30px 16px;\n  background: var(--pes-gradient);\n  clip-path: polygon(0px 28px, 52px 0px, 33.33% 0px, calc(33.33% + 22px) 18px, calc(66.67% - 22px) 18px, 66.67% 0px, calc(100% - 52px) 0px, 100% 28px, 100% calc(100% - 28px), calc(100% - 52px) 100%, 66.67% 100%, calc(66.67% - 22px) calc(100% - 18px), calc(33.33% + 22px) calc(100% - 18px), 33.33% 100%, 52px 100%, 0px calc(100% - 28px));\n}\n.elementor .pes-frame-blue.elementor-widget { background: var(--pes-navy); }\n.elementor .pes-frame.elementor-widget::before { /* dark area inside the line */\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: var(--pes-bg);\n  clip-path: polygon(5px 30.99px, 53.26px 5px, calc(33.33% - 1.78px) 5px, calc(33.33% + 20.22px) 23px, calc(66.67% - 20.22px) 23px, calc(66.67% + 1.78px) 5px, calc(100% - 53.26px) 5px, calc(100% - 5px) 30.99px, calc(100% - 5px) calc(100% - 30.99px), calc(100% - 53.26px) calc(100% - 5px), calc(66.67% + 1.78px) calc(100% - 5px), calc(66.67% - 20.22px) calc(100% - 23px), calc(33.33% + 20.22px) calc(100% - 23px), calc(33.33% - 1.78px) calc(100% - 5px), 53.26px calc(100% - 5px), 5px calc(100% - 30.99px));\n}\n.elementor .pes-frame.elementor-widget .elementor-widget-container,\n.elementor .pes-frame.elementor-widget img,\n.elementor .pes-frame.elementor-widget .elementor-wrapper { position: relative; }\n.elementor .pes-frame img,\n.elementor .pes-frame .elementor-wrapper {\n  --pes-cut: 15px;\n  display: block;\n  width: 100%;\n  clip-path: polygon(var(--pes-cut) 0, calc(100% - var(--pes-cut)) 0, 100% var(--pes-cut),\n    100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, var(--pes-cut) 100%,\n    0 calc(100% - var(--pes-cut)), 0 var(--pes-cut));\n}\n/* height follows the photo, but never collapses: short or missing photos fill a sensible\n   minimum and are cropped to fit */\n.elementor .pes-frame img { height: auto; max-width: 100%; min-height: 380px; object-fit: cover; }\n@media (max-width: 767px) {\n  .elementor .pes-frame img { min-height: 240px; }\n}\n\n\n/* --------------------------------------------------------------------------\n   Section title with circuit lines on both sides (\"Our Process\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-title-circuit { width: 100%; }\n.elementor .pes-title-circuit .elementor-heading-title {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 28px;\n  font-family: var(--pes-font-head);\n  font-size: clamp(36px, 5vw, 56px);\n  font-weight: 700;\n  color: var(--pes-white);\n  text-align: center;\n}\n/* circuit lines either side of the title; they shrink to fit and never overlap the text */\n.elementor .pes-title-circuit .elementor-heading-title::before,\n.elementor .pes-title-circuit .elementor-heading-title::after {\n  content: \"\";\n  flex: 1 1 0;\n  min-width: 40px;\n  max-width: 320px;\n  height: 60px;\n  margin-top: 26px;\n  background: var(--pes-circuit) no-repeat right center / auto 60px;\n  pointer-events: none;\n}\n.elementor .pes-title-circuit .elementor-heading-title::after { transform: scaleX(-1); }\n\n/* --------------------------------------------------------------------------\n   Process steps\n   pes-step-num     – the big number heading\n   pes-step-card    – icon box: white card with cut corner + navy edge\n   -------------------------------------------------------------------------- */\n.elementor .pes-step-num .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: 92px;\n  font-weight: 700;\n  line-height: 0.8;\n  color: var(--pes-white);\n  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);\n}\n.elementor .pes-step-num.elementor-widget {\n  position: relative;\n  z-index: 2;\n  margin-bottom: -26px;\n  margin-block-end: -26px;\n  text-align: center;\n}\n.elementor .pes-step-card.elementor-widget {\n  position: relative;\n  padding: 30px 24px;\n  background: var(--pes-white);\n  box-shadow: 6px 6px 0 var(--pes-navy);\n}\n.elementor .pes-step-card.elementor-widget::before { /* angled top-right corner */\n  content: \"\";\n  position: absolute;\n  top: 0;\n  right: -6px;\n  width: 36px;\n  height: 36px;\n  background: linear-gradient(to bottom left, var(--pes-bg) 50%, var(--pes-navy) 50%, var(--pes-navy) calc(50% + 4px), transparent calc(50% + 4px));\n  pointer-events: none;\n}\n.elementor .pes-step-card .elementor-icon-box-icon { margin-bottom: 18px; }\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon {\n  font-size: 64px;\n  color: var(--pes-navy);\n  fill: var(--pes-navy);\n}\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-navy); }\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon-box-description {\n  margin: 0;\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  line-height: 1.6;\n  text-align: left;\n  color: var(--pes-text-dark);\n}\n\n.elementor .pes-step-card.elementor-widget-icon-box .elementor-icon-box-title {\n  margin: 0 0 6px;\n  font-family: var(--pes-font-head);\n  font-size: 22px;\n  font-weight: 700;\n  text-align: left;\n  color: var(--pes-text-dark);\n}\n.elementor .pes-process .pes-eyebrow { margin-top: -8px; }\n.elementor .pes-steps { margin: 34px 0 30px; }\n\n/* --------------------------------------------------------------------------\n   Who it's for – photo cards (columns with a background image)\n   The description slides in on hover; on touch screens it is always shown.\n   -------------------------------------------------------------------------- */\n.elementor .pes-audience-card > .elementor-widget-wrap {\n  --pes-cut: 18px;\n  position: relative;\n  min-height: 380px;\n  margin: 8px;\n  padding: 34px 22px !important;\n  align-content: flex-start;\n  overflow: hidden;\n  background-size: cover;\n  background-position: center;\n  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),\n    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));\n}\n.elementor .pes-audience-card > .elementor-widget-wrap::before { /* darkening */\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(180deg, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.25) 60%, rgba(10, 10, 12, 0.6) 100%);\n  transition: background 0.3s;\n}\n.elementor .pes-audience-card > .elementor-widget-wrap::after { /* gradient border on the angled shape */\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: var(--pes-gradient);\n  opacity: 0.85;\n  pointer-events: none;\n  clip-path: polygon(evenodd,\n    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,\n    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),\n    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);\n}\n.elementor .pes-audience-card > .elementor-widget-wrap > .elementor-element { position: relative; z-index: 1; }\n.elementor .pes-card-title .elementor-heading-title {\n  font-family: var(--pes-font-head);\n  font-size: 24px;\n  font-weight: 700;\n  letter-spacing: 0.03em;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-card-title .elementor-heading-title::after {\n  content: \"\";\n  display: block;\n  width: 0;\n  height: 3px;\n  margin-top: 12px;\n  background: var(--pes-gradient);\n  transition: width 0.35s;\n}\n.elementor .pes-card-text {\n  font-family: var(--pes-font-body);\n  font-size: 15px;\n  line-height: 1.6;\n  color: var(--pes-white);\n  opacity: 0;\n  transform: translateY(12px);\n  transition: opacity 0.35s, transform 0.35s;\n}\n.elementor .pes-audience-card:hover > .elementor-widget-wrap::before { background: rgba(10, 10, 12, 0.78); }\n.elementor .pes-audience-card:hover .pes-card-title .elementor-heading-title::after { width: 80px; }\n.elementor .pes-audience-card:hover .pes-card-text { opacity: 1; transform: none; }\n@media (hover: none) {\n  .elementor .pes-card-text { opacity: 1; transform: none; }\n  .elementor .pes-card-title .elementor-heading-title::after { width: 80px; }\n  .elementor .pes-audience-card > .elementor-widget-wrap::before { background: rgba(10, 10, 12, 0.7); }\n}\n.elementor .pes-audience { margin-top: 30px; }\n\n/* --------------------------------------------------------------------------\n   Reviews (Trustindex shortcode) and FAQ (Accordion widget)\n   -------------------------------------------------------------------------- */\n.elementor .pes-reviews { margin-top: 20px; }\n.elementor .pes-faq { margin-top: 26px; }\n.elementor .pes-faq .elementor-accordion-item {\n  position: relative;\n  margin-bottom: 12px;\n  border: 1px solid rgba(255, 255, 255, 0.08) !important;\n  background: #232121;\n}\n.elementor .pes-faq .elementor-accordion-item::before { /* gradient bar on the left */\n  content: \"\";\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 4px;\n  background: var(--pes-gradient);\n}\n.elementor .pes-faq .elementor-tab-title {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  padding: 20px 24px 20px 28px;\n  border: 0 !important;\n  cursor: pointer;\n}\n.elementor .pes-faq.elementor-widget-accordion .elementor-accordion-title {\n  font-family: var(--pes-font-ui);\n  font-size: 17px;\n  font-weight: 600;\n  color: var(--pes-white);\n  text-decoration: none;\n}\n.elementor .pes-faq .elementor-accordion-icon {\n  display: grid;\n  place-items: center;\n  flex: none;\n  width: 28px;\n  height: 28px;\n  float: none;\n  text-align: center;\n  font-size: 13px;\n  color: var(--pes-bg) !important;\n  background: var(--pes-gradient);\n  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);\n}\n.elementor .pes-faq .elementor-accordion-icon i,\n.elementor .pes-faq .elementor-accordion-icon svg { color: var(--pes-bg); fill: var(--pes-bg); }\n.elementor .pes-faq .elementor-tab-title.elementor-active .elementor-accordion-title {\n  background: var(--pes-gradient);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n.elementor .pes-faq .elementor-tab-content {\n  padding: 0 28px 22px 72px;\n  border: 0 !important;\n  font-family: var(--pes-font-body);\n  font-size: 16px;\n  line-height: 1.7;\n  color: var(--pes-text);\n}\n.elementor .pes-faq .elementor-tab-content p:last-child { margin-bottom: 0; }\n\n/* --------------------------------------------------------------------------\n   CTA banner (\"Schedule a consultation today\")\n   -------------------------------------------------------------------------- */\n.elementor .pes-cta {\n  position: relative;\n  overflow: hidden;\n  background:\n    radial-gradient(ellipse 45% 110% at 62% 15%, rgba(32, 66, 205, 0.95) 0%, rgba(22, 44, 150, 0.6) 45%, transparent 75%),\n    linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%);\n  color: var(--pes-white);\n}\n.elementor .pes-cta::after { /* neon lightning bolt */\n  content: \"\";\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 63%;\n  width: 16%;\n  min-width: 150px;\n  background: var(--pes-bolt) no-repeat center / 100% 100%;\n  filter: drop-shadow(0 0 4px #7fd0ff) drop-shadow(0 0 12px #2f8bff) drop-shadow(0 0 26px #1d5cff);\n  pointer-events: none;\n}\n.elementor .pes-cta > .elementor-container { position: relative; z-index: 1; }\n.elementor .pes-cta-box .elementor-icon-box-wrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 0;\n  text-align: left;\n}\n.elementor .pes-cta-box .elementor-icon-box-icon {\n  flex: none;\n  margin: 0;\n  padding-right: 26px;\n  margin-right: 26px;\n  border-right: 1px solid rgba(255, 255, 255, 0.35);\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon {\n  font-size: 56px;\n  color: var(--pes-white);\n  fill: var(--pes-white);\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-white); }\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon-box-title {\n  margin: 0 0 2px;\n  font-family: var(--pes-font-cta);\n  font-size: clamp(24px, 2.6vw, 34px);\n  font-weight: 700;\n  line-height: 1.1;\n  text-transform: uppercase;\n  color: var(--pes-white);\n}\n.elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon-box-description {\n  margin: 0;\n  font-family: var(--pes-font-cta);\n  font-size: clamp(17px, 1.7vw, 22px);\n  font-weight: 500;\n  letter-spacing: 0.03em;\n  color: rgba(255, 255, 255, 0.92);\n}\n\n/* --------------------------------------------------------------------------\n   Mobile\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  :root { --pes-header-h: 80px; }\n  .elementor .pes-header::before { clip-path: none; }\n  .elementor .pes-header::after { clip-path: none; top: auto; height: 3px; }\n  .elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 10px; padding-bottom: 10px; }\n  .elementor .pes-header .pes-nav-col > .elementor-widget-wrap { padding-top: 10px; padding-bottom: 10px; }\n  .elementor .pes-nav .elementor-menu-toggle { font-size: 22px; padding: 6px; }\n  .elementor .pes-logo img { height: 44px; }\n  .elementor .pes-header .pes-btn-solid .elementor-button { padding: 11px 16px; font-size: 14px; }\n  .elementor .pes-feature::before,\n  .elementor .pes-title-circuit .elementor-heading-title::before,\n  .elementor .pes-title-circuit .elementor-heading-title::after { display: none; }\n  .elementor .pes-step-num .elementor-heading-title { font-size: 72px; }\n  /* text/image rows stack on phones, so the wide desktop gap isn't needed there */\n  .elementor .pes-section > .elementor-column-gap-wider > .elementor-column > .elementor-element-populated { padding: 15px; }\n  .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }\n  .elementor .pes-faq .elementor-tab-content { padding-left: 28px; }\n  .elementor .pes-cta::after { left: auto; right: -40px; opacity: 0.45; }\n  .elementor .pes-cta-box .elementor-icon-box-icon { padding-right: 16px; margin-right: 16px; }\n  .elementor .pes-cta-box.elementor-widget-icon-box .elementor-icon { font-size: 42px; }\n  .elementor .pes-align-right .elementor-button-wrapper { text-align: left; }\n  .elementor .pes-header .pes-align-right .elementor-button-wrapper { text-align: right; }\n}\n</style>",
                 "_css_classes": "pes-styles-widget"
               },
               "elements": []
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "id": "f6f9052",
+      "id": "9017905",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -84,7 +84,7 @@
       },
       "elements": [
         {
-          "id": "984fb01",
+          "id": "9f57330",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -105,11 +105,22 @@
                 "_css_classes": "pes-logo"
               },
               "elements": []
+            },
+            {
+              "id": "984fb01",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<style>\n:root {\n  \n  --pes-orange: #dd7033;\n  --pes-amber: #eaa24e;\n  --pes-gold: #f8da72;\n  --pes-gradient: linear-gradient(90deg, var(--pes-orange) 0%, var(--pes-amber) 50%, var(--pes-gold) 100%);\n\n  --pes-bg: #1b1a1a;\n  --pes-bg-grid: rgba(255, 255, 255, 0.035);\n  --pes-navy: #2d4a8f;\n  --pes-blue-top: #10206a;   \n  --pes-blue-mid: #0a1850;\n  --pes-blue-glow: rgba(32, 66, 205, 0.55);\n  --pes-black: #121111;      \n  --pes-white: #ffffff;\n  --pes-text: #e9e9ea;\n  --pes-text-dark: #1d1d1f;\n  --pes-font-head: \"Saira\", \"Arial Narrow\", sans-serif;\n  --pes-font-body: \"Inter\", \"Helvetica Neue\", Arial, sans-serif;\n  --pes-font-ui: \"Poppins\", \"Helvetica Neue\", Arial, sans-serif;\n  --pes-font-cta: \"Rajdhani\", \"Arial Narrow\", sans-serif;\n\n  --pes-circuit: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='60' viewBox='0 0 320 60' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='280' y2='0'%3E%3Cstop offset='0' stop-color='%23F8DA72'/%3E%3Cstop offset='.5' stop-color='%23EAA24E'/%3E%3Cstop offset='1' stop-color='%23DD7033'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 8H118' stroke='url%28%23g%29' stroke-width='2'/%3E%3Ccircle cx='123' cy='8' r='5' fill='url%28%23g%29'/%3E%3Cpath d='M0 46H34L52 28H264' stroke='url%28%23g%29' stroke-width='2'/%3E%3Ccircle cx='270' cy='28' r='5' fill='url%28%23g%29'/%3E%3C/svg%3E\");\n  --pes-arrow: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10' viewBox='0 0 24 10' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='24' y2='0'%3E%3Cstop offset='0' stop-color='%23DD7033'/%3E%3Cstop offset='1' stop-color='%23F8DA72'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 5H20' stroke='url%28%23g%29' stroke-width='2'/%3E%3Cpath d='M17 1.5 22.5 5 17 8.5Z' fill='url%28%23g%29'/%3E%3C/svg%3E\");\n  --pes-bolt: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 250' preserveAspectRatio='xMidYMid slice' fill='none'%3E%3Cpath d='M115 -20H215L155 66H250L85 270H-5L95 130H0Z' stroke='%2370c6ff' stroke-width='4' stroke-linejoin='miter'/%3E%3C/svg%3E\");\n\n  \n  --pes-header-h: 150px;\n  --pes-tab-start: 365px; \n  --pes-tab-end: 270px;   \n}\n.elementor .pes-header {\n  position: relative;\n  z-index: 20;\n  min-height: var(--pes-header-h);\n  background: transparent;\n}\n.elementor .pes-header + .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }\nbody:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }\n.elementor-location-header:has(.pes-header) { position: relative; z-index: 20; }\n.elementor .pes-header > .elementor-container { position: relative; z-index: 2; min-height: var(--pes-header-h); }\n.elementor .pes-header::before,\n.elementor .pes-header::after {\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n}\n.elementor .pes-header::before { \n  background-color: var(--pes-black);\n  background-image:\n    linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px),\n    linear-gradient(180deg, var(--pes-black) 0%, var(--pes-bg) 100%);\n  background-size: 96px 96px, 96px 96px, 100% 100%;\n  clip-path: polygon(0 0, 100% 0, 100% 50%,\n    calc(100% - var(--pes-tab-end)) 50%,\n    calc(100% - var(--pes-tab-start)) 100%,\n    0 100%);\n}\n.elementor .pes-header::after {\n  background: var(--pes-gradient);\n  clip-path: polygon(0 calc(100% - 4px),\n    calc(100% - var(--pes-tab-start) - 2px) calc(100% - 4px),\n    calc(100% - var(--pes-tab-end) - 2px) calc(50% - 4px),\n    100% calc(50% - 4px),\n    100% 50%,\n    calc(100% - var(--pes-tab-end)) 50%,\n    calc(100% - var(--pes-tab-start)) 100%,\n    0 100%);\n}\n.elementor .pes-logo img {\n  display: block;\n  width: auto;\n  max-width: 100%;\n  height: 58px;\n  object-fit: contain;\n}\n.elementor .pes-logo.elementor-widget-image { text-align: left; }\n.elementor .pes-header-styles { position: absolute; width: 0; height: 0; overflow: hidden; margin: 0 !important; }\n.elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 78px; padding-bottom: 6px; }\n.elementor .pes-header .menu {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  gap: 4px 34px;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.elementor .pes-header .menu > li { position: relative; }\n.elementor .pes-header .menu a {\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 600;\n  color: var(--pes-white);\n  text-decoration: none;\n}\n.elementor .pes-header .menu a:hover,\n.elementor .pes-header .menu .current-menu-item > a { color: var(--pes-orange); }\n.elementor .pes-header .menu > li > a::after { \n  content: \"\";\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  margin: 0 0 3px 6px;\n  border-right: 1.5px solid var(--pes-amber);\n  border-bottom: 1.5px solid var(--pes-amber);\n  transform: rotate(45deg);\n}\n.elementor .pes-header .menu > li:not(.menu-item-has-children) > a::after { display: none; }\n.elementor .pes-header .sub-menu {\n  display: none;\n  position: absolute;\n  top: 100%;\n  left: -14px;\n  z-index: 50;\n  min-width: 220px;\n  margin: 0;\n  padding: 10px 0;\n  list-style: none;\n  background: var(--pes-black);\n  border-top: 2px solid var(--pes-orange);\n  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);\n}\n.elementor .pes-header li:hover > .sub-menu,\n.elementor .pes-header li:focus-within > .sub-menu { display: block; }\n.elementor .pes-header .sub-menu a { display: block; padding: 8px 14px; font-weight: 500; }\n.elementor .pes-header .sub-menu a:hover { color: var(--pes-white); background: var(--pes-orange); }\n.elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { gap: 4px 34px; }\n.elementor .pes-nav .elementor-nav-menu--main .elementor-item {\n  padding: 8px 0 !important;\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 600;\n  color: var(--pes-white) !important;\n  text-decoration: none !important;\n  white-space: nowrap;\n}\n.elementor .pes-nav .elementor-nav-menu--main .elementor-item:is(:hover, :focus, .elementor-item-active, .highlighted) { color: var(--pes-orange) !important; }\n.elementor .pes-nav .elementor-item:is(:hover, :focus, .highlighted) .sub-arrow { color: var(--pes-orange); }\n.elementor .pes-nav .sub-arrow { margin-left: 6px; padding: 0 !important; color: var(--pes-amber); font-size: 9px; }\n.elementor .pes-nav .sub-arrow svg { fill: var(--pes-amber); width: 9px; height: 9px; }\n.elementor .pes-nav .elementor-nav-menu--main .sub-menu,\n.elementor .pes-nav .elementor-nav-menu--dropdown {\n  background: var(--pes-black) !important;\n}\n.elementor .pes-nav .elementor-nav-menu--main .sub-menu {\n  min-width: 230px !important;\n  padding: 8px 0;\n  border-top: 2px solid var(--pes-orange);\n  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown a {\n  padding: 12px 20px !important;\n  font-family: var(--pes-font-ui);\n  font-size: 15px;\n  font-weight: 500;\n  color: var(--pes-white) !important;\n  text-decoration: none !important;\n  background: transparent !important;\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown a:is(:hover, :focus, .elementor-item-active, .highlighted) {\n  color: var(--pes-white) !important;\n  background: var(--pes-orange) !important;\n}\n.elementor .pes-nav .elementor-menu-toggle {\n  width: auto;\n  margin-left: auto;\n  padding: 8px;\n  font-size: 26px;\n  color: var(--pes-white) !important;\n  background: transparent !important;\n  border: 2px solid rgba(221, 112, 51, 0.7);\n}\n.elementor .pes-nav .elementor-menu-toggle:hover,\n.elementor .pes-nav .elementor-menu-toggle.elementor-active { color: var(--pes-orange) !important; border-color: var(--pes-orange); }\n.elementor .pes-nav .elementor-menu-toggle svg { fill: currentColor; }\n.elementor .pes-header .pes-nav-col,\n.elementor .pes-header .pes-nav-col > .elementor-widget-wrap,\n.elementor .pes-header .pes-nav,\n.elementor .pes-header .pes-nav > .elementor-widget-container { position: static; }\n.elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container {\n  position: absolute !important;\n  top: 100% !important;\n  left: 0 !important;\n  right: 0 !important;\n  width: auto !important;\n  max-width: none !important;\n  z-index: 60;\n  margin: 0 !important;\n  border-top: 3px solid var(--pes-orange);\n  border-image: var(--pes-gradient) 1;\n  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.45);\n}\n.elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container > .elementor-nav-menu > li { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }\n.elementor .pes-nav .elementor-nav-menu--dropdown .sub-menu a { padding-left: 36px !important; font-size: 14px; color: rgba(255, 255, 255, 0.85) !important; }\n.elementor .pes-header .pes-btn-solid .elementor-button { white-space: nowrap; }\n@media (min-width: 1025px) and (max-width: 1280px) {\n.elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { gap: 4px 20px; }\n.elementor .pes-nav .elementor-nav-menu--main .elementor-item,\n  .elementor .pes-header .menu a { font-size: 14px; }\n.elementor .pes-header .menu { gap: 4px 20px; }\n}\n@media (max-width: 1024px) {\n.elementor .pes-nav .elementor-menu-toggle { display: inline-flex; }\n.elementor .pes-header .pes-header-cta > .elementor-widget-wrap { justify-content: flex-end; }\n}\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn-solid .elementor-button,\n.elementor .pes-btn-pill .elementor-button {\n  --pes-cut: 9px;\n  position: relative;\n  display: inline-flex;\n  align-items: center;\n  font-family: var(--pes-font-ui);\n  font-weight: 700;\n  line-height: 1;\n  color: var(--pes-white);\n  text-decoration: none;\n  border: 0;\n  box-shadow: none;\n}\n.elementor .pes-btn .elementor-button,\n.elementor .pes-btn-solid .elementor-button {\n  border-radius: 0;\n  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),\n    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));\n}\n.elementor .pes-btn-solid .elementor-button,\n.elementor .pes-btn-solid .elementor-button:hover,\n.elementor .pes-btn-solid .elementor-button:focus {\n  background: var(--pes-gradient) !important;\n  color: var(--pes-white);\n}\n.elementor .pes-btn-solid .elementor-button {\n  padding: 15px 30px;\n  font-size: 18px;\n  text-shadow: 0 1px 2px rgba(120, 50, 0, 0.35);\n}\n.elementor .pes-align-right .elementor-button-wrapper { text-align: right; }\n.elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button {\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n}\n.elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button:is(:hover, :focus-visible) {\n  transform: scale(1.05);\n}\n.elementor :is(.pes-btn, .pes-btn-solid) .elementor-button-wrapper { transition: filter 0.25s ease; }\n.elementor :is(.pes-btn, .pes-btn-solid) .elementor-button-wrapper:has(.elementor-button:is(:hover, :focus-visible)) {\n  filter: drop-shadow(0 0 8px rgba(234, 162, 78, 0.7)) drop-shadow(0 0 20px rgba(221, 112, 51, 0.35));\n}\n@media (prefers-reduced-motion: reduce) {\n.elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button:is(:hover, :focus-visible) { transform: none; }\n}\n.elementor .pes-hero-center .pes-btn-solid .elementor-button { padding: 18px 36px; font-size: 19px; }\n@media (max-width: 767px) {\n:root { --pes-header-h: 80px; }\n.elementor .pes-header::before { clip-path: none; }\n.elementor .pes-header::after { clip-path: none; top: auto; height: 3px; }\n.elementor .pes-header .pes-header-cta > .elementor-widget-wrap { padding-top: 10px; padding-bottom: 10px; }\n.elementor .pes-header .pes-nav-col > .elementor-widget-wrap { padding-top: 10px; padding-bottom: 10px; }\n.elementor .pes-nav .elementor-menu-toggle { font-size: 22px; padding: 6px; }\n.elementor .pes-logo img { height: 44px; }\n.elementor .pes-header .pes-btn-solid .elementor-button { padding: 11px 16px; font-size: 14px; }\n.elementor .pes-align-right .elementor-button-wrapper { text-align: left; }\n.elementor .pes-header .pes-align-right .elementor-button-wrapper { text-align: right; }\n}\n</style>",
+                "_css_classes": "pes-header-styles"
+              },
+              "elements": []
             }
           ]
         },
         {
-          "id": "9b884c8",
+          "id": "ee95ade",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -122,7 +133,7 @@
           },
           "elements": [
             {
-              "id": "9f57330",
+              "id": "9b884c8",
               "elType": "widget",
               "widgetType": "nav-menu",
               "isInner": false,
@@ -145,7 +156,7 @@
           ]
         },
         {
-          "id": "9219022",
+          "id": "f6f9052",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -157,7 +168,7 @@
           },
           "elements": [
             {
-              "id": "ee95ade",
+              "id": "9219022",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -178,7 +189,7 @@
       ]
     },
     {
-      "id": "e1bdfb0",
+      "id": "1567eec",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -216,7 +227,7 @@
       },
       "elements": [
         {
-          "id": "5b78da0",
+          "id": "e1bdfb0",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -225,7 +236,7 @@
           },
           "elements": [
             {
-              "id": "9017905",
+              "id": "178f654",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -237,7 +248,7 @@
               "elements": []
             },
             {
-              "id": "178f654",
+              "id": "3b5c348",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -248,7 +259,7 @@
               "elements": []
             },
             {
-              "id": "3b5c348",
+              "id": "5b78da0",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -269,7 +280,7 @@
       ]
     },
     {
-      "id": "7f69303",
+      "id": "3530bf3",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -303,7 +314,7 @@
       },
       "elements": [
         {
-          "id": "1ffaaba",
+          "id": "947825f",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -313,7 +324,7 @@
           },
           "elements": [
             {
-              "id": "0895eb9",
+              "id": "7a0c9b4",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -325,7 +336,7 @@
               "elements": []
             },
             {
-              "id": "7a0c9b4",
+              "id": "439ce8a",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -337,7 +348,7 @@
               "elements": []
             },
             {
-              "id": "439ce8a",
+              "id": "1ffaaba",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -348,7 +359,7 @@
               "elements": []
             },
             {
-              "id": "3d2c5a5",
+              "id": "0895eb9",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -364,7 +375,7 @@
               },
               "elements": [
                 {
-                  "id": "48233c4",
+                  "id": "1b2a74d",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -373,7 +384,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1567eec",
+                      "id": "28f04a8",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -385,7 +396,7 @@
                       "elements": []
                     },
                     {
-                      "id": "28f04a8",
+                      "id": "48233c4",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -398,7 +409,7 @@
                   ]
                 },
                 {
-                  "id": "06717ad",
+                  "id": "3d2c5a5",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -407,7 +418,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1b2a74d",
+                      "id": "e27850a",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -419,7 +430,7 @@
                       "elements": []
                     },
                     {
-                      "id": "e27850a",
+                      "id": "06717ad",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -436,7 +447,7 @@
           ]
         },
         {
-          "id": "0645b0e",
+          "id": "7f69303",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -446,7 +457,7 @@
           },
           "elements": [
             {
-              "id": "947825f",
+              "id": "b5009b9",
               "elType": "widget",
               "widgetType": "video",
               "isInner": false,
@@ -457,7 +468,7 @@
               "elements": []
             },
             {
-              "id": "b5009b9",
+              "id": "0645b0e",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -478,7 +489,7 @@
       ]
     },
     {
-      "id": "6258ee0",
+      "id": "e0cac5e",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -513,7 +524,7 @@
       },
       "elements": [
         {
-          "id": "75e2f80",
+          "id": "6258ee0",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -522,7 +533,7 @@
           },
           "elements": [
             {
-              "id": "3530bf3",
+              "id": "9f524c6",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -534,7 +545,7 @@
               "elements": []
             },
             {
-              "id": "9f524c6",
+              "id": "ad0bd0f",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -546,7 +557,7 @@
               "elements": []
             },
             {
-              "id": "ad0bd0f",
+              "id": "75e2f80",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -561,7 +572,7 @@
       ]
     },
     {
-      "id": "d4e855b",
+      "id": "93e1e8c",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -595,7 +606,7 @@
       },
       "elements": [
         {
-          "id": "15836b4",
+          "id": "0f6202b",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -605,7 +616,7 @@
           },
           "elements": [
             {
-              "id": "e0cac5e",
+              "id": "15836b4",
               "elType": "widget",
               "widgetType": "image",
               "isInner": false,
@@ -618,7 +629,7 @@
           ]
         },
         {
-          "id": "b1e4b97",
+          "id": "d4e855b",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -628,7 +639,7 @@
           },
           "elements": [
             {
-              "id": "0f6202b",
+              "id": "f77f496",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -640,7 +651,7 @@
               "elements": []
             },
             {
-              "id": "f77f496",
+              "id": "5c8ce9d",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -652,7 +663,7 @@
               "elements": []
             },
             {
-              "id": "5c8ce9d",
+              "id": "2ed536a",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -663,7 +674,7 @@
               "elements": []
             },
             {
-              "id": "2ed536a",
+              "id": "a1614c2",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -675,14 +686,14 @@
               "elements": []
             },
             {
-              "id": "90c4f90",
+              "id": "a6bdf55",
               "elType": "widget",
               "widgetType": "icon-list",
               "isInner": false,
               "settings": {
                 "icon_list": [
                   {
-                    "_id": "a1614c2",
+                    "_id": "42d8bea",
                     "text": "Benefit 1",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -690,7 +701,7 @@
                     }
                   },
                   {
-                    "_id": "42d8bea",
+                    "_id": "5a8bfc8",
                     "text": "Benefit 2",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -698,7 +709,7 @@
                     }
                   },
                   {
-                    "_id": "5a8bfc8",
+                    "_id": "3c8d785",
                     "text": "Benefit 3",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -706,7 +717,7 @@
                     }
                   },
                   {
-                    "_id": "3c8d785",
+                    "_id": "843d13d",
                     "text": "Benefit 4",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -714,7 +725,7 @@
                     }
                   },
                   {
-                    "_id": "843d13d",
+                    "_id": "90c4f90",
                     "text": "Benefit 5",
                     "selected_icon": {
                       "value": "fas fa-check",
@@ -727,7 +738,7 @@
               "elements": []
             },
             {
-              "id": "a6bdf55",
+              "id": "b1e4b97",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -748,7 +759,7 @@
       ]
     },
     {
-      "id": "c5760d4",
+      "id": "67f7bf2",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -772,7 +783,7 @@
       },
       "elements": [
         {
-          "id": "709800a",
+          "id": "c5760d4",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -781,7 +792,7 @@
           },
           "elements": [
             {
-              "id": "e0fcea3",
+              "id": "09fbb26",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -793,7 +804,7 @@
               "elements": []
             },
             {
-              "id": "09fbb26",
+              "id": "0d5b5c6",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -805,7 +816,7 @@
               "elements": []
             },
             {
-              "id": "6e0bedf",
+              "id": "e0fcea3",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -821,7 +832,7 @@
               },
               "elements": [
                 {
-                  "id": "17e26bc",
+                  "id": "20eb905",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -831,7 +842,7 @@
                   },
                   "elements": [
                     {
-                      "id": "93e1e8c",
+                      "id": "a90f15f",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -843,7 +854,7 @@
                       "elements": []
                     },
                     {
-                      "id": "a90f15f",
+                      "id": "17e26bc",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -865,7 +876,7 @@
                   ]
                 },
                 {
-                  "id": "58dfea6",
+                  "id": "3652dee",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -875,7 +886,7 @@
                   },
                   "elements": [
                     {
-                      "id": "20eb905",
+                      "id": "c551435",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -887,7 +898,7 @@
                       "elements": []
                     },
                     {
-                      "id": "c551435",
+                      "id": "58dfea6",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -909,7 +920,7 @@
                   ]
                 },
                 {
-                  "id": "43a72ee",
+                  "id": "bf1e346",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -919,7 +930,7 @@
                   },
                   "elements": [
                     {
-                      "id": "3652dee",
+                      "id": "d925831",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -931,7 +942,7 @@
                       "elements": []
                     },
                     {
-                      "id": "d925831",
+                      "id": "43a72ee",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -953,7 +964,7 @@
                   ]
                 },
                 {
-                  "id": "2e579d9",
+                  "id": "6e0bedf",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -963,7 +974,7 @@
                   },
                   "elements": [
                     {
-                      "id": "bf1e346",
+                      "id": "bb3e639",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -975,7 +986,7 @@
                       "elements": []
                     },
                     {
-                      "id": "bb3e639",
+                      "id": "2e579d9",
                       "elType": "widget",
                       "widgetType": "icon-box",
                       "isInner": false,
@@ -999,7 +1010,7 @@
               ]
             },
             {
-              "id": "0d5b5c6",
+              "id": "709800a",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,
@@ -1020,7 +1031,7 @@
       ]
     },
     {
-      "id": "4fd3c50",
+      "id": "9d1d598",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1054,7 +1065,7 @@
       },
       "elements": [
         {
-          "id": "c0cd9b8",
+          "id": "2a65037",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1064,7 +1075,7 @@
           },
           "elements": [
             {
-              "id": "67f7bf2",
+              "id": "e65d8a6",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1076,7 +1087,7 @@
               "elements": []
             },
             {
-              "id": "e65d8a6",
+              "id": "c0cd9b8",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -1089,7 +1100,7 @@
           ]
         },
         {
-          "id": "747cdc6",
+          "id": "4fd3c50",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1099,7 +1110,7 @@
           },
           "elements": [
             {
-              "id": "2a65037",
+              "id": "747cdc6",
               "elType": "widget",
               "widgetType": "video",
               "isInner": false,
@@ -1114,7 +1125,7 @@
       ]
     },
     {
-      "id": "919cae8",
+      "id": "9b420de",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1138,7 +1149,7 @@
       },
       "elements": [
         {
-          "id": "635e25c",
+          "id": "919cae8",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1147,7 +1158,7 @@
           },
           "elements": [
             {
-              "id": "2758132",
+              "id": "910229d",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1159,7 +1170,7 @@
               "elements": []
             },
             {
-              "id": "910229d",
+              "id": "635e25c",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1171,7 +1182,7 @@
               "elements": []
             },
             {
-              "id": "c01e857",
+              "id": "2758132",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -1187,7 +1198,7 @@
               },
               "elements": [
                 {
-                  "id": "5a8c9b6",
+                  "id": "fbd101b",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1197,7 +1208,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9d1d598",
+                      "id": "294e604",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1209,7 +1220,7 @@
                       "elements": []
                     },
                     {
-                      "id": "294e604",
+                      "id": "5a8c9b6",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -1222,7 +1233,7 @@
                   ]
                 },
                 {
-                  "id": "0ce8d7e",
+                  "id": "36ad12d",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1232,7 +1243,7 @@
                   },
                   "elements": [
                     {
-                      "id": "fbd101b",
+                      "id": "c58ee0f",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1244,7 +1255,7 @@
                       "elements": []
                     },
                     {
-                      "id": "c58ee0f",
+                      "id": "0ce8d7e",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -1257,7 +1268,7 @@
                   ]
                 },
                 {
-                  "id": "bd32615",
+                  "id": "694a0ff",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1267,7 +1278,7 @@
                   },
                   "elements": [
                     {
-                      "id": "36ad12d",
+                      "id": "a6bd17d",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1279,7 +1290,7 @@
                       "elements": []
                     },
                     {
-                      "id": "a6bd17d",
+                      "id": "bd32615",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -1292,7 +1303,7 @@
                   ]
                 },
                 {
-                  "id": "5d268e0",
+                  "id": "f5252d0",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1302,7 +1313,7 @@
                   },
                   "elements": [
                     {
-                      "id": "694a0ff",
+                      "id": "3384faa",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1314,7 +1325,7 @@
                       "elements": []
                     },
                     {
-                      "id": "3384faa",
+                      "id": "5d268e0",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -1327,7 +1338,7 @@
                   ]
                 },
                 {
-                  "id": "be6e392",
+                  "id": "c01e857",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
@@ -1337,7 +1348,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f5252d0",
+                      "id": "4b91622",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -1349,7 +1360,7 @@
                       "elements": []
                     },
                     {
-                      "id": "4b91622",
+                      "id": "be6e392",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -1368,7 +1379,7 @@
       ]
     },
     {
-      "id": "5e59d12",
+      "id": "ce4136a",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1392,7 +1403,7 @@
       },
       "elements": [
         {
-          "id": "5a86016",
+          "id": "5e59d12",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1401,7 +1412,7 @@
           },
           "elements": [
             {
-              "id": "9b420de",
+              "id": "9f2285f",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1413,7 +1424,7 @@
               "elements": []
             },
             {
-              "id": "9f2285f",
+              "id": "6aa564a",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1425,7 +1436,7 @@
               "elements": []
             },
             {
-              "id": "6aa564a",
+              "id": "5a86016",
               "elType": "widget",
               "widgetType": "shortcode",
               "isInner": false,
@@ -1440,7 +1451,7 @@
       ]
     },
     {
-      "id": "5dc212d",
+      "id": "79d940e",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1464,7 +1475,7 @@
       },
       "elements": [
         {
-          "id": "728c202",
+          "id": "5dc212d",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1473,7 +1484,7 @@
           },
           "elements": [
             {
-              "id": "ce4136a",
+              "id": "b3643c2",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1485,7 +1496,7 @@
               "elements": []
             },
             {
-              "id": "b3643c2",
+              "id": "bfb0e66",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -1497,34 +1508,34 @@
               "elements": []
             },
             {
-              "id": "4cbac00",
+              "id": "728c202",
               "elType": "widget",
               "widgetType": "accordion",
               "isInner": false,
               "settings": {
                 "tabs": [
                   {
-                    "_id": "bfb0e66",
+                    "_id": "b2b53a6",
                     "tab_title": "Question 1",
                     "tab_content": "<p>Answer 1.</p>"
                   },
                   {
-                    "_id": "b2b53a6",
+                    "_id": "7ab1698",
                     "tab_title": "Question 2",
                     "tab_content": "<p>Answer 2.</p>"
                   },
                   {
-                    "_id": "7ab1698",
+                    "_id": "224734d",
                     "tab_title": "Question 3",
                     "tab_content": "<p>Answer 3.</p>"
                   },
                   {
-                    "_id": "224734d",
+                    "_id": "5d856a3",
                     "tab_title": "Question 4",
                     "tab_content": "<p>Answer 4.</p>"
                   },
                   {
-                    "_id": "5d856a3",
+                    "_id": "4cbac00",
                     "tab_title": "Question 5",
                     "tab_content": "<p>Answer 5.</p>"
                   }
@@ -1548,7 +1559,7 @@
       ]
     },
     {
-      "id": "9549fd4",
+      "id": "e1765ca",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -1574,7 +1585,7 @@
       },
       "elements": [
         {
-          "id": "83dac8b",
+          "id": "49be486",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1584,7 +1595,7 @@
           },
           "elements": [
             {
-              "id": "79d940e",
+              "id": "83dac8b",
               "elType": "widget",
               "widgetType": "icon-box",
               "isInner": false,
@@ -1606,7 +1617,7 @@
           ]
         },
         {
-          "id": "706a712",
+          "id": "9549fd4",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -1616,7 +1627,7 @@
           },
           "elements": [
             {
-              "id": "49be486",
+              "id": "706a712",
               "elType": "widget",
               "widgetType": "button",
               "isInner": false,

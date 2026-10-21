@@ -642,11 +642,24 @@ def write_preview(path, title, sections):
     print("wrote", path.relative_to(ROOT.parent))
 
 
+def write_site_css():
+    """dist/pes-site.css – the stylesheet for Elementor > Site Settings > Custom CSS.
+    Elementor puts its own styles first in that file, so an @import there would be
+    ignored; the fonts are loaded by setting them as Global Fonts instead."""
+    css = re.sub(r'@import url\([^)]*\);\n*', "", CSS_FILE.read_text())
+    css = css.replace("This CSS already ships inside", "Site-wide copy. The same CSS also ships inside", 1)
+    (DIST / "pes-site.css").write_text(
+        "/* PES site-wide styles – paste ALL of this into Elementor > Site Settings > Custom CSS.\n"
+        "   Fonts (Saira, Poppins, Inter, Rajdhani) load from Site Settings > Global Fonts. */\n\n" + css)
+    print("wrote", (DIST / "pes-site.css").relative_to(ROOT.parent))
+
+
 def main(argv):
     files = argv[1:] or sorted(str(p) for p in (ROOT / "content").glob("*.json"))
     seen = set()
     for f in files:
         build(f, seen)
+    write_site_css()
 
 
 if __name__ == "__main__":

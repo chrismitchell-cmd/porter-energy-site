@@ -125,6 +125,9 @@
 /* the hero slides up under the header so its photo shows through the tab;
    any other section simply starts below the header */
 .elementor .pes-header + .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }
+/* same when the header is a site-wide Theme Builder header (it then lives outside the page) */
+body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-top: calc(var(--pes-header-h) * -1); }
+.elementor-location-header:has(.pes-header) { position: relative; z-index: 20; }
 .elementor .pes-header > .elementor-container { position: relative; z-index: 2; min-height: var(--pes-header-h); }
 .elementor .pes-header::before,
 .elementor .pes-header::after {

@@ -15,6 +15,7 @@ on every Elementor version, with or without the Container feature switched on.
 The page template carries its own styles in a hidden "PES Styles" section, so
 nothing has to be pasted into the Customizer for it to look right.
 """
+import base64
 import hashlib
 import html
 import json
@@ -539,7 +540,8 @@ def render(el):
         if "pes-logo" in s.get("_css_classes", ""):
             src = "img/logo.png"
         else:
-            src = s.get("image", {}).get("url") or "img/placeholder.jpg"  # like Elementor's own placeholder
+            src = (s.get("image", {}).get("url") or PREVIEW_SRC.get(el["id"])
+                   or (PREVIEW_IMAGES.pop(0) if PREVIEW_IMAGES else "img/placeholder.jpg"))
         body = f'<img src="{src}" alt="">'
     elif kind == "icon-box":
         extra = f" elementor-position-{s['position']} elementor-view-default"
@@ -622,6 +624,14 @@ def write_preview(path, title, sections):
     preview_dir = ROOT / "dist" / "preview" / "img"
     PREVIEW_IMAGES[:] = sorted(f"img/{p.name}" for p in preview_dir.glob("frame-*.jpg")) if preview_dir.exists() else []
     body = "".join(render(s) for s in sections)
+
+    def embed(m):  # inline every preview image so the file works on its own, anywhere
+        f = preview_dir / m.group(2)
+        if not f.exists():
+            return m.group(0)
+        mime = "image/png" if f.suffix == ".png" else "image/jpeg"
+        return f"{m.group(1)}data:{mime};base64,{base64.b64encode(f.read_bytes()).decode()}"
+    body = re.sub(r'(src="|url\()img/([\w.-]+)', embed, body)
     path.write_text(
         f"<!doctype html><html><head><meta charset='utf-8'>"
         f"<meta name='viewport' content='width=device-width,initial-scale=1'>"

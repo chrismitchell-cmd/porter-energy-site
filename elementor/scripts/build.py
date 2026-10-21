@@ -377,12 +377,17 @@ def block_header(ids, b):
     return section(
         ids,
         [
-            column(ids, 18, [image(ids, b.get("logo"), "pes-logo", "Porter Energy Systems")],
-                   content_position="center", _inline_size_mobile=50),
-            column(ids, 60, [widget(ids, "wp-widget-nav_menu", "pes-nav", wp={"title": "", "nav_menu": ""})],
-                   content_position="center", hide_mobile="hidden-mobile"),
+            column(ids, 16, [image(ids, b.get("logo"), "pes-logo", "Porter Energy Systems")],
+                   content_position="center", _inline_size_tablet=30, _inline_size_mobile=42),
+            # Elementor Pro Nav Menu: full menu on desktop, hamburger + dropdown on tablet and phone.
+            # It shows the site's first menu until another one is picked in the widget.
+            column(ids, 62, [widget(ids, "nav-menu", "pes-nav", layout="horizontal", pointer="none",
+                                    submenu_icon=fa("fas fa-chevron-down"), dropdown="tablet",
+                                    toggle="burger", toggle_align="right", full_width="",
+                                    text_align="aside")],
+                   "pes-nav-col", content_position="center", _inline_size_tablet=20, _inline_size_mobile=18),
             column(ids, 22, [button(ids, b["button"], "pes-btn-solid pes-align-right")],
-                   "pes-header-cta", _inline_size_mobile=50),
+                   "pes-header-cta", _inline_size_tablet=50, _inline_size_mobile=40),
         ],
         "pes-header",
         title="Header",
@@ -471,6 +476,12 @@ def build(content_path, seen_blocks):
 # Preview: renders the same element tree with Elementor-like markup so the
 # CSS can be checked in a browser without WordPress. Approximate only.
 # ---------------------------------------------------------------------------
+PREVIEW_MENU = ["Solution", "Service O&amp;M", "Projects", "Company", "Contact Us", "Industry"]
+PREVIEW_SUBMENUS = {
+    "Solution": ["Commercial Solar", "Battery Energy Storage", "EV Charging", "Electrical"],
+    "Service O&amp;M": ["Operations &amp; Maintenance", "Monitoring", "Repairs"],
+    "Industry": ["Agriculture", "Municipal", "Commercial Real Estate"],
+}
 PREVIEW_IMAGES = []
 PREVIEW_SRC = {}  # element id -> stand-in image used only by the HTML preview
 PREVIEW_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>'
@@ -575,6 +586,26 @@ def render(el):
     elif kind == "shortcode":
         body = (f'<div class="elementor-shortcode"><div style="padding:40px;text-align:center;color:#999;'
                 f'border:1px dashed #555">Google reviews from {html.escape(s["shortcode"])} appear here</div></div>')
+    elif kind == "nav-menu":
+        extra = " elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger"
+        def items(sub_class):
+            out = ""
+            for name in PREVIEW_MENU:
+                subs = PREVIEW_SUBMENUS.get(name)
+                arrow = '<span class="sub-arrow"><i class="pv-chev"></i></span>' if subs else ""
+                link = f'<a href="#" class="{"elementor-item" if not sub_class else "elementor-item"}{" has-submenu" if subs else ""}">{name}{arrow}</a>'
+                sub = ""
+                if subs:
+                    sub = '<ul class="sub-menu elementor-nav-menu--dropdown">' + "".join(
+                        f'<li class="menu-item"><a href="#" class="elementor-sub-item">{x}</a></li>' for x in subs) + "</ul>"
+                out += f'<li class="menu-item{" menu-item-has-children" if subs else ""}">{link}{sub}</li>'
+            return out
+        body = ('<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">'
+                f'<ul class="elementor-nav-menu">{items("")}</ul></nav>'
+                '<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu" '
+                'onclick="this.classList.toggle(\'elementor-active\')"><span class="pv-burger">&#9776;</span></div>'
+                '<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container">'
+                f'<ul class="elementor-nav-menu">{items("sub")}</ul></nav>')
     elif kind == "wp-widget-nav_menu":
         items = ["Solution", "Service O&amp;M", "Projects", "Company", "Contact Us", "Industry"]
         body = '<ul class="menu">' + "".join(
@@ -615,6 +646,27 @@ PREVIEW_BASE_CSS = """
 .elementor-icon-list-item{display:flex;align-items:center}
 .elementor-column-gap-narrow>.elementor-column>.elementor-element-populated{padding:5px}
 .pes-logo img{height:44px;width:auto}
+.elementor-nav-menu{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+.elementor-nav-menu li{position:relative}
+.elementor-nav-menu--main .sub-menu{display:none;position:absolute;top:100%;left:0;list-style:none;margin:0;padding:0;min-width:220px;z-index:60}
+.elementor-nav-menu--main li:hover>.sub-menu{display:block}
+.elementor-nav-menu a{display:flex;align-items:center}
+.pv-chev{display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin:0 0 3px}
+.elementor-menu-toggle{display:none;cursor:pointer}
+.elementor-nav-menu--dropdown.elementor-nav-menu__container{display:none}
+.pes-header .elementor-column,.pes-header .elementor-widget-wrap{position:static}
+@media(max-width:1024px){
+ .elementor-nav-menu--dropdown-tablet .elementor-nav-menu--main{display:none}
+ .elementor-nav-menu--dropdown-tablet .elementor-menu-toggle{display:flex}
+ .elementor-menu-toggle.elementor-active+.elementor-nav-menu__container{display:block}
+ .elementor-nav-menu--dropdown .elementor-nav-menu{flex-direction:column;flex-wrap:nowrap}
+ .elementor-nav-menu--dropdown .sub-menu{list-style:none;margin:0;padding:0}
+ .pes-header .elementor-column:nth-child(1){width:30%!important}.pes-header .elementor-column:nth-child(2){width:20%!important}.pes-header .elementor-column:nth-child(3){width:50%!important}
+}
+@media(max-width:767px){
+ .pes-header .elementor-container{flex-wrap:nowrap}
+ .pes-header .elementor-column:nth-child(1){width:42%!important}.pes-header .elementor-column:nth-child(2){width:18%!important}.pes-header .elementor-column:nth-child(3){width:40%!important}
+}
 @media(max-width:767px){.elementor-container{flex-wrap:wrap}.elementor-column{width:100%!important}
 .elementor-column.pv-half-mobile{width:50%!important}.elementor-hidden-mobile{display:none!important}}
 """

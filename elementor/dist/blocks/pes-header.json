@@ -44,9 +44,10 @@
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 18,
+            "_inline_size": 16,
             "content_position": "center",
-            "_inline_size_mobile": 50
+            "_inline_size_tablet": 30,
+            "_inline_size_mobile": 42
           },
           "elements": [
             {
@@ -68,21 +69,30 @@
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 60,
+            "_inline_size": 62,
+            "css_classes": "pes-nav-col",
             "content_position": "center",
-            "hide_mobile": "hidden-mobile"
+            "_inline_size_tablet": 20,
+            "_inline_size_mobile": 18
           },
           "elements": [
             {
               "id": "c29fd89",
               "elType": "widget",
-              "widgetType": "wp-widget-nav_menu",
+              "widgetType": "nav-menu",
               "isInner": false,
               "settings": {
-                "wp": {
-                  "title": "",
-                  "nav_menu": ""
+                "layout": "horizontal",
+                "pointer": "none",
+                "submenu_icon": {
+                  "value": "fas fa-chevron-down",
+                  "library": "fa-solid"
                 },
+                "dropdown": "tablet",
+                "toggle": "burger",
+                "toggle_align": "right",
+                "full_width": "",
+                "text_align": "aside",
                 "_css_classes": "pes-nav"
               },
               "elements": []
@@ -97,7 +107,8 @@
             "_column_size": 50,
             "_inline_size": 22,
             "css_classes": "pes-header-cta",
-            "_inline_size_mobile": 50
+            "_inline_size_tablet": 50,
+            "_inline_size_mobile": 40
           },
           "elements": [
             {

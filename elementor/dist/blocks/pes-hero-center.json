@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "5261c77",
+      "id": "6c831ae",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -21,12 +21,12 @@
         "height": "min-height",
         "custom_height": {
           "unit": "px",
-          "size": 540,
+          "size": 560,
           "sizes": []
         },
         "custom_height_mobile": {
           "unit": "px",
-          "size": 540,
+          "size": 560,
           "sizes": []
         },
         "column_position": "middle",
@@ -43,7 +43,7 @@
       },
       "elements": [
         {
-          "id": "6c831ae",
+          "id": "fd391a9",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -57,7 +57,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Contact Us",
+                "title": "About Porter Energy Systems",
                 "header_size": "p",
                 "_css_classes": "pes-kicker"
               },
@@ -69,7 +69,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Call Us, Visit Us, or Email Us",
+                "title": "About Us",
                 "header_size": "h1",
                 "_css_classes": "pes-h1"
               },
@@ -81,7 +81,7 @@
               "widgetType": "text-editor",
               "isInner": false,
               "settings": {
-                "editor": "<p>Questions about solar, battery storage, EV charging or service for an existing system? Talk to the Porter Energy Systems team.</p>",
+                "editor": "<p>We are renewable energy experts specializing in solar, battery systems, EV charging, and generator installation.</p>",
                 "_css_classes": "pes-lead"
               },
               "elements": []
@@ -89,24 +89,12 @@
             {
               "id": "e406744",
               "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Hours of Operation: Monday–Friday 8:30am – 4:30pm",
-                "header_size": "p",
-                "_css_classes": "pes-hero-note"
-              },
-              "elements": []
-            },
-            {
-              "id": "fd391a9",
-              "elType": "widget",
               "widgetType": "button",
               "isInner": false,
               "settings": {
-                "text": "Call 603-340-0500",
+                "text": "Contact Us",
                 "link": {
-                  "url": "tel:+16033400500",
+                  "url": "/contact-us/",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""

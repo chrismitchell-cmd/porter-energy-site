@@ -1,0 +1,174 @@
+{
+  "version": "0.4",
+  "title": "PES – Areas",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "e03b489",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-areas",
+        "_title": "Service areas",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "1ecf90c",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "e203be3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Service Areas",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "42e2ee9",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Where <span class=\"pes-accent\">We Work</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "189e9ce",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Based in Deerfield, NH, we serve homes and businesses across these major areas.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "4f81721",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "view": "inline",
+                "icon_list": [
+                  {
+                    "_id": "f05bc19",
+                    "text": "Deerfield, NH",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "e812591",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "ca7a21e",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "db3dabf",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "990571e",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "33ae2c5",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "59d72b6",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "14cd6f5",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  }
+                ],
+                "_css_classes": "pes-area-list"
+              },
+              "elements": []
+            },
+            {
+              "id": "e068d8f",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Not Sure If We Serve You? Contact Us",
+                "link": {
+                  "url": "/contact-us/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

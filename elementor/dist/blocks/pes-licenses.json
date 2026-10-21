@@ -1,0 +1,287 @@
+{
+  "version": "0.4",
+  "title": "PES – Licenses",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "8a534e9",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-licenses",
+        "_title": "Licenses",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "60",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "2c364a2",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "670ab84",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Licenses",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "d2deb01",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Licensed & <span class=\"pes-accent\">Insured</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "5f22e10",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Every Porter Energy Systems project is installed by licensed professionals.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "c2b5505",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "30"
+              },
+              "elements": [
+                {
+                  "id": "3909924",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "46aea43",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "New Hampshire",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "ef2dfaa",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "694981d",
+                            "text": "[License type – e.g. Master Electrician]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "aa351a2",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "b811012",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>License #: [number]</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "d32fc57",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "9709818",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "[State]",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "7717ea9",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "b5ecbe5",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "222fde8",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "66bba87",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>License #: [number]</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "5f7cb0d",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "a48e274",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "[State]",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "762f8aa",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "354c24c",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "036bf9f",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "b6be3f4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>License #: [number]</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

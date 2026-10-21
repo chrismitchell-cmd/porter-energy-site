@@ -1,0 +1,282 @@
+{
+  "version": "0.4",
+  "title": "PES – Team",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "9995525",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-team",
+        "_title": "Team",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "60f73d8",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "30f5182",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Meet The Team",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "68ce046",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "The People Behind <span class=\"pes-accent\">Your Power</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "8695d4f",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Hover or tap a card to learn more about each member of the team.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "4a9e38a",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "40"
+              },
+              "elements": [
+                {
+                  "id": "9bd5093",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "faff3a4",
+                      "elType": "widget",
+                      "widgetType": "flip-box",
+                      "isInner": false,
+                      "settings": {
+                        "graphic_element": "image",
+                        "image_size": "full",
+                        "title_text_a": "Team Member Name",
+                        "description_text_a": "Title / Role",
+                        "title_text_b": "Team Member Name",
+                        "description_text_b": "A short bio: background, years of experience, certifications and what they enjoy about the work.",
+                        "button_text": "",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "link_click": "button",
+                        "height": {
+                          "unit": "px",
+                          "size": 480,
+                          "sizes": []
+                        },
+                        "flip_effect": "flip",
+                        "flip_direction": "left",
+                        "background_a_background": "classic",
+                        "background_a_color": "#232121",
+                        "background_b_background": "classic",
+                        "background_b_color": "#121111",
+                        "_css_classes": "pes-team-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "209eaa5",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "84fa8ce",
+                      "elType": "widget",
+                      "widgetType": "flip-box",
+                      "isInner": false,
+                      "settings": {
+                        "graphic_element": "image",
+                        "image_size": "full",
+                        "title_text_a": "Team Member Name",
+                        "description_text_a": "Title / Role",
+                        "title_text_b": "Team Member Name",
+                        "description_text_b": "A short bio: background, years of experience, certifications and what they enjoy about the work.",
+                        "button_text": "",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "link_click": "button",
+                        "height": {
+                          "unit": "px",
+                          "size": 480,
+                          "sizes": []
+                        },
+                        "flip_effect": "flip",
+                        "flip_direction": "left",
+                        "background_a_background": "classic",
+                        "background_a_color": "#232121",
+                        "background_b_background": "classic",
+                        "background_b_color": "#121111",
+                        "_css_classes": "pes-team-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "d54aab4",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "a5d2c40",
+                      "elType": "widget",
+                      "widgetType": "flip-box",
+                      "isInner": false,
+                      "settings": {
+                        "graphic_element": "image",
+                        "image_size": "full",
+                        "title_text_a": "Team Member Name",
+                        "description_text_a": "Title / Role",
+                        "title_text_b": "Team Member Name",
+                        "description_text_b": "A short bio: background, years of experience, certifications and what they enjoy about the work.",
+                        "button_text": "",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "link_click": "button",
+                        "height": {
+                          "unit": "px",
+                          "size": 480,
+                          "sizes": []
+                        },
+                        "flip_effect": "flip",
+                        "flip_direction": "left",
+                        "background_a_background": "classic",
+                        "background_a_color": "#232121",
+                        "background_b_background": "classic",
+                        "background_b_color": "#121111",
+                        "_css_classes": "pes-team-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1223079",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "d1165f7",
+                      "elType": "widget",
+                      "widgetType": "flip-box",
+                      "isInner": false,
+                      "settings": {
+                        "graphic_element": "image",
+                        "image_size": "full",
+                        "title_text_a": "Team Member Name",
+                        "description_text_a": "Title / Role",
+                        "title_text_b": "Team Member Name",
+                        "description_text_b": "A short bio: background, years of experience, certifications and what they enjoy about the work.",
+                        "button_text": "",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "link_click": "button",
+                        "height": {
+                          "unit": "px",
+                          "size": 480,
+                          "sizes": []
+                        },
+                        "flip_effect": "flip",
+                        "flip_direction": "left",
+                        "background_a_background": "classic",
+                        "background_a_color": "#232121",
+                        "background_b_background": "classic",
+                        "background_b_color": "#121111",
+                        "_css_classes": "pes-team-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

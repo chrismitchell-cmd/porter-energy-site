@@ -1,0 +1,1378 @@
+{
+  "version": "0.4",
+  "title": "PES – About Us",
+  "type": "page",
+  "page_settings": {
+    "template": "elementor_header_footer",
+    "hide_title": "yes",
+    "background_background": "classic",
+    "background_color": "#1B1A1A"
+  },
+  "content": [
+    {
+      "id": "612e738",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-hero pes-hero-center",
+        "_title": "Hero",
+        "height": "min-height",
+        "custom_height": {
+          "unit": "px",
+          "size": 560,
+          "sizes": []
+        },
+        "custom_height_mobile": {
+          "unit": "px",
+          "size": 560,
+          "sizes": []
+        },
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(12,12,14,0.62)"
+      },
+      "elements": [
+        {
+          "id": "f663d06",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "95ba82d",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "About Porter Energy Systems",
+                "header_size": "p",
+                "_css_classes": "pes-kicker"
+              },
+              "elements": []
+            },
+            {
+              "id": "08dc215",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "About Us",
+                "header_size": "h1",
+                "_css_classes": "pes-h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "b518b21",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>We are renewable energy experts specializing in solar, battery systems, EV charging, and generator installation.</p>",
+                "_css_classes": "pes-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "a59325e",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Contact Us",
+                "link": {
+                  "url": "/contact-us/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2f3461e",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "wider",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "About Porter – Our mission",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "c095616",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 48,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "6fe3743",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Our Mission",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow"
+              },
+              "elements": []
+            },
+            {
+              "id": "6655575",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Your Local Renewable Energy <span class=\"pes-accent\">Solution Expert</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "98a41cb",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Our mission is to build the future of energy and infrastructure through integrity, craftsmanship, and innovation. We deliver high-performance electrical, solar, battery, and EV charging solutions that empower people, businesses, and communities to become more independent, resilient, and sustainable. By combining decades of hands-on expertise with forward-thinking technology, we help shape a world where energy is cleaner, smarter, and accessible to all.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "e9dd94b",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Contact Us",
+                "link": {
+                  "url": "/contact-us/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "d618fb0",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 52,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "73babef",
+              "elType": "widget",
+              "widgetType": "video",
+              "isInner": false,
+              "settings": {
+                "video_type": "youtube",
+                "_css_classes": "pes-frame"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b902863",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-why",
+        "_title": "Why choose us",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "0d7e7cd",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "cef88e5",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Why Choose Us",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "4d6054e",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "We Take Pride In Being A <span class=\"pes-accent\">Local Solar Installer</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "d7bac2e",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>A renewable energy solution and solar installer you can trust.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "603e9b9",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "40"
+              },
+              "elements": [
+                {
+                  "id": "a942448",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "9ecf06a",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-certificate",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Licensed Electricians",
+                        "description_text": "Your solar installation and wiring not only look great, but last well beyond their expected life span.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "6509860",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "1df1109",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-map-marker-alt",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Local NH Installer",
+                        "description_text": "Based in Deerfield, NH, so the team that installs your system is the team down the road.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "19ff584",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "978e2c5",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-award",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "15+ Years Experience",
+                        "description_text": "Solar, battery system, EV charging and generator installation experience you can count on.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2b8dbd1",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "cfd29c5",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-handshake",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Competitive Pricing",
+                        "description_text": "We are owner-operated and confident our pricing will be competitive.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "306c338",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Contact Us",
+                "link": {
+                  "url": "/contact-us/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "69f7ab3",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-team",
+        "_title": "Team",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "336c15e",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "6b5b9d9",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Meet The Team",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "e90477f",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "The People Behind <span class=\"pes-accent\">Your Power</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "dd1aa00",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Hover or tap a card to learn more about each member of the team.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "6af209d",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "40"
+              },
+              "elements": [
+                {
+                  "id": "a83c3bf",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "921bc88",
+                      "elType": "widget",
+                      "widgetType": "flip-box",
+                      "isInner": false,
+                      "settings": {
+                        "graphic_element": "image",
+                        "image_size": "full",
+                        "title_text_a": "Team Member Name",
+                        "description_text_a": "Title / Role",
+                        "title_text_b": "Team Member Name",
+                        "description_text_b": "A short bio: background, years of experience, certifications and what they enjoy about the work.",
+                        "button_text": "",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "link_click": "button",
+                        "height": {
+                          "unit": "px",
+                          "size": 480,
+                          "sizes": []
+                        },
+                        "flip_effect": "flip",
+                        "flip_direction": "left",
+                        "background_a_background": "classic",
+                        "background_a_color": "#232121",
+                        "background_b_background": "classic",
+                        "background_b_color": "#121111",
+                        "_css_classes": "pes-team-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "17d9e1d",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "1cb7828",
+                      "elType": "widget",
+                      "widgetType": "flip-box",
+                      "isInner": false,
+                      "settings": {
+                        "graphic_element": "image",
+                        "image_size": "full",
+                        "title_text_a": "Team Member Name",
+                        "description_text_a": "Title / Role",
+                        "title_text_b": "Team Member Name",
+                        "description_text_b": "A short bio: background, years of experience, certifications and what they enjoy about the work.",
+                        "button_text": "",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "link_click": "button",
+                        "height": {
+                          "unit": "px",
+                          "size": 480,
+                          "sizes": []
+                        },
+                        "flip_effect": "flip",
+                        "flip_direction": "left",
+                        "background_a_background": "classic",
+                        "background_a_color": "#232121",
+                        "background_b_background": "classic",
+                        "background_b_color": "#121111",
+                        "_css_classes": "pes-team-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "b3fdd56",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "6081648",
+                      "elType": "widget",
+                      "widgetType": "flip-box",
+                      "isInner": false,
+                      "settings": {
+                        "graphic_element": "image",
+                        "image_size": "full",
+                        "title_text_a": "Team Member Name",
+                        "description_text_a": "Title / Role",
+                        "title_text_b": "Team Member Name",
+                        "description_text_b": "A short bio: background, years of experience, certifications and what they enjoy about the work.",
+                        "button_text": "",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "link_click": "button",
+                        "height": {
+                          "unit": "px",
+                          "size": 480,
+                          "sizes": []
+                        },
+                        "flip_effect": "flip",
+                        "flip_direction": "left",
+                        "background_a_background": "classic",
+                        "background_a_color": "#232121",
+                        "background_b_background": "classic",
+                        "background_b_color": "#121111",
+                        "_css_classes": "pes-team-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "0982175",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "bbe1d4b",
+                      "elType": "widget",
+                      "widgetType": "flip-box",
+                      "isInner": false,
+                      "settings": {
+                        "graphic_element": "image",
+                        "image_size": "full",
+                        "title_text_a": "Team Member Name",
+                        "description_text_a": "Title / Role",
+                        "title_text_b": "Team Member Name",
+                        "description_text_b": "A short bio: background, years of experience, certifications and what they enjoy about the work.",
+                        "button_text": "",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "link_click": "button",
+                        "height": {
+                          "unit": "px",
+                          "size": 480,
+                          "sizes": []
+                        },
+                        "flip_effect": "flip",
+                        "flip_direction": "left",
+                        "background_a_background": "classic",
+                        "background_a_color": "#232121",
+                        "background_b_background": "classic",
+                        "background_b_color": "#121111",
+                        "_css_classes": "pes-team-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2b7a911",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-band",
+        "_title": "Careers",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(16,16,17,0.82)"
+      },
+      "elements": [
+        {
+          "id": "864597c",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "29d6048",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Careers",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "83f7f53",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Come Join <span class=\"pes-accent\">Our Team</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "98d0c08",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>We are growing and looking for people who take pride in their work. See our open positions and find your place at Porter Energy Systems.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "2c8c12b",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "View Open Positions",
+                "link": {
+                  "url": "/open-positions/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7de893b",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-licenses",
+        "_title": "Licenses",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "60",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "f15635a",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "c63df36",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Licenses",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "0042de8",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Licensed & <span class=\"pes-accent\">Insured</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "82d25d5",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Every Porter Energy Systems project is installed by licensed professionals.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "577591d",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "30"
+              },
+              "elements": [
+                {
+                  "id": "5a6ff0b",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "b91d9d5",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "New Hampshire",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "ba4323a",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "2812356",
+                            "text": "[License type – e.g. Master Electrician]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "8dae8f5",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "50ac506",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>License #: [number]</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "f336b1b",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "723a0be",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "[State]",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "bd36533",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "58ac420",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "3927c52",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5b59e83",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>License #: [number]</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "a00b6a3",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "78ce623",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "[State]",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e1b6238",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "4945a43",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "a7ea0cb",
+                            "text": "[License type]",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "7637105",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>License #: [number]</p>",
+                        "_css_classes": "pes-card-note"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c48b50b",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-areas",
+        "_title": "Service areas",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "6e74d66",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "740ba24",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Service Areas",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "5b1bbf4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Where <span class=\"pes-accent\">We Work</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "5dbda86",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Based in Deerfield, NH, we serve homes and businesses across these major areas.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "3fd0d3c",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "view": "inline",
+                "icon_list": [
+                  {
+                    "_id": "05550e7",
+                    "text": "Deerfield, NH",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "2aa860f",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "cf66ce0",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "d34d302",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "1ba5f93",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "b29d558",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "79874d5",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "5d69b8c",
+                    "text": "[City / Region]",
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  }
+                ],
+                "_css_classes": "pes-area-list"
+              },
+              "elements": []
+            },
+            {
+              "id": "dcc966a",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Not Sure If We Serve You? Contact Us",
+                "link": {
+                  "url": "/contact-us/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de46a8f",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-cta",
+        "_title": "CTA – Schedule a consultation",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "0",
+          "bottom": "48",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "8c21df6",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 70,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "ebd12af",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "far fa-calendar-alt",
+                  "library": "fa-regular"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Schedule A Consultation Today",
+                "description_text": "Powering Progress. Building Confidence.",
+                "title_size": "h2",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-cta-box"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "d3920d3",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 30,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "311f0d6",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Call Now",
+                "link": {
+                  "url": "tel:+16033400500",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-pill pes-align-right"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

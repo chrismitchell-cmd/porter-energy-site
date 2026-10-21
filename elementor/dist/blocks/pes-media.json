@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "b65c786",
+      "id": "93d4227",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -17,7 +17,7 @@
           "sizes": []
         },
         "css_classes": "pes-section pes-feature",
-        "_title": "Punch line + video",
+        "_title": "About Porter – Our mission",
         "structure": "20",
         "column_position": "middle",
         "padding": {
@@ -39,7 +39,7 @@
       },
       "elements": [
         {
-          "id": "ecce95a",
+          "id": "968df1a",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -54,27 +54,56 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Punch Line <span class=\"pes-accent\">Of Why You Solve The Problem</span>",
-                "header_size": "h2",
-                "_css_classes": "pes-h2"
+                "title": "Our Mission",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow"
               },
               "elements": []
             },
             {
               "id": "6e9ea26",
               "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Your Local Renewable Energy <span class=\"pes-accent\">Solution Expert</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "ecce95a",
+              "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
               "settings": {
-                "editor": "<p>Supporting paragraph. Each page gets its own video here.</p>",
+                "editor": "<p>Our mission is to build the future of energy and infrastructure through integrity, craftsmanship, and innovation. We deliver high-performance electrical, solar, battery, and EV charging solutions that empower people, businesses, and communities to become more independent, resilient, and sustainable. By combining decades of hands-on expertise with forward-thinking technology, we help shape a world where energy is cleaner, smarter, and accessible to all.</p>",
                 "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "0585b6d",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Contact Us",
+                "link": {
+                  "url": "/contact-us/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more"
               },
               "elements": []
             }
           ]
         },
         {
-          "id": "968df1a",
+          "id": "23d7a9d",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -84,7 +113,7 @@
           },
           "elements": [
             {
-              "id": "0585b6d",
+              "id": "b65c786",
               "elType": "widget",
               "widgetType": "video",
               "isInner": false,

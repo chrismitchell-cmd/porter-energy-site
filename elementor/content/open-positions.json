@@ -1,0 +1,58 @@
+{
+  "title": "PES – Open Positions",
+  "slug": "pes-open-positions",
+  "blocks": [
+    {
+      "type": "hero",
+      "align": "center",
+      "height": 520,
+      "kicker": "Open Positions",
+      "title": "Build The Future Of Energy With Us",
+      "text": "We are a growing local team that takes pride in its craftsmanship. If that sounds like you, we would love to hear from you.",
+      "button": {
+        "text": "See Open Positions",
+        "url": "#open-positions",
+        "style": "pes-btn-solid pes-align-center"
+      },
+      "image": ""
+    },
+    {
+      "type": "jobs",
+      "kicker": "Open Positions",
+      "title": "Come Join",
+      "accent": "Our Team",
+      "button": {
+        "text": "Apply Now",
+        "url": "/contact-us/"
+      },
+      "jobs": [
+        {
+          "title": "Renewable Energy Sales Expert",
+          "items": [
+            "2+ years of renewable energy sales experience (preferred but not required)",
+            "Located in NH or has the ability to commute to Deerfield NH",
+            "Is a go getter, has ability to manage themselves, and is willing to work on commission",
+            "Proven experience seeing a renewable energy sale from prospect all the way to install"
+          ]
+        },
+        {
+          "title": "Licensed Electrician",
+          "items": [
+            "Licensed Electrician with 5+ years of experience",
+            "Located in NH or has the ability to commute to Deerfield NH",
+            "Is a go getter, has ability to manage themselves, and can commit to a full time schedule",
+            "Comfortable with heights, as you will be on roofs"
+          ]
+        },
+        {
+          "title": "Office Admin",
+          "items": [
+            "Office Admin with 5+ years of experience",
+            "Located in NH or has the ability to commute to Deerfield NH",
+            "Is a go getter, has ability to manage themselves, and can commit to a full time schedule"
+          ]
+        }
+      ]
+    }
+  ]
+}

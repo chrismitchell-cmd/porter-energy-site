@@ -1,0 +1,239 @@
+{
+  "version": "0.4",
+  "title": "PES – Why",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "c6693ce",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-why",
+        "_title": "Why choose us",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "b26605d",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "7b85537",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Why Choose Us",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "6391242",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "We Take Pride In Being A <span class=\"pes-accent\">Local Solar Installer</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "97c0551",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>A renewable energy solution and solar installer you can trust.</p>",
+                "_css_classes": "pes-lead pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "051d050",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "40"
+              },
+              "elements": [
+                {
+                  "id": "7755add",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "1a99682",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-certificate",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Licensed Electricians",
+                        "description_text": "Your solar installation and wiring not only look great, but last well beyond their expected life span.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "7662a47",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "53bb4c5",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-map-marker-alt",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Local NH Installer",
+                        "description_text": "Based in Deerfield, NH, so the team that installs your system is the team down the road.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "11e8f43",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "ab68aeb",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-award",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "15+ Years Experience",
+                        "description_text": "Solar, battery system, EV charging and generator installation experience you can count on.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "cb36ba1",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0
+                  },
+                  "elements": [
+                    {
+                      "id": "ac44197",
+                      "elType": "widget",
+                      "widgetType": "icon-box",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-handshake",
+                          "library": "fa-solid"
+                        },
+                        "view": "default",
+                        "position": "top",
+                        "title_text": "Competitive Pricing",
+                        "description_text": "We are owner-operated and confident our pricing will be competitive.",
+                        "title_size": "h3",
+                        "content_vertical_alignment": "middle",
+                        "_css_classes": "pes-contact-card pes-why-card"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "752b374",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Contact Us",
+                "link": {
+                  "url": "/contact-us/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

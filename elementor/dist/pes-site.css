@@ -935,6 +935,183 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 .elementor .pes-map + .elementor-widget-button { margin-top: 26px; }
 
 /* --------------------------------------------------------------------------
+   About + careers
+   pes-why-card     – Why Choose Us card (adds to pes-contact-card)
+   pes-team-card    – Flip Box: headshot, name, title; bio on the back
+   pes-job-card     – column card for open positions and licenses
+   pes-area-list    – service-area chips (Icon List, inline)
+   -------------------------------------------------------------------------- */
+.elementor .pes-card-grid { margin-top: 34px; }
+.elementor .pes-card-grid + .elementor-widget-button { margin-top: 34px; }
+.elementor .pes-why-card.elementor-widget { padding: 38px 24px; }
+.elementor .pes-why-card.elementor-widget-icon-box .elementor-icon { font-size: 42px; }
+.elementor .pes-why-card.elementor-widget-icon-box .elementor-icon-box-title { font-size: 24px; }
+.elementor .pes-why-card.elementor-widget-icon-box .elementor-icon-box-description { font-size: 15px; line-height: 1.65; }
+.elementor .pes-why-card .elementor-icon-box-icon { margin-bottom: 14px; }
+.elementor .pes-why-card .elementor-icon-box-icon::after { /* short gradient line under the icon */
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: var(--pes-gradient);
+}
+
+/* team flip cards */
+.elementor .pes-team-card .elementor-flip-box { height: 480px; }
+.elementor .pes-team-card .elementor-flip-box__layer {
+  --pes-cut: 20px;
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+}
+.elementor .pes-team-card .elementor-flip-box__front { background: #232121; }
+.elementor .pes-team-card .elementor-flip-box__back { background: var(--pes-black); }
+.elementor .pes-team-card .elementor-flip-box__layer::after { /* gradient border on both sides */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--pes-gradient);
+  pointer-events: none;
+  clip-path: polygon(evenodd,
+    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,
+    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),
+    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);
+}
+.elementor .pes-team-card .elementor-flip-box__front .elementor-flip-box__layer__overlay { align-items: flex-start; padding: 16px; }
+.elementor .pes-team-card .elementor-flip-box__back .elementor-flip-box__layer__overlay { padding: 30px 24px; }
+.elementor .pes-team-card .elementor-flip-box__layer__inner { width: 100%; }
+.elementor .pes-team-card .elementor-flip-box__image { width: 100%; margin: 0 0 18px; }
+.elementor .pes-team-card .elementor-flip-box__image img {
+  --pes-cut: 14px;
+  display: block;
+  width: 100% !important;
+  height: 330px;
+  object-fit: cover;
+  object-position: center top;
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+}
+.elementor .pes-team-card .elementor-flip-box__layer__title {
+  margin: 0 0 6px;
+  font-family: var(--pes-font-head);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--pes-white);
+}
+.elementor .pes-team-card .elementor-flip-box__front .elementor-flip-box__layer__description {
+  font-family: var(--pes-font-head);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--pes-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.elementor .pes-team-card .elementor-flip-box__back .elementor-flip-box__layer__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 12px auto 14px;
+  background: var(--pes-gradient);
+}
+.elementor .pes-team-card .elementor-flip-box__back .elementor-flip-box__layer__description {
+  font-family: var(--pes-font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--pes-text);
+}
+.elementor .pes-team-card .elementor-flip-box__button {
+  margin-top: 18px;
+  padding: 10px 18px;
+  font-family: var(--pes-font-ui);
+  font-weight: 600;
+  color: var(--pes-white);
+  background: transparent;
+  border: 2px solid var(--pes-orange);
+  border-radius: 0;
+}
+
+/* job + license cards */
+.elementor .pes-job-card > .elementor-widget-wrap {
+  --pes-cut: 20px;
+  position: relative;
+  height: 100%;
+  margin: 8px;
+  padding: 36px 26px !important;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  background: #232121;
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+}
+.elementor .pes-job-card > .elementor-widget-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--pes-gradient);
+  pointer-events: none;
+  clip-path: polygon(evenodd,
+    var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)), calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut), var(--pes-cut) 0,
+    calc(var(--pes-cut) + 1px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - var(--pes-cut) - 1px),
+    calc(100% - var(--pes-cut) - 1px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(var(--pes-cut) + 1px), calc(var(--pes-cut) + 1px) 2px);
+}
+.elementor .pes-job-card > .elementor-widget-wrap > .elementor-element { position: relative; z-index: 1; }
+.elementor .pes-job-card .pes-btn-block { margin-top: auto; padding-top: 20px; }
+.elementor .pes-job-title .elementor-heading-title {
+  font-family: var(--pes-font-head);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--pes-white);
+}
+.elementor .pes-job-title .elementor-heading-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin-top: 14px;
+  background: var(--pes-gradient);
+}
+.elementor .pes-card-list .elementor-icon-list-item {
+  align-items: flex-start;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.elementor .pes-card-list .elementor-icon-list-icon { padding-top: 4px; }
+.elementor .pes-card-note,
+.elementor .pes-card-note p { font-family: var(--pes-font-body); font-size: 14px; color: rgba(255, 255, 255, 0.7); }
+.elementor .pes-btn-block .elementor-button-wrapper { display: block; }
+.elementor .pes-btn-block .elementor-button { display: flex; justify-content: center; width: 100%; }
+.elementor .pes-job-card .pes-btn-block .elementor-button-wrapper:has(.elementor-button:hover) { filter: none; }
+
+/* service area chips */
+.elementor .pes-area-list { margin-top: 30px; }
+.elementor .pes-area-list .elementor-icon-list-items { justify-content: center; gap: 12px; }
+.elementor .pes-area-list .elementor-icon-list-item {
+  margin: 0 !important;
+  padding: 10px 18px 10px 14px !important;
+  font-family: var(--pes-font-ui);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--pes-white);
+  background: #232121;
+  border: 1px solid rgba(234, 162, 78, 0.55);
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+.elementor .pes-area-list .elementor-icon-list-item::after { display: none; }
+.elementor .pes-area-list .elementor-icon-list-icon i { color: var(--pes-orange); font-size: 14px; }
+.elementor .pes-area-list .elementor-icon-list-icon svg { fill: var(--pes-orange); width: 14px; height: 14px; }
+.elementor .pes-area-list .elementor-icon-list-text { color: var(--pes-white); padding-left: 8px; }
+.elementor .pes-area-list + .elementor-widget-button { margin-top: 30px; }
+
+/* --------------------------------------------------------------------------
    CTA banner ("Schedule a consultation today")
    -------------------------------------------------------------------------- */
 .elementor .pes-cta {
@@ -1015,6 +1192,7 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   /* text/image rows stack on phones, so the wide desktop gap isn't needed there */
   .elementor .pes-section > .elementor-column-gap-wider > .elementor-column > .elementor-element-populated { padding: 15px; }
   .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }
+  .elementor .pes-job-card > .elementor-widget-wrap { margin: 8px 0; }
   .elementor .pes-form-panel > .elementor-widget-wrap { padding: 24px 16px !important; }
   .elementor .pes-form-placeholder { min-height: 320px; }
   .elementor .pes-faq .elementor-tab-content { padding-left: 28px; }

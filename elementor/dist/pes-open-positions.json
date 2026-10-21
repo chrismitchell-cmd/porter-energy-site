@@ -1,0 +1,443 @@
+{
+  "version": "0.4",
+  "title": "PES – Open Positions",
+  "type": "page",
+  "page_settings": {
+    "template": "elementor_header_footer",
+    "hide_title": "yes",
+    "background_background": "classic",
+    "background_color": "#1B1A1A"
+  },
+  "content": [
+    {
+      "id": "5fb285f",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-hero pes-hero-center",
+        "_title": "Hero",
+        "height": "min-height",
+        "custom_height": {
+          "unit": "px",
+          "size": 520,
+          "sizes": []
+        },
+        "custom_height_mobile": {
+          "unit": "px",
+          "size": 520,
+          "sizes": []
+        },
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(12,12,14,0.62)"
+      },
+      "elements": [
+        {
+          "id": "6af5c35",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "2773ef3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Open Positions",
+                "header_size": "p",
+                "_css_classes": "pes-kicker"
+              },
+              "elements": []
+            },
+            {
+              "id": "1991154",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Build The Future Of Energy With Us",
+                "header_size": "h1",
+                "_css_classes": "pes-h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "212248f",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>We are a growing local team that takes pride in its craftsmanship. If that sounds like you, we would love to hear from you.</p>",
+                "_css_classes": "pes-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "ce72226",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "See Open Positions",
+                "link": {
+                  "url": "#open-positions",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3d18e28",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-jobs",
+        "_title": "Open positions",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "_element_id": "open-positions"
+      },
+      "elements": [
+        {
+          "id": "7564968",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "cebe3e3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Open Positions",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "768a92a",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Come Join <span class=\"pes-accent\">Our Team</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "b835730",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-card-grid",
+                "structure": "30"
+              },
+              "elements": [
+                {
+                  "id": "6fd74c2",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "a96af70",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Renewable Energy Sales Expert",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "204cb7b",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "795b2d6",
+                            "text": "2+ years of renewable energy sales experience (preferred but not required)",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "d4f4eb5",
+                            "text": "Located in NH or has the ability to commute to Deerfield NH",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "69642a7",
+                            "text": "Is a go getter, has ability to manage themselves, and is willing to work on commission",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "559a8e8",
+                            "text": "Proven experience seeing a renewable energy sale from prospect all the way to install",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c675988",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "Apply Now",
+                        "link": {
+                          "url": "/contact-us/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-btn-solid pes-btn-block"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "273e54c",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "cfc7cc3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Licensed Electrician",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "7bf7227",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "ae0867b",
+                            "text": "Licensed Electrician with 5+ years of experience",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "0e4213d",
+                            "text": "Located in NH or has the ability to commute to Deerfield NH",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "6e499b4",
+                            "text": "Is a go getter, has ability to manage themselves, and can commit to a full time schedule",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "e65cef8",
+                            "text": "Comfortable with heights, as you will be on roofs",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "90c66ef",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "Apply Now",
+                        "link": {
+                          "url": "/contact-us/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-btn-solid pes-btn-block"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "88ed994",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-job-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "5f4c772",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Office Admin",
+                        "header_size": "h3",
+                        "_css_classes": "pes-job-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "efe4ff1",
+                      "elType": "widget",
+                      "widgetType": "icon-list",
+                      "isInner": false,
+                      "settings": {
+                        "icon_list": [
+                          {
+                            "_id": "13541f5",
+                            "text": "Office Admin with 5+ years of experience",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "a873507",
+                            "text": "Located in NH or has the ability to commute to Deerfield NH",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          },
+                          {
+                            "_id": "b15dafe",
+                            "text": "Is a go getter, has ability to manage themselves, and can commit to a full time schedule",
+                            "selected_icon": {
+                              "value": "fas fa-check",
+                              "library": "fa-solid"
+                            }
+                          }
+                        ],
+                        "_css_classes": "pes-checklist pes-card-list"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "db7c814",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "Apply Now",
+                        "link": {
+                          "url": "/contact-us/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-btn-solid pes-btn-block"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

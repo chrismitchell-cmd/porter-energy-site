@@ -1,0 +1,90 @@
+{
+  "title": "PES – About Us",
+  "slug": "pes-about-us",
+  "blocks": [
+    {
+      "type": "hero",
+      "align": "center",
+      "height": 560,
+      "kicker": "About Porter Energy Systems",
+      "title": "About Us",
+      "text": "We are renewable energy experts specializing in solar, battery systems, EV charging, and generator installation.",
+      "button": { "text": "Contact Us", "url": "/contact-us/", "style": "pes-btn-solid pes-align-center" },
+      "image": ""
+    },
+    {
+      "type": "media",
+      "label": "About Porter – Our mission",
+      "kicker": "Our Mission",
+      "title": "Your Local Renewable Energy",
+      "accent": "Solution Expert",
+      "text": "Our mission is to build the future of energy and infrastructure through integrity, craftsmanship, and innovation. We deliver high-performance electrical, solar, battery, and EV charging solutions that empower people, businesses, and communities to become more independent, resilient, and sustainable. By combining decades of hands-on expertise with forward-thinking technology, we help shape a world where energy is cleaner, smarter, and accessible to all.",
+      "button": { "text": "Contact Us", "url": "/contact-us/" },
+      "video": ""
+    },
+    {
+      "type": "why",
+      "kicker": "Why Choose Us",
+      "title": "We Take Pride In Being A",
+      "accent": "Local Solar Installer",
+      "text": "A renewable energy solution and solar installer you can trust.",
+      "cards": [
+        { "icon": "fas fa-certificate", "title": "Licensed Electricians", "text": "Your solar installation and wiring not only look great, but last well beyond their expected life span." },
+        { "icon": "fas fa-map-marker-alt", "title": "Local NH Installer", "text": "Based in Deerfield, NH, so the team that installs your system is the team down the road." },
+        { "icon": "fas fa-award", "title": "15+ Years Experience", "text": "Solar, battery system, EV charging and generator installation experience you can count on." },
+        { "icon": "fas fa-handshake", "title": "Competitive Pricing", "text": "We are owner-operated and confident our pricing will be competitive." }
+      ],
+      "button": { "text": "Contact Us", "url": "/contact-us/" }
+    },
+    {
+      "type": "team",
+      "kicker": "Meet The Team",
+      "title": "The People Behind",
+      "accent": "Your Power",
+      "text": "Hover or tap a card to learn more about each member of the team.",
+      "members": [
+        { "name": "Team Member Name", "role": "Title / Role", "bio": "A short bio: background, years of experience, certifications and what they enjoy about the work.", "image": "" },
+        { "name": "Team Member Name", "role": "Title / Role", "bio": "A short bio: background, years of experience, certifications and what they enjoy about the work.", "image": "" },
+        { "name": "Team Member Name", "role": "Title / Role", "bio": "A short bio: background, years of experience, certifications and what they enjoy about the work.", "image": "" },
+        { "name": "Team Member Name", "role": "Title / Role", "bio": "A short bio: background, years of experience, certifications and what they enjoy about the work.", "image": "" }
+      ]
+    },
+    {
+      "type": "band",
+      "label": "Careers",
+      "kicker": "Careers",
+      "title": "Come Join",
+      "accent": "Our Team",
+      "text": "We are growing and looking for people who take pride in their work. See our open positions and find your place at Porter Energy Systems.",
+      "button": { "text": "View Open Positions", "url": "/open-positions/" },
+      "image": ""
+    },
+    {
+      "type": "licenses",
+      "kicker": "Licenses",
+      "title": "Licensed &",
+      "accent": "Insured",
+      "text": "Every Porter Energy Systems project is installed by licensed professionals.",
+      "states": [
+        { "state": "New Hampshire", "licenses": ["[License type – e.g. Master Electrician]", "[License type]"], "note": "License #: [number]" },
+        { "state": "[State]", "licenses": ["[License type]", "[License type]"], "note": "License #: [number]" },
+        { "state": "[State]", "licenses": ["[License type]", "[License type]"], "note": "License #: [number]" }
+      ]
+    },
+    {
+      "type": "areas",
+      "kicker": "Service Areas",
+      "title": "Where",
+      "accent": "We Work",
+      "text": "Based in Deerfield, NH, we serve homes and businesses across these major areas.",
+      "areas": ["Deerfield, NH", "[City / Region]", "[City / Region]", "[City / Region]", "[City / Region]", "[City / Region]", "[City / Region]", "[City / Region]"],
+      "button": { "text": "Not Sure If We Serve You? Contact Us", "url": "/contact-us/" }
+    },
+    {
+      "type": "cta",
+      "title": "Schedule A Consultation Today",
+      "subtitle": "Powering Progress. Building Confidence.",
+      "button": { "text": "Call Now", "url": "tel:+16033400500" }
+    }
+  ]
+}

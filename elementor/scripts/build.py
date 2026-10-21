@@ -283,7 +283,8 @@ def block_band(ids, b):
         heading(ids, b["kicker"], "p", "pes-eyebrow pes-center"),
         heading(ids, two_tone(b["title"], b.get("accent")), "h2", "pes-h2 pes-h2-mixed pes-center"),
         text(ids, b["text"], "pes-lead pes-center"),
-    ])], "pes-section pes-band", title="Problem band – Why it matters",
+    ] + ([button(ids, b["button"], "pes-btn-solid pes-align-center")] if b.get("button") else []))],
+        "pes-section pes-band", title=b.get("label", "Problem band – Why it matters"),
         column_position="middle", padding=box(110, 0, 110, 0), padding_mobile=box(80, 0, 80, 0),
         **bg_image(b.get("image")))
 
@@ -308,13 +309,13 @@ def block_benefits(ids, b):
 
 def block_media(ids, b):
     """Punch line – two-tone heading + paragraph | framed video."""
-    copy = column(ids, 48, [
+    copy = column(ids, 48, ([heading(ids, b["kicker"], "p", "pes-eyebrow")] if b.get("kicker") else []) + [
         heading(ids, two_tone(b["title"], b.get("accent")), "h2", "pes-h2"),
         text(ids, b["text"]),
     ] + ([button(ids, b["button"], "pes-btn pes-btn-more")] if b.get("button") else []),
         content_position="center")
     media = column(ids, 52, [video(ids, b.get("video"), frame_classes(b), "img/video.jpg")], content_position="center")
-    return section(ids, [copy, media], "pes-section pes-feature", title="Punch line + video",
+    return section(ids, [copy, media], "pes-section pes-feature", title=b.get("label", "Punch line + video"),
                    gap="wider", structure="20", column_position="middle",
                    padding=box(110, 0, 110, 0), padding_mobile=box(70, 0, 70, 0))
 
@@ -381,6 +382,87 @@ def block_map(ids, b):
         w,
     ] + ([button(ids, b["button"], "pes-btn pes-btn-more pes-align-center")] if b.get("button") else []))],
         "pes-section", title="Map – Visit us", padding=box(80, 0, 100, 0))
+
+
+def section_intro(ids, b):
+    """Centred eyebrow + heading (+ optional lead) used at the top of grid sections."""
+    out = [heading(ids, b["kicker"], "p", "pes-eyebrow pes-center"),
+           heading(ids, two_tone(b["title"], b.get("accent")), "h2", "pes-h2 pes-h2-mixed pes-center")]
+    if b.get("text"):
+        out.append(text(ids, b["text"], "pes-lead pes-center"))
+    return out
+
+
+def card_grid(ids, cols, gap="extended"):
+    n = len(cols)
+    return section(ids, cols, "pes-card-grid", inner=True, gap=gap, structure=f"{n}0")
+
+
+def block_why(ids, b):
+    """Why choose us – icon cards in the angled gradient-border style."""
+    cards = [column(ids, round(100 / len(b["cards"]), 3),
+                    [icon_box(ids, c["icon"], "pes-contact-card pes-why-card", c["title"], c["text"])])
+             for c in b["cards"]]
+    tail = [button(ids, b["button"], "pes-btn-solid pes-align-center")] if b.get("button") else []
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [card_grid(ids, cards)] + tail)],
+                   "pes-section pes-why", title="Why choose us", padding=box(100, 0, 110, 0))
+
+
+def block_team(ids, b):
+    """Team – Elementor Pro Flip Box per person: headshot, name, title; bio on the back."""
+    cards = []
+    for m in b["members"]:
+        img = {"image": {"url": m["image"], "id": "", "source": "library"}} if m.get("image") else {}
+        w = widget(ids, "flip-box", "pes-team-card", graphic_element="image", image_size="full", **img,
+                   title_text_a=m["name"], description_text_a=m["role"],
+                   title_text_b=m["name"], description_text_b=m["bio"],
+                   button_text=m.get("button", ""), link={"url": m.get("url", ""), "is_external": "",
+                                                          "nofollow": "", "custom_attributes": ""},
+                   link_click="button", height=px(480), flip_effect="flip", flip_direction="left",
+                   background_a_background="classic", background_a_color="#232121",
+                   background_b_background="classic", background_b_color="#121111")
+        PREVIEW_SRC[w["id"]] = "img/placeholder.jpg"
+        cards.append(column(ids, round(100 / len(b["members"]), 3), [w]))
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [card_grid(ids, cards)])],
+                   "pes-section pes-team", title="Team", padding=box(100, 0, 110, 0))
+
+
+def info_card(ids, title, items, btn=None, note=None, width=33.333):
+    """Dark card with gradient border: title, gold line, checklist, optional note and button."""
+    widgets = [heading(ids, title, "h3", "pes-job-title"), icon_list(ids, items, "pes-checklist pes-card-list")]
+    if note:
+        widgets.append(text(ids, note, "pes-card-note"))
+    if btn:
+        widgets.append(button(ids, btn, "pes-btn-solid pes-btn-block"))
+    return column(ids, width, widgets, "pes-job-card")
+
+
+def block_jobs(ids, b):
+    """Open positions – one card per role with requirements and an apply button."""
+    n = len(b["jobs"])
+    cards = [info_card(ids, j["title"], j["items"], j.get("button", b.get("button")), width=round(100 / n, 3))
+             for j in b["jobs"]]
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [card_grid(ids, cards)])],
+                   "pes-section pes-jobs", title=b.get("label", "Open positions"), padding=box(100, 0, 110, 0),
+                   _element_id="open-positions")
+
+
+def block_licenses(ids, b):
+    """Licenses – one card per state with what the company is licensed for."""
+    n = len(b["states"])
+    cards = [info_card(ids, st["state"], st["licenses"], note=st.get("note"), width=round(100 / n, 3))
+             for st in b["states"]]
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [card_grid(ids, cards)])],
+                   "pes-section pes-licenses", title="Licenses", padding=box(100, 0, 60, 0))
+
+
+def block_areas(ids, b):
+    """Service areas – map-pin chips for the main towns / regions."""
+    chips = widget(ids, "icon-list", "pes-area-list", view="inline", icon_list=[
+        {"_id": ids(), "text": t, "selected_icon": fa("fas fa-map-marker-alt")} for t in b["areas"]])
+    tail = [button(ids, b["button"], "pes-btn pes-btn-more pes-align-center")] if b.get("button") else []
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [chips] + tail)],
+                   "pes-section pes-areas", title="Service areas", padding=box(60, 0, 110, 0))
 
 
 def block_testimonials(ids, b):
@@ -493,6 +575,11 @@ BLOCKS = {
     "testimonials": block_testimonials,
     "faq": block_faq,
     "contact_cards": block_contact_cards,
+    "why": block_why,
+    "team": block_team,
+    "jobs": block_jobs,
+    "licenses": block_licenses,
+    "areas": block_areas,
     "form": block_form,
     "map": block_map,
     "cta": block_cta,
@@ -663,11 +750,17 @@ def render(el):
                 f'<span style="width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.55);display:grid;'
                 f'place-items:center;color:#fff;font-size:26px">&#9654;</span></div>')
     elif kind == "icon-list":
-        body = '<ul class="elementor-icon-list-items">' + "".join(
+        inline = " elementor-inline-items" if s.get("view") == "inline" else ""
+        extra = " elementor-icon-list--layout-inline" if inline else ""
+        pin = "map" in (s["icon_list"][0]["selected_icon"]["value"] if s["icon_list"] else "")
+        body = f'<ul class="elementor-icon-list-items{inline}">' + "".join(
             f'<li class="elementor-icon-list-item"><span class="elementor-icon-list-icon">'
             f'<svg viewBox="0 0 512 512" width="1em" height="1em"><path d="M173.9 439.4 7.5 273c-10-10-10-26.2 0-36.2l36.2-36.2'
             f'c10-10 26.2-10 36.2 0L192 312.7 432.1 72.6c10-10 26.2-10 36.2 0l36.2 36.2c10 10 10 26.2 0 36.2L210.1 439.4'
             f'c-10 10-26.2 10-36.2 0z"/></svg></span><span class="elementor-icon-list-text">{i["text"]}</span></li>'
+            if not pin else
+            f'<li class="elementor-icon-list-item"><span class="elementor-icon-list-icon">{PREVIEW_ICONS["map"]}</span>'
+            f'<span class="elementor-icon-list-text">{i["text"]}</span></li>'
             for i in s["icon_list"]) + "</ul>"
     elif kind == "accordion":
         body = '<div class="elementor-accordion">' + "".join(
@@ -677,6 +770,19 @@ def render(el):
             f'<a class="elementor-accordion-title" href="#">{t["tab_title"]}</a></div>'
             f'<div class="elementor-tab-content" style="display:{"block" if n == 0 else "none"}">{t["tab_content"]}</div></div>'
             for n, t in enumerate(s["tabs"])) + "</div>"
+    elif kind == "flip-box":
+        src = s.get("image", {}).get("url") or PREVIEW_SRC.get(el["id"], "")
+        btn = (f'<a class="elementor-flip-box__button elementor-button" href="#">{s["button_text"]}</a>'
+               if s.get("button_text") else "")
+        body = ('<div class="elementor-flip-box" tabindex="0">'
+                '<div class="elementor-flip-box__layer elementor-flip-box__front"><div class="elementor-flip-box__layer__overlay">'
+                f'<div class="elementor-flip-box__layer__inner"><div class="elementor-flip-box__image"><img src="{src}" alt=""></div>'
+                f'<h3 class="elementor-flip-box__layer__title">{s["title_text_a"]}</h3>'
+                f'<div class="elementor-flip-box__layer__description">{s["description_text_a"]}</div></div></div></div>'
+                '<div class="elementor-flip-box__layer elementor-flip-box__back"><div class="elementor-flip-box__layer__overlay">'
+                f'<div class="elementor-flip-box__layer__inner"><h3 class="elementor-flip-box__layer__title">{s["title_text_b"]}</h3>'
+                f'<div class="elementor-flip-box__layer__description">{s["description_text_b"]}</div>{btn}</div></div></div></div>')
+        extra = " elementor-flip-box--effect-flip elementor-flip-box--direction-left"
     elif kind == "google_maps":
         q = html.escape(s["address"])
         body = (f'<div class="elementor-custom-embed"><div style="height:{s["height"]["size"]}px;display:grid;place-items:center;'
@@ -742,6 +848,13 @@ PREVIEW_BASE_CSS = """
 .elementor-icon-box-description{margin:0}
 .elementor-icon-list-items{list-style:none;margin:0;padding:0}
 .elementor-icon-list-item{display:flex;align-items:center}
+.elementor-flip-box{position:relative;height:480px;perspective:1000px}
+.elementor-flip-box__layer{position:absolute;inset:0;transition:transform .6s;backface-visibility:hidden;transform-style:preserve-3d}
+.elementor-flip-box__layer__overlay{display:flex;height:100%;align-items:center;justify-content:center;text-align:center}
+.elementor-flip-box__back{transform:rotateY(180deg)}
+.elementor-flip-box:hover .elementor-flip-box__front{transform:rotateY(-180deg)}
+.elementor-flip-box:hover .elementor-flip-box__back{transform:none}
+.elementor-inline-items{display:flex;flex-wrap:wrap}
 .elementor-column-gap-narrow>.elementor-column>.elementor-element-populated{padding:5px}
 .pes-logo img{height:44px;width:auto}
 .elementor-nav-menu{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0}

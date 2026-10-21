@@ -653,6 +653,16 @@ def write_site_css():
         "   Fonts (Saira, Poppins, Inter, Rajdhani) load from Site Settings > Global Fonts. */\n\n" + css)
     print("wrote", (DIST / "pes-site.css").relative_to(ROOT.parent))
 
+    # compact copy (no comments / blank lines) that is easier to copy and paste in one go
+    small = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    small = "\n".join(l.strip() for l in small.splitlines() if l.strip())
+    small = re.sub(r"\{\n", " { ", small)
+    small = re.sub(r";\n(?=[^}])", "; ", small)
+    small = re.sub(r"\n\}", " }", small)
+    (DIST / "pes-site.min.css").write_text(
+        "/* PES site-wide styles – paste into Elementor > Site Settings > Custom CSS */\n" + small + "\n")
+    print("wrote", (DIST / "pes-site.min.css").relative_to(ROOT.parent))
+
 
 def main(argv):
     files = argv[1:] or sorted(str(p) for p in (ROOT / "content").glob("*.json"))

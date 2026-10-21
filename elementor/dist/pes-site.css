@@ -1127,7 +1127,9 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 .elementor .pes-hero-center .pes-btn-inline { margin: 0 7px; }
 .elementor .pes-hero-center .elementor-widget-wrap:has(> .pes-btn-inline) { justify-content: center; }
 
-.elementor .pes-partners { border-top: 1px solid rgba(255, 255, 255, 0.06); border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+/* pes-divider – a full-width gradient line along the top of a section, to split up
+   runs of sections that share the same background */
+.elementor .pes-divider { border-top: 2px solid transparent; border-image: var(--pes-gradient) 1; }
 .elementor .pes-partners .pes-h2 .elementor-heading-title { font-size: clamp(26px, 3vw, 36px); }
 .elementor .pes-logo-marquee { margin-top: 26px; }
 .elementor .pes-logo-marquee .swiper-wrapper { transition-timing-function: linear !important; }
@@ -1262,6 +1264,49 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 .elementor .pes-toggle button:focus-visible { outline: 2px solid var(--pes-gold); outline-offset: 2px; }
 
 .elementor .pes-tab-panel { display: none; margin-top: 26px; }
+.elementor .pes-tab-more { margin-top: 0; }
+.elementor .pes-tab-panel > .elementor-container { justify-content: center; }
+.elementor .pes-energy:not(.is-expanded) .pes-tab-panel.pes-tab-more { display: none; }
+.elementor-editor-active .elementor .pes-energy .pes-tab-panel.pes-tab-more { display: block; }
+.elementor .pes-more-wrap { margin-top: 34px; text-align: center; }
+.elementor .pes-more-toggle {
+  position: relative;
+  padding: 13px 26px 13px 24px;
+  font-family: var(--pes-font-ui);
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--pes-white);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.elementor .pes-more-toggle::before { /* angled gradient outline, like the other outline buttons */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--pes-gradient);
+  clip-path: polygon(evenodd,
+    9px 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%, 0 9px, 9px 0,
+    10px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 10px), calc(100% - 10px) calc(100% - 2px), 2px calc(100% - 2px), 2px 10px, 10px 2px);
+}
+.elementor .pes-more-toggle::after { /* chevron that flips when expanded */
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 0 3px 12px;
+  border-right: 2px solid var(--pes-amber);
+  border-bottom: 2px solid var(--pes-amber);
+  transform: rotate(45deg);
+  transition: transform 0.25s;
+}
+.elementor .pes-energy.is-expanded .pes-more-toggle::after { transform: rotate(225deg); margin-bottom: -2px; }
+.elementor .pes-more-toggle:hover,
+.elementor .pes-more-toggle:focus-visible { transform: scale(1.05); filter: drop-shadow(0 0 8px rgba(234, 162, 78, 0.7)); }
+.elementor-editor-active .elementor .pes-more-wrap::after { content: " (in the editor every card shows; on the site the rest appear when this is clicked)"; display: block; margin-top: 8px; font: 12px var(--pes-font-body); color: #b88600; }
 .elementor .pes-tab-panel.is-active { display: block; animation: pes-fade-up 0.45s ease both; }
 .elementor-editor-active .elementor .pes-tab-panel { display: block; }
 .elementor-editor-active .elementor .pes-tab-panel + .pes-tab-panel { margin-top: 50px; padding-top: 30px; border-top: 1px dashed rgba(234, 162, 78, 0.5); }
@@ -1367,6 +1412,58 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   .elementor .pes-svc-card:hover .pes-svc-img img { transform: none; }
   .elementor .pes-tab-panel.is-active { animation: none; }
 }
+
+/* Why choose us – stacked call-out boxes (Icon Box, icon on the left) */
+.elementor .pes-why-row.elementor-widget {
+  --pes-cut: 14px;
+  position: relative;
+  margin-bottom: 14px;
+  padding: 20px 22px;
+  background: #232121;
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+  transition: transform 0.3s ease, background 0.3s;
+}
+.elementor .pes-why-row.elementor-widget::before { /* gradient bar on the left */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--pes-orange), var(--pes-gold));
+}
+.elementor .pes-why-row.elementor-widget:hover { transform: translateX(8px); background: #2a2727; }
+.elementor .pes-why-row .elementor-icon-box-wrapper { display: flex; align-items: center; gap: 18px; text-align: left; }
+.elementor .pes-why-row .elementor-icon-box-icon { flex: none; margin: 0 !important; }
+.elementor .pes-why-row.elementor-widget-icon-box .elementor-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  font-size: 24px;
+  color: var(--pes-white);
+  fill: var(--pes-white);
+  background: var(--pes-gradient);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+.elementor .pes-why-row.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-white); }
+.elementor .pes-why-row.elementor-widget-icon-box .elementor-icon-box-title {
+  margin: 0 0 4px;
+  font-family: var(--pes-font-head);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--pes-white);
+}
+.elementor .pes-why-row.elementor-widget-icon-box .elementor-icon-box-description {
+  margin: 0;
+  font-family: var(--pes-font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--pes-text);
+}
+.elementor .pes-feature .pes-body + .pes-why-row { margin-top: 26px; }
+.elementor .pes-why-row + .elementor-widget-button { margin-top: 14px; }
 
 /* --------------------------------------------------------------------------
    CTA banner ("Schedule a consultation today")

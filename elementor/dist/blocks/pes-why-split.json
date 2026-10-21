@@ -1,0 +1,211 @@
+{
+  "version": "0.4",
+  "title": "PES – Why Split",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "7bbea37",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "wider",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-feature",
+        "_title": "Why choose us",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "e3719bd",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 55,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "84aa117",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Why Choose Us",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow"
+              },
+              "elements": []
+            },
+            {
+              "id": "f95fb0f",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Why Porter <span class=\"pes-accent\">Energy Systems</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2"
+              },
+              "elements": []
+            },
+            {
+              "id": "df6d525",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>A renewable energy solution and solar installer you can trust.</p>",
+                "_css_classes": "pes-body"
+              },
+              "elements": []
+            },
+            {
+              "id": "ae7f298",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-certificate",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Licensed Electricians",
+                "description_text": "Your installation and wiring not only look great, but last well beyond their expected life span.",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-why-row"
+              },
+              "elements": []
+            },
+            {
+              "id": "a5d4ad2",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-map-marker-alt",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Local NH Installer",
+                "description_text": "Based in Deerfield, NH, so the team that installs your system is the team down the road.",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-why-row"
+              },
+              "elements": []
+            },
+            {
+              "id": "b820ec1",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-award",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "15+ Years Experience",
+                "description_text": "Solar, battery system, EV charging and generator installation experience you can count on.",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-why-row"
+              },
+              "elements": []
+            },
+            {
+              "id": "a94e6ad",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-handshake",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Competitive Pricing",
+                "description_text": "We are owner-operated and confident our pricing will be competitive.",
+                "title_size": "h3",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-why-row"
+              },
+              "elements": []
+            },
+            {
+              "id": "f0f2560",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book An Appointment",
+                "link": {
+                  "url": "/contact-us/#book-appointment",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "8ad6a46",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 45,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "95ca6d4",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image_size": "full",
+                "_css_classes": "pes-frame"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

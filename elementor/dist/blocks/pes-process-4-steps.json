@@ -17,7 +17,7 @@
           "sizes": []
         },
         "css_classes": "pes-section pes-process",
-        "_title": "Process – Doing business with us is easy",
+        "_title": "Process",
         "padding": {
           "unit": "px",
           "top": "80",
@@ -43,7 +43,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Doing Business With Us Is Easy!",
+                "title": "Our Process",
                 "header_size": "h2",
                 "_css_classes": "pes-title-circuit"
               },
@@ -55,7 +55,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "Just 4 easy steps and you are on your renewable energy journey",
+                "title": "Four simple steps from first call to long-term support",
                 "header_size": "p",
                 "_css_classes": "pes-eyebrow pes-center"
               },
@@ -106,13 +106,13 @@
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-file-invoice-dollar",
-                          "library": "fa-solid"
+                          "value": "far fa-calendar-alt",
+                          "library": "fa-regular"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "Step 1",
-                        "description_text": "Description of step 1.",
+                        "title_text": "Book",
+                        "description_text": "Book an appointment and tell us about your property and goals.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -150,13 +150,13 @@
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "fas fa-solar-panel",
+                          "value": "fas fa-drafting-compass",
                           "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "Step 2",
-                        "description_text": "Description of step 2.",
+                        "title_text": "Design",
+                        "description_text": "We assess your site and design the right system and proposal.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -194,13 +194,13 @@
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "far fa-handshake",
-                          "library": "fa-regular"
+                          "value": "fas fa-solar-panel",
+                          "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "Step 3",
-                        "description_text": "Description of step 3.",
+                        "title_text": "Install",
+                        "description_text": "Our licensed team installs, connects and commissions your system.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"
@@ -238,13 +238,13 @@
                       "isInner": false,
                       "settings": {
                         "selected_icon": {
-                          "value": "far fa-calendar-alt",
-                          "library": "fa-regular"
+                          "value": "fas fa-tools",
+                          "library": "fa-solid"
                         },
                         "view": "default",
                         "position": "top",
-                        "title_text": "Step 4",
-                        "description_text": "Description of step 4.",
+                        "title_text": "Support",
+                        "description_text": "Monitoring and O&M keep your system performing for years.",
                         "title_size": "h3",
                         "content_vertical_alignment": "middle",
                         "_css_classes": "pes-step-card"

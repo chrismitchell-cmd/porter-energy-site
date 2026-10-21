@@ -38,29 +38,57 @@
           "cards": [
             {
               "title": "Commercial Solar",
-              "text": "Generate more of your own power and reduce long-term energy costs.",
+              "text": "Generate more of your own power and cut long-term energy costs.",
               "url": "/commercial-solar/",
               "image": "",
               "preview": "img/frame-1.jpg"
             },
             {
-              "title": "Battery Energy Storage",
-              "text": "Store energy for backup power, peak shaving and greater control.",
-              "url": "/battery-energy-storage/",
+              "title": "Commercial Battery Energy Storage",
+              "text": "Backup power, peak shaving and more control over energy costs.",
+              "url": "/commercial-battery-energy-storage/",
               "image": "",
               "preview": "img/frame-2.jpg"
             },
             {
-              "title": "EV Charging",
-              "text": "Home and commercial EV charger installation, done right.",
-              "url": "/ev-charging/",
+              "title": "Microgrids & Energy Management",
+              "text": "Solar, storage and controls working together as one system.",
+              "url": "/microgrids-energy-management/",
               "image": "",
               "preview": "img/frame-3.jpg"
             },
             {
-              "title": "Generators",
-              "text": "Standby generators that keep you running through every outage.",
-              "url": "/generators/",
+              "title": "Utility-Scale & Solar Farms",
+              "text": "Large ground-mount and solar farm construction.",
+              "url": "/utility-scale-solar-farms/",
+              "image": "",
+              "preview": "img/sunset.jpg"
+            },
+            {
+              "title": "EV Charging Infrastructure",
+              "text": "Workplace, fleet and public EV charging, designed and installed.",
+              "url": "/ev-charging-infrastructure/",
+              "image": "",
+              "preview": "img/frame-1.jpg"
+            },
+            {
+              "title": "Electrical Infrastructure",
+              "text": "Service upgrades, switchgear and the backbone your energy runs on.",
+              "url": "/electrical-infrastructure/",
+              "image": "",
+              "preview": "img/frame-2.jpg"
+            },
+            {
+              "title": "Residential Solar",
+              "text": "Lower bills and more independence for your home.",
+              "url": "/residential-solar/",
+              "image": "",
+              "preview": "img/frame-3.jpg"
+            },
+            {
+              "title": "Residential Battery Energy Storage",
+              "text": "Keep the lights on through outages with home battery backup.",
+              "url": "/residential-battery-energy-storage/",
               "image": "",
               "preview": "img/sunset.jpg"
             }
@@ -71,36 +99,45 @@
           "label": "O&M Services",
           "cards": [
             {
-              "title": "Preventive Maintenance",
-              "text": "Scheduled inspections and upkeep that protect your system's output.",
-              "url": "/preventive-maintenance/",
+              "title": "Solar O&M",
+              "text": "Preventive maintenance that keeps your system producing.",
+              "url": "/solar-om/",
               "image": "",
               "preview": "img/frame-2.jpg"
             },
             {
-              "title": "System Monitoring",
-              "text": "We watch performance so issues are caught before they cost you.",
-              "url": "/system-monitoring/",
+              "title": "Battery Service",
+              "text": "Inspection, service and repair for battery energy storage systems.",
+              "url": "/battery-service/",
               "image": "",
               "preview": "img/frame-1.jpg"
             },
             {
-              "title": "Repairs & Troubleshooting",
-              "text": "Fast diagnosis and repair for solar, battery and electrical systems.",
-              "url": "/repairs/",
+              "title": "System Troubleshooting",
+              "text": "Fast diagnosis when production drops or a system goes down.",
+              "url": "/system-troubleshooting/",
               "image": "",
               "preview": "img/sunset.jpg"
             },
             {
-              "title": "System Takeovers",
-              "text": "Installed by someone else? We service and support existing systems.",
-              "url": "/system-takeovers/",
+              "title": "Repowering",
+              "text": "Upgrade aging equipment to restore and boost performance.",
+              "url": "/repowering/",
               "image": "",
               "preview": "img/frame-3.jpg"
+            },
+            {
+              "title": "Orphaned Solar Systems",
+              "text": "Installer gone out of business? We take over service and support.",
+              "url": "/orphaned-solar-systems/",
+              "image": "",
+              "preview": "img/frame-1.jpg"
             }
           ]
         }
-      ]
+      ],
+      "per_row": 3,
+      "divider": true
     },
     {
       "type": "audience",
@@ -108,34 +145,50 @@
       "title": "Energy Solutions For Every Property",
       "cards": [
         {
+          "title": "Commercial & Industrial",
+          "text": "Cut operating costs and protect operations with on-site power.",
+          "image": ""
+        },
+        {
+          "title": "Solar Development & EPCs",
+          "text": "A licensed electrical partner for your build schedule.",
+          "image": ""
+        },
+        {
+          "title": "Agriculture",
+          "text": "Power barns, pumps and operations with the land you have.",
+          "image": ""
+        },
+        {
+          "title": "Municipal & Government",
+          "text": "Lower energy budgets and resilient public facilities.",
+          "image": ""
+        },
+        {
+          "title": "Schools & Universities",
+          "text": "Stable energy costs and real-world learning on campus.",
+          "image": ""
+        },
+        {
+          "title": "Data Centers & Critical Infrastructure",
+          "text": "Backup and resilient power where downtime isn't an option.",
+          "image": ""
+        },
+        {
+          "title": "Multi-Family",
+          "text": "Shared solar, storage and EV charging for residents.",
+          "image": ""
+        },
+        {
           "title": "Homeowners",
-          "text": "Lower bills and backup power for your home.",
-          "image": ""
-        },
-        {
-          "title": "Industry 1",
-          "text": "Supporting description.",
-          "image": ""
-        },
-        {
-          "title": "Industry 2",
-          "text": "Supporting description.",
-          "image": ""
-        },
-        {
-          "title": "Industry 3",
-          "text": "Supporting description.",
-          "image": ""
-        },
-        {
-          "title": "Industry 4",
-          "text": "Supporting description.",
+          "text": "Residential solar and battery backup for your home.",
           "image": ""
         }
-      ]
+      ],
+      "per_row": 4
     },
     {
-      "type": "why",
+      "type": "why_split",
       "kicker": "Why Choose Us",
       "title": "Why Porter",
       "accent": "Energy Systems",
@@ -161,13 +214,20 @@
           "title": "Competitive Pricing",
           "text": "We are owner-operated and confident our pricing will be competitive."
         }
-      ]
+      ],
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      },
+      "frame": "orange",
+      "image": "",
+      "divider": true
     },
     {
       "type": "process",
       "label": "Process",
       "title": "Our Process",
-      "subtitle": "Getting started is easy",
+      "subtitle": "Four simple steps from first call to long-term support",
       "steps": [
         {
           "icon": "far fa-calendar-alt",
@@ -175,14 +235,19 @@
           "text": "Book an appointment and tell us about your property and goals."
         },
         {
-          "icon": "fas fa-solar-panel",
+          "icon": "fas fa-drafting-compass",
           "title": "Design",
-          "text": "We assess your site and design the right system for you."
+          "text": "We assess your site and design the right system and proposal."
         },
         {
-          "icon": "fas fa-bolt",
+          "icon": "fas fa-solar-panel",
           "title": "Install",
-          "text": "Our licensed team installs and connects your system."
+          "text": "Our licensed team installs, connects and commissions your system."
+        },
+        {
+          "icon": "fas fa-tools",
+          "title": "Support",
+          "text": "Monitoring and O&M keep your system performing for years."
         }
       ],
       "button": {
@@ -212,7 +277,8 @@
       "button": {
         "text": "View All Projects",
         "url": "/our-projects/"
-      }
+      },
+      "divider": true
     },
     {
       "type": "testimonials",
@@ -229,7 +295,8 @@
       "button": {
         "text": "View All Posts",
         "url": "/blog/"
-      }
+      },
+      "divider": true
     },
     {
       "type": "cta",

@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "5a8793c",
+      "id": "10c0bfe",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "9b5b494",
+          "id": "a45ff7b",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -38,7 +38,7 @@
           },
           "elements": [
             {
-              "id": "a84bdfd",
+              "id": "a5d9e1e",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -50,7 +50,7 @@
               "elements": []
             },
             {
-              "id": "574c2fc",
+              "id": "b8e55b4",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -62,7 +62,7 @@
               "elements": []
             },
             {
-              "id": "300fc06",
+              "id": "a32c1bf",
               "elType": "widget",
               "widgetType": "text-editor",
               "isInner": false,
@@ -78,13 +78,13 @@
               "widgetType": "html",
               "isInner": false,
               "settings": {
-                "html": "<div class=\"pes-toggle\" role=\"tablist\"><button type=\"button\" role=\"tab\" data-tab=\"solutions\" aria-selected=\"true\" class=\"is-active\">Solutions</button><button type=\"button\" role=\"tab\" data-tab=\"om\" aria-selected=\"false\">O&M Services</button></div>\n<script>\n(function () {\n  function init(root) {\n    var sec = root.closest('.pes-energy');\n    if (!sec || sec.dataset.pesTabs) return;\n    sec.dataset.pesTabs = '1';\n    var btns = sec.querySelectorAll('.pes-toggle button');\n    btns.forEach(function (btn) {\n      btn.addEventListener('click', function () {\n        btns.forEach(function (b) { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-selected', b === btn); });\n        sec.querySelectorAll('.pes-tab-panel').forEach(function (p) {\n          p.classList.toggle('is-active', p.classList.contains('pes-tab-' + btn.dataset.tab));\n        });\n      });\n    });\n  }\n  document.querySelectorAll('.pes-toggle').forEach(init);\n  document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.pes-toggle').forEach(init); });\n})();\n</script>",
+                "html": "<div class=\"pes-toggle\" role=\"tablist\"><button type=\"button\" role=\"tab\" data-tab=\"solutions\" aria-selected=\"true\" class=\"is-active\">Solutions</button><button type=\"button\" role=\"tab\" data-tab=\"om\" aria-selected=\"false\">O&M Services</button></div>\n<script>\n(function () {\n  function init(root) {\n    var sec = root.closest('.pes-energy');\n    if (!sec || sec.dataset.pesTabs) return;\n    sec.dataset.pesTabs = '1';\n    var btns = sec.querySelectorAll('.pes-toggle button');\n    btns.forEach(function (btn) {\n      btn.addEventListener('click', function () {\n        btns.forEach(function (b) { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-selected', b === btn); });\n        sec.querySelectorAll('.pes-tab-panel').forEach(function (p) {\n          p.classList.toggle('is-active', p.classList.contains('pes-tab-' + btn.dataset.tab));\n        });\n        update();\n      });\n    });\n    var more = sec.querySelector('.pes-more-toggle');\n    function update() {\n      if (!more) return;\n      var hidden = sec.querySelectorAll('.pes-tab-panel.is-active.pes-tab-more').length;\n      more.parentNode.style.display = hidden ? '' : 'none';\n    }\n    if (more) {\n      more.addEventListener('click', function () {\n        var open = sec.classList.toggle('is-expanded');\n        more.setAttribute('aria-expanded', open);\n        more.textContent = open ? more.dataset.less : more.dataset.more;\n      });\n    }\n    update();\n  }\n  function run() { document.querySelectorAll('.pes-toggle').forEach(init); }\n  // wait for the whole section (the See All button comes after this script)\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();\n  window.addEventListener('elementor/frontend/init', run);\n})();\n</script>",
                 "_css_classes": "pes-toggle-widget"
               },
               "elements": []
             },
             {
-              "id": "93f0b99",
+              "id": "52cef16",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -96,8 +96,8 @@
                   "sizes": []
                 },
                 "css_classes": "pes-tab-panel pes-tab-solutions is-active",
-                "_title": "Toggle – Solutions cards",
-                "structure": "40"
+                "_title": "Toggle – Solutions – featured",
+                "structure": "30"
               },
               "elements": [
                 {
@@ -106,7 +106,7 @@
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0,
+                    "_inline_size": 33.333,
                     "css_classes": "pes-svc-card"
                   },
                   "elements": [
@@ -145,7 +145,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Generate more of your own power and reduce long-term energy costs.</p>",
+                        "editor": "<p>Generate more of your own power and cut long-term energy costs.</p>",
                         "_css_classes": "pes-svc-text"
                       },
                       "elements": []
@@ -170,7 +170,7 @@
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0,
+                    "_inline_size": 33.333,
                     "css_classes": "pes-svc-card"
                   },
                   "elements": [
@@ -191,10 +191,10 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Battery Energy Storage",
+                        "title": "Commercial Battery Energy Storage",
                         "header_size": "h3",
                         "link": {
-                          "url": "/battery-energy-storage/",
+                          "url": "/commercial-battery-energy-storage/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -209,7 +209,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Store energy for backup power, peak shaving and greater control.</p>",
+                        "editor": "<p>Backup power, peak shaving and more control over energy costs.</p>",
                         "_css_classes": "pes-svc-text"
                       },
                       "elements": []
@@ -234,7 +234,7 @@
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0,
+                    "_inline_size": 33.333,
                     "css_classes": "pes-svc-card"
                   },
                   "elements": [
@@ -255,10 +255,10 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "EV Charging",
+                        "title": "Microgrids & Energy Management",
                         "header_size": "h3",
                         "link": {
-                          "url": "/ev-charging/",
+                          "url": "/microgrids-energy-management/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -273,7 +273,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Home and commercial EV charger installation, done right.</p>",
+                        "editor": "<p>Solar, storage and controls working together as one system.</p>",
                         "_css_classes": "pes-svc-text"
                       },
                       "elements": []
@@ -291,19 +291,38 @@
                       "elements": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "b6ae933",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
                 },
+                "css_classes": "pes-tab-panel pes-tab-solutions pes-tab-more is-active",
+                "_title": "Toggle – Solutions – more (shown by See All Services)",
+                "structure": "30"
+              },
+              "elements": [
                 {
-                  "id": "80fc874",
+                  "id": "93f0b99",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0,
+                    "_inline_size": 33.333,
                     "css_classes": "pes-svc-card"
                   },
                   "elements": [
                     {
-                      "id": "52cef16",
+                      "id": "e3fc7ac",
                       "elType": "widget",
                       "widgetType": "image",
                       "isInner": false,
@@ -314,15 +333,15 @@
                       "elements": []
                     },
                     {
-                      "id": "e3fc7ac",
+                      "id": "adc4f63",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Generators",
+                        "title": "Utility-Scale & Solar Farms",
                         "header_size": "h3",
                         "link": {
-                          "url": "/generators/",
+                          "url": "/utility-scale-solar-farms/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -332,18 +351,18 @@
                       "elements": []
                     },
                     {
-                      "id": "adc4f63",
+                      "id": "597bfe9",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Standby generators that keep you running through every outage.</p>",
+                        "editor": "<p>Large ground-mount and solar farm construction.</p>",
                         "_css_classes": "pes-svc-text"
                       },
                       "elements": []
                     },
                     {
-                      "id": "597bfe9",
+                      "id": "80fc874",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -355,33 +374,14 @@
                       "elements": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "id": "582d322",
-              "elType": "section",
-              "isInner": true,
-              "settings": {
-                "layout": "boxed",
-                "gap": "extended",
-                "content_width": {
-                  "unit": "px",
-                  "size": 1140,
-                  "sizes": []
                 },
-                "css_classes": "pes-tab-panel pes-tab-om",
-                "_title": "Toggle – O&M Services cards",
-                "structure": "40"
-              },
-              "elements": [
                 {
                   "id": "729bc69",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0,
+                    "_inline_size": 33.333,
                     "css_classes": "pes-svc-card"
                   },
                   "elements": [
@@ -402,10 +402,10 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Preventive Maintenance",
+                        "title": "EV Charging Infrastructure",
                         "header_size": "h3",
                         "link": {
-                          "url": "/preventive-maintenance/",
+                          "url": "/ev-charging-infrastructure/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -420,7 +420,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Scheduled inspections and upkeep that protect your system's output.</p>",
+                        "editor": "<p>Workplace, fleet and public EV charging, designed and installed.</p>",
                         "_css_classes": "pes-svc-text"
                       },
                       "elements": []
@@ -445,7 +445,7 @@
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0,
+                    "_inline_size": 33.333,
                     "css_classes": "pes-svc-card"
                   },
                   "elements": [
@@ -466,10 +466,10 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "System Monitoring",
+                        "title": "Electrical Infrastructure",
                         "header_size": "h3",
                         "link": {
-                          "url": "/system-monitoring/",
+                          "url": "/electrical-infrastructure/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -484,7 +484,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>We watch performance so issues are caught before they cost you.</p>",
+                        "editor": "<p>Service upgrades, switchgear and the backbone your energy runs on.</p>",
                         "_css_classes": "pes-svc-text"
                       },
                       "elements": []
@@ -502,19 +502,38 @@
                       "elements": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "a84bdfd",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
                 },
+                "css_classes": "pes-tab-panel pes-tab-solutions pes-tab-more is-active",
+                "_title": "Toggle – Solutions – more (shown by See All Services)",
+                "structure": "20"
+              },
+              "elements": [
                 {
-                  "id": "e6ec634",
+                  "id": "dfd9a45",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0,
+                    "_inline_size": 33.333,
                     "css_classes": "pes-svc-card"
                   },
                   "elements": [
                     {
-                      "id": "b6ae933",
+                      "id": "abc95d5",
                       "elType": "widget",
                       "widgetType": "image",
                       "isInner": false,
@@ -525,15 +544,15 @@
                       "elements": []
                     },
                     {
-                      "id": "abc95d5",
+                      "id": "34a2386",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Repairs & Troubleshooting",
+                        "title": "Residential Solar",
                         "header_size": "h3",
                         "link": {
-                          "url": "/repairs/",
+                          "url": "/residential-solar/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -543,18 +562,18 @@
                       "elements": []
                     },
                     {
-                      "id": "34a2386",
+                      "id": "f56517f",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Fast diagnosis and repair for solar, battery and electrical systems.</p>",
+                        "editor": "<p>Lower bills and more independence for your home.</p>",
                         "_css_classes": "pes-svc-text"
                       },
                       "elements": []
                     },
                     {
-                      "id": "f56517f",
+                      "id": "e6ec634",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -568,17 +587,17 @@
                   ]
                 },
                 {
-                  "id": "757f11b",
+                  "id": "582d322",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 25.0,
+                    "_inline_size": 33.333,
                     "css_classes": "pes-svc-card"
                   },
                   "elements": [
                     {
-                      "id": "dfd9a45",
+                      "id": "76cd5de",
                       "elType": "widget",
                       "widgetType": "image",
                       "isInner": false,
@@ -589,15 +608,15 @@
                       "elements": []
                     },
                     {
-                      "id": "76cd5de",
+                      "id": "c544005",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "System Takeovers",
+                        "title": "Residential Battery Energy Storage",
                         "header_size": "h3",
                         "link": {
-                          "url": "/system-takeovers/",
+                          "url": "/residential-battery-energy-storage/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -607,18 +626,18 @@
                       "elements": []
                     },
                     {
-                      "id": "c544005",
+                      "id": "6b6cf6e",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Installed by someone else? We service and support existing systems.</p>",
+                        "editor": "<p>Keep the lights on through outages with home battery backup.</p>",
                         "_css_classes": "pes-svc-text"
                       },
                       "elements": []
                     },
                     {
-                      "id": "6b6cf6e",
+                      "id": "757f11b",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -632,6 +651,375 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "996ed06",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-tab-panel pes-tab-om",
+                "_title": "Toggle – O&M Services – featured",
+                "structure": "30"
+              },
+              "elements": [
+                {
+                  "id": "66baba5",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "574c2fc",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "300fc06",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Solar O&M",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/solar-om/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "9b5b494",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Preventive maintenance that keeps your system producing.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5a8793c",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "64de3ba",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "83530a7",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "056a8de",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Battery Service",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/battery-service/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "7831fa8",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Inspection, service and repair for battery energy storage systems.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f0a72db",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "c8678fc",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "1358f94",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "3c554f5",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "System Troubleshooting",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/system-troubleshooting/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "ef7e47d",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Fast diagnosis when production drops or a system goes down.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "03dc7f5",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1eb9e74",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "extended",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
+                },
+                "css_classes": "pes-tab-panel pes-tab-om pes-tab-more",
+                "_title": "Toggle – O&M Services – more (shown by See All Services)",
+                "structure": "20"
+              },
+              "elements": [
+                {
+                  "id": "b6dbd0c",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "d774cbf",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "3195ff8",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Repowering",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/repowering/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "7dd3710",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Upgrade aging equipment to restore and boost performance.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "de23369",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "12652c1",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 33.333,
+                    "css_classes": "pes-svc-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "503283c",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image_size": "full",
+                        "_css_classes": "pes-svc-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "ba3b97a",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Orphaned Solar Systems",
+                        "header_size": "h3",
+                        "link": {
+                          "url": "/orphaned-solar-systems/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "pes-svc-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "0b6e1fa",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Installer gone out of business? We take over service and support.</p>",
+                        "_css_classes": "pes-svc-text"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "8bf0ee7",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Learn More",
+                        "header_size": "span",
+                        "_css_classes": "pes-svc-more"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "521b76f",
+              "elType": "widget",
+              "widgetType": "html",
+              "isInner": false,
+              "settings": {
+                "html": "<div class=\"pes-more-wrap\"><button type=\"button\" class=\"pes-more-toggle\" aria-expanded=\"false\" data-more=\"See All Services\" data-less=\"Show Fewer Services\">See All Services</button></div>",
+                "_css_classes": "pes-more-widget"
+              },
+              "elements": []
             }
           ]
         }

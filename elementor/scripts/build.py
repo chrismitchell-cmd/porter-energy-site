@@ -341,12 +341,16 @@ def block_audience(ids, b):
                                    if c.get("image") else {}))
         PREVIEW_SRC[col["id"]] = "img/rack.jpg"
         cards.append(col)
-    grid = section(ids, cards, "pes-audience", inner=True, gap="narrow", structure=f"{n}0")
+    per = b.get("per_row", n)
+    if per < n:
+        for c in cards:
+            c["settings"]["_inline_size"] = round(100 / per, 3)
+    rows = [section(ids, cards[i:i + per], "pes-audience", inner=True, gap="narrow", structure=f"{min(per, n - i)}0")
+            for i in range(0, n, per)]
     return section(ids, [column(ids, 100, [
         heading(ids, b["kicker"], "p", "pes-eyebrow pes-center"),
         heading(ids, b["title"], "h2", "pes-h2 pes-h2-mixed pes-center"),
-        grid,
-    ])], "pes-section", title="Who it's for", padding=box(100, 0, 110, 0))
+    ] + rows)], "pes-section", title="Who it's for", padding=box(100, 0, 110, 0))
 
 
 def block_contact_cards(ids, b):
@@ -404,6 +408,22 @@ def section_intro(ids, b):
 def card_grid(ids, cols, gap="extended"):
     n = len(cols)
     return section(ids, cols, "pes-card-grid", inner=True, gap=gap, structure=f"{n}0")
+
+
+def block_why_split(ids, b):
+    """Why choose us – heading and stacked call-out boxes on the left, framed photo on the right."""
+    boxes = [icon_box(ids, c["icon"], "pes-why-row", c["title"], c["text"], position="left", title_tag="h3")
+             for c in b["cards"]]
+    copy = column(ids, 55, [heading(ids, b["kicker"], "p", "pes-eyebrow"),
+                            heading(ids, two_tone(b["title"], b.get("accent")), "h2", "pes-h2"),
+                            text(ids, b["text"])] + boxes
+                  + ([button(ids, b["button"], "pes-btn-solid")] if b.get("button") else []),
+                  content_position="center")
+    media = column(ids, 45, [image(ids, b.get("image"), frame_classes(b), b["title"], "img/video.jpg")],
+                   content_position="center")
+    return section(ids, [copy, media], "pes-section pes-feature", title="Why choose us",
+                   gap="wider", structure="20", column_position="middle",
+                   padding=box(110, 0, 110, 0), padding_mobile=box(70, 0, 70, 0))
 
 
 def block_why(ids, b):
@@ -511,11 +531,28 @@ TOGGLE_JS = """<script>
         sec.querySelectorAll('.pes-tab-panel').forEach(function (p) {
           p.classList.toggle('is-active', p.classList.contains('pes-tab-' + btn.dataset.tab));
         });
+        update();
       });
     });
+    var more = sec.querySelector('.pes-more-toggle');
+    function update() {
+      if (!more) return;
+      var hidden = sec.querySelectorAll('.pes-tab-panel.is-active.pes-tab-more').length;
+      more.parentNode.style.display = hidden ? '' : 'none';
+    }
+    if (more) {
+      more.addEventListener('click', function () {
+        var open = sec.classList.toggle('is-expanded');
+        more.setAttribute('aria-expanded', open);
+        more.textContent = open ? more.dataset.less : more.dataset.more;
+      });
+    }
+    update();
   }
-  document.querySelectorAll('.pes-toggle').forEach(init);
-  document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.pes-toggle').forEach(init); });
+  function run() { document.querySelectorAll('.pes-toggle').forEach(init); }
+  // wait for the whole section (the See All button comes after this script)
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+  window.addEventListener('elementor/frontend/init', run);
 })();
 </script>"""
 
@@ -537,14 +574,23 @@ def block_energy_tabs(ids, b):
         f'{" class=\"is-active\"" if i == 0 else ""}>{t["label"]}</button>' for i, t in enumerate(tabs))
     toggle = widget(ids, "html", "pes-toggle-widget",
                     html=f'<div class="pes-toggle" role="tablist">{btns}</div>\n{TOGGLE_JS}')
+    per = b.get("per_row", 3)
     panels = []
     for i, t in enumerate(tabs):
-        n = len(t["cards"])
-        sec = section(ids, [service_card(ids, c, round(100 / n, 3)) for c in t["cards"]],
-                      f'pes-tab-panel pes-tab-{t["key"]}' + (" is-active" if i == 0 else ""),
-                      inner=True, title=f"Toggle – {t['label']} cards", gap="extended", structure=f"{n}0")
-        panels.append(sec)
-    return section(ids, [column(ids, 100, section_intro(ids, b) + [toggle] + panels)],
+        cards = t["cards"]
+        active = " is-active" if i == 0 else ""
+        for r in range(0, len(cards), per):
+            row = cards[r:r + per]
+            more = " pes-tab-more" if r else ""
+            label = f"Toggle – {t['label']} – " + ("featured" if not r else "more (shown by See All Services)")
+            panels.append(section(ids, [service_card(ids, c, round(100 / per, 3)) for c in row],
+                                  f'pes-tab-panel pes-tab-{t["key"]}{more}{active}', inner=True, title=label,
+                                  gap="extended", structure=f"{len(row)}0"))
+    more_btn = widget(ids, "html", "pes-more-widget", html=(
+        '<div class="pes-more-wrap"><button type="button" class="pes-more-toggle" aria-expanded="false" '
+        f'data-more="{b.get("more_label", "See All Services")}" data-less="{b.get("less_label", "Show Fewer Services")}">'
+        f'{b.get("more_label", "See All Services")}</button></div>'))
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [toggle] + panels + [more_btn])],
                    "pes-section pes-energy", title="Energy management – Solutions / O&M toggle",
                    padding=box(100, 0, 110, 0))
 
@@ -689,6 +735,7 @@ BLOCKS = {
     "faq": block_faq,
     "contact_cards": block_contact_cards,
     "why": block_why,
+    "why_split": block_why_split,
     "partners": block_partners,
     "energy_tabs": block_energy_tabs,
     "service_grid": block_service_grid,
@@ -745,7 +792,12 @@ def build(content_path, seen_blocks):
     page = json.loads(Path(content_path).read_text())
     ids = Ids(page["slug"])
     header = page.get("header", HEADER_DEFAULTS)
-    content = [BLOCKS[b["type"]](ids, b) for b in page["blocks"]]
+    content = []
+    for b in page["blocks"]:
+        sec = BLOCKS[b["type"]](ids, b)
+        if b.get("divider"):
+            sec["settings"]["css_classes"] = (sec["settings"].get("css_classes", "") + " pes-divider").strip()
+        content.append(sec)
     # The page template holds only the page's own content: the styles live in
     # Site Settings > Custom CSS and the header is the site-wide Theme Builder header.
     write_json(DIST / f"{page['slug']}.json",

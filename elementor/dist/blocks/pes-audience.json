@@ -5,7 +5,7 @@
   "page_settings": [],
   "content": [
     {
-      "id": "6c861a9",
+      "id": "95bcccf",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -29,7 +29,7 @@
       },
       "elements": [
         {
-          "id": "d2c2afc",
+          "id": "2e82ac3",
           "elType": "column",
           "isInner": false,
           "settings": {
@@ -38,7 +38,7 @@
           },
           "elements": [
             {
-              "id": "734b93b",
+              "id": "8bc4bcd",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -50,7 +50,7 @@
               "elements": []
             },
             {
-              "id": "d3dce1d",
+              "id": "a335693",
               "elType": "widget",
               "widgetType": "heading",
               "isInner": false,
@@ -62,7 +62,7 @@
               "elements": []
             },
             {
-              "id": "534beaf",
+              "id": "7bba84a",
               "elType": "section",
               "isInner": true,
               "settings": {
@@ -74,7 +74,7 @@
                   "sizes": []
                 },
                 "css_classes": "pes-audience",
-                "structure": "50"
+                "structure": "40"
               },
               "elements": [
                 {
@@ -83,7 +83,7 @@
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 20.0,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-audience-card"
                   },
                   "elements": [
@@ -93,7 +93,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Homeowners",
+                        "title": "Commercial & Industrial",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -105,7 +105,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Lower bills and backup power for your home.</p>",
+                        "editor": "<p>Cut operating costs and protect operations with on-site power.</p>",
                         "_css_classes": "pes-card-text"
                       },
                       "elements": []
@@ -118,7 +118,7 @@
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 20.0,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-audience-card"
                   },
                   "elements": [
@@ -128,7 +128,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 1",
+                        "title": "Solar Development & EPCs",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -140,7 +140,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Supporting description.</p>",
+                        "editor": "<p>A licensed electrical partner for your build schedule.</p>",
                         "_css_classes": "pes-card-text"
                       },
                       "elements": []
@@ -153,7 +153,7 @@
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 20.0,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-audience-card"
                   },
                   "elements": [
@@ -163,7 +163,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 2",
+                        "title": "Agriculture",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -175,7 +175,7 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Supporting description.</p>",
+                        "editor": "<p>Power barns, pumps and operations with the land you have.</p>",
                         "_css_classes": "pes-card-text"
                       },
                       "elements": []
@@ -188,7 +188,7 @@
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 20.0,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-audience-card"
                   },
                   "elements": [
@@ -198,7 +198,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 3",
+                        "title": "Municipal & Government",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -210,20 +210,38 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Supporting description.</p>",
+                        "editor": "<p>Lower energy budgets and resilient public facilities.</p>",
                         "_css_classes": "pes-card-text"
                       },
                       "elements": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "7478d9d",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "layout": "boxed",
+                "gap": "narrow",
+                "content_width": {
+                  "unit": "px",
+                  "size": 1140,
+                  "sizes": []
                 },
+                "css_classes": "pes-audience",
+                "structure": "40"
+              },
+              "elements": [
                 {
                   "id": "778e062",
                   "elType": "column",
                   "isInner": true,
                   "settings": {
                     "_column_size": 50,
-                    "_inline_size": 20.0,
+                    "_inline_size": 25.0,
                     "css_classes": "pes-audience-card"
                   },
                   "elements": [
@@ -233,7 +251,7 @@
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Industry 4",
+                        "title": "Schools & Universities",
                         "header_size": "h3",
                         "_css_classes": "pes-card-title"
                       },
@@ -245,7 +263,112 @@
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "<p>Supporting description.</p>",
+                        "editor": "<p>Stable energy costs and real-world learning on campus.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "d3dce1d",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "534beaf",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Data Centers & Critical Infrastructure",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "734b93b",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Backup and resilient power where downtime isn't an option.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "36051df",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "d2c2afc",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Multi-Family",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "6c861a9",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Shared solar, storage and EV charging for residents.</p>",
+                        "_css_classes": "pes-card-text"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "70614f9",
+                  "elType": "column",
+                  "isInner": true,
+                  "settings": {
+                    "_column_size": 50,
+                    "_inline_size": 25.0,
+                    "css_classes": "pes-audience-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "943eead",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Homeowners",
+                        "header_size": "h3",
+                        "_css_classes": "pes-card-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "fc23352",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Residential solar and battery backup for your home.</p>",
                         "_css_classes": "pes-card-text"
                       },
                       "elements": []

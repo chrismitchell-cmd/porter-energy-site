@@ -777,9 +777,15 @@ def link_list(ids, items, classes, fa_class=None):
 def block_footer_trust(ids, b):
     """Footer trust strip – warranty / credential badges in a row."""
     n = len(b["badges"])
-    cols = [column(ids, round(100 / n, 3), [icon_box(ids, x["icon"], "pes-trust-badge", x["title"], x["text"],
-                                                     position="left", title_tag="p")])
-            for x in b["badges"]]
+    cols = []
+    for x in b["badges"]:
+        if x.get("badge_image") is not None:  # the real warranty badge artwork
+            w = image(ids, x["badge_image"], "pes-trust-img", x["title"], x.get("preview"))
+            w["settings"]["link"] = {"url": x.get("url", ""), "is_external": "", "nofollow": "", "custom_attributes": ""}
+            w["settings"]["link_to"] = "custom" if x.get("url") else "none"
+        else:
+            w = icon_box(ids, x["icon"], "pes-trust-badge", x["title"], x["text"], position="left", title_tag="p")
+        cols.append(column(ids, round(100 / n, 3), [w], content_position="center"))
     return section(ids, cols, "pes-footer-trust", title="Footer – warranty strip", structure=f"{n}0",
                    gap="extended", column_position="middle", padding=box(34, 0, 34, 0))
 

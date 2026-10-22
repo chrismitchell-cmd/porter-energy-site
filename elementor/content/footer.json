@@ -19,14 +19,14 @@
       "type": "footer_trust",
       "badges": [
         {
-          "icon": "fas fa-shield-alt",
-          "title": "1-Year Labor Warranty",
-          "text": "Satisfaction guaranteed on every install"
+          "badge_image": "",
+          "title": "1-Year Labor Warranty – Satisfaction Guaranteed",
+          "preview": "img/badge-1yr.png"
         },
         {
-          "icon": "fas fa-award",
+          "badge_image": "",
           "title": "25-Year Workmanship Warranty",
-          "text": "Built to last, backed for decades"
+          "preview": "img/badge-25yr.png"
         },
         {
           "icon": "fas fa-certificate",

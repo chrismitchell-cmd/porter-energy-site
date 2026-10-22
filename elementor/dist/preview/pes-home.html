@@ -669,18 +669,24 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   text-shadow: 0 1px 2px rgba(120, 50, 0, 0.35);
 }
 
+/* CTA banner button – the same gradient, angled-corner style as the other main buttons */
 .elementor .pes-btn-pill .elementor-button,
 .elementor .pes-btn-pill .elementor-button:hover,
 .elementor .pes-btn-pill .elementor-button:focus {
-  background: #ef7828 !important;
+  background: var(--pes-gradient) !important;
   color: var(--pes-white);
 }
 .elementor .pes-btn-pill .elementor-button {
-  padding: 13px 40px;
-  border-radius: 999px;
-  font-size: 16px;
-  font-style: italic;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  padding: 16px 32px;
+  border-radius: 0;
+  font-size: 18px;
+  text-shadow: 0 1px 2px rgba(120, 50, 0, 0.35);
+  clip-path: polygon(var(--pes-cut) 0, 100% 0, 100% calc(100% - var(--pes-cut)),
+    calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut));
+}
+.elementor .pes-btn-pill .elementor-button-wrapper { transition: filter 0.25s ease; }
+.elementor .pes-btn-pill .elementor-button-wrapper:has(.elementor-button:is(:hover, :focus-visible)) {
+  filter: drop-shadow(0 0 8px rgba(234, 162, 78, 0.7)) drop-shadow(0 0 20px rgba(221, 112, 51, 0.35));
 }
 
 .elementor .pes-align-right .elementor-button-wrapper { text-align: right; }
@@ -699,9 +705,7 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 .elementor :is(.pes-btn, .pes-btn-solid) .elementor-button-wrapper:has(.elementor-button:is(:hover, :focus-visible)) {
   filter: drop-shadow(0 0 8px rgba(234, 162, 78, 0.7)) drop-shadow(0 0 20px rgba(221, 112, 51, 0.35));
 }
-.elementor .pes-btn-pill .elementor-button:is(:hover, :focus-visible) {
-  box-shadow: 0 0 14px rgba(239, 120, 40, 0.75), 0 0 30px rgba(234, 162, 78, 0.35), 0 6px 18px rgba(0, 0, 0, 0.45);
-}
+
 @media (prefers-reduced-motion: reduce) {
   .elementor :is(.pes-btn, .pes-btn-solid, .pes-btn-pill) .elementor-button:is(:hover, :focus-visible) { transform: none; }
 }
@@ -2077,6 +2081,19 @@ body:not(.elementor-editor-active) .elementor .pes-proj-row > .elementor-contain
   border-top: 3px solid transparent;
   border-image: var(--pes-gradient) 1;
 }
+/* real warranty badge artwork */
+.elementor .pes-trust-img { text-align: center; }
+.elementor .pes-trust-img img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.elementor .pes-trust-img a:hover img,
+.elementor .pes-trust-img img:hover { transform: scale(1.06); filter: drop-shadow(0 0 14px rgba(234, 162, 78, 0.55)); }
 .elementor .pes-trust-badge .elementor-icon-box-wrapper { display: flex; align-items: center; gap: 16px; text-align: left; }
 .elementor .pes-trust-badge .elementor-icon-box-icon { flex: none; margin: 0 !important; }
 .elementor .pes-trust-badge.elementor-widget-icon-box .elementor-icon {
@@ -2276,6 +2293,8 @@ body:not(.elementor-editor-active) .elementor .pes-proj-row > .elementor-contain
   .elementor .pes-footer-col { margin-bottom: 18px; }
   .elementor .pes-footer-main .pes-footer-col,
   .elementor .pes-footer-trust > .elementor-container > .elementor-column { width: 100% !important; }
+  .elementor .pes-footer-trust > .elementor-container > .elementor-column:has(.pes-trust-img) { width: 50% !important; }
+  .elementor .pes-trust-img img { height: 96px; }
   .elementor .pes-footer-main::after { display: none; }
   .elementor .pes-article { font-size: 17px; }
   .elementor .pes-article h2 { font-size: 27px; }

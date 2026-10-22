@@ -36,26 +36,25 @@
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 25.0
+            "_inline_size": 25.0,
+            "content_position": "center"
           },
           "elements": [
             {
               "id": "357a1e9",
               "elType": "widget",
-              "widgetType": "icon-box",
+              "widgetType": "image",
               "isInner": false,
               "settings": {
-                "selected_icon": {
-                  "value": "fas fa-shield-alt",
-                  "library": "fa-solid"
+                "image_size": "full",
+                "_css_classes": "pes-trust-img",
+                "link": {
+                  "url": "",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
                 },
-                "view": "default",
-                "position": "left",
-                "title_text": "1-Year Labor Warranty",
-                "description_text": "Satisfaction guaranteed on every install",
-                "title_size": "p",
-                "content_vertical_alignment": "middle",
-                "_css_classes": "pes-trust-badge"
+                "link_to": "none"
               },
               "elements": []
             }
@@ -67,26 +66,25 @@
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 25.0
+            "_inline_size": 25.0,
+            "content_position": "center"
           },
           "elements": [
             {
               "id": "1605f88",
               "elType": "widget",
-              "widgetType": "icon-box",
+              "widgetType": "image",
               "isInner": false,
               "settings": {
-                "selected_icon": {
-                  "value": "fas fa-award",
-                  "library": "fa-solid"
+                "image_size": "full",
+                "_css_classes": "pes-trust-img",
+                "link": {
+                  "url": "",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
                 },
-                "view": "default",
-                "position": "left",
-                "title_text": "25-Year Workmanship Warranty",
-                "description_text": "Built to last, backed for decades",
-                "title_size": "p",
-                "content_vertical_alignment": "middle",
-                "_css_classes": "pes-trust-badge"
+                "link_to": "none"
               },
               "elements": []
             }
@@ -98,7 +96,8 @@
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 25.0
+            "_inline_size": 25.0,
+            "content_position": "center"
           },
           "elements": [
             {
@@ -129,7 +128,8 @@
           "isInner": false,
           "settings": {
             "_column_size": 50,
-            "_inline_size": 25.0
+            "_inline_size": 25.0,
+            "content_position": "center"
           },
           "elements": [
             {

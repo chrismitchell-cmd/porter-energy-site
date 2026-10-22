@@ -897,7 +897,7 @@ BLOCKS = {
 
 STYLES_BLOCK = {"type": "styles"}
 HEADER_DEFAULTS = {"type": "header", "logo": "",
-                   "button": {"text": "Book An Appointment", "url": "/contact-us/#book-appointment"}}
+                   "button": {"text": "603-340-0500", "url": "tel:+16033400500"}}
 
 
 def block_name(b):

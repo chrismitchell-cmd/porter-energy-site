@@ -1,0 +1,160 @@
+{
+  "version": "0.4",
+  "title": "PES – Footer Trust",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "548a2e2",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-footer-trust",
+        "_title": "Footer – warranty strip",
+        "structure": "40",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "34",
+          "right": "0",
+          "bottom": "34",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "1297d2d",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 25.0
+          },
+          "elements": [
+            {
+              "id": "357a1e9",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-shield-alt",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "1-Year Labor Warranty",
+                "description_text": "Satisfaction guaranteed on every install",
+                "title_size": "p",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-trust-badge"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "d3e9635",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 25.0
+          },
+          "elements": [
+            {
+              "id": "1605f88",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-award",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "25-Year Workmanship Warranty",
+                "description_text": "Built to last, backed for decades",
+                "title_size": "p",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-trust-badge"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "aba1c13",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 25.0
+          },
+          "elements": [
+            {
+              "id": "ca9a2b3",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-certificate",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Licensed Electricians",
+                "description_text": "Licensed & insured professionals",
+                "title_size": "p",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-trust-badge"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "a9e32c1",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 25.0
+          },
+          "elements": [
+            {
+              "id": "438c74b",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-map-marker-alt",
+                  "library": "fa-solid"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Local Deerfield, NH Team",
+                "description_text": "Serving NH, ME and MA",
+                "title_size": "p",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-trust-badge"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

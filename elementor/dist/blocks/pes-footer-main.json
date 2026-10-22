@@ -1,0 +1,587 @@
+{
+  "version": "0.4",
+  "title": "PES – Footer Main",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "3248f0c",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "extended",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-footer-main",
+        "_title": "Footer – columns",
+        "structure": "40",
+        "padding": {
+          "unit": "px",
+          "top": "70",
+          "right": "0",
+          "bottom": "50",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "50",
+          "right": "0",
+          "bottom": "30",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "ae0339c",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 28,
+            "css_classes": "pes-footer-col"
+          },
+          "elements": [
+            {
+              "id": "3a107b2",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image_size": "full",
+                "_css_classes": "pes-footer-logo"
+              },
+              "elements": []
+            },
+            {
+              "id": "ddbe254",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Integrated solar, battery storage, EV charging and electrical systems for homes and businesses across New England, installed and serviced by licensed electricians.</p>",
+                "_css_classes": "pes-footer-blurb"
+              },
+              "elements": []
+            },
+            {
+              "id": "562a537",
+              "elType": "widget",
+              "widgetType": "social-icons",
+              "isInner": false,
+              "settings": {
+                "shape": "square",
+                "align": "left",
+                "social_icon_list": [
+                  {
+                    "_id": "dc141e2",
+                    "social_icon": {
+                      "value": "fab fa-facebook-f",
+                      "library": "fa-brands"
+                    },
+                    "link": {
+                      "url": "https://www.facebook.com/",
+                      "is_external": "on",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  },
+                  {
+                    "_id": "ed01684",
+                    "social_icon": {
+                      "value": "fab fa-instagram",
+                      "library": "fa-brands"
+                    },
+                    "link": {
+                      "url": "https://www.instagram.com/",
+                      "is_external": "on",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  },
+                  {
+                    "_id": "660c7e0",
+                    "social_icon": {
+                      "value": "fab fa-linkedin-in",
+                      "library": "fa-brands"
+                    },
+                    "link": {
+                      "url": "https://www.linkedin.com/",
+                      "is_external": "on",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  }
+                ],
+                "_css_classes": "pes-footer-social"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "f79f9d2",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 23,
+            "css_classes": "pes-footer-col"
+          },
+          "elements": [
+            {
+              "id": "496f9c7",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Solutions",
+                "header_size": "h4",
+                "_css_classes": "pes-footer-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "729f6a1",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "_id": "7d048e9",
+                    "text": "Commercial Solar",
+                    "link": {
+                      "url": "/commercial-solar/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "9e752bb",
+                    "text": "Utility-Scale & Solar Farms",
+                    "link": {
+                      "url": "/utility-scale-solar-farms/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "7733f92",
+                    "text": "Commercial Battery Storage",
+                    "link": {
+                      "url": "/commercial-battery-energy-storage/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "1571088",
+                    "text": "Microgrids & Energy Management",
+                    "link": {
+                      "url": "/microgrids-energy-management/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "c55dbfc",
+                    "text": "EV Charging Infrastructure",
+                    "link": {
+                      "url": "/ev-charging-infrastructure/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "f3d1e5c",
+                    "text": "Electrical Infrastructure",
+                    "link": {
+                      "url": "/electrical-infrastructure/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "da3559f",
+                    "text": "Residential Solar",
+                    "link": {
+                      "url": "/residential-solar/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "77272c8",
+                    "text": "Residential Battery Storage",
+                    "link": {
+                      "url": "/residential-battery-energy-storage/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  }
+                ],
+                "_css_classes": "pes-footer-links"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "72c1d60",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 23,
+            "css_classes": "pes-footer-col"
+          },
+          "elements": [
+            {
+              "id": "0a9e0f3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Service O&M",
+                "header_size": "h4",
+                "_css_classes": "pes-footer-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "4764c2d",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "_id": "182fe85",
+                    "text": "Solar O&M",
+                    "link": {
+                      "url": "/solar-om/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "9833007",
+                    "text": "Battery Service",
+                    "link": {
+                      "url": "/battery-service/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "f6d8ac6",
+                    "text": "System Troubleshooting",
+                    "link": {
+                      "url": "/system-troubleshooting/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "4aa6662",
+                    "text": "Repowering",
+                    "link": {
+                      "url": "/repowering/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "a2f3482",
+                    "text": "Orphaned Solar Systems",
+                    "link": {
+                      "url": "/orphaned-solar-systems/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  }
+                ],
+                "_css_classes": "pes-footer-links"
+              },
+              "elements": []
+            },
+            {
+              "id": "230dc7f",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Company",
+                "header_size": "h4",
+                "_css_classes": "pes-footer-title pes-footer-title-2"
+              },
+              "elements": []
+            },
+            {
+              "id": "8d5be30",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "_id": "1a4dc04",
+                    "text": "About Us",
+                    "link": {
+                      "url": "/about-us/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "f0a31a8",
+                    "text": "Projects",
+                    "link": {
+                      "url": "/projects/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "4992197",
+                    "text": "Blog",
+                    "link": {
+                      "url": "/blog/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "92dea9d",
+                    "text": "Open Positions",
+                    "link": {
+                      "url": "/open-positions/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  {
+                    "_id": "b27bec4",
+                    "text": "Contact Us",
+                    "link": {
+                      "url": "/contact-us/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  }
+                ],
+                "_css_classes": "pes-footer-links"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "b2b63b3",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 26,
+            "css_classes": "pes-footer-col"
+          },
+          "elements": [
+            {
+              "id": "ccc2760",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Get In Touch",
+                "header_size": "h4",
+                "_css_classes": "pes-footer-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "1aa94c4",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "_id": "ca70319",
+                    "text": "(603) 340-0500",
+                    "link": {
+                      "url": "tel:+16033400500",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "fas fa-phone-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "a2b1779",
+                    "text": "info@porter-electrical.com",
+                    "link": {
+                      "url": "mailto:info@porter-electrical.com",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "far fa-envelope",
+                      "library": "fa-regular"
+                    }
+                  },
+                  {
+                    "_id": "6cb121c",
+                    "text": "38A North Road, Deerfield, NH 03037",
+                    "link": {
+                      "url": "https://www.google.com/maps/search/?api=1&query=38A+North+Road+Deerfield+NH+03037",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "fas fa-map-marker-alt",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "_id": "b73ca6a",
+                    "text": "Mon–Fri 8:30am – 4:30pm",
+                    "link": {
+                      "url": "/contact-us/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "selected_icon": {
+                      "value": "far fa-clock",
+                      "library": "fa-regular"
+                    }
+                  }
+                ],
+                "_css_classes": "pes-footer-contact"
+              },
+              "elements": []
+            },
+            {
+              "id": "eff7794",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book An Appointment",
+                "link": {
+                  "url": "/contact-us/#book-appointment",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-footer-btn"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

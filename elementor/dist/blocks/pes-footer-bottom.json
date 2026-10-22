@@ -1,0 +1,82 @@
+{
+  "version": "0.4",
+  "title": "PES – Footer Bottom",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "809d5f9",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-footer-bottom",
+        "_title": "Footer – bottom bar",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "18",
+          "right": "0",
+          "bottom": "18",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "292191c",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 60,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "5a8145b",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>© 2026 Porter Energy Systems. All rights reserved. &nbsp;·&nbsp; <a href=\"/privacy-policy/\">Privacy Policy</a></p>",
+                "_css_classes": "pes-footer-legal"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "9074a90",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 40,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "e5e0e25",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Website built by <a href=\"https://befirstsearch.com/\">First Search Marketing LLC</a></p>",
+                "_css_classes": "pes-footer-legal pes-footer-credit"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

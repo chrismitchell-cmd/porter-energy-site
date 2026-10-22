@@ -98,7 +98,11 @@ calc(100% - var(--pes-tab-start)) 100%,
 .elementor .pes-header .pes-nav > .elementor-widget-container { display: flex; justify-content: flex-end; }
 .elementor .pes-header .pes-nav-col { padding-right: calc(var(--pes-tab-start) - 40px + 8px); }
 .elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container { top: var(--pes-header-h) !important; }
-body:not(.elementor-editor-active) .elementor .pes-proj-card { width: 50% !important; } }
+body:not(.elementor-editor-active) .elementor .pes-proj-card { width: 50% !important; }
+.elementor .pes-footer-main > .elementor-container,
+.elementor .pes-footer-trust > .elementor-container { flex-wrap: wrap; }
+.elementor .pes-footer-main .pes-footer-col,
+.elementor .pes-footer-trust > .elementor-container > .elementor-column { width: 50% !important; } }
 @media (max-width: 767px)  { :root { --pes-header-h: 76px; --pes-line-y: 76px; }
 .elementor .pes-header { padding: 0 12px !important; }
 .elementor .pes-header::before { clip-path: none; }
@@ -588,6 +592,56 @@ calc(100% - var(--pes-cut)) 100%, 0 100%, 0 var(--pes-cut)); }
 .elementor .pes-side-posts .elementor-post__title a { margin: 0; font-family: var(--pes-font-head); font-size: 16px; font-weight: 700; line-height: 1.25; color: var(--pes-white); text-decoration: none; }
 .elementor .pes-side-posts .elementor-post__title a:hover { color: var(--pes-orange); }
 .elementor .pes-side-posts .elementor-post__meta-data { margin-top: 6px; font-family: var(--pes-font-head); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pes-amber); }
+.elementor .pes-footer-trust,
+.elementor .pes-footer-main,
+.elementor .pes-footer-bottom { position: relative; color: var(--pes-text); font-family: var(--pes-font-body); }
+.elementor .pes-footer-trust  { background: #232121; border-top: 3px solid transparent; border-image: var(--pes-gradient) 1; }
+.elementor .pes-trust-badge .elementor-icon-box-wrapper { display: flex; align-items: center; gap: 16px; text-align: left; }
+.elementor .pes-trust-badge .elementor-icon-box-icon { flex: none; margin: 0 !important; }
+.elementor .pes-trust-badge.elementor-widget-icon-box .elementor-icon  { display: grid; place-items: center; width: 58px; height: 58px; font-size: 26px; color: var(--pes-white); fill: var(--pes-white); background: var(--pes-gradient); clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px); }
+.elementor .pes-trust-badge.elementor-widget-icon-box .elementor-icon svg { fill: var(--pes-white); }
+.elementor .pes-trust-badge.elementor-widget-icon-box .elementor-icon-box-title  { margin: 0 0 2px; font-family: var(--pes-font-head); font-size: 20px; font-weight: 700; line-height: 1.1; color: var(--pes-white); }
+.elementor .pes-trust-badge.elementor-widget-icon-box .elementor-icon-box-description { margin: 0; font-size: 14px; line-height: 1.4; color: rgba(255, 255, 255, 0.72); }
+.elementor .pes-footer-main  { background-color: var(--pes-black); background-image:
+linear-gradient(var(--pes-bg-grid) 1px, transparent 1px),
+linear-gradient(90deg, var(--pes-bg-grid) 1px, transparent 1px); background-size: 96px 96px; overflow: hidden; }
+.elementor .pes-footer-main::after  { content: ""; position: absolute; right: -30px; bottom: -40px; width: 260px; height: 340px; background: var(--pes-bolt) no-repeat center / contain; opacity: 0.08; pointer-events: none; }
+.elementor .pes-footer-main > .elementor-container { position: relative; z-index: 1; }
+.elementor .pes-footer-col > .elementor-widget-wrap { align-content: flex-start; }
+.elementor .pes-footer-logo { text-align: left; }
+.elementor .pes-footer-logo img { width: auto; max-width: 220px; height: auto; max-height: 80px; }
+.elementor .pes-footer-blurb { margin-top: 18px; }
+.elementor .pes-footer-blurb, .elementor .pes-footer-blurb p { font-size: 15px; line-height: 1.7; color: rgba(255, 255, 255, 0.72); max-width: 330px; }
+.elementor .pes-footer-social { margin-top: 6px; }
+.elementor .pes-footer-social .elementor-social-icons-wrapper { display: flex; gap: 10px; }
+.elementor .pes-footer-social .elementor-social-icon  { display: grid; place-items: center; width: 42px; height: 42px; font-size: 17px; color: var(--pes-white) !important; background: #232121 !important; border: 1px solid rgba(234, 162, 78, 0.5); border-radius: 0 !important; clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px); text-decoration: none; transition: background 0.25s, transform 0.25s; }
+.elementor .pes-footer-social .elementor-social-icon i { color: var(--pes-white); }
+.elementor .pes-footer-social .elementor-social-icon svg { fill: var(--pes-white); }
+.elementor .pes-footer-social .elementor-social-icon:hover { background: var(--pes-gradient) !important; transform: translateY(-3px); }
+.elementor .pes-footer-title .elementor-heading-title  { font-family: var(--pes-font-head); font-size: 17px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pes-white); }
+.elementor .pes-footer-title .elementor-heading-title::after  { content: ""; display: block; width: 42px; height: 3px; margin-top: 12px; background: var(--pes-gradient); }
+.elementor .pes-footer-title { margin-bottom: 16px !important; }
+.elementor .pes-footer-title-2 { margin-top: 30px; }
+.elementor .pes-footer-links .elementor-icon-list-item,
+.elementor .pes-footer-contact .elementor-icon-list-item { padding: 5px 0 !important; }
+.elementor .pes-footer-links .elementor-icon-list-item a,
+.elementor .pes-footer-contact .elementor-icon-list-item a  { display: inline-flex; align-items: flex-start; font-family: var(--pes-font-ui); font-size: 15px; font-weight: 500; line-height: 1.45; color: rgba(255, 255, 255, 0.78); text-decoration: none; transition: color 0.2s, transform 0.2s; }
+.elementor .pes-footer-links .elementor-icon-list-text,
+.elementor .pes-footer-contact .elementor-icon-list-text { color: inherit !important; padding-left: 0 !important; }
+.elementor .pes-footer-links .elementor-icon-list-icon { display: none; }
+.elementor .pes-footer-links .elementor-icon-list-item a:hover { color: var(--pes-orange); transform: translateX(5px); }
+.elementor .pes-footer-contact .elementor-icon-list-icon { width: auto; margin: 3px 12px 0 0; }
+.elementor .pes-footer-contact .elementor-icon-list-icon i { color: var(--pes-orange); font-size: 15px; }
+.elementor .pes-footer-contact .elementor-icon-list-icon svg { fill: var(--pes-orange); width: 16px; height: 16px; }
+.elementor .pes-footer-contact .elementor-icon-list-item a:hover { color: var(--pes-white); }
+.elementor .pes-footer-contact .elementor-icon-list-item:first-child .elementor-icon-list-text { font-family: var(--pes-font-head); font-size: 22px; font-weight: 700; color: var(--pes-white) !important; }
+.elementor .pes-footer-btn { margin-top: 18px; }
+.elementor .pes-footer-btn .elementor-button { font-size: 15px; padding: 13px 22px; }
+.elementor .pes-footer-bottom { background: #0c0b0b; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.elementor .pes-footer-legal, .elementor .pes-footer-legal p { margin: 0; font-size: 14px; color: rgba(255, 255, 255, 0.6); }
+.elementor .pes-footer-legal a { color: rgba(255, 255, 255, 0.82); text-decoration: none; }
+.elementor .pes-footer-legal a:hover { color: var(--pes-orange); }
+.elementor .pes-footer-credit, .elementor .pes-footer-credit p { text-align: right; }
 .elementor .pes-cta  { position: relative; overflow: hidden; background:
 radial-gradient(ellipse 45% 110% at 62% 15%, rgba(32, 66, 205, 0.95) 0%, rgba(22, 44, 150, 0.6) 45%, transparent 75%),
 linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%); color: var(--pes-white); }
@@ -607,6 +661,12 @@ linear-gradient(180deg, #10206a 0%, #0a1850 55%, #020f24 100%); color: var(--pes
 .elementor .pes-audience-card > .elementor-widget-wrap { min-height: 260px; }
 .elementor .pes-job-card > .elementor-widget-wrap { margin: 8px 0; }
 .elementor .pes-btn-inline { margin: 0 0 12px; }
+.elementor .pes-footer-credit, .elementor .pes-footer-credit p,
+.elementor .pes-footer-legal, .elementor .pes-footer-legal p { text-align: center; }
+.elementor .pes-footer-col { margin-bottom: 18px; }
+.elementor .pes-footer-main .pes-footer-col,
+.elementor .pes-footer-trust > .elementor-container > .elementor-column { width: 100% !important; }
+.elementor .pes-footer-main::after { display: none; }
 .elementor .pes-article { font-size: 17px; }
 .elementor .pes-article h2 { font-size: 27px; }
 .elementor .pes-post-meta .elementor-icon-list-item { margin: 0 8px !important; }

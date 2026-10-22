@@ -1,0 +1,188 @@
+{
+  "title": "PES – Footer",
+  "slug": "pes-footer",
+  "template_type": "footer",
+  "page_settings": {},
+  "preview_before": [
+    {
+      "type": "cta",
+      "title": "Book An Appointment Today",
+      "subtitle": "Powering Progress. Building Confidence.",
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "footer_trust",
+      "badges": [
+        {
+          "icon": "fas fa-shield-alt",
+          "title": "1-Year Labor Warranty",
+          "text": "Satisfaction guaranteed on every install"
+        },
+        {
+          "icon": "fas fa-award",
+          "title": "25-Year Workmanship Warranty",
+          "text": "Built to last, backed for decades"
+        },
+        {
+          "icon": "fas fa-certificate",
+          "title": "Licensed Electricians",
+          "text": "Licensed & insured professionals"
+        },
+        {
+          "icon": "fas fa-map-marker-alt",
+          "title": "Local Deerfield, NH Team",
+          "text": "Serving NH, ME and MA"
+        }
+      ]
+    },
+    {
+      "type": "footer_main",
+      "logo": "",
+      "blurb": "Integrated solar, battery storage, EV charging and electrical systems for homes and businesses across New England, installed and serviced by licensed electricians.",
+      "social": [
+        {
+          "icon": "fab fa-facebook-f",
+          "url": "https://www.facebook.com/"
+        },
+        {
+          "icon": "fab fa-instagram",
+          "url": "https://www.instagram.com/"
+        },
+        {
+          "icon": "fab fa-linkedin-in",
+          "url": "https://www.linkedin.com/"
+        }
+      ],
+      "columns": [
+        [
+          [
+            "Solutions",
+            [
+              [
+                "Commercial Solar",
+                "/commercial-solar/"
+              ],
+              [
+                "Utility-Scale & Solar Farms",
+                "/utility-scale-solar-farms/"
+              ],
+              [
+                "Commercial Battery Storage",
+                "/commercial-battery-energy-storage/"
+              ],
+              [
+                "Microgrids & Energy Management",
+                "/microgrids-energy-management/"
+              ],
+              [
+                "EV Charging Infrastructure",
+                "/ev-charging-infrastructure/"
+              ],
+              [
+                "Electrical Infrastructure",
+                "/electrical-infrastructure/"
+              ],
+              [
+                "Residential Solar",
+                "/residential-solar/"
+              ],
+              [
+                "Residential Battery Storage",
+                "/residential-battery-energy-storage/"
+              ]
+            ]
+          ]
+        ],
+        [
+          [
+            "Service O&M",
+            [
+              [
+                "Solar O&M",
+                "/solar-om/"
+              ],
+              [
+                "Battery Service",
+                "/battery-service/"
+              ],
+              [
+                "System Troubleshooting",
+                "/system-troubleshooting/"
+              ],
+              [
+                "Repowering",
+                "/repowering/"
+              ],
+              [
+                "Orphaned Solar Systems",
+                "/orphaned-solar-systems/"
+              ]
+            ]
+          ],
+          [
+            "Company",
+            [
+              [
+                "About Us",
+                "/about-us/"
+              ],
+              [
+                "Projects",
+                "/projects/"
+              ],
+              [
+                "Blog",
+                "/blog/"
+              ],
+              [
+                "Open Positions",
+                "/open-positions/"
+              ],
+              [
+                "Contact Us",
+                "/contact-us/"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "contact_title": "Get In Touch",
+      "contact": [
+        [
+          "(603) 340-0500",
+          "tel:+16033400500",
+          "fas fa-phone-alt"
+        ],
+        [
+          "info@porter-electrical.com",
+          "mailto:info@porter-electrical.com",
+          "far fa-envelope"
+        ],
+        [
+          "38A North Road, Deerfield, NH 03037",
+          "https://www.google.com/maps/search/?api=1&query=38A+North+Road+Deerfield+NH+03037",
+          "fas fa-map-marker-alt"
+        ],
+        [
+          "Mon–Fri 8:30am – 4:30pm",
+          "/contact-us/",
+          "far fa-clock"
+        ]
+      ],
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      }
+    },
+    {
+      "type": "footer_bottom",
+      "left": "© 2026 Porter Energy Systems. All rights reserved. &nbsp;·&nbsp; <a href=\"/privacy-policy/\">Privacy Policy</a>",
+      "right": "Website built by <a href=\"https://befirstsearch.com/\">First Search Marketing LLC</a>"
+    }
+  ]
+}

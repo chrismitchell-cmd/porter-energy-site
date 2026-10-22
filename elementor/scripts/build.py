@@ -764,6 +764,64 @@ def block_post_body(ids, b):
                    structure="20", padding=box(80, 0, 90, 0))
 
 
+def link_list(ids, items, classes, fa_class=None):
+    """Icon List where every row is a link: items are (text, url) pairs."""
+    rows = []
+    for t, u in items:
+        row = {"_id": ids(), "text": t, "link": {"url": u, "is_external": "", "nofollow": "", "custom_attributes": ""}}
+        row["selected_icon"] = fa(fa_class) if fa_class else {"value": "", "library": ""}
+        rows.append(row)
+    return widget(ids, "icon-list", classes, icon_list=rows)
+
+
+def block_footer_trust(ids, b):
+    """Footer trust strip – warranty / credential badges in a row."""
+    n = len(b["badges"])
+    cols = [column(ids, round(100 / n, 3), [icon_box(ids, x["icon"], "pes-trust-badge", x["title"], x["text"],
+                                                     position="left", title_tag="p")])
+            for x in b["badges"]]
+    return section(ids, cols, "pes-footer-trust", title="Footer – warranty strip", structure=f"{n}0",
+                   gap="extended", column_position="middle", padding=box(34, 0, 34, 0))
+
+
+def block_footer_main(ids, b):
+    """Footer columns – brand | solutions | O&M + company | contact."""
+    brand = column(ids, 28, [
+        image(ids, b.get("logo"), "pes-footer-logo", "Porter Energy Systems", "img/logo.png"),
+        text(ids, b["blurb"], "pes-footer-blurb"),
+        widget(ids, "social-icons", "pes-footer-social", shape="square", align="left", social_icon_list=[
+            {"_id": ids(), "social_icon": fa(x["icon"].replace("fas ", "fab ")) | {"library": "fa-brands"},
+             "link": {"url": x["url"], "is_external": "on", "nofollow": "", "custom_attributes": ""}}
+            for x in b["social"]]),
+    ], "pes-footer-col")
+    cols = [brand]
+    for group in b["columns"]:
+        w = []
+        for k, (title, links) in enumerate(group):
+            w.append(heading(ids, title, "h4", "pes-footer-title" + (" pes-footer-title-2" if k else "")))
+            w.append(link_list(ids, [tuple(x) for x in links], "pes-footer-links"))
+        cols.append(column(ids, 23, w, "pes-footer-col"))
+    contact = column(ids, 26, [
+        heading(ids, b["contact_title"], "h4", "pes-footer-title"),
+        link_list(ids, [(t, u) for t, u, _ in b["contact"]], "pes-footer-contact"),
+        button(ids, b["button"], "pes-btn-solid pes-footer-btn"),
+    ], "pes-footer-col")
+    # contact icons differ per row
+    for row, (_, _, ic) in zip(contact["elements"][1]["settings"]["icon_list"], b["contact"]):
+        row["selected_icon"] = fa(ic)
+    cols.append(contact)
+    return section(ids, cols, "pes-footer-main", title="Footer – columns", structure="40", gap="extended",
+                   padding=box(70, 0, 50, 0), padding_mobile=box(50, 0, 30, 0))
+
+
+def block_footer_bottom(ids, b):
+    """Footer bottom bar – copyright + legal links | credit."""
+    left = column(ids, 60, [text(ids, b["left"], "pes-footer-legal")], content_position="center")
+    right = column(ids, 40, [text(ids, b["right"], "pes-footer-legal pes-footer-credit")], content_position="center")
+    return section(ids, [left, right], "pes-footer-bottom", title="Footer – bottom bar", structure="20",
+                   column_position="middle", padding=box(18, 0, 18, 0))
+
+
 def block_testimonials(ids, b):
     return section(ids, [column(ids, 100, [
         heading(ids, b["kicker"], "p", "pes-eyebrow pes-center"),
@@ -885,6 +943,9 @@ BLOCKS = {
     "blog_grid": block_blog_grid,
     "post_hero": block_post_hero,
     "post_body": block_post_body,
+    "footer_trust": block_footer_trust,
+    "footer_main": block_footer_main,
+    "footer_bottom": block_footer_bottom,
     "team": block_team,
     "jobs": block_jobs,
     "licenses": block_licenses,
@@ -948,8 +1009,9 @@ def build(content_path, seen_blocks):
     settings = PAGE_SETTINGS if kind == "page" else page.get("page_settings", [])
     write_json(DIST / f"{page['slug']}.json", template(page["title"], kind, content, settings))
     # The preview shows the page as it appears on the site, header and styles included.
+    before = [BLOCKS[b["type"]](ids, b) for b in page.get("preview_before", [])]
     write_preview(DIST / "preview" / f"{page['slug']}.html", page["title"],
-                  [block_styles(ids), block_header(ids, header)] + content)
+                  [block_styles(ids), block_header(ids, header)] + before + content)
 
     # one standalone file per block variant (first occurrence wins)
     for b in [STYLES_BLOCK, header] + page["blocks"]:
@@ -985,6 +1047,9 @@ PREVIEW_SUBMENUS = {  # the site's menu: a list of names, or (group, [names]) fo
     "Company": ["About Us", "Open Positions", "Blog"],
 }
 PREVIEW_ICONS = {
+    "shield": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5z"/></svg>',
+    "award": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M12 2a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM8 16.6V22l4-2 4 2v-5.4a9 9 0 0 1-8 0z"/></svg>',
+    "certificate": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="m12 1 2.6 2.3 3.4-.5.8 3.4 3 1.7-1.4 3.1 1.4 3.1-3 1.7-.8 3.4-3.4-.5L12 23l-2.6-2.3-3.4.5-.8-3.4-3-1.7L3.6 11 2.2 7.9l3-1.7.8-3.4 3.4.5z"/></svg>',
     "phone": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>',
     "map": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>',
     "envelope": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7l-8 5z"/></svg>',
@@ -1092,6 +1157,17 @@ def render(el):
                 f'background:url({PREVIEW_SRC.get(el["id"])}) center/cover;display:grid;place-items:center">'
                 f'<span style="width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.55);display:grid;'
                 f'place-items:center;color:#fff;font-size:26px">&#9654;</span></div>')
+    elif kind == "icon-list" and any(i.get("link") for i in s["icon_list"]):
+        def ic(v):
+            for k in ("phone", "map", "envelope"):
+                if k in v:
+                    return f'<span class="elementor-icon-list-icon">{PREVIEW_ICONS[k]}</span>'
+            if "clock" in v:
+                return f'<span class="elementor-icon-list-icon">{PREVIEW_CALENDAR}</span>'
+            return ""
+        body = '<ul class="elementor-icon-list-items">' + "".join(
+            f'<li class="elementor-icon-list-item"><a href="{html.escape(i["link"]["url"])}">{ic(i["selected_icon"]["value"])}'
+            f'<span class="elementor-icon-list-text">{i["text"]}</span></a></li>' for i in s["icon_list"]) + "</ul>"
     elif kind == "icon-list":
         inline = " elementor-inline-items" if s.get("view") == "inline" else ""
         extra = " elementor-icon-list--layout-inline" if inline else ""
@@ -1113,6 +1189,11 @@ def render(el):
             f'<a class="elementor-accordion-title" href="#">{t["tab_title"]}</a></div>'
             f'<div class="elementor-tab-content" style="display:{"block" if n == 0 else "none"}">{t["tab_content"]}</div></div>'
             for n, t in enumerate(s["tabs"])) + "</div>"
+    elif kind == "social-icons":
+        body = '<div class="elementor-social-icons-wrapper elementor-grid">' + "".join(
+            f'<span class="elementor-grid-item"><a class="elementor-icon elementor-social-icon" href="#">'
+            f'<span class="pv-soc">{next((v for k, v in {"facebook": "f", "instagram": "ig", "linkedin": "in", "youtube": "▶"}.items() if k in x["social_icon"]["value"]), "•")}</span></a></span>'
+            for x in s["social_icon_list"]) + "</div>"
     elif kind == "theme-post-title":
         body = f'<h1 class="elementor-heading-title">How Battery Storage Keeps Your Business Running Through Outages</h1>'
     elif kind == "post-info":

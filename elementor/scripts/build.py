@@ -955,11 +955,17 @@ def build(content_path, seen_blocks):
 # Preview: renders the same element tree with Elementor-like markup so the
 # CSS can be checked in a browser without WordPress. Approximate only.
 # ---------------------------------------------------------------------------
-PREVIEW_MENU = ["Solution", "Service O&amp;M", "Projects", "Company", "Contact Us", "Industry"]
-PREVIEW_SUBMENUS = {
-    "Solution": ["Commercial Solar", "Battery Energy Storage", "EV Charging", "Electrical"],
-    "Service O&amp;M": ["Operations &amp; Maintenance", "Monitoring", "Repairs"],
-    "Industry": ["Agriculture", "Municipal", "Commercial Real Estate"],
+PREVIEW_MENU = ["Solutions", "Service O&amp;M", "Industries", "Projects", "Company", "Contact Us"]
+PREVIEW_SUBMENUS = {  # the site's real menu (pages created on the site)
+    "Solutions": ["Commercial Solar", "Utility-Scale &amp; Solar Farms", "Commercial Battery Energy Storage",
+                  "Microgrids &amp; Energy Management", "EV Charging Infrastructure", "Electrical Infrastructure",
+                  "Residential Solar", "Residential Battery Energy Storage"],
+    "Service O&amp;M": ["Solar O&amp;M", "Battery Service", "System Troubleshooting", "Repowering",
+                        "Orphaned Solar Systems"],
+    "Industries": ["Commercial &amp; Industrial", "Solar Development &amp; EPCs", "Agriculture",
+                   "Municipal &amp; Government", "Schools &amp; Universities",
+                   "Data Centers &amp; Critical Infrastructure", "Multi-Family"],
+    "Company": ["About Us", "Open Positions", "Blog"],
 }
 PREVIEW_ICONS = {
     "phone": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>',
@@ -1260,18 +1266,15 @@ PREVIEW_BASE_CSS = """
 .pv-chev{display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin:0 0 3px}
 .elementor-menu-toggle{display:none;cursor:pointer}
 .elementor-nav-menu--dropdown.elementor-nav-menu__container{display:none}
-.pes-header .elementor-column,.pes-header .elementor-widget-wrap{position:static}
+
 @media(max-width:1024px){
  .elementor-nav-menu--dropdown-tablet .elementor-nav-menu--main{display:none}
  .elementor-nav-menu--dropdown-tablet .elementor-menu-toggle{display:flex}
  .elementor-menu-toggle.elementor-active+.elementor-nav-menu__container{display:block}
  .elementor-nav-menu--dropdown .elementor-nav-menu{flex-direction:column;flex-wrap:nowrap}
  .elementor-nav-menu--dropdown .sub-menu{list-style:none;margin:0;padding:0}
- .pes-header .elementor-column:nth-child(1){width:30%!important}.pes-header .elementor-column:nth-child(2){width:20%!important}.pes-header .elementor-column:nth-child(3){width:50%!important}
 }
 @media(max-width:767px){
- .pes-header .elementor-container{flex-wrap:nowrap}
- .pes-header .elementor-column:nth-child(1){width:42%!important}.pes-header .elementor-column:nth-child(2){width:18%!important}.pes-header .elementor-column:nth-child(3){width:40%!important}
 }
 @media(max-width:767px){.elementor-container{flex-wrap:wrap}.elementor-column{width:100%!important}
 .elementor-column.pv-half-mobile{width:50%!important}.elementor-hidden-mobile{display:none!important}}

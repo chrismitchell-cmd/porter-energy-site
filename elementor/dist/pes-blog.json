@@ -1,0 +1,295 @@
+{
+  "version": "0.4",
+  "title": "PES – Blog",
+  "type": "page",
+  "page_settings": {
+    "template": "elementor_header_footer",
+    "hide_title": "yes",
+    "background_background": "classic",
+    "background_color": "#1B1A1A"
+  },
+  "content": [
+    {
+      "id": "cb29cde",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-hero pes-hero-center",
+        "_title": "Hero",
+        "height": "min-height",
+        "custom_height": {
+          "unit": "px",
+          "size": 500,
+          "sizes": []
+        },
+        "custom_height_mobile": {
+          "unit": "px",
+          "size": 500,
+          "sizes": []
+        },
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(12,12,14,0.62)"
+      },
+      "elements": [
+        {
+          "id": "0f5bb61",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "4d523ec",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Porter Energy Systems Blog",
+                "header_size": "p",
+                "_css_classes": "pes-kicker"
+              },
+              "elements": []
+            },
+            {
+              "id": "5d91a8c",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Energy Tips, News & Insights",
+                "header_size": "h1",
+                "_css_classes": "pes-h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "2a8bde2",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Practical advice on solar, battery storage, EV charging and keeping your energy systems running at their best.</p>",
+                "_css_classes": "pes-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "64de866",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book An Appointment",
+                "link": {
+                  "url": "/contact-us/#book-appointment",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca965cd",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Blog – all posts",
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "4b2d182",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "9beb9f9",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Latest Articles",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "54b7ad3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "From <span class=\"pes-accent\">The Blog</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "da971b0",
+              "elType": "widget",
+              "widgetType": "posts",
+              "isInner": false,
+              "settings": {
+                "_skin": "classic",
+                "classic_columns": "3",
+                "classic_columns_tablet": "2",
+                "classic_columns_mobile": "1",
+                "classic_posts_per_page": 9,
+                "classic_thumbnail": "top",
+                "classic_title_tag": "h2",
+                "classic_excerpt_length": 22,
+                "classic_meta_data": [
+                  "date"
+                ],
+                "classic_read_more_text": "Read More",
+                "classic_show_read_more": "yes",
+                "posts_post_type": "post",
+                "pagination_type": "numbers_and_prev_next",
+                "pagination_prev_label": "« Previous",
+                "pagination_next_label": "Next »",
+                "pagination_page_limit": 10,
+                "nothing_found_message": "New posts are on the way. Check back soon!",
+                "_css_classes": "pes-posts pes-posts-archive"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27eb874",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-cta",
+        "_title": "CTA – Schedule a consultation",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "0",
+          "bottom": "48",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "7466e27",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 70,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "6b534c0",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "far fa-calendar-alt",
+                  "library": "fa-regular"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Book An Appointment Today",
+                "description_text": "Powering Progress. Building Confidence.",
+                "title_size": "h2",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-cta-box"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "f845a33",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 30,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "9eadf42",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book An Appointment",
+                "link": {
+                  "url": "/contact-us/#book-appointment",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-pill pes-align-right"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

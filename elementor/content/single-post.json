@@ -1,0 +1,46 @@
+{
+  "title": "PES – Single Post",
+  "slug": "pes-single-post",
+  "template_type": "single-post",
+  "page_settings": {
+    "preview_type": "single/post",
+    "hide_title": "yes"
+  },
+  "blocks": [
+    {
+      "type": "post_hero",
+      "height": 520
+    },
+    {
+      "type": "post_body",
+      "card_title": "Ready To Take Control Of Your Power?",
+      "card_text": "Talk with our licensed team about solar, battery storage, EV charging or service for an existing system.",
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      }
+    },
+    {
+      "type": "posts",
+      "kicker": "Keep Reading",
+      "title": "More From",
+      "accent": "The Blog",
+      "count": 3,
+      "exclude_current": true,
+      "button": {
+        "text": "View All Posts",
+        "url": "/blog/"
+      },
+      "divider": true
+    },
+    {
+      "type": "cta",
+      "title": "Book An Appointment Today",
+      "subtitle": "Powering Progress. Building Confidence.",
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      }
+    }
+  ]
+}

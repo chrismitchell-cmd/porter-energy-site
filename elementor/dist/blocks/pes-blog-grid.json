@@ -1,0 +1,98 @@
+{
+  "version": "0.4",
+  "title": "PES – Blog Grid",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "c45eb20",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Blog – all posts",
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "a036065",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "906fca4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Latest Articles",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "e2f881d",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "From <span class=\"pes-accent\">The Blog</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "cfe6226",
+              "elType": "widget",
+              "widgetType": "posts",
+              "isInner": false,
+              "settings": {
+                "_skin": "classic",
+                "classic_columns": "3",
+                "classic_columns_tablet": "2",
+                "classic_columns_mobile": "1",
+                "classic_posts_per_page": 9,
+                "classic_thumbnail": "top",
+                "classic_title_tag": "h2",
+                "classic_excerpt_length": 22,
+                "classic_meta_data": [
+                  "date"
+                ],
+                "classic_read_more_text": "Read More",
+                "classic_show_read_more": "yes",
+                "posts_post_type": "post",
+                "pagination_type": "numbers_and_prev_next",
+                "pagination_prev_label": "« Previous",
+                "pagination_next_label": "Next »",
+                "pagination_page_limit": 10,
+                "nothing_found_message": "New posts are on the way. Check back soon!",
+                "_css_classes": "pes-posts pes-posts-archive"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

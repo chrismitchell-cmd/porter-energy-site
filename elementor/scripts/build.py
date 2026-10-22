@@ -685,10 +685,72 @@ def block_posts(ids, b):
     w = widget(ids, "posts", "pes-posts", _skin="classic", classic_columns="3", classic_columns_mobile="1",
                classic_posts_per_page=b.get("count", 3), classic_thumbnail="top", classic_title_tag="h3",
                classic_excerpt_length=20, classic_meta_data=["date"], classic_read_more_text="Read More",
-               classic_show_read_more="yes", posts_post_type="post")
+               classic_show_read_more="yes", posts_post_type="post",
+               **({"posts_exclude": ["current_post"]} if b.get("exclude_current") else {}))
     tail = [button(ids, b["button"], "pes-btn pes-btn-more pes-align-center")] if b.get("button") else []
     return section(ids, [column(ids, 100, section_intro(ids, b) + [w] + tail)],
                    "pes-section", title="Latest from the blog", padding=box(100, 0, 110, 0))
+
+
+def block_blog_grid(ids, b):
+    """Blog page – every post in a three-column grid with numbered pages."""
+    w = widget(ids, "posts", "pes-posts pes-posts-archive", _skin="classic", classic_columns="3",
+               classic_columns_tablet="2", classic_columns_mobile="1",
+               classic_posts_per_page=b.get("per_page", 9), classic_thumbnail="top", classic_title_tag="h2",
+               classic_excerpt_length=22, classic_meta_data=["date"], classic_read_more_text="Read More",
+               classic_show_read_more="yes", posts_post_type="post", pagination_type="numbers_and_prev_next",
+               pagination_prev_label="« Previous", pagination_next_label="Next »", pagination_page_limit=10,
+               nothing_found_message="New posts are on the way. Check back soon!")
+    return section(ids, [column(ids, 100, section_intro(ids, b) + [w])],
+                   "pes-section", title="Blog – all posts", padding=box(90, 0, 110, 0))
+
+
+DYN_FEATURED = '[elementor-tag id="" name="post-featured-image" settings="%7B%7D"]'
+
+
+def block_post_hero(ids, b):
+    """Single post hero – the post's featured image as the background, category, title, date and author."""
+    cat = widget(ids, "post-info", "pes-post-cat", view="inline", icon_list=[
+        {"_id": ids(), "type": "terms", "taxonomy": "category", "show_icon": "none", "link": "yes"}])
+    meta = widget(ids, "post-info", "pes-post-meta", view="inline", icon_list=[
+        {"_id": ids(), "type": "date", "selected_icon": fa("far fa-calendar-alt")},
+        {"_id": ids(), "type": "author", "selected_icon": fa("far fa-user"), "link": ""}])
+    title = widget(ids, "theme-post-title", "pes-h1 pes-post-title", header_size="h1")
+    return section(ids, [column(ids, 100, [cat, title, meta])],
+                   "pes-section pes-hero pes-hero-center pes-post-hero", title="Post hero (featured image)",
+                   height="min-height", custom_height=px(b.get("height", 520)),
+                   custom_height_mobile=px(420), column_position="middle", padding=box(80, 0, 70, 0),
+                   background_background="classic", background_position="center center",
+                   background_size="cover", __dynamic__={"background_image": DYN_FEATURED},
+                   background_overlay_background="classic", background_overlay_color="rgba(12,12,14,0.72)")
+
+
+def block_post_body(ids, b):
+    """Single post body – the article, share buttons and next/previous on the left; a booking
+    card and recent posts in the sidebar."""
+    article = column(ids, 66, [
+        widget(ids, "theme-post-content", "pes-article"),
+        heading(ids, "Share This Post", "p", "pes-eyebrow pes-share-label"),
+        widget(ids, "share-buttons", "pes-share", share_buttons=[
+            {"_id": ids(), "button": "facebook"}, {"_id": ids(), "button": "linkedin"},
+            {"_id": ids(), "button": "twitter"}, {"_id": ids(), "button": "email"}],
+            view="icon", skin="flat", shape="square", columns="0", alignment="left"),
+        widget(ids, "post-navigation", "pes-post-nav", show_label="yes", prev_label="Previous Post",
+               next_label="Next Post", show_arrow="yes", show_title="yes", show_borders=""),
+    ], "pes-article-col")
+    side = column(ids, 34, [
+        widget(ids, "heading", "pes-side-title", title=b["card_title"], header_size="h3"),
+        text(ids, b["card_text"], "pes-side-text"),
+        button(ids, b["button"], "pes-btn-solid pes-btn-block"),
+        heading(ids, "Recent Posts", "h3", "pes-side-title pes-side-recent"),
+        widget(ids, "posts", "pes-side-posts", _skin="classic", classic_columns="1", classic_posts_per_page=4,
+               classic_thumbnail="left", classic_item_ratio=px(0.75), classic_image_width=px(34, "%"),
+               classic_title_tag="h4", classic_excerpt_length=0, classic_show_excerpt="",
+               classic_meta_data=["date"], classic_show_read_more="", posts_post_type="post",
+               posts_exclude=["current_post"]),
+    ], "pes-post-sidebar")
+    return section(ids, [article, side], "pes-section", title="Post body + sidebar", gap="wider",
+                   structure="20", padding=box(80, 0, 90, 0))
 
 
 def block_testimonials(ids, b):
@@ -809,6 +871,9 @@ BLOCKS = {
     "projects": block_projects,
     "posts": block_posts,
     "project_gallery": block_project_gallery,
+    "blog_grid": block_blog_grid,
+    "post_hero": block_post_hero,
+    "post_body": block_post_body,
     "team": block_team,
     "jobs": block_jobs,
     "licenses": block_licenses,
@@ -868,8 +933,9 @@ def build(content_path, seen_blocks):
         content.append(sec)
     # The page template holds only the page's own content: the styles live in
     # Site Settings > Custom CSS and the header is the site-wide Theme Builder header.
-    write_json(DIST / f"{page['slug']}.json",
-               template(page["title"], "page", content, PAGE_SETTINGS))
+    kind = page.get("template_type", "page")
+    settings = PAGE_SETTINGS if kind == "page" else page.get("page_settings", [])
+    write_json(DIST / f"{page['slug']}.json", template(page["title"], kind, content, settings))
     # The preview shows the page as it appears on the site, header and styles included.
     write_preview(DIST / "preview" / f"{page['slug']}.html", page["title"],
                   [block_styles(ids), block_header(ids, header)] + content)
@@ -900,6 +966,17 @@ PREVIEW_ICONS = {
     "map": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>',
     "envelope": '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7l-8 5z"/></svg>',
 }
+PREVIEW_ARTICLE = """
+<p>A power outage costs a business more than lost electricity. Spoiled inventory, idle staff and missed orders add up fast. A battery energy storage system keeps critical loads running, and pairs with solar so you can keep producing even when the grid goes down.</p>
+<h2>Why businesses are adding battery storage</h2>
+<p>Battery systems do more than provide backup. They can lower <a href="#">demand charges</a> by covering short spikes in usage, store extra solar production for later, and give you more control over when and how you buy power.</p>
+<ul><li>Backup power for critical equipment</li><li>Lower peak demand charges</li><li>More value from your solar array</li></ul>
+<figure><img src="img/frame-2.jpg" alt=""><figcaption>A commercial battery installation by Porter Energy Systems.</figcaption></figure>
+<h3>How to size a system</h3>
+<p>The right size depends on which loads you need to protect and for how long. Our team reviews your utility data and site to recommend a system that fits your goals and budget.</p>
+<blockquote>The best time to plan for an outage is before it happens.</blockquote>
+<p>Ready to see what battery storage could do for your property? Book an appointment and we will walk you through the options.</p>
+"""
 PREVIEW_IMAGES = []
 PREVIEW_SRC = {}  # element id -> stand-in image used only by the HTML preview
 PREVIEW_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>'
@@ -924,6 +1001,8 @@ def render(el):
         bg_url = s.get("background_image", {}).get("url")
         if not bg_url and "pes-hero" in s.get("css_classes", ""):
             bg_url = "img/hero.jpg"  # preview stand-ins only
+        if not bg_url and "__dynamic__" in s:
+            bg_url = "img/frame-1.jpg"  # stands in for the post's featured image
         if not bg_url and "pes-band" in s.get("css_classes", ""):
             bg_url = "img/band.jpg"
         if bg_url:
@@ -1011,6 +1090,28 @@ def render(el):
             f'<a class="elementor-accordion-title" href="#">{t["tab_title"]}</a></div>'
             f'<div class="elementor-tab-content" style="display:{"block" if n == 0 else "none"}">{t["tab_content"]}</div></div>'
             for n, t in enumerate(s["tabs"])) + "</div>"
+    elif kind == "theme-post-title":
+        body = f'<h1 class="elementor-heading-title">How Battery Storage Keeps Your Business Running Through Outages</h1>'
+    elif kind == "post-info":
+        if s["icon_list"][0]["type"] == "terms":
+            body = '<ul class="elementor-inline-items elementor-icon-list-items elementor-post-info"><li class="elementor-icon-list-item"><span class="elementor-icon-list-text elementor-post-info__item"><span class="elementor-post-info__terms-list"><a class="elementor-post-info__terms-list-item" href="#">Battery Storage</a></span></span></li></ul>'
+        else:
+            body = ('<ul class="elementor-inline-items elementor-icon-list-items elementor-post-info">'
+                    f'<li class="elementor-icon-list-item"><span class="elementor-icon-list-icon">{PREVIEW_CALENDAR}</span><span class="elementor-icon-list-text">October 22, 2026</span></li>'
+                    '<li class="elementor-icon-list-item"><span class="elementor-icon-list-text">Porter Energy Systems</span></li></ul>')
+    elif kind == "theme-post-content":
+        body = PREVIEW_ARTICLE
+    elif kind == "share-buttons":
+        body = '<div class="elementor-grid">' + "".join(
+            f'<div class="elementor-grid-item"><div class="elementor-share-btn elementor-share-btn_{n}"><span class="elementor-share-btn__icon">{l}</span></div></div>'
+            for n, l in [("facebook", "f"), ("linkedin", "in"), ("twitter", "X"), ("email", "@")]) + "</div>"
+    elif kind == "post-navigation":
+        body = ('<div class="elementor-post-navigation"><div class="elementor-post-navigation__prev elementor-post-navigation__link"><a href="#">'
+                '<span class="post-navigation__arrow-wrapper post-navigation__arrow-prev">&#8249;</span><span class="elementor-post-navigation__link__prev">'
+                '<span class="post-navigation__prev--label">Previous Post</span><span class="post-navigation__prev--title">5 Signs Your Solar System Needs Service</span></span></a></div>'
+                '<div class="elementor-post-navigation__next elementor-post-navigation__link"><a href="#"><span class="elementor-post-navigation__link__next">'
+                '<span class="post-navigation__next--label">Next Post</span><span class="post-navigation__next--title">EV Charging For Your Workplace</span></span>'
+                '<span class="post-navigation__arrow-wrapper post-navigation__arrow-next">&#8250;</span></a></div></div>')
     elif kind == "image-gallery":
         pics = [p["url"] for p in s.get("wp_gallery", [])] or PREVIEW_SRC.get(el["id"]) or ["img/placeholder.jpg"]
         body = '<div class="gallery">' + "".join(
@@ -1029,15 +1130,28 @@ def render(el):
         logo = ('<div class="pv-logo">PARTNER {k}</div>')
         items = "".join(logo.format(k=k % n + 1) for k in range(n * 2))
         body = f'<div class="pv-marquee"><div class="pv-marquee-track">{items}</div></div>'
+    elif kind == "posts" and s.get("classic_thumbnail") == "left":
+        body = '<div class="elementor-posts-container elementor-posts pv-side">' + "".join(
+            f'<article class="elementor-post elementor-posts--thumbnail-left"><a class="elementor-post__thumbnail__link" href="#">'
+            f'<div class="elementor-post__thumbnail"><img src="img/frame-{k}.jpg" alt=""></div></a><div class="elementor-post__text">'
+            f'<h4 class="elementor-post__title"><a href="#">{t}</a></h4><div class="elementor-post__meta-data">'
+            f'<span class="elementor-post-date">October {k + 10}, 2026</span></div></div></article>'
+            for k, t in [(1, "5 Signs Your Solar System Needs Service"), (2, "Is Battery Backup Worth It In NH?"),
+                         (3, "EV Charging For Your Workplace"), (1, "What Repowering Means For Older Arrays")]) + "</div>"
     elif kind == "posts":
+        n = s.get("classic_posts_per_page", 3)
+        pages = ('<nav class="elementor-pagination"><span class="page-numbers prev">« Previous</span>'
+                 '<span class="page-numbers current">1</span><a class="page-numbers" href="#">2</a>'
+                 '<a class="page-numbers" href="#">3</a><a class="page-numbers next" href="#">Next »</a></nav>'
+                 if s.get("pagination_type") else "")
         cards = "".join(
             f'<article class="elementor-post"><a class="elementor-post__thumbnail__link" href="#"><div class="elementor-post__thumbnail">'
             f'<img src="img/frame-{k}.jpg" alt=""></div></a><div class="elementor-post__text">'
             f'<h3 class="elementor-post__title"><a href="#">Blog post title number {k} goes here</a></h3>'
             f'<div class="elementor-post__meta-data"><span class="elementor-post-date">October {k}, 2026</span></div>'
             f'<div class="elementor-post__excerpt"><p>The first lines of the post appear here automatically as a short excerpt…</p></div>'
-            f'<a class="elementor-post__read-more" href="#">Read More</a></div></article>' for k in (1, 2, 3))
-        body = f'<div class="elementor-posts-container elementor-posts elementor-grid">{cards}</div>'
+            f'<a class="elementor-post__read-more" href="#">Read More</a></div></article>' for k in [1, 2, 3] * (n // 3))
+        body = f'<div class="elementor-posts-container elementor-posts elementor-grid">{cards}</div>{pages}'
     elif kind == "flip-box":
         src = s.get("image", {}).get("url") or PREVIEW_SRC.get(el["id"], "")
         btn = (f'<a class="elementor-flip-box__button elementor-button" href="#">{s["button_text"]}</a>'
@@ -1127,6 +1241,12 @@ PREVIEW_BASE_CSS = """
 .pv-logo{width:150px;height:70px;display:grid;place-items:center;border:1px dashed #666;color:#999;font:600 13px sans-serif}
 @keyframes pvm{to{transform:translateX(-50%)}}
 .elementor-posts{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.elementor-posts.pv-side{grid-template-columns:1fr;gap:16px}
+.elementor-posts--thumbnail-left{display:flex;gap:14px}.elementor-posts--thumbnail-left .elementor-post__thumbnail__link{width:34%;flex:none}
+.elementor-post-navigation{display:flex;justify-content:space-between}.elementor-post-navigation a{display:flex;align-items:center;gap:10px;text-decoration:none}
+.elementor-post-navigation__link__prev,.elementor-post-navigation__link__next{display:flex;flex-direction:column}
+.elementor-share-btn{display:grid;place-items:center;width:42px;height:42px}
+.pes-share .elementor-grid{display:flex;gap:10px}
 .elementor-post__thumbnail img{width:100%;display:block}
 .elementor-widget-wrap>.elementor-element.pes-btn-inline{width:auto}
 @media(max-width:767px){.elementor-posts{grid-template-columns:1fr}}

@@ -1,0 +1,36 @@
+{
+  "title": "PES – Blog",
+  "slug": "pes-blog",
+  "blocks": [
+    {
+      "type": "hero",
+      "align": "center",
+      "height": 500,
+      "kicker": "Porter Energy Systems Blog",
+      "title": "Energy Tips, News & Insights",
+      "text": "Practical advice on solar, battery storage, EV charging and keeping your energy systems running at their best.",
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment",
+        "style": "pes-btn-solid pes-align-center"
+      },
+      "image": ""
+    },
+    {
+      "type": "blog_grid",
+      "kicker": "Latest Articles",
+      "title": "From",
+      "accent": "The Blog",
+      "per_page": 9
+    },
+    {
+      "type": "cta",
+      "title": "Book An Appointment Today",
+      "subtitle": "Powering Progress. Building Confidence.",
+      "button": {
+        "text": "Book An Appointment",
+        "url": "/contact-us/#book-appointment"
+      }
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "version": "0.4",
+  "title": "PES – Post Body",
+  "type": "section",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "60bc78a",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "wider",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Post body + sidebar",
+        "structure": "20",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "90",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "a7735ac",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 66,
+            "css_classes": "pes-article-col"
+          },
+          "elements": [
+            {
+              "id": "0f1a2e8",
+              "elType": "widget",
+              "widgetType": "theme-post-content",
+              "isInner": false,
+              "settings": {
+                "_css_classes": "pes-article"
+              },
+              "elements": []
+            },
+            {
+              "id": "57ebb47",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Share This Post",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-share-label"
+              },
+              "elements": []
+            },
+            {
+              "id": "8e50bc5",
+              "elType": "widget",
+              "widgetType": "share-buttons",
+              "isInner": false,
+              "settings": {
+                "share_buttons": [
+                  {
+                    "_id": "ade7770",
+                    "button": "facebook"
+                  },
+                  {
+                    "_id": "7286899",
+                    "button": "linkedin"
+                  },
+                  {
+                    "_id": "7bb522c",
+                    "button": "twitter"
+                  },
+                  {
+                    "_id": "400d9b3",
+                    "button": "email"
+                  }
+                ],
+                "view": "icon",
+                "skin": "flat",
+                "shape": "square",
+                "columns": "0",
+                "alignment": "left",
+                "_css_classes": "pes-share"
+              },
+              "elements": []
+            },
+            {
+              "id": "d062014",
+              "elType": "widget",
+              "widgetType": "post-navigation",
+              "isInner": false,
+              "settings": {
+                "show_label": "yes",
+                "prev_label": "Previous Post",
+                "next_label": "Next Post",
+                "show_arrow": "yes",
+                "show_title": "yes",
+                "show_borders": "",
+                "_css_classes": "pes-post-nav"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "5517306",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 34,
+            "css_classes": "pes-post-sidebar"
+          },
+          "elements": [
+            {
+              "id": "8018f64",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Ready To Take Control Of Your Power?",
+                "header_size": "h3",
+                "_css_classes": "pes-side-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "78f5733",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Talk with our licensed team about solar, battery storage, EV charging or service for an existing system.</p>",
+                "_css_classes": "pes-side-text"
+              },
+              "elements": []
+            },
+            {
+              "id": "f241e3b",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book An Appointment",
+                "link": {
+                  "url": "/contact-us/#book-appointment",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-btn-block"
+              },
+              "elements": []
+            },
+            {
+              "id": "9a170e2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Recent Posts",
+                "header_size": "h3",
+                "_css_classes": "pes-side-title pes-side-recent"
+              },
+              "elements": []
+            },
+            {
+              "id": "ef07e22",
+              "elType": "widget",
+              "widgetType": "posts",
+              "isInner": false,
+              "settings": {
+                "_skin": "classic",
+                "classic_columns": "1",
+                "classic_posts_per_page": 4,
+                "classic_thumbnail": "left",
+                "classic_item_ratio": {
+                  "unit": "px",
+                  "size": 0.75,
+                  "sizes": []
+                },
+                "classic_image_width": {
+                  "unit": "%",
+                  "size": 34,
+                  "sizes": []
+                },
+                "classic_title_tag": "h4",
+                "classic_excerpt_length": 0,
+                "classic_show_excerpt": "",
+                "classic_meta_data": [
+                  "date"
+                ],
+                "classic_show_read_more": "",
+                "posts_post_type": "post",
+                "posts_exclude": [
+                  "current_post"
+                ],
+                "_css_classes": "pes-side-posts"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

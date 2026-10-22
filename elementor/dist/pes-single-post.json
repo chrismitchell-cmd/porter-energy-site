@@ -1,0 +1,531 @@
+{
+  "version": "0.4",
+  "title": "PES – Single Post",
+  "type": "single-post",
+  "page_settings": {
+    "preview_type": "single/post",
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "54a389c",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-hero pes-hero-center pes-post-hero",
+        "_title": "Post hero (featured image)",
+        "height": "min-height",
+        "custom_height": {
+          "unit": "px",
+          "size": 520,
+          "sizes": []
+        },
+        "custom_height_mobile": {
+          "unit": "px",
+          "size": 420,
+          "sizes": []
+        },
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_position": "center center",
+        "background_size": "cover",
+        "__dynamic__": {
+          "background_image": "[elementor-tag id=\"\" name=\"post-featured-image\" settings=\"%7B%7D\"]"
+        },
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(12,12,14,0.72)"
+      },
+      "elements": [
+        {
+          "id": "4023032",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "b4cc921",
+              "elType": "widget",
+              "widgetType": "post-info",
+              "isInner": false,
+              "settings": {
+                "view": "inline",
+                "icon_list": [
+                  {
+                    "_id": "775b7ee",
+                    "type": "terms",
+                    "taxonomy": "category",
+                    "show_icon": "none",
+                    "link": "yes"
+                  }
+                ],
+                "_css_classes": "pes-post-cat"
+              },
+              "elements": []
+            },
+            {
+              "id": "8dcbbee",
+              "elType": "widget",
+              "widgetType": "theme-post-title",
+              "isInner": false,
+              "settings": {
+                "header_size": "h1",
+                "_css_classes": "pes-h1 pes-post-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "b1bb5cd",
+              "elType": "widget",
+              "widgetType": "post-info",
+              "isInner": false,
+              "settings": {
+                "view": "inline",
+                "icon_list": [
+                  {
+                    "_id": "deb9547",
+                    "type": "date",
+                    "selected_icon": {
+                      "value": "far fa-calendar-alt",
+                      "library": "fa-regular"
+                    }
+                  },
+                  {
+                    "_id": "d5b08ec",
+                    "type": "author",
+                    "selected_icon": {
+                      "value": "far fa-user",
+                      "library": "fa-regular"
+                    },
+                    "link": ""
+                  }
+                ],
+                "_css_classes": "pes-post-meta"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7e50467",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "wider",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section",
+        "_title": "Post body + sidebar",
+        "structure": "20",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "90",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "1c1d9bd",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 66,
+            "css_classes": "pes-article-col"
+          },
+          "elements": [
+            {
+              "id": "0997e23",
+              "elType": "widget",
+              "widgetType": "theme-post-content",
+              "isInner": false,
+              "settings": {
+                "_css_classes": "pes-article"
+              },
+              "elements": []
+            },
+            {
+              "id": "5ba3932",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Share This Post",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-share-label"
+              },
+              "elements": []
+            },
+            {
+              "id": "44a8622",
+              "elType": "widget",
+              "widgetType": "share-buttons",
+              "isInner": false,
+              "settings": {
+                "share_buttons": [
+                  {
+                    "_id": "4224e27",
+                    "button": "facebook"
+                  },
+                  {
+                    "_id": "580b82d",
+                    "button": "linkedin"
+                  },
+                  {
+                    "_id": "805c5ec",
+                    "button": "twitter"
+                  },
+                  {
+                    "_id": "58c8822",
+                    "button": "email"
+                  }
+                ],
+                "view": "icon",
+                "skin": "flat",
+                "shape": "square",
+                "columns": "0",
+                "alignment": "left",
+                "_css_classes": "pes-share"
+              },
+              "elements": []
+            },
+            {
+              "id": "baca13a",
+              "elType": "widget",
+              "widgetType": "post-navigation",
+              "isInner": false,
+              "settings": {
+                "show_label": "yes",
+                "prev_label": "Previous Post",
+                "next_label": "Next Post",
+                "show_arrow": "yes",
+                "show_title": "yes",
+                "show_borders": "",
+                "_css_classes": "pes-post-nav"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "99a8989",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 34,
+            "css_classes": "pes-post-sidebar"
+          },
+          "elements": [
+            {
+              "id": "d2acf11",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Ready To Take Control Of Your Power?",
+                "header_size": "h3",
+                "_css_classes": "pes-side-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "d6a24b6",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Talk with our licensed team about solar, battery storage, EV charging or service for an existing system.</p>",
+                "_css_classes": "pes-side-text"
+              },
+              "elements": []
+            },
+            {
+              "id": "f6cec82",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book An Appointment",
+                "link": {
+                  "url": "/contact-us/#book-appointment",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-solid pes-btn-block"
+              },
+              "elements": []
+            },
+            {
+              "id": "e90f96f",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Recent Posts",
+                "header_size": "h3",
+                "_css_classes": "pes-side-title pes-side-recent"
+              },
+              "elements": []
+            },
+            {
+              "id": "c105bbf",
+              "elType": "widget",
+              "widgetType": "posts",
+              "isInner": false,
+              "settings": {
+                "_skin": "classic",
+                "classic_columns": "1",
+                "classic_posts_per_page": 4,
+                "classic_thumbnail": "left",
+                "classic_item_ratio": {
+                  "unit": "px",
+                  "size": 0.75,
+                  "sizes": []
+                },
+                "classic_image_width": {
+                  "unit": "%",
+                  "size": 34,
+                  "sizes": []
+                },
+                "classic_title_tag": "h4",
+                "classic_excerpt_length": 0,
+                "classic_show_excerpt": "",
+                "classic_meta_data": [
+                  "date"
+                ],
+                "classic_show_read_more": "",
+                "posts_post_type": "post",
+                "posts_exclude": [
+                  "current_post"
+                ],
+                "_css_classes": "pes-side-posts"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7616fd7",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-section pes-divider",
+        "_title": "Latest from the blog",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "aff6986",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": 100
+          },
+          "elements": [
+            {
+              "id": "0f2082c",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Keep Reading",
+                "header_size": "p",
+                "_css_classes": "pes-eyebrow pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "787c371",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "More From <span class=\"pes-accent\">The Blog</span>",
+                "header_size": "h2",
+                "_css_classes": "pes-h2 pes-h2-mixed pes-center"
+              },
+              "elements": []
+            },
+            {
+              "id": "fb66acc",
+              "elType": "widget",
+              "widgetType": "posts",
+              "isInner": false,
+              "settings": {
+                "_skin": "classic",
+                "classic_columns": "3",
+                "classic_columns_mobile": "1",
+                "classic_posts_per_page": 3,
+                "classic_thumbnail": "top",
+                "classic_title_tag": "h3",
+                "classic_excerpt_length": 20,
+                "classic_meta_data": [
+                  "date"
+                ],
+                "classic_read_more_text": "Read More",
+                "classic_show_read_more": "yes",
+                "posts_post_type": "post",
+                "posts_exclude": [
+                  "current_post"
+                ],
+                "_css_classes": "pes-posts"
+              },
+              "elements": []
+            },
+            {
+              "id": "c536369",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "View All Posts",
+                "link": {
+                  "url": "/blog/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn pes-btn-more pes-align-center"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22b6a8a",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "boxed",
+        "gap": "default",
+        "content_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "css_classes": "pes-cta",
+        "_title": "CTA – Schedule a consultation",
+        "structure": "20",
+        "column_position": "middle",
+        "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "0",
+          "bottom": "48",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "42046dd",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 70,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "56faea7",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "far fa-calendar-alt",
+                  "library": "fa-regular"
+                },
+                "view": "default",
+                "position": "left",
+                "title_text": "Book An Appointment Today",
+                "description_text": "Powering Progress. Building Confidence.",
+                "title_size": "h2",
+                "content_vertical_alignment": "middle",
+                "_css_classes": "pes-cta-box"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "d2ae519",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 50,
+            "_inline_size": 30,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "5ed9261",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book An Appointment",
+                "link": {
+                  "url": "/contact-us/#book-appointment",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "_css_classes": "pes-btn-pill pes-align-right"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

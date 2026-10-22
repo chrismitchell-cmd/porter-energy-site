@@ -2236,7 +2236,7 @@
                       "settings": {
                         "text": "See Full Details",
                         "link": {
-                          "url": "/our-projects/",
+                          "url": "/projects/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -2299,7 +2299,7 @@
                       "settings": {
                         "text": "See Full Details",
                         "link": {
-                          "url": "/our-projects/",
+                          "url": "/projects/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -2362,7 +2362,7 @@
                       "settings": {
                         "text": "See Full Details",
                         "link": {
-                          "url": "/our-projects/",
+                          "url": "/projects/",
                           "is_external": "",
                           "nofollow": "",
                           "custom_attributes": ""
@@ -2383,7 +2383,7 @@
               "settings": {
                 "text": "View All Projects",
                 "link": {
-                  "url": "/our-projects/",
+                  "url": "/projects/",
                   "is_external": "",
                   "nofollow": "",
                   "custom_attributes": ""

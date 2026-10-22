@@ -42,10 +42,10 @@
   --pes-bolt: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 250' preserveAspectRatio='xMidYMid slice' fill='none'%3E%3Cpath d='M115 -20H215L155 66H250L85 270H-5L95 130H0Z' stroke='%2370c6ff' stroke-width='4' stroke-linejoin='miter'/%3E%3C/svg%3E");
 
   /* header shape: the dark bar steps up into a tab on the right */
-  --pes-header-h: 160px;
-  --pes-line-y: 82px;      /* height of the top band (logo + menu); the tab sits below it */
-  --pes-tab-end: 300px;    /* width of the flat tab that holds the button */
-  --pes-tab-start: 392px;  /* where the gold line starts to climb (tab + the diagonal) */
+  --pes-header-h: 104px;
+  --pes-line-y: 16px;      /* how far below the top the gold line runs across the tab */
+  --pes-tab-end: 272px;    /* width of the flat tab that holds the button */
+  --pes-tab-start: 340px;  /* where the gold line starts to climb (tab + the diagonal) */
 }
 
 /* --------------------------------------------------------------------------
@@ -84,8 +84,8 @@
    A transparent section over the hero. The black bar (::before) is cut so the
    right-hand side shows the hero photo; the orange→gold line (::after) runs
    along its bottom, climbs, and continues across the top of the tab.
-   Desktop: logo + menu sit in the top band (above --pes-line-y); the button has
-   its own slot inside the tab, below the line, so the two never meet.
+   Desktop: one row – logo and menu on the black bar, the button in its own slot
+   inside the tab (below the line), so the menu, button and line never meet.
    -------------------------------------------------------------------------- */
 .elementor .pes-header {
   position: relative;
@@ -141,14 +141,15 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 
 /* columns: logo (auto) | menu (fills the band) | button (own slot in the tab) */
 .elementor .pes-header > .elementor-container > .elementor-column:not(.pes-header-cta) > .elementor-widget-wrap {
-  min-height: calc(var(--pes-line-y) - 4px);
+  min-height: calc(var(--pes-header-h) - 4px);
   padding: 0 !important;
   align-content: center;
   align-items: center;
 }
 .elementor .pes-header .elementor-widget { margin-bottom: 0 !important; margin-block-end: 0 !important; }
 .elementor .pes-header > .elementor-container > .elementor-column:first-child { flex: none; width: auto !important; }
-.elementor .pes-header .pes-nav-col { flex: 1 1 auto; width: auto !important; min-width: 0; padding-left: 36px; }
+/* the menu stops before the climbing line so the two never overlap */
+.elementor .pes-header .pes-nav-col { flex: 1 1 auto; width: auto !important; min-width: 0; padding-left: 40px; padding-right: calc(var(--pes-tab-start) - 40px + 16px); }
 .elementor .pes-header .pes-header-cta {
   position: absolute !important;
   top: 0;
@@ -230,11 +231,11 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 .elementor .pes-header .sub-menu a:hover { color: var(--pes-white); background: var(--pes-orange); }
 
 /* Elementor Pro Nav Menu (pes-nav): full menu on desktop, hamburger + panel on tablet and phone */
-.elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { flex-wrap: nowrap; gap: 4px 30px; }
+.elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu { flex-wrap: nowrap; gap: 4px 34px; }
 .elementor .pes-nav .elementor-nav-menu--main .elementor-item {
-  padding: 8px 0 !important;
+  padding: 10px 0 !important;
   font-family: var(--pes-font-ui);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--pes-white) !important;
   text-decoration: none !important;
@@ -242,7 +243,7 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 }
 .elementor .pes-nav .elementor-nav-menu--main .elementor-item:is(:hover, :focus, .elementor-item-active, .highlighted) { color: var(--pes-orange) !important; }
 .elementor .pes-nav .elementor-item:is(:hover, :focus, .highlighted) .sub-arrow { color: var(--pes-orange); }
-.elementor .pes-nav .sub-arrow { margin-left: 6px; padding: 0 !important; color: var(--pes-amber); font-size: 9px; }
+.elementor .pes-nav .sub-arrow { margin-left: 7px; padding: 0 !important; color: var(--pes-amber); font-size: 10px; }
 .elementor .pes-nav .sub-arrow svg { fill: var(--pes-amber); width: 9px; height: 9px; }
 .elementor .pes-nav .elementor-nav-menu--main .sub-menu,
 .elementor .pes-nav .elementor-nav-menu--dropdown { background: var(--pes-black) !important; }
@@ -271,6 +272,52 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   color: var(--pes-white) !important;
   background: var(--pes-orange) !important;
 }
+/* Mega menu – add the CSS class pes-mega to a top-level menu item (Appearance > Menus >
+   Screen Options > CSS Classes). Its second-level items become column headings and
+   their own sub-items are listed underneath, all in one wide panel. */
+.elementor .pes-nav .elementor-nav-menu--main li.pes-mega > .sub-menu {
+  width: 760px !important;
+  max-width: calc(100vw - 80px) !important;
+  padding: 22px 12px 18px !important;
+  white-space: normal;
+}
+.elementor .pes-nav .elementor-nav-menu--main li.pes-mega > .sub-menu > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.333%;
+  padding: 0 10px;
+  border: 0 !important;
+}
+.elementor .pes-nav .elementor-nav-menu--main li.pes-mega > .sub-menu > li > a {
+  padding: 4px 8px 10px !important;
+  margin-bottom: 6px;
+  font-family: var(--pes-font-head);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pes-amber) !important;
+  background: transparent !important;
+  border-bottom: 2px solid transparent !important;
+  border-image: var(--pes-gradient) 1;
+  cursor: default;
+}
+.elementor .pes-nav .elementor-nav-menu--main li.pes-mega > .sub-menu > li > a .sub-arrow { display: none; }
+.elementor .pes-nav .elementor-nav-menu--main li.pes-mega > .sub-menu > li > .sub-menu {
+  position: static !important;
+  display: block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  left: auto !important;
+  top: auto !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.elementor .pes-nav .elementor-nav-menu--main li.pes-mega > .sub-menu > li > .sub-menu a { padding: 8px 8px !important; font-size: 15px; }
 .elementor .pes-nav .elementor-menu-toggle {
   width: auto;
   margin-left: auto;
@@ -309,7 +356,15 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
 
 /* laptops: tighten the menu so it stays on one line */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  .elementor .pes-header .pes-nav-col { padding-left: 24px; }
+  .elementor .pes-header .pes-nav-col { padding-left: 28px; }
+  .elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu,
+  .elementor .pes-header .menu { gap: 4px 24px; }
+  .elementor .pes-nav .elementor-nav-menu--main .elementor-item,
+  .elementor .pes-header .menu a { font-size: 15px; }
+}
+@media (min-width: 1025px) and (max-width: 1140px) {
+  .elementor .pes-logo img { height: 50px; }
+  .elementor .pes-header .pes-nav-col { padding-left: 22px; }
   .elementor .pes-nav .elementor-nav-menu--main .elementor-nav-menu,
   .elementor .pes-header .menu { gap: 4px 18px; }
   .elementor .pes-nav .elementor-nav-menu--main .elementor-item,
@@ -320,6 +375,7 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
   .elementor .pes-nav .elementor-menu-toggle { display: inline-flex; }
   .elementor .pes-header .pes-nav-col > .elementor-widget-wrap { justify-content: flex-end; }
   .elementor .pes-header .pes-nav > .elementor-widget-container { display: flex; justify-content: flex-end; }
+  .elementor .pes-header .pes-nav-col { padding-right: calc(var(--pes-tab-start) - 40px + 8px); }
   .elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container { top: var(--pes-header-h) !important; }
   body:not(.elementor-editor-active) .elementor .pes-proj-card { width: 50% !important; }
 }
@@ -346,7 +402,7 @@ body:has(.elementor-location-header .pes-header) .elementor .pes-hero { margin-t
     justify-content: flex-end;
   }
   .elementor .pes-header .pes-header-cta .elementor-button-wrapper { text-align: right !important; }
-  .elementor .pes-header .pes-nav-col { order: 3; flex: none; padding-left: 0; }
+  .elementor .pes-header .pes-nav-col { order: 3; flex: none; padding-left: 0; padding-right: 0; }
   .elementor .pes-header .pes-btn-solid .elementor-button { padding: 10px 12px; font-size: 12px; }
   .elementor .pes-nav .elementor-menu-toggle { font-size: 22px; padding: 6px; }
   .elementor .pes-nav .elementor-nav-menu--dropdown.elementor-nav-menu__container { left: -12px !important; right: -12px !important; top: 76px !important; }

@@ -605,7 +605,7 @@ def block_projects(ids, b):
             img,
             heading(ids, pr["title"], "h3", "pes-job-title"),
             text(ids, pr["meta"], "pes-card-note"),
-            button(ids, {"text": "See Full Details", "url": pr.get("url", b.get("url", "/our-projects/"))},
+            button(ids, {"text": "See Full Details", "url": pr.get("url", b.get("url", "/projects/"))},
                    "pes-btn pes-btn-more"),
         ], "pes-job-card pes-project-card"))
     tail = [button(ids, b["button"], "pes-btn-solid pes-align-center")] if b.get("button") else []
@@ -632,9 +632,20 @@ FILTER_JS = """<script>
       });
     });
   }
-  function run() { document.querySelectorAll('.pes-filter').forEach(init); }
+  // links like /projects/#battery-storage open the page with that filter selected
+  function fromHash() {
+    var key = (location.hash || '').replace('#', '');
+    if (!key) return;
+    var btn = document.querySelector('.pes-filter button[data-filter="' + key + '"]');
+    if (!btn) return;
+    btn.click();
+    var sec = btn.closest('.pes-projects');
+    if (sec) setTimeout(function () { sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+  }
+  function run() { document.querySelectorAll('.pes-filter').forEach(init); fromHash(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
   window.addEventListener('elementor/frontend/init', run);
+  window.addEventListener('hashchange', fromHash);
 })();
 </script>"""
 
@@ -955,11 +966,17 @@ def build(content_path, seen_blocks):
 # Preview: renders the same element tree with Elementor-like markup so the
 # CSS can be checked in a browser without WordPress. Approximate only.
 # ---------------------------------------------------------------------------
-PREVIEW_MENU = ["Solutions", "Service O&amp;M", "Industries", "Projects", "Company", "Contact Us"]
-PREVIEW_SUBMENUS = {  # the site's real menu (pages created on the site)
-    "Solutions": ["Commercial Solar", "Utility-Scale &amp; Solar Farms", "Commercial Battery Energy Storage",
-                  "Microgrids &amp; Energy Management", "EV Charging Infrastructure", "Electrical Infrastructure",
-                  "Residential Solar", "Residential Battery Energy Storage"],
+PREVIEW_MENU = ["Services", "Service O&amp;M", "Industries", "Company", "Contact Us"]
+PREVIEW_MEGA = {"Services"}  # menu items with the CSS class pes-mega (three-column dropdown)
+PREVIEW_SUBMENUS = {  # the site's menu: a list of names, or (group, [names]) for mega columns
+    "Services": [
+        ("Residential Services", ["Residential Solar", "Residential Battery Energy Storage"]),
+        ("Commercial Services", ["Commercial Solar", "Utility-Scale &amp; Solar Farms",
+                                 "Commercial Battery Energy Storage", "Microgrids &amp; Energy Management",
+                                 "EV Charging Infrastructure", "Electrical Infrastructure"]),
+        ("Projects", ["Commercial Solar", "Residential Solar", "Solar Farms", "Battery Storage",
+                      "EV Infrastructure", "Electrical Infrastructure", "All Projects"]),
+    ],
     "Service O&amp;M": ["Solar O&amp;M", "Battery Service", "System Troubleshooting", "Repowering",
                         "Orphaned Solar Systems"],
     "Industries": ["Commercial &amp; Industrial", "Solar Development &amp; EPCs", "Agriculture",
@@ -1180,17 +1197,26 @@ def render(el):
                 f'border:1px dashed #555">Google reviews from {html.escape(s["shortcode"])} appear here</div></div>')
     elif kind == "nav-menu":
         extra = " elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger"
+        arrow = '<span class="sub-arrow"><i class="pv-chev"></i></span>'
+
+        def sub_list(subs):
+            lis = ""
+            for x in subs:
+                if isinstance(x, tuple):
+                    lis += (f'<li class="menu-item menu-item-has-children"><a href="#" class="elementor-sub-item has-submenu">'
+                            f'{x[0]}{arrow}</a>{sub_list(x[1])}</li>')
+                else:
+                    lis += f'<li class="menu-item"><a href="#" class="elementor-sub-item">{x}</a></li>'
+            return f'<ul class="sub-menu elementor-nav-menu--dropdown">{lis}</ul>'
+
         def items(sub_class):
             out = ""
             for name in PREVIEW_MENU:
                 subs = PREVIEW_SUBMENUS.get(name)
-                arrow = '<span class="sub-arrow"><i class="pv-chev"></i></span>' if subs else ""
-                link = f'<a href="#" class="{"elementor-item" if not sub_class else "elementor-item"}{" has-submenu" if subs else ""}">{name}{arrow}</a>'
-                sub = ""
-                if subs:
-                    sub = '<ul class="sub-menu elementor-nav-menu--dropdown">' + "".join(
-                        f'<li class="menu-item"><a href="#" class="elementor-sub-item">{x}</a></li>' for x in subs) + "</ul>"
-                out += f'<li class="menu-item{" menu-item-has-children" if subs else ""}">{link}{sub}</li>'
+                link = f'<a href="#" class="elementor-item{" has-submenu" if subs else ""}">{name}{arrow if subs else ""}</a>'
+                cls = " menu-item-has-children" if subs else ""
+                cls += " pes-mega" if name in PREVIEW_MEGA else ""
+                out += f'<li class="menu-item{cls}">{link}{sub_list(subs) if subs else ""}</li>'
             return out
         body = ('<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">'
                 f'<ul class="elementor-nav-menu">{items("")}</ul></nav>'

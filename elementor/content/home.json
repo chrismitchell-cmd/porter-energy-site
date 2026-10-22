@@ -276,7 +276,7 @@
       ],
       "button": {
         "text": "View All Projects",
-        "url": "/our-projects/"
+        "url": "/projects/"
       },
       "divider": true
     },
